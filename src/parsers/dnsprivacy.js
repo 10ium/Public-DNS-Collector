@@ -13,7 +13,7 @@ export function parseDnsPrivacyOrg(content) {
     const document = dom.window.document;
     const providerMap = new Map();
 
-    // Helper to get or create a server object from the map
+    // Helper to get or create a server object from the map, consolidating providers
     const getOrCreateServer = (providerName) => {
         const cleanedName = providerName.replace(/'secure'|'insecure'/, '').trim();
         if (!providerMap.has(cleanedName)) {
@@ -25,6 +25,7 @@ export function parseDnsPrivacyOrg(content) {
     };
 
     // --- Process DNS-over-TLS (DoT) Table ---
+    // The header is now a h3 tag. Find it by its text content.
     const dotHeader = Array.from(document.querySelectorAll('h3')).find(h => h.textContent.includes('DNS-over-TLS (DoT)'));
     if (dotHeader) {
         let dotTable = dotHeader.nextElementSibling;
@@ -36,7 +37,7 @@ export function parseDnsPrivacyOrg(content) {
             const rows = dotTable.querySelectorAll('tbody tr');
             rows.forEach(row => {
                 const cells = row.querySelectorAll('td');
-                if (cells.length < 5) return;
+                if (cells.length < 6) return; // Table structure has 6 columns now
 
                 const providerName = cells[0].textContent.trim();
                 if (!providerName) return;
@@ -44,7 +45,9 @@ export function parseDnsPrivacyOrg(content) {
                 const server = getOrCreateServer(providerName);
                 server.protocols.push('dot');
 
+                // Extract IPs from the second column
                 const ips = cells[1].textContent.trim().split(/\s*or\s*|\s+/).filter(Boolean);
+                // Extract hostname from the fourth column
                 const hostname = cells[3].textContent.trim();
                 
                 if (hostname && !hostname.toLowerCase().includes('various')) server.addresses.push(hostname);
@@ -52,9 +55,9 @@ export function parseDnsPrivacyOrg(content) {
                 
                 const notes = cells[5].textContent.toLowerCase();
                 if (notes.includes('filter')) server.filters.ads = true;
-                if (notes.includes('malware')) server.filters.malware = true;
-                if (notes.includes('family')) server.filters.family = true;
-                if (notes.includes('doh')) server.protocols.push('doh');
+                if (notes.includes('dns-over-https is also available') || notes.includes('it also does doh')) {
+                    server.protocols.push('doh');
+                }
             });
         }
     }
@@ -74,31 +77,34 @@ export function parseDnsPrivacyOrg(content) {
                 if (cells.length < 3) return;
 
                 const providerName = cells[0].textContent.trim();
-                 if (!providerName) return;
+                if (!providerName) return;
 
                 const server = getOrCreateServer(providerName);
                 server.protocols.push('doh');
 
+                // Extract URLs from the second column
                 const urls = (cells[1].textContent.match(/https:\/\/[^\s<]+/g) || []);
                 server.addresses.push(...urls);
 
                 const notes = cells[2].textContent.toLowerCase();
                 if (notes.includes('filter')) server.filters.ads = true;
-                if (notes.includes('malware')) server.filters.malware = true;
-                if (notes.includes('family')) server.filters.family = true;
             });
         }
     }
 
-    // Finalize and return the list of servers
+    // --- Finalize and return the list of servers ---
     for (const server of providerMap.values()) {
+        // Deduplicate addresses and protocols
         server.addresses = [...new Set(server.addresses.filter(Boolean))];
         server.protocols = [...new Set(server.protocols)];
 
+        // Assume unfiltered if no specific filter is mentioned
         if (!server.filters.ads && !server.filters.malware && !server.filters.family) {
             server.filters.unfiltered = true;
         }
-        server.features.dnssec = true; // Most on this list support it
+        // Assume DNSSEC and no-log as a general policy for privacy-focused providers
+        server.features.dnssec = true;
+        server.features.no_log = true;
 
         if (server.addresses.length > 0) {
             servers.push(server);
