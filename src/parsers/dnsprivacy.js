@@ -25,10 +25,12 @@ export function parseDnsPrivacyOrg(content) {
 
     const allTables = document.querySelectorAll('table');
     allTables.forEach(table => {
-        const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.toLowerCase());
+        const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.toLowerCase().replace(/\s+/g, ' '));
         
         // --- Identify and Process DNS-over-TLS (DoT) Table ---
-        if (headers.includes('hostname for tls\nauthentication')) {
+        // Corrected Logic: Use a more flexible check for the header text.
+        const isDoTTable = headers.some(h => h.includes('hostname for tls') && h.includes('authentication'));
+        if (isDoTTable) {
             const rows = table.querySelectorAll('tbody tr');
             rows.forEach(row => {
                 const cells = row.querySelectorAll('td');
@@ -54,7 +56,8 @@ export function parseDnsPrivacyOrg(content) {
         }
 
         // --- Identify and Process DNS-over-HTTPS (DoH) Table ---
-        if (headers.includes('url') && headers.includes('notes')) {
+        const isDoHTable = headers.includes('url') && headers.includes('notes');
+        if (isDoHTable) {
             const rows = table.querySelectorAll('tbody tr');
             rows.forEach(row => {
                 const cells = row.querySelectorAll('td');
