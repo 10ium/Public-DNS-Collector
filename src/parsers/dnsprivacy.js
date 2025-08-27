@@ -13,6 +13,9 @@ export function parseDnsPrivacyOrg(content) {
     const document = dom.window.document;
     const providerMap = new Map();
 
+    // Regex to validate if a string is a valid IP (v4/v6) or a hostname
+    const validAddressRegex = /^(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}|^\d{1,3}(\.\d{1,3}){3}$|^([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}$|^([0-9a-fA-F]{1,4}:){1,7}:$|^([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}$|^([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}$|^([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}$|^([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}$|^([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}$|^[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})$|:((:[0-9a-fA-F]{1,4}){1,7}|:)$|^fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}$|^::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])$|^([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])$/;
+
     const getOrCreateServer = (providerName) => {
         const cleanedName = providerName.replace(/'secure'|'insecure'/, '').trim();
         if (!providerMap.has(cleanedName)) {
@@ -23,37 +26,36 @@ export function parseDnsPrivacyOrg(content) {
         return providerMap.get(cleanedName);
     };
 
-    // --- Final Corrected Logic: Target the main content container first ---
     const mainContent = document.querySelector('#body-inner');
     if (!mainContent) {
         console.warn('  ⚠️ [DNSPrivacy Parser] کانتینر اصلی محتوا (#body-inner) پیدا نشد.');
         return [];
     }
     
-    // --- Process DNS-over-TLS (DoT) Table using its specific anchor ID ---
-    const dotHeader = mainContent.querySelector('#dns-over-tls-dot');
-    if (dotHeader) {
-        let dotTable = dotHeader.nextElementSibling;
-        while (dotTable && dotTable.tagName !== 'DIV' && !dotTable.querySelector('table')) {
-            dotTable = dotTable.nextElementSibling;
-        }
+    const allTables = mainContent.querySelectorAll('table');
+    allTables.forEach(table => {
+        const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.toLowerCase().replace(/\s+/g, ' '));
         
-        const table = dotTable ? dotTable.querySelector('table') : null;
-        if (table) {
+        const isDoTTable = headers.some(h => h.includes('hostname for tls') && h.includes('authentication'));
+        if (isDoTTable) {
             const rows = table.querySelectorAll('tbody tr');
             rows.forEach(row => {
                 const cells = row.querySelectorAll('td');
-                if (cells.length < 6) return; // Expecting at least 6 cells in DoT table rows
+                if (cells.length < 6) return;
                 const providerName = cells[0].textContent.trim();
-                if (!providerName) return;
+                const ipsText = cells[1].textContent.trim();
+                const hostnameText = cells[3].textContent.trim();
+                
+                if (!providerName || hostnameText.toLowerCase().includes('various')) return;
                 
                 const server = getOrCreateServer(providerName);
                 if (!server.protocols.includes('dot')) server.protocols.push('dot');
 
-                const ips = cells[1].textContent.trim().split(/\s*or\s*|\s+/).filter(Boolean);
-                const hostname = cells[3].textContent.trim();
+                const ips = ipsText.split(/\s*or\s*|\s+/).filter(addr => validAddressRegex.test(addr));
                 
-                if (hostname && !hostname.toLowerCase().includes('various')) server.addresses.push(hostname);
+                if (validAddressRegex.test(hostnameText)) {
+                    server.addresses.push(hostnameText);
+                }
                 server.addresses.push(...ips);
                 
                 const notes = cells[5].textContent.toLowerCase();
@@ -63,36 +65,29 @@ export function parseDnsPrivacyOrg(content) {
                 }
             });
         }
-    }
 
-    // --- Process DNS-over-HTTPS (DoH) Table using its specific anchor ID ---
-    const dohHeader = mainContent.querySelector('#dns-over-https-doh');
-    if (dohHeader) {
-        let dohTable = dohHeader.nextElementSibling;
-        while (dohTable && dohTable.tagName !== 'DIV' && !dohTable.querySelector('table')) {
-            dohTable = dohTable.nextElementSibling;
-        }
-        
-        const table = dohTable ? dohTable.querySelector('table') : null;
-        if (table) {
+        const isDoHTable = headers.includes('url') && headers.includes('notes');
+        if (isDoHTable) {
             const rows = table.querySelectorAll('tbody tr');
             rows.forEach(row => {
                 const cells = row.querySelectorAll('td');
-                if (cells.length < 2) return; // Simplified check for DoH table
+                if (cells.length < 2) return;
                 const providerName = cells[0].textContent.trim();
-                if (!providerName) return;
+                const urlText = cells[1].textContent.trim();
+
+                if (!providerName || urlText.toLowerCase().includes('various')) return;
 
                 const server = getOrCreateServer(providerName);
                 if (!server.protocols.includes('doh')) server.protocols.push('doh');
                 
-                const urls = (cells[1].textContent.match(/https:\/\/[^\s<]+/g) || []);
+                const urls = (urlText.match(/https:\/\/[^\s<]+/g) || []);
                 server.addresses.push(...urls);
 
                 const notes = (cells[2] ? cells[2].textContent : '').toLowerCase();
                 if (notes.includes('filter')) server.filters.ads = true;
             });
         }
-    }
+    });
 
     for (const server of providerMap.values()) {
         server.addresses = [...new Set(server.addresses.filter(Boolean))];
