@@ -42,6 +42,8 @@
 2001:41d0:801:2000::1b28
 2001:41d0:801:2000::d64
 2001:470:1c:76d::53
+2001:4860:4860::8844
+2001:4860:4860::8888
 2001:67c:27e4::35
 2001:8b0:24:24::24
 208.67.220.123
@@ -138,6 +140,8 @@
 77.88.8.7
 77.88.8.8
 77.88.8.88
+8.8.4.4
+8.8.8.8
 81.187.221.24
 83.220.169.155
 86.54.11.1
@@ -173,6 +177,7 @@ anycast.dns.nextdns.io
 base.dns.mullvad.net
 child-noads.joindns4.eu
 child.joindns4.eu
+cloudflare-dns.com
 common.dot.dns.yandex.net
 dns-tls.bitwiseshift.net
 dns.adguard-dns.com
