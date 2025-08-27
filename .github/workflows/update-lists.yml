@@ -17,19 +17,20 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          # The 'cache' line is removed to prevent the lock file error
 
       - name: Install dependencies
         run: npm install
 
       - name: Run build script
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
         run: node build.js
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore(automation): Update DNS lists"
+          commit_message: "chore(automation): Update DNS lists and README"
           commit_user_name: "GitHub Actions Bot"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
-          file_pattern: "lists/*.txt"
+          file_pattern: "lists/*.txt lists/sources/*.txt README.md"
           commit_options: '--no-verify'
