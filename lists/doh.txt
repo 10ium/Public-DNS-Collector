@@ -43,7 +43,7 @@ https://blitz.ahadns.com
 https://blitz.ahadns.com/1:1
 https://blitz.ahadns.com/1:1.12
 https://blocker.thethorsens.org/dns-query
-https://blog.cloudflare.com/welcome-hidden-resolver)
+https://blog.cloudflare.com/welcome-hidden-resolver
 https://bne01.dnscry.pt/dns-query
 https://bog01.dnscry.pt/dns-query
 https://bom01.dnscry.pt/dns-query
@@ -56,7 +56,7 @@ https://child.joindns4.eu/dns-query
 https://chuncheon.dnsovertor.cc/dns-query
 https://clean.dnsforge.de/dns-query
 https://cloudflare-dns.com/dns-query
-https://common.dot.dns.y
+https://common.dot.dns.yandex.net/dns-query
 https://commons.host/
 https://cph01.dnscry.pt/dns-query
 https://cvt01.dnscry.pt/dns-query
@@ -299,7 +299,7 @@ https://doh.opendns.com/dns-query
 https://doh.pl.ahadns.net/dns-query
 https://doh.post-factum.tk/dns-query
 https://doh.powerdns.org
-https://doh.s
+https://doh.sandbox.opendns.com/dns-query
 https://doh.seby.io:8443/dns-query
 https://doh.sz-dns.com/dns-query
 https://doh.this.web.id/dns-query
@@ -327,7 +327,7 @@ https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
 https://family.dns.mullvad.net/dns-query
 https://family.dns.ningkelle.id/dns-query
-https://family.dot.dns.y
+https://family.dot.dns.yandex.net/dns-query
 https://family.mydns.network/dns-query
 https://family.rabbitdns.org/dns-query
 https://fi.doh.dns.snopyta.org/dns-query
@@ -396,7 +396,7 @@ https://masters-of-cloud.de/dns-query
 https://megumin.is.my.waifu.cz/dns-query
 https://mil01.dnscry.pt/dns-query
 https://mozilla.cloudflare-dns.com/dns-query
-https://my.nextdns.io/start)
+https://my.nextdns.io/start
 https://myatris.sbs/dns-query
 https://nicsezcheckfbi.gov
 https://nl.dns.privex.io
@@ -449,7 +449,7 @@ https://ric.openbld.net/dns-query
 https://ro-buc-w-p-1.nashkan.net/dns-query
 https://router.comss.one/dns-query
 https://sa01.dns4me.net
-https://safe.dot.dns.y
+https://safe.dot.dns.yandex.net/dns-query
 https://safeservedns.com/dns-query
 https://sea01.dnscry.pt/dns-query
 https://secondary.dns.seia.io/dns-query
@@ -497,7 +497,7 @@ https://us-saj-w-f-1.nashkan.net/dns-query
 https://us-saj-w-p-1.nashkan.net/dns-query
 https://us01.dns4me.net
 https://us02.dns4me.net
-https://us1.dns.lavate.ch/dns-query,
+https://us1.dns.lavate.ch/dns-query
 https://vie01.dnscry.pt/dns-query
 https://vno01.dnscry.pt/dns-query
 https://waw02.dnscry.pt/dns-query

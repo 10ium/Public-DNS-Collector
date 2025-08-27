@@ -3,19 +3,25 @@
 194.242.2.2
 2001:4860:4860::8844
 2001:4860:4860::8888
+208.67.220.2
+208.67.222.2
 2606:4700:4700::1001
 2606:4700:4700::1111
+2620:0:ccc::2
+2620:0:ccd::2
 2a07:e340::2
+2a10:50c0::1:ff
+2a10:50c0::2:ff
+2a13:1001::86:54:11:100
+76.76.10.0
+76.76.2.0
 8.8.4.4
 8.8.8.8
-DNS
-See
-See Wikimedia DNS website
-Wikimedia
-box.opendns.com
-box.opendns.com/dns-query
+86.54.11.100
+86.54.11.200
+94.140.14.140
+94.140.14.141
 child-noads.joindns4.eu
-cloudflare-dns.com
 dns.adguard.com
 dns.google
 dns.mullvad.net
@@ -42,7 +48,7 @@ https://bazooki-infra.dev/dns-query
 https://blitz.ahadns.com
 https://blitz.ahadns.com/1:1
 https://blitz.ahadns.com/1:1.12
-https://blog.cloudflare.com/welcome-hidden-resolver)
+https://blog.cloudflare.com/welcome-hidden-resolver
 https://bne01.dnscry.pt/dns-query
 https://bog01.dnscry.pt/dns-query
 https://bom01.dnscry.pt/dns-query
@@ -180,7 +186,7 @@ https://doh.niyawe.de/dns-query
 https://doh.opendns.com/dns-query
 https://doh.post-factum.tk/dns-query
 https://doh.powerdns.org
-https://doh.s
+https://doh.sandbox.opendns.com/dns-query
 https://doh.seby.io:8443/dns-query
 https://doh.this.web.id/dns-query
 https://doh.us.dnswarden.com/adblock
@@ -236,7 +242,7 @@ https://masters-of-cloud.de/dns-query
 https://megumin.is.my.waifu.cz/dns-query
 https://mil01.dnscry.pt/dns-query
 https://mozilla.cloudflare-dns.com/dns-query
-https://my.nextdns.io/start)
+https://my.nextdns.io/start
 https://myatris.sbs/dns-query
 https://nl.dns.privex.io
 https://noads.joindns4.eu/dns-query
@@ -301,7 +307,7 @@ https://unfiltered.adguard-dns.com/dns-query
 https://unfiltered.joindns4.eu/dns-query
 https://us01.dns4me.net
 https://us02.dns4me.net
-https://us1.dns.lavate.ch/dns-query,
+https://us1.dns.lavate.ch/dns-query
 https://vie01.dnscry.pt/dns-query
 https://vno01.dnscry.pt/dns-query
 https://waw02.dnscry.pt/dns-query
@@ -316,7 +322,7 @@ https://yyz01.dnscry.pt/dns-query
 https://zero.dns0.eu
 max.rethinkdns.com
 p0.freedns.controld.com
-s
+sandbox.opendns.com
 sdns://AQEAAAAAAAAAD1syNjIwOjA6Y2NjOjoyXSC3NRFAIG8iXT4r2CLX_WkeocM8yNZmjQy-BL-rykP7eRsyLmRuc2NyeXB0LWNlcnQub3BlbmRucy5jb20
 sdns://AQEAAAAAAAAADDE0Ni4xMTIuNDEuNCC3NRFAIG8iXT4r2CLX_WkeocM8yNZmjQy-BL-rykP7eRsyLmRuc2NyeXB0LWNlcnQub3BlbmRucy5jb20
 sdns://AQEAAAAAAAAADjIwOC42Ny4yMjAuMTIzILc1EUAgbyJdPivYItf9aR6hwzzI1maNDL4Ev6vKQ_t5GzIuZG5zY3J5cHQtY2VydC5vcGVuZG5zLmNvbQ
@@ -324,6 +330,8 @@ sdns://AQEAAAAAAAAADjIwOC42Ny4yMjAuMjIwILc1EUAgbyJdPivYItf9aR6hwzzI1maNDL4Ev6vKQ
 sdns://AQEAAAAAAAAAEVsyNjIwOjExOTozNTo6MzVdILc1EUAgbyJdPivYItf9aR6hwzzI1maNDL4Ev6vKQ_t5GzIuZG5zY3J5cHQtY2VydC5vcGVuZG5zLmNvbQ
 sdns://AQIAAAAAAAAAEDEwMy4xNi4xMzEuNzc6NTQgnRNtOLv4IzxEfkbLFOaHa-ncLImdQiP-pS1jaFY5jlUdMi5kbnNjcnlwdC1jZXJ0LnVzZXJzcGFjZS1ibmU
 sdns://AQIAAAAAAAAAEjEwMy4yMzYuMTYyLjExOTo1NCBPr5jCD_2geOTMmS5LgQg_v79pgppTm3vLZhe_oahbgR0yLmRuc2NyeXB0LWNlcnQudXNlcnNwYWNlLW1lbA
+sdns://AQIAAAAAAAAAF1syYTAwOjVhNjA6OjAxOmZmXTo1NDQzIIHQAtNqTKUMRzt0eWUP4S4CsyHLYThWKiCOQD39xV6UIjIuZG5zY3J5cHQuZGVmYXVsdC5uczIuYWRndWFyZC5jb20
+sdns://AQIAAAAAAAAAFlsyYTEwOjUwYzA6OjE6ZmZdOjU0NDMgtehE1rg6Pj4SaOtoH76nDePF-mjb1ogUHb8uwGay2volMi5kbnNjcnlwdC51bmZpbHRlcmVkLm5zMS5hZGd1YXJkLmNvbQ
 sdns://AQIAAAAAAAAAJVsyNDA0Ojk0MDA6MTowOjIxNjozZWZmOmZlZjA6MTgwYV06NTQgnRNtOLv4IzxEfkbLFOaHa-ncLImdQiP-pS1jaFY5jlUdMi5kbnNjcnlwdC1jZXJ0LnVzZXJzcGFjZS1ibmU
 sdns://AQIAAAAAAAAAJVsyNDA0Ojk0MDA6MzowOjIxNjozZWZmOmZlZTA6N2Y2OV06NTQgT6-Ywg_9oHjkzJkuS4EIP7-_aYKaU5t7y2YXv6GoW4EdMi5kbnNjcnlwdC1jZXJ0LnVzZXJzcGFjZS1tZWw
 sdns://AQMAAAAAAAAADDkuOS45Ljk6ODQ0MyBnyEe4yHWM0SAkVUO-dWdG3zTfHYTAC4xHA2jfgh2GPhkyLmRuc2NyeXB0LWNlcnQucXVhZDkubmV0
@@ -810,5 +818,3 @@ sdns://AgcAAAAAAAAAJ1syMDAxOjE5ZjA6OTAwMjpkZTQ6NTQwMDo0ZmY6ZmUwODo3ZGUzXSCaOjT3J
 sdns://AgcAAAAAAAAAJVsyMDAxOjE5ZjA6NTozYmQ3OjU0MDA6NGZmOmZlMDU6ZGE4M10gmjo09yfeubylEAPZzpw5-PJ92cUkKQHCurGkTmNaAhkUa3Jvbm9zLnBsYW45LWRucy5jb20KL2Rucy1xdWVyeQ
 sdns://AgcAAAAAAAAAKFsyMDAxOjE5ZjA6YjQwMDoxZDhjOjU0MDA6NGZmOmZlMTE6YjE1YV0gmjo09yfeubylEAPZzpw5-PJ92cUkKQHCurGkTmNaAhkUaGVsaW9zLnBsYW45LWRucy5jb20KL2Rucy1xdWVyeQ
 unfiltered.adguard-dns.com
-unfiltered.dns.bebasid.com:853
-website
