@@ -31,17 +31,14 @@ function isValidDnsAddress(address) {
     if (typeof address !== 'string' || address.length === 0) return false;
     const addr = address.trim();
 
-    // Check for full URI schemes first
     if (addr.startsWith('https://') || addr.startsWith('tls://') || addr.startsWith('quic://') || addr.startsWith('sdns://')) {
         return true;
     }
     
-    // Check for plain IPs
     if (IPV4_REGEX.test(addr) || IPV6_REGEX.test(addr)) {
         return true;
     }
 
-    // Check for hostnames, which may include a port
     const hostnamePart = addr.split(':')[0];
     if (HOSTNAME_REGEX.test(hostnamePart)) {
         return true;
@@ -82,7 +79,6 @@ function categorizeServers(servers) {
             if (server.features.no_log) sets.no_log.add(cleanedAddress);
             if (server.features.dnssec) sets.dnssec.add(cleanedAddress);
             
-            // Categorize IPs, but only if they are not part of a URI scheme
             if (!cleanedAddress.includes('://')) {
                  if (IPV6_REGEX.test(cleanedAddress)) sets.ipv6.add(cleanedAddress);
                  if (IPV4_REGEX.test(cleanedAddress)) sets.ipv4.add(cleanedAddress);
@@ -142,7 +138,7 @@ async function main() {
         }
     }
     
-    console.log('\n- - - - - - - - - - - - - - - - - - - -');
+    console.log('\n- - - - - - - - - - - - - - - - - را- - - -');
     console.log('\n📊 [تجمیع نهایی] در حال ترکیب و پاک‌سازی تمام داده‌ها...');
     const aggregatedSets = categorizeServers(allServers);
 
@@ -150,7 +146,6 @@ async function main() {
     const plainIPv4s = new Set();
     for(const ip of aggregatedSets.ipv4) {
         if (!encryptedAddresses.has(ip)) {
-            // Check if this IP was ever associated with a "plain" DNS protocol
             const sourceServer = allServers.find(s => s.addresses.includes(ip) && s.protocols.includes('plain'));
             if (sourceServer) {
                 plainIPv4s.add(ip);
