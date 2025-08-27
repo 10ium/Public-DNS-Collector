@@ -21,7 +21,7 @@ const SOURCES = [
     { name: 'Thiagozs', url: 'https://gist.githubusercontent.com/thiagozs/088fd8f8129ca06df524f6711116ee8f/raw/', parser: parsers.parseThiagozs },
 ];
 
-// --- FINAL VALIDATION UTILITY ---
+// --- UTILITY FUNCTIONS ---
 const IPV4_REGEX = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 const IPV6_REGEX = /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/i;
 const HOSTNAME_REGEX = /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9-]*[A-Za-z0-9])$/;
@@ -36,11 +36,48 @@ function isValidDnsAddress(address) {
     return false;
 }
 
+/**
+ * Categorizes a list of server objects into different sets based on their properties.
+ * @param {Array<object>} servers - The list of server objects to categorize.
+ * @returns {object} An object containing sets of categorized addresses.
+ */
+function categorizeServers(servers) {
+    const sets = {
+        all: new Set(), doh: new Set(), dot: new Set(), dnscrypt: new Set(),
+        adblock: new Set(), malware: new Set(), family: new Set(),
+        unfiltered: new Set(), ipv4: new Set(), ipv6: new Set(),
+        no_log: new Set(), dnssec: new Set(),
+    };
+    for (const server of servers) {
+        for (const address of server.addresses) {
+            const cleanedAddress = address.trim();
+            if (!isValidDnsAddress(cleanedAddress)) continue;
+
+            sets.all.add(cleanedAddress);
+            if (server.protocols.includes('doh')) sets.doh.add(cleanedAddress);
+            if (server.protocols.includes('dot')) sets.dot.add(cleanedAddress);
+            if (server.protocols.includes('dnscrypt')) sets.dnscrypt.add(cleanedAddress);
+            if (server.filters.ads) sets.adblock.add(cleanedAddress);
+            if (server.filters.malware) sets.malware.add(cleanedAddress);
+            if (server.filters.family) sets.family.add(cleanedAddress);
+            if (server.filters.unfiltered) sets.unfiltered.add(cleanedAddress);
+            if (server.features.no_log) sets.no_log.add(cleanedAddress);
+            if (server.features.dnssec) sets.dnssec.add(cleanedAddress);
+            if (IPV6_REGEX.test(cleanedAddress)) sets.ipv6.add(cleanedAddress);
+            if (IPV4_REGEX.test(cleanedAddress)) sets.ipv4.add(cleanedAddress);
+        }
+    }
+    return sets;
+}
+
 // --- MAIN EXECUTION ---
 async function main() {
     console.log('🚀 [شروع] فرآیند جمع‌آوری و به‌روزرسانی لیست‌های DNS آغاز شد.');
     let allServers = [];
-    const serversBySource = {};
+    const listFileCounts = {};
+
+    if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
+    if (!fs.existsSync(SOURCES_DIR)) fs.mkdirSync(SOURCES_DIR);
 
     for (const source of SOURCES) {
         console.log(`\n📥 [دریافت] در حال دریافت اطلاعات از منبع: ${source.name}`);
@@ -50,12 +87,26 @@ async function main() {
             try {
                 const parsedServers = await Promise.resolve(source.parser(content));
                 if (!parsedServers || parsedServers.length === 0) {
-                    console.warn(`  ⚠️ [هشدار] هیچ سروری از منبع ${source.name} استخراج نشد. ممکن است ساختار منبع تغییر کرده باشد.`);
-                    console.log(`  🔍 [اشکال‌زدایی] محتوای خام دریافت شده از ${source.name} که منجر به هشدار شد: \n--- BEGIN CONTENT ---\n${typeof content === 'string' ? content.substring(0, 1000) + '...' : JSON.stringify(content)}\n--- END CONTENT ---`);
+                     console.warn(`  ⚠️ [هشدار] هیچ سروری از منبع ${source.name} استخراج نشد.`);
                 } else {
                     allServers.push(...parsedServers);
-                    serversBySource[source.name] = parsedServers;
                     console.log(`  ✅ [موفقیت] تعداد ${parsedServers.length} گروه سرور از ${source.name} با موفقیت استخراج شد.`);
+                    
+                    console.log(`  💾 [نوشتن فایل‌های منبع: ${source.name}] در حال تولید فایل‌های خروجی...`);
+                    const sourceDir = path.join(SOURCES_DIR, source.name);
+                    if (!fs.existsSync(sourceDir)) fs.mkdirSync(sourceDir);
+
+                    const sourceSets = categorizeServers(parsedServers);
+                    for (const [listName, addressSet] of Object.entries(sourceSets)) {
+                        if(addressSet.size > 0) {
+                            const sortedList = Array.from(addressSet).sort();
+                            const fileName = `${listName}.txt`;
+                            listFileCounts[`${source.name}/${fileName}`] = sortedList.length;
+                            const filePath = path.join(sourceDir, fileName);
+                            fs.writeFileSync(filePath, sortedList.join('\n'));
+                            console.log(`    📄 فایل ${filePath} با ${sortedList.length} آدرس نوشته شد.`);
+                        }
+                    }
                 }
             } catch (error) {
                 console.error(`  ❌ [خطای پردازش] تجزیه محتوای ${source.name} با خطای جدی مواجه شد: ${error.message}\n${error.stack}`);
@@ -63,96 +114,33 @@ async function main() {
         }
     }
     
-    console.log(`\n📊 [تجمیع] مجموعاً ${allServers.length} گروه سرور از تمام منابع جمع‌آوری شد.`);
-    console.log('  🧹 [پاک‌سازی] در حال حذف موارد تکراری و دسته‌بندی آدرس‌ها...');
+    console.log('\n- - - - - - - - - - - - - - - - - - - -');
+    console.log('\n📊 [تجمیع نهایی] در حال ترکیب و پاک‌سازی تمام داده‌ها...');
+    const aggregatedSets = categorizeServers(allServers);
 
-    const addressSets = {
-        doh: new Set(), dot: new Set(), dnscrypt: new Set(),
-        adblock: new Set(), malware: new Set(), family: new Set(),
-        unfiltered: new Set(), ipv4: new Set(), ipv6: new Set(),
-        no_log: new Set(), dnssec: new Set(),
-    };
-
-    for (const server of allServers) {
-        for (const address of server.addresses) {
-            const cleanedAddress = address.trim();
-            if (!cleanedAddress) continue;
-            if (server.protocols.includes('doh') && cleanedAddress.startsWith('https://')) addressSets.doh.add(cleanedAddress);
-            if (server.protocols.includes('dot') && !cleanedAddress.startsWith('https://') && !cleanedAddress.startsWith('sdns://')) addressSets.dot.add(cleanedAddress);
-            if (server.protocols.includes('dnscrypt') && cleanedAddress.startsWith('sdns://')) addressSets.dnscrypt.add(cleanedAddress);
-            if (server.protocols.length > 0) {
-                if (server.filters.ads) addressSets.adblock.add(cleanedAddress);
-                if (server.filters.malware) addressSets.malware.add(cleanedAddress);
-                if (server.filters.family) addressSets.family.add(cleanedAddress);
-                if (server.filters.unfiltered) addressSets.unfiltered.add(cleanedAddress);
-            }
-            if (server.features.no_log) addressSets.no_log.add(cleanedAddress);
-            if (server.features.dnssec) addressSets.dnssec.add(cleanedAddress);
-            if (IPV6_REGEX.test(cleanedAddress) || (/:/.test(cleanedAddress) && !cleanedAddress.startsWith('https:'))) addressSets.ipv6.add(cleanedAddress);
-            if (IPV4_REGEX.test(cleanedAddress)) addressSets.ipv4.add(cleanedAddress);
-        }
-    }
-    
-    const encryptedAddresses = new Set([...addressSets.doh, ...addressSets.dot, ...addressSets.dnscrypt]);
+    // Refine the final ipv4 list to ensure it only contains plain DNS servers
+    const encryptedAddresses = new Set([...aggregatedSets.doh, ...aggregatedSets.dot, ...aggregatedSets.dnscrypt]);
     const plainIPv4s = new Set();
-    for(const ip of addressSets.ipv4) {
-        const sourceServer = allServers.find(s => s.addresses.includes(ip));
-        if (sourceServer && sourceServer.protocols.length === 0) {
-            plainIPv4s.add(ip);
-        }
-    }
-    addressSets.ipv4 = plainIPv4s;
-
-    console.log('\n🛡️ [اعتبارسنجی نهایی] در حال اعمال فیلتر نهایی روی تمام لیست‌ها...');
-    for (const listName in addressSets) {
-        const originalArray = Array.from(addressSets[listName]);
-        const validAddresses = new Set();
-        const invalidAddresses = [];
-        originalArray.forEach(address => {
-            if (isValidDnsAddress(address)) {
-                validAddresses.add(address);
-            } else {
-                invalidAddresses.push(address);
+    for(const ip of aggregatedSets.ipv4) {
+        if (!encryptedAddresses.has(ip)) {
+            const sourceServer = allServers.find(s => s.addresses.includes(ip));
+            if (sourceServer && sourceServer.protocols.length === 0) {
+                plainIPv4s.add(ip);
             }
-        });
-        addressSets[listName] = validAddresses;
-        if (invalidAddresses.length > 0) {
-            console.log(`  ✨ [پاک‌سازی] تعداد ${invalidAddresses.length} ورودی نامعتبر از لیست '${listName}.txt' حذف شد:`);
-            invalidAddresses.forEach(invalid => console.log(`    - "${invalid}"`));
         }
     }
-
-    if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
-    if (!fs.existsSync(SOURCES_DIR)) fs.mkdirSync(SOURCES_DIR);
-    
-    const listFileCounts = {};
+    aggregatedSets.ipv4 = plainIPv4s;
 
     console.log('\n💾 [نوشتن فایل‌های تجمیعی] در حال تولید و ذخیره فایل‌های خروجی اصلی...');
-    for (const [listName, addressSet] of Object.entries(addressSets)) {
-        const sortedList = Array.from(addressSet).sort();
-        const fileName = `${listName}.txt`;
-        listFileCounts[fileName] = sortedList.length;
-        const filePath = path.join(OUTPUT_DIR, fileName);
-        fs.writeFileSync(filePath, sortedList.join('\n'));
-        console.log(`  📄 فایل ${filePath} با ${sortedList.length} آدرس منحصر به فرد نوشته شد.`);
-    }
-
-    console.log('\n💾 [نوشتن فایل‌های منبع] در حال تولید فایل‌های خروجی به تفکیک هر منبع...');
-    for (const [sourceName, sourceServers] of Object.entries(serversBySource)) {
-        const sourceAddresses = new Set();
-        for (const server of sourceServers) {
-            for (const address of server.addresses) {
-                 if (isValidDnsAddress(address.trim())) {
-                    sourceAddresses.add(address.trim());
-                 }
-            }
+    for (const [listName, addressSet] of Object.entries(aggregatedSets)) {
+        if(listName !== 'all') { // 'all' is only for per-source, not aggregated
+            const sortedList = Array.from(addressSet).sort();
+            const fileName = `${listName}.txt`;
+            listFileCounts[fileName] = sortedList.length;
+            const filePath = path.join(OUTPUT_DIR, fileName);
+            fs.writeFileSync(filePath, sortedList.join('\n'));
+            console.log(`  📄 فایل ${filePath} با ${sortedList.length} آدرس منحصر به فرد نوشته شد.`);
         }
-        const sortedList = Array.from(sourceAddresses).sort();
-        const fileName = `${sourceName}.txt`;
-        listFileCounts[fileName] = sortedList.length;
-        const filePath = path.join(SOURCES_DIR, fileName);
-        fs.writeFileSync(filePath, sortedList.join('\n'));
-        console.log(`  📄 فایل ${filePath} با ${sortedList.length} آدرس منحصر به فرد نوشته شد.`);
     }
 
     console.log('\n📝 [تولید README] در حال ساخت فایل README.md پویا...');
