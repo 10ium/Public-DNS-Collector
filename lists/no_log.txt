@@ -20,15 +20,6 @@
 8.8.4.4
 8.8.8.8
 9.9.9.9
-AdGuard
-CleanBrowsing
-Control
-D
-DNS
-DSN4EU
-See
-Various
-Wikimedia
 adblock.dns.mullvad.net
 all.dns.mullvad.net
 base.dns.mullvad.net
@@ -370,6 +361,3 @@ sdns://AgcAAAAAAAAAEFsyMDAxOjhiMDo6MjAyM10ADWRucy5hYS5uZXQudWsKL2Rucy1xdWVyeQ
 sdns://AgcAAAAAAAAAEFsyMDAxOjhiMDo6MjAyMl0ADWRucy5hYS5uZXQudWsKL2Rucy1xdWVyeQ
 sdns://AgcAAAAAAAAAG1syNjA2OjQ3MDA6MzAzNjo6YWM0Mzo4NjlkXQASZG9oLWlwdjYuY3J5cHRvLnN4Ci9kbnMtcXVlcnk
 sdns://AgcAAAAAAAAAGlsyNjA2OjQ3MDA6MzAzNzo6NjgxNTo2NGVdABJkb2gtaXB2Ni5jcnlwdG8uc3gKL2Rucy1xdWVyeQ
-see
-the
-website
