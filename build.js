@@ -18,13 +18,33 @@ const SOURCES = [
     { name: 'Thiagozs', url: 'https://gist.githubusercontent.com/thiagozs/088fd8f8129ca06df524f6711116ee8f/raw/', parser: parsers.parseThiagozs },
 ];
 
+// --- FINAL VALIDATION UTILITY ---
+
+const IPV4_REGEX = /^\d{1,3}(\.\d{1,3}){3}$/;
+const IPV6_REGEX = /^(::|([0-9a-fA-F]{1,4}:){1,7}(:[0-9a-fA-F]{1,4}){1}|([0-9a-fA-F]{1,4}:){1,6}(:[0-9a-fA-F]{1,4}){2}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){3}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){4}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){5}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){6}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){7})|(([0-9a-fA-F]{1,4}:){6}(((25[0-5]|(2[0-4]|1?[0-9])?[0-9])\.){3}(25[0-5]|(2[0-4]|1?[0-9])?[0-9]))))$/i;
+const HOSTNAME_REGEX = /^([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,63}$/;
+
+/**
+ * Checks if a given string is a valid DNS address format (URL, Stamp, IP, or Hostname).
+ * @param {string} address The address to validate.
+ * @returns {boolean} True if the address format is valid.
+ */
+function isValidDnsAddress(address) {
+    if (typeof address !== 'string' || address.length === 0) return false;
+    if (address.startsWith('https://')) return true; // DoH
+    if (address.startsWith('sdns://')) return true; // DNSCrypt
+    if (IPV4_REGEX.test(address)) return true;
+    if (IPV6_REGEX.test(address)) return true;
+    if (HOSTNAME_REGEX.test(address)) return true; // DoT / Hostname
+    return false;
+}
+
 // --- MAIN EXECUTION ---
 async function main() {
     console.log('🚀 [شروع] فرآیند جمع‌آوری و به‌روزرسانی لیست‌های DNS آغاز شد.');
     let allServers = [];
-    const serversBySource = {}; // Object to hold servers for each source
+    const serversBySource = {};
 
-    // Step 1 & 2: Fetch and Parse all sources
     for (const source of SOURCES) {
         console.log(`\n📥 [دریافت] در حال دریافت اطلاعات از منبع: ${source.name}`);
         const content = await fetchData(source.url);
@@ -38,7 +58,7 @@ async function main() {
                     console.log(`  🔍 [اشکال‌زدایی] محتوای خام دریافت شده از ${source.name} که منجر به هشدار شد: \n--- BEGIN CONTENT ---\n${typeof content === 'string' ? content.substring(0, 1000) + '...' : JSON.stringify(content)}\n--- END CONTENT ---`);
                 } else {
                     allServers.push(...parsedServers);
-                    serversBySource[source.name] = parsedServers; // Store servers for this source
+                    serversBySource[source.name] = parsedServers;
                     console.log(`  ✅ [موفقیت] تعداد ${parsedServers.length} گروه سرور از ${source.name} با موفقیت استخراج شد.`);
                 }
             } catch (error) {
@@ -50,7 +70,6 @@ async function main() {
     console.log(`\n📊 [تجمیع] مجموعاً ${allServers.length} گروه سرور از تمام منابع جمع‌آوری شد.`);
     console.log('  🧹 [پاک‌سازی] در حال حذف موارد تکراری و دسته‌بندی آدرس‌ها...');
 
-    // Step 3 & 4: Deduplicate, Generate, and Write files
     const addressSets = {
         doh: new Set(), dot: new Set(), dnscrypt: new Set(),
         adblock: new Set(), malware: new Set(), family: new Set(),
@@ -74,7 +93,7 @@ async function main() {
             if (server.features.no_log) addressSets.no_log.add(cleanedAddress);
             if (server.features.dnssec) addressSets.dnssec.add(cleanedAddress);
             if (/:/.test(cleanedAddress) || server.features.ipv6) addressSets.ipv6.add(cleanedAddress);
-            if (/^\d{1,3}(\.\d{1,3}){3}$/.test(cleanedAddress)) addressSets.ipv4.add(cleanedAddress);
+            if (IPV4_REGEX.test(cleanedAddress)) addressSets.ipv4.add(cleanedAddress);
         }
     }
     
@@ -88,12 +107,22 @@ async function main() {
     }
     addressSets.ipv4 = plainIPv4s;
 
-    // --- Step 5: Write Files ---
-    // Ensure output directories exist
+    // --- Final Sanitization Step ---
+    console.log('\n🛡️ [اعتبارسنجی نهایی] در حال اعمال فیلتر نهایی روی تمام لیست‌ها...');
+    for (const listName in addressSets) {
+        const originalSize = addressSets[listName].size;
+        const filteredArray = Array.from(addressSets[listName]).filter(isValidDnsAddress);
+        addressSets[listName] = new Set(filteredArray);
+        const removedCount = originalSize - addressSets[listName].size;
+        if (removedCount > 0) {
+            console.log(`  ✨ [پاک‌سازی] تعداد ${removedCount} ورودی نامعتبر از لیست '${listName}.txt' حذف شد.`);
+        }
+    }
+
+    // --- Write Files ---
     if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
     if (!fs.existsSync(SOURCES_DIR)) fs.mkdirSync(SOURCES_DIR);
     
-    // Write aggregated list files
     console.log('\n💾 [نوشتن فایل‌های تجمیعی] در حال تولید و ذخیره فایل‌های خروجی اصلی...');
     for (const [listName, addressSet] of Object.entries(addressSets)) {
         const sortedList = Array.from(addressSet).sort();
@@ -102,13 +131,14 @@ async function main() {
         console.log(`  📄 فایل ${filePath} با ${sortedList.length} آدرس منحصر به فرد نوشته شد.`);
     }
 
-    // Write per-source files
     console.log('\n💾 [نوشتن فایل‌های منبع] در حال تولید فایل‌های خروجی به تفکیک هر منبع...');
     for (const [sourceName, sourceServers] of Object.entries(serversBySource)) {
         const sourceAddresses = new Set();
         for (const server of sourceServers) {
             for (const address of server.addresses) {
-                sourceAddresses.add(address.trim());
+                 if (isValidDnsAddress(address.trim())) {
+                    sourceAddresses.add(address.trim());
+                 }
             }
         }
         const sortedList = Array.from(sourceAddresses).sort();
