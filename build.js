@@ -26,14 +26,27 @@ const SOURCES = [
 const IPV4_REGEX = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 const IPV6_REGEX = /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/i;
 const HOSTNAME_REGEX = /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9-]*[A-Za-z0-9])$/;
+
 function isValidDnsAddress(address) {
     if (typeof address !== 'string' || address.length === 0) return false;
     const addr = address.trim();
-    if (addr.startsWith('https://')) return true;
-    if (addr.startsWith('sdns://')) return true;
-    if (IPV4_REGEX.test(addr)) return true;
-    if (IPV6_REGEX.test(addr)) return true;
-    if (HOSTNAME_REGEX.test(addr)) return true;
+
+    // Check for full URI schemes first
+    if (addr.startsWith('https://') || addr.startsWith('tls://') || addr.startsWith('quic://') || addr.startsWith('sdns://')) {
+        return true;
+    }
+    
+    // Check for plain IPs
+    if (IPV4_REGEX.test(addr) || IPV6_REGEX.test(addr)) {
+        return true;
+    }
+
+    // Check for hostnames, which may include a port
+    const hostnamePart = addr.split(':')[0];
+    if (HOSTNAME_REGEX.test(hostnamePart)) {
+        return true;
+    }
+    
     return false;
 }
 
@@ -44,7 +57,7 @@ function isValidDnsAddress(address) {
  */
 function categorizeServers(servers) {
     const sets = {
-        all: new Set(), doh: new Set(), dot: new Set(), dnscrypt: new Set(),
+        all: new Set(), doh: new Set(), dot: new Set(), doq: new Set(), dnscrypt: new Set(),
         adblock: new Set(), malware: new Set(), family: new Set(),
         unfiltered: new Set(), ipv4: new Set(), ipv6: new Set(),
         no_log: new Set(), dnssec: new Set(),
@@ -52,11 +65,15 @@ function categorizeServers(servers) {
     for (const server of servers) {
         for (const address of server.addresses) {
             const cleanedAddress = address.trim();
-            if (!isValidDnsAddress(cleanedAddress)) continue;
+            if (!isValidDnsAddress(cleanedAddress)) {
+                // console.warn(`  ⚠️ [هشدار اعتبارسنجی] آدرس نامعتبر نادیده گرفته شد: "${cleanedAddress}"`);
+                continue;
+            }
 
             sets.all.add(cleanedAddress);
             if (server.protocols.includes('doh')) sets.doh.add(cleanedAddress);
             if (server.protocols.includes('dot')) sets.dot.add(cleanedAddress);
+            if (server.protocols.includes('doq')) sets.doq.add(cleanedAddress);
             if (server.protocols.includes('dnscrypt')) sets.dnscrypt.add(cleanedAddress);
             if (server.filters.ads) sets.adblock.add(cleanedAddress);
             if (server.filters.malware) sets.malware.add(cleanedAddress);
@@ -64,8 +81,12 @@ function categorizeServers(servers) {
             if (server.filters.unfiltered) sets.unfiltered.add(cleanedAddress);
             if (server.features.no_log) sets.no_log.add(cleanedAddress);
             if (server.features.dnssec) sets.dnssec.add(cleanedAddress);
-            if (IPV6_REGEX.test(cleanedAddress)) sets.ipv6.add(cleanedAddress);
-            if (IPV4_REGEX.test(cleanedAddress)) sets.ipv4.add(cleanedAddress);
+            
+            // Categorize IPs, but only if they are not part of a URI scheme
+            if (!cleanedAddress.includes('://')) {
+                 if (IPV6_REGEX.test(cleanedAddress)) sets.ipv6.add(cleanedAddress);
+                 if (IPV4_REGEX.test(cleanedAddress)) sets.ipv4.add(cleanedAddress);
+            }
         }
     }
     return sets;
@@ -125,12 +146,13 @@ async function main() {
     console.log('\n📊 [تجمیع نهایی] در حال ترکیب و پاک‌سازی تمام داده‌ها...');
     const aggregatedSets = categorizeServers(allServers);
 
-    const encryptedAddresses = new Set([...aggregatedSets.doh, ...aggregatedSets.dot, ...aggregatedSets.dnscrypt]);
+    const encryptedAddresses = new Set([...aggregatedSets.doh, ...aggregatedSets.dot, ...aggregatedSets.doq, ...aggregatedSets.dnscrypt]);
     const plainIPv4s = new Set();
     for(const ip of aggregatedSets.ipv4) {
         if (!encryptedAddresses.has(ip)) {
-            const sourceServer = allServers.find(s => s.addresses.includes(ip));
-            if (sourceServer && sourceServer.protocols.length === 0) {
+            // Check if this IP was ever associated with a "plain" DNS protocol
+            const sourceServer = allServers.find(s => s.addresses.includes(ip) && s.protocols.includes('plain'));
+            if (sourceServer) {
                 plainIPv4s.add(ip);
             }
         }
