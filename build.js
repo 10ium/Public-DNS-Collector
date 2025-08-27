@@ -19,23 +19,16 @@ const SOURCES = [
 ];
 
 // --- FINAL VALIDATION UTILITY ---
-
 const IPV4_REGEX = /^\d{1,3}(\.\d{1,3}){3}$/;
 const IPV6_REGEX = /^(::|([0-9a-fA-F]{1,4}:){1,7}(:[0-9a-fA-F]{1,4}){1}|([0-9a-fA-F]{1,4}:){1,6}(:[0-9a-fA-F]{1,4}){2}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){3}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){4}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){5}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){6}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){7})|(([0-9a-fA-F]{1,4}:){6}(((25[0-5]|(2[0-4]|1?[0-9])?[0-9])\.){3}(25[0-5]|(2[0-4]|1?[0-9])?[0-9]))))$/i;
 const HOSTNAME_REGEX = /^([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,63}$/;
-
-/**
- * Checks if a given string is a valid DNS address format (URL, Stamp, IP, or Hostname).
- * @param {string} address The address to validate.
- * @returns {boolean} True if the address format is valid.
- */
 function isValidDnsAddress(address) {
     if (typeof address !== 'string' || address.length === 0) return false;
-    if (address.startsWith('https://')) return true; // DoH
-    if (address.startsWith('sdns://')) return true; // DNSCrypt
+    if (address.startsWith('https://')) return true;
+    if (address.startsWith('sdns://')) return true;
     if (IPV4_REGEX.test(address)) return true;
     if (IPV6_REGEX.test(address)) return true;
-    if (HOSTNAME_REGEX.test(address)) return true; // DoT / Hostname
+    if (HOSTNAME_REGEX.test(address)) return true;
     return false;
 }
 
@@ -48,7 +41,6 @@ async function main() {
     for (const source of SOURCES) {
         console.log(`\n📥 [دریافت] در حال دریافت اطلاعات از منبع: ${source.name}`);
         const content = await fetchData(source.url);
-        
         if (content) {
             console.log(`  🔬 [پردازش] در حال تجزیه و تحلیل محتوای دریافت شده از ${source.name}...`);
             try {
@@ -107,19 +99,28 @@ async function main() {
     }
     addressSets.ipv4 = plainIPv4s;
 
-    // --- Final Sanitization Step ---
     console.log('\n🛡️ [اعتبارسنجی نهایی] در حال اعمال فیلتر نهایی روی تمام لیست‌ها...');
     for (const listName in addressSets) {
-        const originalSize = addressSets[listName].size;
-        const filteredArray = Array.from(addressSets[listName]).filter(isValidDnsAddress);
-        addressSets[listName] = new Set(filteredArray);
-        const removedCount = originalSize - addressSets[listName].size;
-        if (removedCount > 0) {
-            console.log(`  ✨ [پاک‌سازی] تعداد ${removedCount} ورودی نامعتبر از لیست '${listName}.txt' حذف شد.`);
+        const originalArray = Array.from(addressSets[listName]);
+        const validAddresses = new Set();
+        const invalidAddresses = [];
+
+        originalArray.forEach(address => {
+            if (isValidDnsAddress(address)) {
+                validAddresses.add(address);
+            } else {
+                invalidAddresses.push(address);
+            }
+        });
+        
+        addressSets[listName] = validAddresses;
+        
+        if (invalidAddresses.length > 0) {
+            console.log(`  ✨ [پاک‌سازی] تعداد ${invalidAddresses.length} ورودی نامعتبر از لیست '${listName}.txt' حذف شد:`);
+            invalidAddresses.forEach(invalid => console.log(`    - "${invalid}"`));
         }
     }
 
-    // --- Write Files ---
     if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
     if (!fs.existsSync(SOURCES_DIR)) fs.mkdirSync(SOURCES_DIR);
     
