@@ -31,7 +31,7 @@
 | `ipv4.txt` | **6788** | لیست سرورهای DNS استاندارد روی IPv4. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/ipv4.txt) |
 | `ipv6.txt` | **41** | لیست تمام آدرس‌های IPv6 موجود. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/ipv6.txt) |
 | `adblock.txt` | **252** | لیست سرورهایی که تبلیغات را مسدود می‌کنند. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/adblock.txt) |
-| `malware.txt` | **226** | لیست سرورهایی که از بدافزار و فیشینگ جلوگیری می‌کنند. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/malware.txt) |
+| `malware.txt` | **227** | لیست سرورهایی که از بدافزار و فیشینگ جلوگیری می‌کنند. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/malware.txt) |
 | `family.txt` | **129** | لیست سرورهایی با فیلترینگ خانواده (محتوای بزرگسالان). | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/family.txt) |
 | `unfiltered.txt` | **7646** | لیست سرورهای بدون فیلترینگ خاص. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/unfiltered.txt) |
 | `no_log.txt` | **363** | لیست سرورهایی که ادعا می‌کنند لاگ کاربران را ذخیره نمی‌کنند. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/no_log.txt) |
@@ -68,7 +68,7 @@
 | `doh.txt` | **49** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Paulmillr/doh.txt) |
 | `dot.txt` | **44** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Paulmillr/dot.txt) |
 | `adblock.txt` | **8** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Paulmillr/adblock.txt) |
-| `malware.txt` | **27** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Paulmillr/malware.txt) |
+| `malware.txt` | **28** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Paulmillr/malware.txt) |
 | `family.txt` | **9** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Paulmillr/family.txt) |
 | `unfiltered.txt` | **18** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Paulmillr/unfiltered.txt) |
 
