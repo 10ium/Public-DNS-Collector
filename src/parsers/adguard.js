@@ -5,8 +5,7 @@ import { createServerObject } from '../utils.js';
  * Parses the content from the AdGuard DNS Providers source.
  * The source is an HTML page with a structured layout.
  * This revised parser creates a separate server object for each protocol entry (table row)
- * to prevent cross-contamination of addresses and protocols.
- * It also robustly detects protocols from address prefixes (e.g., tls://).
+ * and intelligently removes default ports while preserving non-default ones.
  * @param {string} content The raw HTML content.
  * @returns {Array<object>} A list of server objects.
  */
@@ -16,7 +15,7 @@ export function parseAdGuard(content) {
     const document = dom.window.document;
 
     // A more general regex to capture potential address-like strings. Cleanup logic will refine them.
-    const addressRegex = /(https:\/\/[^\s`'"]+)|(tls:\/\/[^\s`'"]+)|(quic:\/\/[^\s`'"]+)|(\b\d{1,3}(\.\d{1,3}){3}\b)|(\[?[0-9a-fA-F:]+:[0-9a-fA-F:.]+\]?)/g;
+    const addressRegex = /(https:\/\/[^\s`'"]+)|(tls:\/\/[^\s`'"]+)|(quic:\/\/[^\s`'"]+)|(\b\d{1,3}(\.\d{1,3}){3}(:\d+)?\b)|(\[?[0-9a-fA-F:]+:[0-9a-fA-F:.]+\]?(:\d+)?)/g;
 
     const mainContent = document.querySelector('.theme-doc-markdown.markdown');
     if (!mainContent) {
@@ -86,7 +85,6 @@ export function parseAdGuard(content) {
                     const foundAddresses = addressCellText.match(addressRegex) || [];
 
                     foundAddresses.forEach(address => {
-                        // Robustly detect protocol from the address prefix itself
                         if (address.startsWith('https://')) {
                             currentProtocols.add('doh');
                         } else if (address.startsWith('tls://')) {
@@ -95,11 +93,19 @@ export function parseAdGuard(content) {
                             currentProtocols.add('doq');
                         }
                         
-                        // Clean up address: remove protocol prefix, brackets, and trailing port
-                        const cleanAddress = address
-                            .replace(/^(https|tls|quic):\/\//, '')
-                            .replace(/:\d+$/, '')
-                            .replace(/[\[\]]/g, '');
+                        let cleanAddress = address;
+
+                        // Conditionally remove default ports based on protocol
+                        if (cleanAddress.startsWith('https://') && cleanAddress.endsWith(':443')) {
+                            cleanAddress = cleanAddress.slice(0, -4); // Remove ":443"
+                        } else if (cleanAddress.startsWith('tls://') && cleanAddress.endsWith(':853')) {
+                            cleanAddress = cleanAddress.slice(0, -4); // Remove ":853"
+                        } else if (cleanAddress.startsWith('quic://') && cleanAddress.endsWith(':853')) {
+                            cleanAddress = cleanAddress.slice(0, -4); // Remove ":853"
+                        }
+                        
+                        // Always remove brackets from IPv6 for standardization
+                        cleanAddress = cleanAddress.replace(/[\[\]]/g, '');
 
                         if (cleanAddress) {
                             currentAddresses.add(cleanAddress);
