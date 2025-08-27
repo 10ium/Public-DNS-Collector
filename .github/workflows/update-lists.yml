@@ -1,0 +1,35 @@
+name: Update DNS Lists
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 1 * * 0' # Runs at 01:00 on Sunday
+
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run build script
+        run: node build.js
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(automation): Update DNS lists"
+          commit_user_name: "GitHub Actions Bot"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          file_pattern: "lists/*.txt"
+          commit_options: '--no-verify'
