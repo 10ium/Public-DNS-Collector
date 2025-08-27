@@ -13,9 +13,6 @@ export function parseDnsPrivacyOrg(content) {
     const document = dom.window.document;
     const providerMap = new Map();
 
-    // Regex to validate if a string is a valid IP (v4/v6) or a hostname
-    const validAddressRegex = /^(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}|^\d{1,3}(\.\d{1,3}){3}$|^([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}$|^([0-9a-fA-F]{1,4}:){1,7}:$|^([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}$|^([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}$|^([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}$|^([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}$|^([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}$|^[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})$|:((:[0-9a-fA-F]{1,4}){1,7}|:)$|^fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}$|^::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])$|^([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])$/;
-
     const getOrCreateServer = (providerName) => {
         const cleanedName = providerName.replace(/'secure'|'insecure'/, '').trim();
         if (!providerMap.has(cleanedName)) {
@@ -34,9 +31,9 @@ export function parseDnsPrivacyOrg(content) {
     
     const allTables = mainContent.querySelectorAll('table');
     allTables.forEach(table => {
-        const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.toLowerCase().replace(/\s+/g, ' '));
+        const headers = Array.from(table.querySelectorAll('thead th, tr.header th')).map(th => th.textContent.toLowerCase().replace(/\s+/g, ' ').trim());
         
-        const isDoTTable = headers.some(h => h.includes('hostname for tls') && h.includes('authentication'));
+        const isDoTTable = headers.some(h => h.includes('hostname for tls'));
         if (isDoTTable) {
             const rows = table.querySelectorAll('tbody tr');
             rows.forEach(row => {
@@ -51,11 +48,8 @@ export function parseDnsPrivacyOrg(content) {
                 const server = getOrCreateServer(providerName);
                 if (!server.protocols.includes('dot')) server.protocols.push('dot');
 
-                const ips = ipsText.split(/\s*or\s*|\s+/).filter(addr => validAddressRegex.test(addr));
-                
-                if (validAddressRegex.test(hostnameText)) {
-                    server.addresses.push(hostnameText);
-                }
+                const ips = ipsText.split(/\s*or\s*|\s+/).filter(Boolean);
+                if (hostnameText) server.addresses.push(hostnameText);
                 server.addresses.push(...ips);
                 
                 const notes = cells[5].textContent.toLowerCase();
@@ -74,7 +68,6 @@ export function parseDnsPrivacyOrg(content) {
                 if (cells.length < 2) return;
                 const providerName = cells[0].textContent.trim();
                 const urlText = cells[1].textContent.trim();
-
                 if (!providerName || urlText.toLowerCase().includes('various')) return;
 
                 const server = getOrCreateServer(providerName);
@@ -92,14 +85,10 @@ export function parseDnsPrivacyOrg(content) {
     for (const server of providerMap.values()) {
         server.addresses = [...new Set(server.addresses.filter(Boolean))];
         server.protocols = [...new Set(server.protocols)];
-        if (!server.filters.ads && !server.filters.malware && !server.filters.family) {
-            server.filters.unfiltered = true;
-        }
+        if (!server.filters.ads && !server.filters.malware && !server.filters.family) server.filters.unfiltered = true;
         server.features.dnssec = true;
         server.features.no_log = true;
-        if (server.addresses.length > 0) {
-            servers.push(server);
-        }
+        if (server.addresses.length > 0) servers.push(server);
     }
 
     return servers;
