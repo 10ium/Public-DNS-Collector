@@ -1,0 +1,2 @@
+dns.adguard.com
+dns.quad9.net

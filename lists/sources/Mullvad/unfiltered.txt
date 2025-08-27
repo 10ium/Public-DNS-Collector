@@ -1,0 +1,4 @@
+194.242.2.2
+2a07:e340::2
+dns.mullvad.net
+https://dns.mullvad.net/dns-query

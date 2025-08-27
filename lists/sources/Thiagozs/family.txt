@@ -1,0 +1,3 @@
+https://dns-family.adguard.com/dns-query
+https://dns.adguard.com/dns-query
+https://doh.cleanbrowsing.org/doh/family-filter/

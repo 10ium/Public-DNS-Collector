@@ -1,0 +1,12 @@
+https://de.adhole.org/dns-query
+https://dns-family.adguard.com/dns-query
+https://dns-nyc.aaflalo.me/dns-query
+https://dns.adguard.com/dns-query
+https://dns.arapurayil.com/dns-query
+https://dns.doh.my.id/dns-query
+https://dns.edgy.network/dns-query
+https://example.doh.blockerdns.com/dns-query
+https://sg.adhole.org/dns-query
+https://uk.adhole.org/dns-query
+https://us-central.adhole.org/dns-query
+https://us-east.adhole.org/dns-query

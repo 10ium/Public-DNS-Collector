@@ -1,0 +1,4 @@
+1.1.1.1
+dns.adguard.com
+dns.google
+dns.quad9.net
