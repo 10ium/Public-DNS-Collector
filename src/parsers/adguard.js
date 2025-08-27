@@ -3,7 +3,7 @@ import { createServerObject } from '../utils.js';
 
 /**
  * Parses the content from the AdGuard DNS Providers source.
- * The source is an HTML page with structured tables.
+ * The source is an HTML page with a structured layout.
  * @param {string} content The raw HTML content.
  * @returns {Array<object>} A list of server objects.
  */
@@ -12,28 +12,28 @@ export function parseAdGuard(content) {
     const dom = new JSDOM(content);
     const document = dom.window.document;
 
-    // Find all provider sections, which are typically marked by <h2> or similar headers
-    const providerHeaders = document.querySelectorAll('h2, h3');
+    // Target the main content container which holds all the provider information
+    const mainContent = document.querySelector('.theme-doc-markdown.markdown');
+    if (!mainContent) {
+        console.warn('  ⚠️ [AdGuard Parser] کانتینر اصلی محتوا (.theme-doc-markdown) پیدا نشد.');
+        return [];
+    }
+    
+    // Get all H3 elements, which represent the start of a provider's section
+    const providerHeaders = mainContent.querySelectorAll('h3');
 
-    providerHeaders.forEach(header => {
-        // Skip irrelevant headers
-        if (header.textContent.toLowerCase().includes('quick links') || header.textContent.toLowerCase().includes('known dns providers')) {
-            return;
-        }
-
-        const providerName = header.textContent.trim().replace(' DNS', '');
-        let nextElement = header.nextElementSibling;
+    providerHeaders.forEach(providerHeader => {
+        const providerName = providerHeader.textContent.trim().replace(/ DNS$/, '');
+        let currentElement = providerHeader.nextElementSibling;
         
-        while (nextElement) {
-            // Stop when we hit the next provider header
-            if (nextElement.tagName === 'H2' || nextElement.tagName === 'H3') {
-                break;
-            }
-
-            // Find sub-sections for different filter types (e.g., Default, Family Protection)
-            if (nextElement.tagName === 'H3' || nextElement.tagName === 'H4') {
-                const filterType = nextElement.textContent.toLowerCase();
-                let table = nextElement.nextElementSibling;
+        // Process elements only until the next provider header (H3) or end of content
+        while (currentElement && currentElement.tagName !== 'H3') {
+            // H4 tags define the filter type (e.g., Default, Family Protection)
+            if (currentElement.tagName === 'H4') {
+                const filterType = currentElement.textContent.toLowerCase();
+                
+                // Find the table associated with this filter type
+                let table = currentElement.nextElementSibling;
                 while (table && table.tagName !== 'TABLE') {
                     table = table.nextElementSibling;
                 }
@@ -42,9 +42,9 @@ export function parseAdGuard(content) {
                     const server = createServerObject();
                     server.provider = providerName;
 
-                    // Set filters based on sub-section title
+                    // Set filters based on the H4 title
                     if (filterType.includes('family')) server.filters.family = true;
-                    if (filterType.includes('default') || filterType.includes('malware') || filterType.includes('ad blocking') || filterType.includes('standard')) {
+                    if (filterType.includes('default') || filterType.includes('malware') || filterType.includes('ad blocking') || filterType.includes('standard') || filterType.includes('security')) {
                         server.filters.ads = true;
                         server.filters.malware = true;
                     }
@@ -58,10 +58,10 @@ export function parseAdGuard(content) {
                         if (cells.length < 2) return;
                         
                         const protocolText = cells[0].textContent.toLowerCase();
-                        const addressText = cells[1].textContent;
+                        const addressCell = cells[1];
                         
-                        // Extract multiple addresses if present (e.g., "94.140.14.14 and 94.140.15.15")
-                        const addresses = addressText.split(/and|,|\s+/).map(a => a.trim()).filter(Boolean);
+                        // Extract addresses, which are inside `<code>` tags
+                        const addresses = Array.from(addressCell.querySelectorAll('code')).map(c => c.textContent.trim());
 
                         addresses.forEach(address => {
                             if (protocolText.includes('dns-over-https')) {
@@ -71,44 +71,29 @@ export function parseAdGuard(content) {
                                 server.protocols.push('dot');
                                 server.addresses.push(address.replace('tls://', ''));
                             } else if (protocolText.includes('dnscrypt')) {
-                                // Extract provider name from DNSCrypt string
-                                const providerMatch = addressText.match(/Provider:\s*([^\s]+)/);
-                                if (providerMatch) {
+                                // For DNSCrypt, we extract the SDNS stamp from the link's href
+                                const sdnstamp = row.querySelector('a[href^="sdns://"]');
+                                if (sdnstamp) {
                                     server.protocols.push('dnscrypt');
-                                    // We can't use the provider name as an address,
-                                    // but this confirms the protocol. Other sources will provide the stamp.
+                                    server.addresses.push(sdnstamp.href);
                                 }
-                            } else if (protocolText.includes('dns, ipv4')) {
-                                // Plain DNS, will be categorized by the main script
+                            } else if (protocolText.includes('dns, ipv4') || protocolText.includes('dns, ipv6')) {
+                                // We also collect plain DNS addresses
+                                server.addresses.push(address);
                             }
                         });
                     });
 
-                    // To avoid duplicates, we add one server object per filter type
                     if (server.addresses.length > 0) {
-                         // A single server group can have multiple addresses for different protocols.
-                         // We create one server object and push all addresses into it.
-                         let existingServer = servers.find(s => s.provider === server.provider && JSON.stringify(s.filters) === JSON.stringify(server.filters));
-                         if (existingServer) {
-                             existingServer.addresses.push(...server.addresses);
-                             existingServer.protocols = [...new Set([...existingServer.protocols, ...server.protocols])];
-                         } else if (server.addresses.length > 0) {
-                             servers.push(server);
-                         }
+                        server.addresses = [...new Set(server.addresses)];
+                        server.protocols = [...new Set(server.protocols)];
+                        servers.push(server);
                     }
                 }
             }
-            nextElement = nextElement.nextElementSibling;
+            currentElement = currentElement.nextElementSibling;
         }
     });
-    
-    // Manual merge for AdGuard DNS as it is split into 3 sections
-    const adguardDefault = servers.find(s => s.provider === "AdGuard" && s.filters.ads && !s.filters.family);
-    const adguardFamily = servers.find(s => s.provider === "AdGuard" && s.filters.family);
-    const adguardUnfiltered = servers.find(s => s.provider === "AdGuard" && s.filters.unfiltered);
 
-    // This logic is complex and better handled by individual parsers. Let's simplify.
-    // The main loop already creates separate objects which is fine.
-
-    return servers.filter(s => s.addresses.length > 0);
+    return servers;
 }
