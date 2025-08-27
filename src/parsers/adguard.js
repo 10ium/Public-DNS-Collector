@@ -12,6 +12,9 @@ export function parseAdGuard(content) {
     const dom = new JSDOM(content);
     const document = dom.window.document;
 
+    // Regex to strictly match valid addresses within the text
+    const addressRegex = /(https:\/\/[^\s`]+)|(tls:\/\/[^\s`]+)|(quic:\/\/[^\s`]+)|(\b\d{1,3}(\.\d{1,3}){3}\b)|(\b[0-9a-fA-F:]+::[0-9a-fA-F:]{0,}\b)/g;
+
     const mainContent = document.querySelector('.theme-doc-markdown.markdown');
     if (!mainContent) {
         return [];
@@ -52,8 +55,7 @@ export function parseAdGuard(content) {
                         const protocolText = cells[0].textContent.toLowerCase();
                         const addressCellText = cells[1].textContent;
                         
-                        // Final Correction: Extract addresses using regex to be more precise and avoid garbage text.
-                        const foundAddresses = addressCellText.match(/(https:\/\/[^\s`]+)|(tls:\/\/[^\s`]+)|(quic:\/\/[^\s`]+)|(\d{1,3}(\.\d{1,3}){3})|([0-9a-fA-F:]+::[0-9a-fA-F:]*)/g) || [];
+                        const foundAddresses = addressCellText.match(addressRegex) || [];
 
                         foundAddresses.forEach(address => {
                             if (protocolText.includes('dns-over-https')) server.protocols.push('doh');
@@ -63,7 +65,6 @@ export function parseAdGuard(content) {
                             server.addresses.push(address.replace(/tls:\/\/|quic:\/\//, '').replace(/:\d+$/, ''));
                         });
                         
-                        // Special handling for DNSCrypt stamps which are in hrefs
                         if (protocolText.includes('dnscrypt')) {
                             const sdnstamp = row.querySelector('a[href^="sdns://"]');
                             if (sdnstamp) {
