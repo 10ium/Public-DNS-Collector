@@ -2,10 +2,13 @@ import fs from 'fs';
 import path from 'path';
 import { fetchData } from './src/utils.js';
 import * as parsers from './src/parsers/index.js';
+import { generateReadme, writeReadme } from './src/readme-generator.js';
 
 // --- CONFIGURATION ---
 const OUTPUT_DIR = 'lists';
 const SOURCES_DIR = path.join(OUTPUT_DIR, 'sources');
+const GITHUB_REPO_URL = `https://github.com/${process.env.GITHUB_REPOSITORY}`;
+
 const SOURCES = [
     { name: 'DNSCrypt', url: 'https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/refs/heads/master/v3/public-resolvers.md', parser: parsers.parseDNSCrypt },
     { name: 'Paulmillr', url: 'https://raw.githubusercontent.com/paulmillr/encrypted-dns/refs/heads/master/README.md', parser: parsers.parsePaulmillr },
@@ -20,15 +23,8 @@ const SOURCES = [
 
 // --- FINAL VALIDATION UTILITY ---
 const IPV4_REGEX = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
-// A more comprehensive IPv6 regex that handles various shortened formats
 const IPV6_REGEX = /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/i;
 const HOSTNAME_REGEX = /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9-]*[A-Za-z0-9])$/;
-
-/**
- * Checks if a given string is a valid DNS address format (URL, Stamp, IP, or Hostname).
- * @param {string} address The address to validate.
- * @returns {boolean} True if the address format is valid.
- */
 function isValidDnsAddress(address) {
     if (typeof address !== 'string' || address.length === 0) return false;
     const addr = address.trim();
@@ -129,10 +125,14 @@ async function main() {
     if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
     if (!fs.existsSync(SOURCES_DIR)) fs.mkdirSync(SOURCES_DIR);
     
+    const listFileCounts = {};
+
     console.log('\n💾 [نوشتن فایل‌های تجمیعی] در حال تولید و ذخیره فایل‌های خروجی اصلی...');
     for (const [listName, addressSet] of Object.entries(addressSets)) {
         const sortedList = Array.from(addressSet).sort();
-        const filePath = path.join(OUTPUT_DIR, `${listName}.txt`);
+        const fileName = `${listName}.txt`;
+        listFileCounts[fileName] = sortedList.length;
+        const filePath = path.join(OUTPUT_DIR, fileName);
         fs.writeFileSync(filePath, sortedList.join('\n'));
         console.log(`  📄 فایل ${filePath} با ${sortedList.length} آدرس منحصر به فرد نوشته شد.`);
     }
@@ -148,10 +148,16 @@ async function main() {
             }
         }
         const sortedList = Array.from(sourceAddresses).sort();
-        const filePath = path.join(SOURCES_DIR, `${sourceName}.txt`);
+        const fileName = `${sourceName}.txt`;
+        listFileCounts[fileName] = sortedList.length;
+        const filePath = path.join(SOURCES_DIR, fileName);
         fs.writeFileSync(filePath, sortedList.join('\n'));
         console.log(`  📄 فایل ${filePath} با ${sortedList.length} آدرس منحصر به فرد نوشته شد.`);
     }
+
+    console.log('\n📝 [تولید README] در حال ساخت فایل README.md پویا...');
+    const readmeContent = generateReadme(SOURCES, GITHUB_REPO_URL, listFileCounts);
+    writeReadme(readmeContent);
 
     console.log('\n🎉 [پایان] فرآیند با موفقیت به اتمام رسید.');
 }
