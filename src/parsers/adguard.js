@@ -6,6 +6,7 @@ import { createServerObject } from '../utils.js';
  * The source is an HTML page with a structured layout.
  * This revised parser creates a separate server object for each protocol entry (table row)
  * to prevent cross-contamination of addresses and protocols.
+ * It also robustly detects protocols from address prefixes (e.g., tls://).
  * @param {string} content The raw HTML content.
  * @returns {Array<object>} A list of server objects.
  */
@@ -14,8 +15,8 @@ export function parseAdGuard(content) {
     const dom = new JSDOM(content);
     const document = dom.window.document;
 
-    // Regex to strictly match valid addresses within the text
-    const addressRegex = /(https:\/\/[^\s`]+)|(tls:\/\/[^\s`]+)|(quic:\/\/[^\s`]+)|(\b\d{1,3}(\.\d{1,3}){3}\b)|(\b[0-9a-fA-F:]*:[0-9a-fA-F:.]+\b)/g;
+    // A more general regex to capture potential address-like strings. Cleanup logic will refine them.
+    const addressRegex = /(https:\/\/[^\s`'"]+)|(tls:\/\/[^\s`'"]+)|(quic:\/\/[^\s`'"]+)|(\b\d{1,3}(\.\d{1,3}){3}\b)|(\[?[0-9a-fA-F:]+:[0-9a-fA-F:.]+\]?)/g;
 
     const mainContent = document.querySelector('.theme-doc-markdown.markdown');
     if (!mainContent) {
@@ -41,11 +42,9 @@ export function parseAdGuard(content) {
                     const cells = row.querySelectorAll('td');
                     if (cells.length < 2) return;
 
-                    // Create a new server object for each row to ensure data isolation
                     const server = createServerObject();
                     server.provider = providerName;
 
-                    // --- Advanced Filter Logic ---
                     const ft = lastFilterType;
                     if (ft.includes('family') || ft.includes('adult content')) {
                         server.filters.family = true;
@@ -60,7 +59,6 @@ export function parseAdGuard(content) {
                         server.filters.ads = true;
                         server.filters.malware = true;
                     } else if (ft.includes('standard')) {
-                        // Handle ambiguity of "standard" keyword
                         if (providerName.toLowerCase() === 'cloudflare') {
                             server.filters.unfiltered = true;
                         } else {
@@ -74,7 +72,6 @@ export function parseAdGuard(content) {
                         server.filters.unfiltered = true;
                     }
 
-                    // --- Protocol and Address Extraction for the current row ---
                     const protocolText = cells[0].textContent.toLowerCase();
                     const addressCellText = cells[1].textContent;
                     
@@ -87,8 +84,26 @@ export function parseAdGuard(content) {
                     
                     const currentAddresses = new Set();
                     const foundAddresses = addressCellText.match(addressRegex) || [];
+
                     foundAddresses.forEach(address => {
-                        currentAddresses.add(address.replace(/^(tls|quic):\/\//, ''));
+                        // Robustly detect protocol from the address prefix itself
+                        if (address.startsWith('https://')) {
+                            currentProtocols.add('doh');
+                        } else if (address.startsWith('tls://')) {
+                            currentProtocols.add('dot');
+                        } else if (address.startsWith('quic://')) {
+                            currentProtocols.add('doq');
+                        }
+                        
+                        // Clean up address: remove protocol prefix, brackets, and trailing port
+                        const cleanAddress = address
+                            .replace(/^(https|tls|quic):\/\//, '')
+                            .replace(/:\d+$/, '')
+                            .replace(/[\[\]]/g, '');
+
+                        if (cleanAddress) {
+                            currentAddresses.add(cleanAddress);
+                        }
                     });
 
                     const sdnstamp = row.querySelector('a[href^="sdns://"]');
