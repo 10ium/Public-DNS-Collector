@@ -1,0 +1,6 @@
+https://dns.mullvad.net/adblock.json
+https://dns.mullvad.net/all.json
+https://dns.mullvad.net/base.json
+https://dns.mullvad.net/dns.json
+https://dns.mullvad.net/extended.json
+https://dns.mullvad.net/family.json

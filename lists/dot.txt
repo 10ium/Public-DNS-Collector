@@ -1,0 +1,18 @@
+:------------------:
+AS13238
+AS13335
+AS15169
+AS19281
+AS199524
+AS36692
+AS41740
+AS43832
+ASn
+Political Region
+US
+adblock.dns.mullvad.net
+all.dns.mullvad.net
+base.dns.mullvad.net
+dns.mullvad.net
+extended.dns.mullvad.net
+family.dns.mullvad.net
