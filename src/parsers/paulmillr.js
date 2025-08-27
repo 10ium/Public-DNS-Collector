@@ -3,7 +3,7 @@ import { fetchData } from '../utils.js';
 
 /**
  * Parses the structured JSON data for each provider from the paulmillr/encrypted-dns source.
- * This is an async parser that fetches a list of provider JSON files and then processes each one.
+ * This is the definitive, async parser that fetches a list of provider JSON files and processes each one.
  * @returns {Promise<Array<object>>} A list of server objects.
  */
 export async function parsePaulmillr() {
@@ -28,7 +28,7 @@ export async function parsePaulmillr() {
             const server = createServerObject();
             server.provider = providerData.names?.en || providerData.name || 'Unknown';
 
-            // --- Final Corrected Logic: Extract ONLY the ServerURLOrName ---
+            // --- Corrected Logic: Extract ONLY the ServerURLOrName ---
             if (providerData.https && providerData.https.ServerURLOrName) {
                 server.protocols.push('doh');
                 server.addresses.push(providerData.https.ServerURLOrName);
@@ -38,23 +38,25 @@ export async function parsePaulmillr() {
                 server.addresses.push(providerData.tls.ServerURLOrName);
             }
             
-            // Infer filtering from censorship and notes
+            // --- Corrected Logic for Filtering ---
             const notes = (providerData.notes?.en || '').toLowerCase();
             if (providerData.censorship === false) {
                 server.filters.unfiltered = true;
-            } else {
+            } else { // censorship is true or undefined
                 if (notes.includes('malware') || server.provider.toLowerCase().includes('security') || server.provider.toLowerCase().includes('protected')) {
                     server.filters.malware = true;
                 }
-                if (notes.includes('ads') || server.provider.toLowerCase().includes('adblock')) {
+                if (notes.includes('ads') || server.provider.toLowerCase().includes('adblock') || notes.includes('tracking')) {
                     server.filters.ads = true;
                 }
-                if (notes.includes('adult') || server.provider.toLowerCase().includes('family')) {
+                if (notes.includes('adult content') || server.provider.toLowerCase().includes('family')) {
                     server.filters.family = true;
                 }
                 
+                // If censorship is true but no specific category is found, assume it's a general ad/malware filter
                 if (providerData.censorship === true && !server.filters.malware && !server.filters.ads && !server.filters.family) {
-                    server.filters.ads = true; // General fallback for "censorship=true"
+                    server.filters.ads = true;
+                    server.filters.malware = true;
                 }
             }
 
@@ -72,5 +74,5 @@ export async function parsePaulmillr() {
     });
 
     const results = await Promise.all(promises);
-    return results.filter(Boolean);
+    return results.filter(Boolean); // Filter out any null results from failed fetches/parses
 }
