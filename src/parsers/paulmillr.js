@@ -28,7 +28,7 @@ export async function parsePaulmillr() {
             const server = createServerObject();
             server.provider = providerData.names?.en || providerData.name || 'Unknown';
 
-            // --- Corrected Logic: Extract ONLY the ServerURLOrName ---
+            // --- Final Corrected Logic: Extract ONLY the ServerURLOrName ---
             if (providerData.https && providerData.https.ServerURLOrName) {
                 server.protocols.push('doh');
                 server.addresses.push(providerData.https.ServerURLOrName);
