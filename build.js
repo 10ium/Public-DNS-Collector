@@ -11,7 +11,8 @@ const GITHUB_REPO_URL = `https://github.com/${process.env.GITHUB_REPOSITORY}`;
 
 const SOURCES = [
     { name: 'DNSCrypt', url: 'https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/refs/heads/master/v3/public-resolvers.md', parser: parsers.parseDNSCrypt },
-    { name: 'Paulmillr', url: 'https://raw.githubusercontent.com/paulmillr/encrypted-dns/refs/heads/master/README.md', parser: parsers.parsePaulmillr },
+    // Paulmillr parser is now self-fetching, so URL is null.
+    { name: 'Paulmillr', url: null, parser: parsers.parsePaulmillr },
     { name: 'Blacklantern', url: 'https://raw.githubusercontent.com/blacklanternsecurity/public-dns-servers/refs/heads/master/nameservers.txt', parser: parsers.parseBlacklantern },
     { name: 'MutinSA', url: 'https://gist.githubusercontent.com/mutin-sa/5dcbd35ee436eb629db7872581093bc5/raw/', parser: parsers.parseMutinSA },
     { name: 'AdGuard', url: 'https://adguard-dns.io/kb/general/dns-providers/', parser: parsers.parseAdGuard },
@@ -21,7 +22,7 @@ const SOURCES = [
     { name: 'Thiagozs', url: 'https://gist.githubusercontent.com/thiagozs/088fd8f8129ca06df524f6711116ee8f/raw/', parser: parsers.parseThiagozs },
 ];
 
-// --- UTILITY FUNCTIONS ---
+// --- FINAL VALIDATION UTILITY ---
 const IPV4_REGEX = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 const IPV6_REGEX = /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/i;
 const HOSTNAME_REGEX = /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9-]*[A-Za-z0-9])$/;
@@ -80,9 +81,15 @@ async function main() {
     if (!fs.existsSync(SOURCES_DIR)) fs.mkdirSync(SOURCES_DIR);
 
     for (const source of SOURCES) {
-        console.log(`\n📥 [دریافت] در حال دریافت اطلاعات از منبع: ${source.name}`);
-        const content = await fetchData(source.url);
-        if (content) {
+        let content = null;
+        if (source.url) {
+            console.log(`\n📥 [دریافت] در حال دریافت اطلاعات از منبع: ${source.name}`);
+            content = await fetchData(source.url);
+        } else {
+            console.log(`\n📥 [شروع پردازشگر خود-واکشی] منبع: ${source.name}`);
+        }
+        
+        if (content !== null || source.url === null) {
             console.log(`  🔬 [پردازش] در حال تجزیه و تحلیل محتوای دریافت شده از ${source.name}...`);
             try {
                 const parsedServers = await Promise.resolve(source.parser(content));
@@ -118,7 +125,6 @@ async function main() {
     console.log('\n📊 [تجمیع نهایی] در حال ترکیب و پاک‌سازی تمام داده‌ها...');
     const aggregatedSets = categorizeServers(allServers);
 
-    // Refine the final ipv4 list to ensure it only contains plain DNS servers
     const encryptedAddresses = new Set([...aggregatedSets.doh, ...aggregatedSets.dot, ...aggregatedSets.dnscrypt]);
     const plainIPv4s = new Set();
     for(const ip of aggregatedSets.ipv4) {
@@ -133,7 +139,7 @@ async function main() {
 
     console.log('\n💾 [نوشتن فایل‌های تجمیعی] در حال تولید و ذخیره فایل‌های خروجی اصلی...');
     for (const [listName, addressSet] of Object.entries(aggregatedSets)) {
-        if(listName !== 'all') { // 'all' is only for per-source, not aggregated
+        if(listName !== 'all') {
             const sortedList = Array.from(addressSet).sort();
             const fileName = `${listName}.txt`;
             listFileCounts[fileName] = sortedList.length;
