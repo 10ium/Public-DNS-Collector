@@ -19,16 +19,24 @@ const SOURCES = [
 ];
 
 // --- FINAL VALIDATION UTILITY ---
-const IPV4_REGEX = /^\d{1,3}(\.\d{1,3}){3}$/;
-const IPV6_REGEX = /^(::|([0-9a-fA-F]{1,4}:){1,7}(:[0-9a-fA-F]{1,4}){1}|([0-9a-fA-F]{1,4}:){1,6}(:[0-9a-fA-F]{1,4}){2}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){3}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){4}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){5}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){6}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){7})|(([0-9a-fA-F]{1,4}:){6}(((25[0-5]|(2[0-4]|1?[0-9])?[0-9])\.){3}(25[0-5]|(2[0-4]|1?[0-9])?[0-9]))))$/i;
-const HOSTNAME_REGEX = /^([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,63}$/;
+const IPV4_REGEX = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+// A more comprehensive IPv6 regex that handles various shortened formats
+const IPV6_REGEX = /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/i;
+const HOSTNAME_REGEX = /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9-]*[A-Za-z0-9])$/;
+
+/**
+ * Checks if a given string is a valid DNS address format (URL, Stamp, IP, or Hostname).
+ * @param {string} address The address to validate.
+ * @returns {boolean} True if the address format is valid.
+ */
 function isValidDnsAddress(address) {
     if (typeof address !== 'string' || address.length === 0) return false;
-    if (address.startsWith('https://')) return true;
-    if (address.startsWith('sdns://')) return true;
-    if (IPV4_REGEX.test(address)) return true;
-    if (IPV6_REGEX.test(address)) return true;
-    if (HOSTNAME_REGEX.test(address)) return true;
+    const addr = address.trim();
+    if (addr.startsWith('https://')) return true;
+    if (addr.startsWith('sdns://')) return true;
+    if (IPV4_REGEX.test(addr)) return true;
+    if (IPV6_REGEX.test(addr)) return true;
+    if (HOSTNAME_REGEX.test(addr)) return true;
     return false;
 }
 
@@ -45,7 +53,7 @@ async function main() {
             console.log(`  🔬 [پردازش] در حال تجزیه و تحلیل محتوای دریافت شده از ${source.name}...`);
             try {
                 const parsedServers = await Promise.resolve(source.parser(content));
-                if (parsedServers.length === 0) {
+                if (!parsedServers || parsedServers.length === 0) {
                     console.warn(`  ⚠️ [هشدار] هیچ سروری از منبع ${source.name} استخراج نشد. ممکن است ساختار منبع تغییر کرده باشد.`);
                     console.log(`  🔍 [اشکال‌زدایی] محتوای خام دریافت شده از ${source.name} که منجر به هشدار شد: \n--- BEGIN CONTENT ---\n${typeof content === 'string' ? content.substring(0, 1000) + '...' : JSON.stringify(content)}\n--- END CONTENT ---`);
                 } else {
@@ -84,7 +92,7 @@ async function main() {
             }
             if (server.features.no_log) addressSets.no_log.add(cleanedAddress);
             if (server.features.dnssec) addressSets.dnssec.add(cleanedAddress);
-            if (/:/.test(cleanedAddress) || server.features.ipv6) addressSets.ipv6.add(cleanedAddress);
+            if (IPV6_REGEX.test(cleanedAddress) || (/:/.test(cleanedAddress) && !cleanedAddress.startsWith('https:'))) addressSets.ipv6.add(cleanedAddress);
             if (IPV4_REGEX.test(cleanedAddress)) addressSets.ipv4.add(cleanedAddress);
         }
     }
@@ -104,7 +112,6 @@ async function main() {
         const originalArray = Array.from(addressSets[listName]);
         const validAddresses = new Set();
         const invalidAddresses = [];
-
         originalArray.forEach(address => {
             if (isValidDnsAddress(address)) {
                 validAddresses.add(address);
@@ -112,9 +119,7 @@ async function main() {
                 invalidAddresses.push(address);
             }
         });
-        
         addressSets[listName] = validAddresses;
-        
         if (invalidAddresses.length > 0) {
             console.log(`  ✨ [پاک‌سازی] تعداد ${invalidAddresses.length} ورودی نامعتبر از لیست '${listName}.txt' حذف شد:`);
             invalidAddresses.forEach(invalid => console.log(`    - "${invalid}"`));
