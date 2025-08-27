@@ -5,6 +5,7 @@ import * as parsers from './src/parsers/index.js';
 
 // --- CONFIGURATION ---
 const OUTPUT_DIR = 'lists';
+// The master list of sources, now pointing to their respective modular parsers.
 const SOURCES = [
     { name: 'DNSCrypt', url: 'https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/refs/heads/master/v3/public-resolvers.md', parser: parsers.parseDNSCrypt },
     { name: 'Paulmillr', url: 'https://raw.githubusercontent.com/paulmillr/encrypted-dns/refs/heads/master/README.md', parser: parsers.parsePaulmillr },
@@ -13,7 +14,7 @@ const SOURCES = [
     { name: 'AdGuard', url: 'https://adguard-dns.io/kb/general/dns-providers/', parser: parsers.parseAdGuard },
     { name: 'Mullvad', url: 'https://mullvad.net/en/help/dns-over-https-and-dns-over-tls', parser: parsers.parseMullvad },
     { name: 'DNSPrivacyOrg', url: 'https://dnsprivacy.org/public_resolvers/', parser: parsers.parseDnsPrivacyOrg },
-    { name: 'Curl', url: 'https://raw.githubusercontent.com/curl/curl/master/docs/DNS-over-HTTPS.md', parser: parsers.parseCurl },
+    { name: 'Curl', url: 'https://raw.githubusercontent.com/wiki/curl/curl/DNS-over-HTTPS.md', parser: parsers.parseCurl },
     { name: 'Thiagozs', url: 'https://gist.githubusercontent.com/thiagozs/088fd8f8129ca06df524f6711116ee8f/raw/', parser: parsers.parseThiagozs },
 ];
 
@@ -22,7 +23,7 @@ async function main() {
     console.log('🚀 [شروع] فرآیند جمع‌آوری و به‌روزرسانی لیست‌های DNS آغاز شد.');
     let allServers = [];
 
-    // Step 1 & 2: Fetch and Parse all sources
+    // Step 1 & 2: Fetch and Parse all sources by iterating through the configuration
     for (const source of SOURCES) {
         console.log(`\n📥 [دریافت] در حال دریافت اطلاعات از منبع: ${source.name}`);
         const content = await fetchData(source.url);
@@ -30,6 +31,7 @@ async function main() {
         if (content) {
             console.log(`  🔬 [پردازش] در حال تجزیه و تحلیل محتوای دریافت شده از ${source.name}...`);
             try {
+                // Await the parser, wrapping with Promise.resolve to handle both sync/async parsers
                 const parsedServers = await Promise.resolve(source.parser(content));
                 if (parsedServers.length === 0) {
                     console.warn(`  ⚠️ [هشدار] هیچ سروری از منبع ${source.name} استخراج نشد. ممکن است ساختار منبع تغییر کرده باشد.`);
@@ -46,7 +48,7 @@ async function main() {
     console.log(`\n📊 [تجمیع] مجموعاً ${allServers.length} گروه سرور از تمام منابع جمع‌آوری شد.`);
     console.log('  🧹 [پاک‌سازی] در حال حذف موارد تکراری و دسته‌بندی آدرس‌ها...');
 
-    // Step 3 & 4: Deduplicate, Generate, and Write files
+    // Step 3 & 4: Deduplicate, Generate, and Write files including the new lists
     const addressSets = {
         doh: new Set(),
         dot: new Set(),
@@ -57,8 +59,8 @@ async function main() {
         unfiltered: new Set(),
         ipv4: new Set(),
         ipv6: new Set(),
-        no_log: new Set(),   // New list
-        dnssec: new Set(),   // New list
+        no_log: new Set(),
+        dnssec: new Set(),
     };
 
     for (const server of allServers) {
@@ -71,7 +73,7 @@ async function main() {
             if (server.protocols.includes('dot') && !cleanedAddress.startsWith('https://') && !cleanedAddress.startsWith('sdns://')) addressSets.dot.add(cleanedAddress);
             if (server.protocols.includes('dnscrypt') && cleanedAddress.startsWith('sdns://')) addressSets.dnscrypt.add(cleanedAddress);
 
-            // Categorize by filter type (only for servers with known protocols)
+            // Categorize by filter type (only for servers with known encrypted protocols)
             if (server.protocols.length > 0) {
                 if (server.filters.ads) addressSets.adblock.add(cleanedAddress);
                 if (server.filters.malware) addressSets.malware.add(cleanedAddress);
@@ -84,17 +86,24 @@ async function main() {
             if (server.features.dnssec) addressSets.dnssec.add(cleanedAddress);
 
             // Categorize by IP version
-            const isIPv6 = /:/.test(cleanedAddress) || server.features.ipv6;
-            if (isIPv6) addressSets.ipv6.add(cleanedAddress);
-
-            const isIPv4 = /^\d{1,3}(\.\d{1,3}){3}$/.test(cleanedAddress);
-            if (isIPv4) addressSets.ipv4.add(cleanedAddress);
+            if (/:/.test(cleanedAddress) || server.features.ipv6) addressSets.ipv6.add(cleanedAddress);
+            if (/^\d{1,3}(\.\d{1,3}){3}$/.test(cleanedAddress)) addressSets.ipv4.add(cleanedAddress);
         }
     }
     
-    // Ensure ipv4 list only contains plain DNS servers
-    const encryptedProtocols = new Set([...addressSets.doh, ...addressSets.dot, ...addressSets.dnscrypt]);
-    addressSets.ipv4 = new Set([...addressSets.ipv4].filter(ip => !encryptedProtocols.has(ip)));
+    // Refine the ipv4 list to ensure it only contains plain DNS servers
+    const encryptedAddresses = new Set([...addressSets.doh, ...addressSets.dot, ...addressSets.dnscrypt]);
+    const plainIPv4s = new Set();
+    for(const ip of addressSets.ipv4) {
+        // A plain DNS server might have the same IP as a DoH/DoT server's base, but it's a different service.
+        // We only add IPs that are explicitly from non-encrypted sources.
+        const sourceServer = allServers.find(s => s.addresses.includes(ip));
+        if (sourceServer && sourceServer.protocols.length === 0) {
+            plainIPv4s.add(ip);
+        }
+    }
+    addressSets.ipv4 = plainIPv4s;
+
 
     // Ensure output directory exists
     if (!fs.existsSync(OUTPUT_DIR)) {
