@@ -7,6 +7,7 @@
 2620:10A:80BB::10
 2620:10A:80BC::10
 2a10:50c0::1:ff
+2a10:50c0::1:ff:5443
 2a10:50c0::2:ff
 2a13:1001::86:54:11:100
 76.76.10.0
@@ -14,9 +15,8 @@
 86.54.11.100
 86.54.11.200
 94.140.14.140
+94.140.14.140:5443
 94.140.14.141
-child-noads.joindns4.eu
-dns.mullvad.net
 https://basic.rethinkdns.com/
 https://dns.bebasid.com/unfiltered
 https://dns.mullvad.net/dns-query
@@ -26,9 +26,13 @@ https://freedns.controld.com/p0
 https://private.canadianshield.cira.ca/dns-query
 https://unfiltered.adguard-dns.com/dns-query
 https://unfiltered.joindns4.eu/dns-query
-max.rethinkdns.com
-private.canadianshield.cira.ca
-sandbox.opendns.com
+quic://unfiltered.adguard-dns.com
 sdns://AQIAAAAAAAAAF1syYTAwOjVhNjA6OjAxOmZmXTo1NDQzIIHQAtNqTKUMRzt0eWUP4S4CsyHLYThWKiCOQD39xV6UIjIuZG5zY3J5cHQuZGVmYXVsdC5uczIuYWRndWFyZC5jb20
 sdns://AQIAAAAAAAAAFlsyYTEwOjUwYzA6OjE6ZmZdOjU0NDMgtehE1rg6Pj4SaOtoH76nDePF-mjb1ogUHb8uwGay2volMi5kbnNjcnlwdC51bmZpbHRlcmVkLm5zMS5hZGd1YXJkLmNvbQ
-unfiltered.adguard-dns.com
+tls://child-noads.joindns4.eu
+tls://dns.mullvad.net
+tls://max.rethinkdns.com
+tls://private.canadianshield.cira.ca
+tls://sandbox.opendns.com
+tls://unfiltered.adguard-dns.com
+tls://unfiltered.dns.bebasid.com
