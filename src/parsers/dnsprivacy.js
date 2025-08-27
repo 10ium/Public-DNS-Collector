@@ -30,22 +30,25 @@ export function parseDnsPrivacyOrg(content) {
         return [];
     }
     
-    const allTables = mainContent.querySelectorAll('table');
-    allTables.forEach(table => {
-        const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.toLowerCase().replace(/\s+/g, ' '));
+    // --- Process DNS-over-TLS (DoT) Table using its specific anchor ID ---
+    const dotHeader = mainContent.querySelector('#dns-over-tls-dot');
+    if (dotHeader) {
+        let dotTable = dotHeader.nextElementSibling;
+        while (dotTable && dotTable.tagName !== 'DIV' && !dotTable.querySelector('table')) {
+            dotTable = dotTable.nextElementSibling;
+        }
         
-        // Identify and Process DNS-over-TLS (DoT) Table
-        const isDoTTable = headers.some(h => h.includes('hostname for tls') && h.includes('authentication'));
-        if (isDoTTable) {
+        const table = dotTable ? dotTable.querySelector('table') : null;
+        if (table) {
             const rows = table.querySelectorAll('tbody tr');
             rows.forEach(row => {
                 const cells = row.querySelectorAll('td');
-                if (cells.length < 6) return;
+                if (cells.length < 6) return; // Expecting at least 6 cells in DoT table rows
                 const providerName = cells[0].textContent.trim();
                 if (!providerName) return;
                 
                 const server = getOrCreateServer(providerName);
-                server.protocols.push('dot');
+                if (!server.protocols.includes('dot')) server.protocols.push('dot');
 
                 const ips = cells[1].textContent.trim().split(/\s*or\s*|\s+/).filter(Boolean);
                 const hostname = cells[3].textContent.trim();
@@ -56,32 +59,40 @@ export function parseDnsPrivacyOrg(content) {
                 const notes = cells[5].textContent.toLowerCase();
                 if (notes.includes('filter')) server.filters.ads = true;
                 if (notes.includes('dns-over-https is also available') || notes.includes('it also does doh')) {
-                    server.protocols.push('doh');
+                    if (!server.protocols.includes('doh')) server.protocols.push('doh');
                 }
             });
         }
+    }
 
-        // Identify and Process DNS-over-HTTPS (DoH) Table
-        const isDoHTable = headers.includes('url') && headers.includes('notes');
-        if (isDoHTable) {
+    // --- Process DNS-over-HTTPS (DoH) Table using its specific anchor ID ---
+    const dohHeader = mainContent.querySelector('#dns-over-https-doh');
+    if (dohHeader) {
+        let dohTable = dohHeader.nextElementSibling;
+        while (dohTable && dohTable.tagName !== 'DIV' && !dohTable.querySelector('table')) {
+            dohTable = dohTable.nextElementSibling;
+        }
+        
+        const table = dohTable ? dohTable.querySelector('table') : null;
+        if (table) {
             const rows = table.querySelectorAll('tbody tr');
             rows.forEach(row => {
                 const cells = row.querySelectorAll('td');
-                if (cells.length < 3) return;
+                if (cells.length < 2) return; // Simplified check for DoH table
                 const providerName = cells[0].textContent.trim();
                 if (!providerName) return;
 
                 const server = getOrCreateServer(providerName);
-                server.protocols.push('doh');
+                if (!server.protocols.includes('doh')) server.protocols.push('doh');
                 
                 const urls = (cells[1].textContent.match(/https:\/\/[^\s<]+/g) || []);
                 server.addresses.push(...urls);
 
-                const notes = cells[2].textContent.toLowerCase();
+                const notes = (cells[2] ? cells[2].textContent : '').toLowerCase();
                 if (notes.includes('filter')) server.filters.ads = true;
             });
         }
-    });
+    }
 
     for (const server of providerMap.values()) {
         server.addresses = [...new Set(server.addresses.filter(Boolean))];
