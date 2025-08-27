@@ -14,7 +14,6 @@ export function parseAdGuard(content) {
 
     const mainContent = document.querySelector('.theme-doc-markdown.markdown');
     if (!mainContent) {
-        console.warn('  ⚠️ [AdGuard Parser] کانتینر اصلی محتوا (.theme-doc-markdown) پیدا نشد.');
         return [];
     }
     
@@ -37,7 +36,7 @@ export function parseAdGuard(content) {
                     server.provider = providerName;
 
                     if (filterType.includes('family')) server.filters.family = true;
-                    if (filterType.includes('default') || filterType.includes('malware') || filterType.includes('ad blocking') || filterType.includes('standard') || filterType.includes('security')) {
+                    if (filterType.includes('default') || filterType.includes('malware') || filterType.includes('ad blocking') || filterType.includes('standard') || filterType.includes('security') || filterType.includes('protective')) {
                         server.filters.ads = true;
                         server.filters.malware = true;
                     }
@@ -51,28 +50,27 @@ export function parseAdGuard(content) {
                         if (cells.length < 2) return;
                         
                         const protocolText = cells[0].textContent.toLowerCase();
-                        const addressCell = cells[1];
+                        const addressCellText = cells[1].textContent;
                         
-                        const addresses = Array.from(addressCell.querySelectorAll('code')).map(c => c.textContent.trim());
+                        // Final Correction: Extract addresses using regex to be more precise and avoid garbage text.
+                        const foundAddresses = addressCellText.match(/(https:\/\/[^\s`]+)|(tls:\/\/[^\s`]+)|(quic:\/\/[^\s`]+)|(\d{1,3}(\.\d{1,3}){3})|([0-9a-fA-F:]+::[0-9a-fA-F:]*)/g) || [];
 
-                        addresses.forEach(address => {
-                            if (protocolText.includes('dns-over-https')) {
-                                server.protocols.push('doh');
-                                server.addresses.push(address);
-                            } else if (protocolText.includes('dns-over-tls')) {
-                                server.protocols.push('dot');
-                                // Corrected Logic: Remove port from DoT hostnames
-                                server.addresses.push(address.replace('tls://', '').replace(/:\d+$/, ''));
-                            } else if (protocolText.includes('dnscrypt')) {
-                                const sdnstamp = row.querySelector('a[href^="sdns://"]');
-                                if (sdnstamp) {
-                                    server.protocols.push('dnscrypt');
-                                    server.addresses.push(sdnstamp.href);
-                                }
-                            } else if (protocolText.includes('dns, ipv4') || protocolText.includes('dns, ipv6')) {
-                                server.addresses.push(address);
-                            }
+                        foundAddresses.forEach(address => {
+                            if (protocolText.includes('dns-over-https')) server.protocols.push('doh');
+                            else if (protocolText.includes('dns-over-tls')) server.protocols.push('dot');
+                            else if (protocolText.includes('dnscrypt')) server.protocols.push('dnscrypt');
+                            
+                            server.addresses.push(address.replace(/tls:\/\/|quic:\/\//, '').replace(/:\d+$/, ''));
                         });
+                        
+                        // Special handling for DNSCrypt stamps which are in hrefs
+                        if (protocolText.includes('dnscrypt')) {
+                            const sdnstamp = row.querySelector('a[href^="sdns://"]');
+                            if (sdnstamp) {
+                                server.protocols.push('dnscrypt');
+                                server.addresses.push(sdnstamp.href);
+                            }
+                        }
                     });
 
                     if (server.addresses.length > 0) {
