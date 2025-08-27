@@ -1,0 +1,26 @@
+{
+  "name": "dns-list-aggregator",
+  "version": "1.0.0",
+  "description": "A GitHub Action to automatically fetch, parse, and update DNS lists from various public sources.",
+  "main": "build.js",
+  "type": "module",
+  "scripts": {
+    "start": "node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dns",
+    "doh",
+    "dot",
+    "dnscrypt",
+    "privacy",
+    "security",
+    "github-action"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "jsdom": "^24.1.0"
+  }
+}
