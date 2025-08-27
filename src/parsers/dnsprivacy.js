@@ -39,16 +39,17 @@ export function parseDnsPrivacyOrg(content) {
                 const cells = row.querySelectorAll('td');
                 if (cells.length < 6) return;
                 const providerName = cells[0].textContent.trim();
-                if (!providerName || providerName.toLowerCase().includes('various')) return;
+                const ipsText = cells[1].textContent.trim();
+                const hostnameText = cells[3].textContent.trim();
+                
+                if (!providerName || hostnameText.toLowerCase().includes('various')) return;
                 
                 const server = getOrCreateServer(providerName);
                 if (!server.protocols.includes('dot')) server.protocols.push('dot');
 
-                const ips = cells[1].textContent.trim().split(/\s*or\s*|\s+/).filter(Boolean);
-                const hostname = cells[3].textContent.trim();
-                
-                if (hostname && !hostname.toLowerCase().includes('various')) server.addresses.push(hostname);
-                server.addresses.push(...ips);
+                // Final Correction: Use regex to extract only valid IPs and hostnames, ignoring surrounding text.
+                const foundAddresses = (ipsText + ' ' + hostnameText).match(/(\d{1,3}(\.\d{1,3}){3})|([0-9a-fA-F:]+::[0-9a-fA-F:]*)|(([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,63})/g) || [];
+                server.addresses.push(...foundAddresses);
                 
                 const notes = cells[5].textContent.toLowerCase();
                 if (notes.includes('filter')) server.filters.ads = true;
