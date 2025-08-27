@@ -25,7 +25,6 @@ export function parseDnsPrivacyOrg(content) {
 
     const mainContent = document.querySelector('#body-inner');
     if (!mainContent) {
-        console.warn('  ⚠️ [DNSPrivacy Parser] کانتینر اصلی محتوا (#body-inner) پیدا نشد.');
         return [];
     }
     
@@ -40,16 +39,15 @@ export function parseDnsPrivacyOrg(content) {
                 const cells = row.querySelectorAll('td');
                 if (cells.length < 6) return;
                 const providerName = cells[0].textContent.trim();
-                const ipsText = cells[1].textContent.trim();
-                const hostnameText = cells[3].textContent.trim();
-                
-                if (!providerName || hostnameText.toLowerCase().includes('various')) return;
+                if (!providerName || providerName.toLowerCase().includes('various')) return;
                 
                 const server = getOrCreateServer(providerName);
                 if (!server.protocols.includes('dot')) server.protocols.push('dot');
 
-                const ips = ipsText.split(/\s*or\s*|\s+/).filter(Boolean);
-                if (hostnameText) server.addresses.push(hostnameText);
+                const ips = cells[1].textContent.trim().split(/\s*or\s*|\s+/).filter(Boolean);
+                const hostname = cells[3].textContent.trim();
+                
+                if (hostname && !hostname.toLowerCase().includes('various')) server.addresses.push(hostname);
                 server.addresses.push(...ips);
                 
                 const notes = cells[5].textContent.toLowerCase();
