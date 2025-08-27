@@ -28,24 +28,14 @@ export async function parsePaulmillr() {
             const server = createServerObject();
             server.provider = providerData.names?.en || providerData.name || 'Unknown';
 
-            // Extract addresses and protocols
-            if (providerData.https) {
+            // --- Final Corrected Logic: Extract ONLY the ServerURLOrName ---
+            if (providerData.https && providerData.https.ServerURLOrName) {
                 server.protocols.push('doh');
-                if (providerData.https.ServerURLOrName) {
-                    server.addresses.push(providerData.https.ServerURLOrName);
-                }
-                if (providerData.https.ServerAddresses) {
-                    server.addresses.push(...providerData.https.ServerAddresses);
-                }
+                server.addresses.push(providerData.https.ServerURLOrName);
             }
-            if (providerData.tls) {
+            if (providerData.tls && providerData.tls.ServerURLOrName) {
                 server.protocols.push('dot');
-                if (providerData.tls.ServerURLOrName) {
-                    server.addresses.push(providerData.tls.ServerURLOrName);
-                }
-                if (providerData.tls.ServerAddresses) {
-                    server.addresses.push(...providerData.tls.ServerAddresses);
-                }
+                server.addresses.push(providerData.tls.ServerURLOrName);
             }
             
             // Infer filtering from censorship and notes
@@ -53,12 +43,18 @@ export async function parsePaulmillr() {
             if (providerData.censorship === false) {
                 server.filters.unfiltered = true;
             } else {
-                if (notes.includes('malware')) server.filters.malware = true;
-                if (notes.includes('ads')) server.filters.ads = true;
-                if (notes.includes('adult') || notes.includes('family')) server.filters.family = true;
-                // If censorship is true but no specific category is found, assume general adblocking
-                if (!server.filters.malware && !server.filters.ads && !server.filters.family) {
+                if (notes.includes('malware') || server.provider.toLowerCase().includes('security') || server.provider.toLowerCase().includes('protected')) {
+                    server.filters.malware = true;
+                }
+                if (notes.includes('ads') || server.provider.toLowerCase().includes('adblock')) {
                     server.filters.ads = true;
+                }
+                if (notes.includes('adult') || server.provider.toLowerCase().includes('family')) {
+                    server.filters.family = true;
+                }
+                
+                if (providerData.censorship === true && !server.filters.malware && !server.filters.ads && !server.filters.family) {
+                    server.filters.ads = true; // General fallback for "censorship=true"
                 }
             }
 
@@ -76,5 +72,5 @@ export async function parsePaulmillr() {
     });
 
     const results = await Promise.all(promises);
-    return results.filter(Boolean); // Filter out any null results from failed fetches/parses
+    return results.filter(Boolean);
 }
