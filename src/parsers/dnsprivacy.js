@@ -23,12 +23,18 @@ export function parseDnsPrivacyOrg(content) {
         return providerMap.get(cleanedName);
     };
 
-    const allTables = document.querySelectorAll('table');
+    // --- Final Corrected Logic: Target the main content container first ---
+    const mainContent = document.querySelector('#body-inner');
+    if (!mainContent) {
+        console.warn('  ⚠️ [DNSPrivacy Parser] کانتینر اصلی محتوا (#body-inner) پیدا نشد.');
+        return [];
+    }
+    
+    const allTables = mainContent.querySelectorAll('table');
     allTables.forEach(table => {
         const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.toLowerCase().replace(/\s+/g, ' '));
         
-        // --- Identify and Process DNS-over-TLS (DoT) Table ---
-        // Corrected Logic: Use a more flexible check for the header text.
+        // Identify and Process DNS-over-TLS (DoT) Table
         const isDoTTable = headers.some(h => h.includes('hostname for tls') && h.includes('authentication'));
         if (isDoTTable) {
             const rows = table.querySelectorAll('tbody tr');
@@ -55,7 +61,7 @@ export function parseDnsPrivacyOrg(content) {
             });
         }
 
-        // --- Identify and Process DNS-over-HTTPS (DoH) Table ---
+        // Identify and Process DNS-over-HTTPS (DoH) Table
         const isDoHTable = headers.includes('url') && headers.includes('notes');
         if (isDoHTable) {
             const rows = table.querySelectorAll('tbody tr');
