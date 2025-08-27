@@ -47,12 +47,20 @@
 9.9.9.9
 94.140.14.14
 94.140.15.15
+AdGuard
+CleanBrowsing
+Control
+D
+DSN4EU
+Various
 adblock.dns.mullvad.net
 all.dns.mullvad.net
+antivirus.bebasid.com
 base.dns.mullvad.net
 child-noads.joindns4.eu
 dns.adguard-dns.com
 dns.adguard.com
+dns.bebasid.com
 dns.opendns.com
 dns.quad9.net
 extended.dns.mullvad.net
@@ -251,3 +259,6 @@ sdns://AgMAAAAAAAAAGFsyYTAxOjRmODoxNTE6MzRhYTo6MTk4XaDMEGDTnIMptitvvH0NbfkwmGm5g
 sdns://AgMAAAAAAAAAHlsyNDAwOmM0MDE6OjUwNTQ6ZmY6ZmUxYjpiMDM2XaDMEGDTnIMptitvvH0NbfkwmGm5gefmOS1c2PpAj02A5qD39a8ogB6HfX3zor4o_hSfMnSn7SnxNv1QPOOYy6gLDaCzXgWVDPvYJZ-TdboQGHC4w8TA7FpSl1fmMWfp3iap6KBETr1nu4P4gHs5Iek4rJF4uIK9UKrbESMfBEz18I33zqDmRLppY-M1_nZcuZdrErEOtUKUtCR3dkzLOjrMo6yy_CAqrj-3vwXkyBxBlNykRRHU-a8wR4bsGuchhAnPYqCDVRBhZGwuYWRmaWx0ZXIubmV0Ci9kbnMtcXVlcnk
 security-filter-dns.cleanbrowsing.org
 security.cloudflare-dns.com
+see
+the
+website

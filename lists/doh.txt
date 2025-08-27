@@ -210,6 +210,7 @@ https://dns.tipsy.coffee/dns-query
 https://dns.tls-data.de/dns-query
 https://dns.twnic.tw/dns-query
 https://dns.unx.io/dns-query
+https://dns.us.futuredns.eu.org/dns-query
 https://dns.vaioswolke.xyz/dns-query
 https://dns.w3ctag.org/dns-query
 https://dns.wang.art/dns-query
