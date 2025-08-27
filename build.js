@@ -35,6 +35,8 @@ async function main() {
                 const parsedServers = await Promise.resolve(source.parser(content));
                 if (parsedServers.length === 0) {
                     console.warn(`  ⚠️ [هشدار] هیچ سروری از منبع ${source.name} استخراج نشد. ممکن است ساختار منبع تغییر کرده باشد.`);
+                    // --- DEBUG LOGGING ADDED HERE ---
+                    console.log(`  🔍 [اشکال‌زدایی] محتوای خام دریافت شده از ${source.name} که منجر به هشدار شد: \n--- BEGIN CONTENT ---\n${typeof content === 'string' ? content.substring(0, 1000) + '...' : JSON.stringify(content)}\n--- END CONTENT ---`);
                 } else {
                     allServers.push(...parsedServers);
                     console.log(`  ✅ [موفقیت] تعداد ${parsedServers.length} گروه سرور از ${source.name} با موفقیت استخراج شد.`);
