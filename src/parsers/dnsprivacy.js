@@ -15,12 +15,13 @@ export function parseDnsPrivacyOrg(content) {
 
     // Helper to get or create a server object from the map
     const getOrCreateServer = (providerName) => {
-        if (!providerMap.has(providerName)) {
+        const cleanedName = providerName.replace(/'secure'|'insecure'/, '').trim();
+        if (!providerMap.has(cleanedName)) {
             const newServer = createServerObject();
-            newServer.provider = providerName;
-            providerMap.set(providerName, newServer);
+            newServer.provider = cleanedName;
+            providerMap.set(cleanedName, newServer);
         }
-        return providerMap.get(providerName);
+        return providerMap.get(cleanedName);
     };
 
     // --- Process DNS-over-TLS (DoT) Table ---
@@ -38,8 +39,9 @@ export function parseDnsPrivacyOrg(content) {
                 if (cells.length < 5) return;
 
                 const providerName = cells[0].textContent.trim();
-                const server = getOrCreateServer(providerName);
+                if (!providerName) return;
                 
+                const server = getOrCreateServer(providerName);
                 server.protocols.push('dot');
 
                 const ips = cells[1].textContent.trim().split(/\s*or\s*|\s+/).filter(Boolean);
@@ -52,7 +54,7 @@ export function parseDnsPrivacyOrg(content) {
                 if (notes.includes('filter')) server.filters.ads = true;
                 if (notes.includes('malware')) server.filters.malware = true;
                 if (notes.includes('family')) server.filters.family = true;
-                if (notes.includes('doh')) server.protocols.push('doh'); // Note may indicate DoH support
+                if (notes.includes('doh')) server.protocols.push('doh');
             });
         }
     }
@@ -72,8 +74,9 @@ export function parseDnsPrivacyOrg(content) {
                 if (cells.length < 3) return;
 
                 const providerName = cells[0].textContent.trim();
-                const server = getOrCreateServer(providerName);
+                 if (!providerName) return;
 
+                const server = getOrCreateServer(providerName);
                 server.protocols.push('doh');
 
                 const urls = (cells[1].textContent.match(/https:\/\/[^\s<]+/g) || []);
@@ -89,8 +92,7 @@ export function parseDnsPrivacyOrg(content) {
 
     // Finalize and return the list of servers
     for (const server of providerMap.values()) {
-        // Deduplicate addresses and protocols
-        server.addresses = [...new Set(server.addresses)];
+        server.addresses = [...new Set(server.addresses.filter(Boolean))];
         server.protocols = [...new Set(server.protocols)];
 
         if (!server.filters.ads && !server.filters.malware && !server.filters.family) {
