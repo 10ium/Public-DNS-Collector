@@ -1,9 +1,14 @@
 1.1.1.1
 149.112.121.30
+194.242.2.6
+194.242.2.9
 2620:10A:80BB::30
+2a07:e340::6
+2a07:e340::9
 Hostname:
 IP:
 IPv6:
+all.dns.mullvad.net
 dns.adguard.com
 doh.opendns.com
 ex.net
@@ -12,6 +17,7 @@ family-adblock.bebasid.com:853
 family-filter-dns.cleanbrowsing.org
 family.adguard-dns.com
 family.canadianshield.cira.ca
+family.dns.mullvad.net
 family.dot.dns.y
 familyshield.opendns.com
 https://adblock.dns.mullvad.net/dns-query

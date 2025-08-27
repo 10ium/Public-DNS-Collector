@@ -1,3 +1,13 @@
+194.242.2.3
+194.242.2.4
+194.242.2.5
+194.242.2.6
+194.242.2.9
+2a07:e340::3
+2a07:e340::4
+2a07:e340::5
+2a07:e340::6
+2a07:e340::9
 adblock.dns.mullvad.net
 all.dns.mullvad.net
 base.dns.mullvad.net
