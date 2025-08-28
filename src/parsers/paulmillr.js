@@ -7,7 +7,6 @@ import { fetchData } from '../utils.js';
  * @returns {Promise<Array<object>>} A list of server objects.
  */
 export async function parsePaulmillr() {
-    const servers = [];
     const repoApiUrl = 'https://api.github.com/repos/paulmillr/encrypted-dns/contents/providers';
 
     // Step 1: Fetch the list of provider files from the GitHub API
@@ -25,31 +24,21 @@ export async function parsePaulmillr() {
             const providerData = await fetchData(file.download_url);
             if (!providerData) return null;
 
-            const server = createServerObject();
-            server.provider = providerData.names?.en || providerData.name || 'Unknown';
-
-            // --- IMPROVED: Protocol Detection & Formatting ---
-            // Add DoH (DNS over HTTPS) address if available
-            if (providerData.https && providerData.https.ServerURLOrName) {
-                server.protocols.push('doh');
-                server.addresses.push(providerData.https.ServerURLOrName);
-            }
-            // Add DoT (DNS over TLS) address if available, with the required prefix
-            if (providerData.tls && providerData.tls.ServerURLOrName) {
-                server.protocols.push('dot');
-                server.addresses.push(`tls://${providerData.tls.ServerURLOrName}`);
-            }
-
-            // If no addresses were found after checking all protocols, skip this provider
-            if (server.addresses.length === 0) {
-                return null;
-            }
+            const providerServers = []; // Will hold separate server objects for each protocol
+            const providerName = providerData.names?.en || providerData.name || 'Unknown';
             
-            // --- REVISED: Filtering Logic ---
+            // --- Determine Filters Once ---
+            // This logic is common for all protocols from this provider
+            const filters = {
+                unfiltered: false,
+                malware: false,
+                ads: false,
+                family: false,
+            };
+
             if (providerData.censorship === false) {
-                server.filters.unfiltered = true;
+                filters.unfiltered = true;
             } else { // Handles censorship: true or undefined
-                // Create a comprehensive text corpus by combining relevant fields to search for keywords
                 const searchCorpus = [
                     providerData.names?.en,
                     providerData.name,
@@ -58,34 +47,42 @@ export async function parsePaulmillr() {
                     providerData.notes?.en
                 ].filter(Boolean).join(' ').toLowerCase();
 
-                // Check for "family" filters
                 if (searchCorpus.includes('family') || searchCorpus.includes('adult content') || searchCorpus.includes('child protection')) {
-                    server.filters.family = true;
+                    filters.family = true;
                 }
-                
-                // Check for ad/tracking filters independently
                 if (searchCorpus.includes('ads') || searchCorpus.includes('ad-blocking') || searchCorpus.includes('adblock') || searchCorpus.includes('tracking') || searchCorpus.includes('noads')) {
-                    server.filters.ads = true;
+                    filters.ads = true;
                 }
-
-                // Check for security filters (malware/phishing) independently
                 if (searchCorpus.includes('malware') || searchCorpus.includes('phishing') || searchCorpus.includes('security') || searchCorpus.includes('protected') || searchCorpus.includes('protective')) {
-                    server.filters.malware = true;
+                    filters.malware = true;
                 }
-
-                // Fallback for providers marked with `censorship: true` but without specific keywords found.
-                // This assumes a general-purpose security and ad-blocking filter.
-                if (providerData.censorship === true && !server.filters.malware && !server.filters.ads && !server.filters.family) {
-                    server.filters.ads = true;
-                    server.filters.malware = true;
+                if (providerData.censorship === true && !filters.malware && !filters.ads && !filters.family) {
+                    filters.ads = true;
+                    filters.malware = true;
                 }
             }
 
-            // Final cleanup of collected data
-            server.addresses = [...new Set(server.addresses)];
-            server.protocols = [...new Set(server.protocols)];
+            // --- Create a SEPARATE server object for DoH ---
+            if (providerData.https && providerData.https.ServerURLOrName) {
+                const dohServer = createServerObject();
+                dohServer.provider = providerName;
+                dohServer.protocols.push('doh');
+                dohServer.addresses.push(providerData.https.ServerURLOrName);
+                dohServer.filters = { ...filters }; // Assign a copy of the filters
+                providerServers.push(dohServer);
+            }
+
+            // --- Create a SEPARATE server object for DoT ---
+            if (providerData.tls && providerData.tls.ServerURLOrName) {
+                const dotServer = createServerObject();
+                dotServer.provider = providerName;
+                dotServer.protocols.push('dot');
+                dotServer.addresses.push(`tls://${providerData.tls.ServerURLOrName}`);
+                dotServer.filters = { ...filters }; // Assign a copy of the filters
+                providerServers.push(dotServer);
+            }
             
-            return server;
+            return providerServers;
 
         } catch (error) {
             console.error(`  ❌ [Paulmillr Parser] پردازش فایل ${file.name} با خطا مواجه شد: ${error.message}`);
@@ -94,5 +91,6 @@ export async function parsePaulmillr() {
     });
 
     const results = await Promise.all(promises);
-    return results.filter(Boolean); // Filter out any null results from failed fetches/parses
+    // Flatten the array of arrays and filter out any null/empty results
+    return results.flat().filter(Boolean); 
 }
