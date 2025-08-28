@@ -3,8 +3,9 @@ import { createServerObject } from '../utils.js';
 /**
  * Parses the content from the Curl GitHub Wiki source.
  * The source is a Markdown file with a large table of DoH servers.
+ * This parser creates a separate server entry for each protocol found for a provider.
  * @param {string} content The raw Markdown content.
- * @returns {Array<object>} A list of server objects.
+ * @returns {Array<object>} A list of server objects, with each object representing a single protocol.
  */
 export function parseCurl(content) {
     const servers = [];
@@ -36,104 +37,101 @@ export function parseCurl(content) {
             currentProvider = providerName;
         }
 
-        // Extract all https URLs from the 'Base URL' cell
-        const urls = (parts[2].match(/https:\/\/[^\s<]+/g) || []);
-        if (urls.length === 0) continue;
+        // Extract all https URLs from the 'Base URL' cell for DoH
+        const dohUrls = (parts[2].match(/https:\/\/[^\s<]+/g) || []);
+        if (dohUrls.length === 0) continue;
 
-        const rawCommentText = parts[4]; // Use raw text for case-insensitive regex matching
-        
-        // Create a server object for each group of URLs with the same comment
-        const server = createServerObject();
-        server.provider = currentProvider;
-        server.protocols.push('doh'); // DoH is the default for this list
-        server.addresses.push(...urls);
+        const rawCommentText = parts[4];
+        const commentTextLower = rawCommentText.toLowerCase();
 
-        // --- IMPROVED & BUG-FIXED PROTOCOL & ADDRESS DETECTION ---
-        // Extract base hostname from the main DoH URL to use as a safe fallback.
+        // --- COMMON PROPERTIES FACTORY ---
+        // A function to create a base server object with shared properties.
+        const createBaseServer = () => {
+            const server = createServerObject();
+            server.provider = currentProvider;
+            
+            // Infer filters
+            const combinedText = (commentTextLower + " " + dohUrls.join(' '));
+            if (combinedText.includes('adblock') || combinedText.includes('block ads')) server.filters.ads = true;
+            if (combinedText.includes('malware') || combinedText.includes('phishing')) server.filters.malware = true;
+            if (combinedText.includes('family') || combinedText.includes('parental') || combinedText.includes('adult content') || combinedText.includes('porn')) server.filters.family = true;
+            
+            // Infer features
+            if (commentTextLower.includes('dnssec')) server.features.dnssec = true;
+            if (commentTextLower.includes('no log') || commentTextLower.includes('no-log') || commentTextLower.includes('non-logging')) server.features.no_log = true;
+
+            // Set 'unfiltered' status
+            if (!server.filters.ads && !server.filters.malware && !server.filters.family) {
+                if (commentTextLower.includes('no filter') || commentTextLower.includes('unfiltered') || commentTextLower.includes('non-filtering')) {
+                    server.filters.unfiltered = true;
+                } else {
+                    server.filters.unfiltered = true; // Default fallback
+                }
+            }
+            return server;
+        };
+
+        // --- PROTOCOL-SPECIFIC PARSING ---
+
+        // 1. DoH (Default)
+        const dohServer = createBaseServer();
+        dohServer.protocols.push('doh');
+        dohServer.addresses.push(...dohUrls);
+        servers.push(dohServer);
+
+        // Extract base hostname from the main DoH URL for other protocols
         let baseHostname = null;
         try {
-            const mainUrl = new URL(urls[0]);
-            baseHostname = mainUrl.hostname;
-        } catch (e) {
-            // Ignore if URL is invalid, though it shouldn't happen with the regex above.
-        }
+            baseHostname = new URL(dohUrls[0]).hostname;
+        } catch (e) { /* Ignore invalid URLs */ }
 
-        // Handle shared DoT/DoQ addresses (e.g., "DoT/DoQ: dns.example.com")
-        const sharedMatch = rawCommentText.match(/(?:DoT\/DoQ|DoQ\/DoT)\s*:?\s*([a-zA-Z0-9.-]+(?::\d{1,5})?)/i);
-        if (sharedMatch && sharedMatch[1]) {
-            const hostname = sharedMatch[1];
-            if (!server.protocols.includes('dot')) server.protocols.push('dot');
-            server.addresses.push(`tls://${hostname}`);
-            if (!server.protocols.includes('doq')) server.protocols.push('doq');
-            server.addresses.push(`quic://${hostname}`);
-        }
-
-        // Handle individual DoT (DNS-over-TLS)
-        if (/\bdot\b/i.test(rawCommentText)) {
-            if (!server.protocols.includes('dot')) server.protocols.push('dot');
-            // Try to find an explicitly defined address first
-            const dotMatch = rawCommentText.match(/DoT\s*(?:\(|`|:)\s*([a-zA-Z0-9.-]+(?::\d{1,5})?)/i);
-            if (dotMatch && dotMatch[1]) {
-                server.addresses.push(`tls://${dotMatch[1]}`);
-            } else if (baseHostname && !sharedMatch) { // Fallback to the base hostname if no explicit or shared address found
-                server.addresses.push(`tls://${baseHostname}`);
+        // 2. DoT
+        if (/\b(dot|tls)\b/i.test(rawCommentText)) {
+            const dotServer = createBaseServer();
+            dotServer.protocols.push('dot');
+            const explicitMatch = rawCommentText.match(/(?:DoT|TLS)\s*(?:\(|`|:)\s*([a-zA-Z0-9.-]+(?::\d{1,5})?)/i) || rawCommentText.match(/(?:DoT\/DoQ|DoQ\/DoT)\s*:?\s*([a-zA-Z0-9.-]+(?::\d{1,5})?)/i);
+            
+            if (explicitMatch && explicitMatch[1]) {
+                dotServer.addresses.push(`tls://${explicitMatch[1]}`);
+            } else if (baseHostname) {
+                dotServer.addresses.push(`tls://${baseHostname}`);
             }
+            if (dotServer.addresses.length > 0) servers.push(dotServer);
         }
-        
-        // Handle individual DoQ (DNS-over-QUIC)
+
+        // 3. DoQ
         if (/\bdoq\b/i.test(rawCommentText)) {
-            if (!server.protocols.includes('doq')) server.protocols.push('doq');
-            // Try to find an explicitly defined address first
-            const doqMatch = rawCommentText.match(/DoQ\s*(?:\(|`|:)\s*([a-zA-Z0-9.-]+(?::\d{1,5})?)/i);
-            if (doqMatch && doqMatch[1]) {
-                server.addresses.push(`quic://${doqMatch[1]}`);
-            } else if (baseHostname && !sharedMatch) { // Fallback to the base hostname if no explicit or shared address found
-                server.addresses.push(`quic://${baseHostname}`);
+            const doqServer = createBaseServer();
+            doqServer.protocols.push('doq');
+            const explicitMatch = rawCommentText.match(/DoQ\s*(?:\(|`|:)\s*([a-zA-Z0-9.-]+(?::\d{1,5})?)/i) || rawCommentText.match(/(?:DoT\/DoQ|DoQ\/DoT)\s*:?\s*([a-zA-Z0-9.-]+(?::\d{1,5})?)/i);
+
+            if (explicitMatch && explicitMatch[1]) {
+                doqServer.addresses.push(`quic://${explicitMatch[1]}`);
+            } else if (baseHostname) {
+                doqServer.addresses.push(`quic://${baseHostname}`);
             }
+            if (doqServer.addresses.length > 0) servers.push(doqServer);
         }
 
-        // Handle DoH3
+        // 4. DoH3
         if (/\bdoh3\b/i.test(rawCommentText)) {
-            if (!server.protocols.includes('doh3')) server.protocols.push('doh3');
+            const doh3Server = createBaseServer();
+            doh3Server.protocols.push('doh3');
+            // DoH3 reuses the DoH URLs
+            doh3Server.addresses.push(...dohUrls);
+            servers.push(doh3Server);
         }
 
-        // Handle DNSCrypt (often includes full sdns:// URIs)
+        // 5. DNSCrypt
         if (/\bdnscrypt\b/i.test(rawCommentText)) {
-            if (!server.protocols.includes('dnscrypt')) server.protocols.push('dnscrypt');
+            const dnsCryptServer = createBaseServer();
+            dnsCryptServer.protocols.push('dnscrypt');
             const dnsCryptMatches = rawCommentText.match(/sdns:\/\/[^\s`)]+/g);
             if (dnsCryptMatches) {
-                server.addresses.push(...dnsCryptMatches);
+                dnsCryptServer.addresses.push(...dnsCryptMatches);
             }
+            if (dnsCryptServer.addresses.length > 0) servers.push(dnsCryptServer);
         }
-        
-        // Ensure addresses and protocols are unique before proceeding
-        server.addresses = [...new Set(server.addresses)];
-        server.protocols = [...new Set(server.protocols)];
-
-        // Infer filters by searching for keywords in the comment text and URLs
-        const commentText = rawCommentText.toLowerCase(); // Lowercase for keyword matching
-        const combinedText = (commentText + " " + urls.join(' ')).toLowerCase();
-        if (combinedText.includes('adblock') || combinedText.includes('block ads')) server.filters.ads = true;
-        if (combinedText.includes('malware') || combinedText.includes('phishing')) server.filters.malware = true;
-        if (combinedText.includes('family') || combinedText.includes('parental') || combinedText.includes('adult content') || combinedText.includes('porn')) server.filters.family = true;
-        
-        // Infer features from the comment text
-        if (commentText.includes('dnssec')) server.features.dnssec = true;
-        if (commentText.includes('no log') || commentText.includes('no-log') || commentText.includes('non-logging')) server.features.no_log = true;
-
-        // Set 'unfiltered' status if no specific filtering is detected
-        if (!server.filters.ads && !server.filters.malware && !server.filters.family) {
-            if (commentText.includes('no filter') || commentText.includes('unfiltered') || commentText.includes('non-filtering')) {
-                server.filters.unfiltered = true;
-            }
-        }
-        
-        // Final fallback: if no filtering information is found at all, assume unfiltered
-        if (!server.filters.ads && !server.filters.malware && !server.filters.family && !server.filters.unfiltered) {
-            server.filters.unfiltered = true;
-        }
-
-        servers.push(server);
     }
     return servers;
 }
