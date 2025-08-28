@@ -24,7 +24,7 @@ const SOURCES = [
 // --- FINAL VALIDATION UTILITY ---
 const IPV4_REGEX = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 const IPV6_REGEX = /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/i;
-const HOSTNAME_REGEX = /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9-]*[A-Za-z0-9])$/;
+const HOSTNAME_REGEX = /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][a-zA-Z0-9-]*[A-Za-z0-9])$/;
 
 function isValidDnsAddress(address) {
     if (typeof address !== 'string' || address.length === 0) return false;
@@ -53,7 +53,7 @@ function categorizeServers(servers) {
     const sets = {
         all: new Set(), doh: new Set(), dot: new Set(), doq: new Set(), dnscrypt: new Set(),
         adblock: new Set(), malware: new Set(), family: new Set(),
-        unfiltered: new Set(), ipv4: new Set(), ipv6: new Set(),
+        unfiltered: new Set(), ipv4: new Set(), ipv6: new Set(), dns64: new Set(),
         no_log: new Set(), dnssec: new Set(),
     };
     for (const server of servers) {
@@ -102,6 +102,7 @@ function categorizeServers(servers) {
             if (server.filters.unfiltered) sets.unfiltered.add(cleanedAddress);
             if (server.features.no_log) sets.no_log.add(cleanedAddress);
             if (server.features.dnssec) sets.dnssec.add(cleanedAddress);
+            if (server.features.dns64) sets.dns64.add(cleanedAddress);
         }
     }
     return sets;
