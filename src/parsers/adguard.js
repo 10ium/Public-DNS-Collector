@@ -5,7 +5,7 @@ import { createServerObject } from '../utils.js';
  * Parses the content from the AdGuard DNS Providers source.
  * The source is an HTML page with a structured layout.
  * This revised parser creates a separate server object for each protocol entry (table row)
- * and intelligently removes default ports while preserving non-default ones.
+ * and preserves all prefixes and ports. It also adds support for DoQ.
  * @param {string} content The raw HTML content.
  * @returns {Array<object>} A list of server objects.
  */
@@ -19,6 +19,7 @@ export function parseAdGuard(content) {
 
     const mainContent = document.querySelector('.theme-doc-markdown.markdown');
     if (!mainContent) {
+        console.warn("  ⚠️ [هشدار AdGuard] بخش اصلی محتوای صفحه پیدا نشد.");
         return [];
     }
     
@@ -30,7 +31,7 @@ export function parseAdGuard(content) {
 
         while (currentElement && currentElement.tagName !== 'H3') {
             if (currentElement.tagName === 'H4' || currentElement.tagName === 'H5') {
-                lastFilterType = currentElement.textContent.toLowerCase();
+                lastFilterType = currentElement.textContent.toLowerCase().replace(' ', ''); // Remove spaces for easier matching
             }
 
             if (currentElement.tagName === 'TABLE') {
@@ -39,21 +40,25 @@ export function parseAdGuard(content) {
                 
                 rows.forEach(row => {
                     const cells = row.querySelectorAll('td');
-                    if (cells.length < 2) return;
+                    if (cells.length < 2) {
+                        console.warn(`  ⚠️ [هشدار AdGuard] سطر جدول در ${providerName} سلول‌های کافی ندارد، نادیده گرفته شد.`);
+                        return;
+                    }
 
                     const server = createServerObject();
                     server.provider = providerName;
 
                     const ft = lastFilterType;
-                    if (ft.includes('family') || ft.includes('adult content')) {
+                    if (ft.includes('family') || ft.includes('adultcontent')) {
                         server.filters.family = true;
                     }
                     if (ft.includes('malware') || ft.includes('security') || ft.includes('protected') || ft.includes('threat') || ft.includes('phishing')) {
                         server.filters.malware = true;
                     }
-                    if (ft.includes('ads') || ft.includes('ad blocking') || ft.includes('ad-blocking')) {
+                    if (ft.includes('ads') || ft.includes('adblocking') || ft.includes('ad-blocking')) {
                         server.filters.ads = true;
                     }
+                    // Default handling for AdGuard's own categories
                     if (ft.includes('default')) {
                         server.filters.ads = true;
                         server.filters.malware = true;
@@ -61,30 +66,32 @@ export function parseAdGuard(content) {
                         if (providerName.toLowerCase() === 'cloudflare') {
                             server.filters.unfiltered = true;
                         } else {
-                            server.filters.malware = true;
+                            server.filters.malware = true; // Assuming 'standard' implies some level of protection unless stated otherwise
                         }
                     }
-                    if (ft.includes('non-filtering') || ft.includes('unfiltered') || ft.includes('sandbox') || (providerName.toLowerCase().includes('cira') && ft.includes('private'))) {
+                    if (ft.includes('nonfiltering') || ft.includes('unfiltered') || ft.includes('sandbox') || (providerName.toLowerCase().includes('cira') && ft.includes('private'))) {
                         server.filters.ads = false;
                         server.filters.malware = false;
                         server.filters.family = false;
                         server.filters.unfiltered = true;
                     }
 
-                    const protocolText = cells[0].textContent.toLowerCase();
+                    const protocolCellText = cells[0].textContent.toLowerCase();
                     const addressCellText = cells[1].textContent;
                     
                     const currentProtocols = new Set();
-                    if (protocolText.includes('dns-over-https')) currentProtocols.add('doh');
-                    if (protocolText.includes('dns-over-tls')) currentProtocols.add('dot');
-                    if (protocolText.includes('dns-over-quic')) currentProtocols.add('doq');
-                    if (protocolText.includes('dnscrypt')) currentProtocols.add('dnscrypt');
-                    if (protocolText.startsWith('dns,')) currentProtocols.add('plain');
+                    if (protocolCellText.includes('dns-over-https')) currentProtocols.add('doh');
+                    if (protocolCellText.includes('dns-over-tls')) currentProtocols.add('dot');
+                    if (protocolCellText.includes('dns-over-quic')) currentProtocols.add('doq');
+                    if (protocolCellText.includes('dnscrypt')) currentProtocols.add('dnscrypt');
+                    // If it contains "dns," it's likely a plain DNS entry
+                    if (protocolCellText.includes('dns,')) currentProtocols.add('plain');
                     
                     const currentAddresses = new Set();
                     const foundAddresses = addressCellText.match(addressRegex) || [];
 
                     foundAddresses.forEach(address => {
+                        // Determine protocol from address format if not clear from text
                         if (address.startsWith('https://')) {
                             currentProtocols.add('doh');
                         } else if (address.startsWith('tls://')) {
@@ -94,17 +101,8 @@ export function parseAdGuard(content) {
                         }
                         
                         let cleanAddress = address;
-
-                        // Conditionally remove default ports based on protocol
-                        if (cleanAddress.startsWith('https://') && cleanAddress.endsWith(':443')) {
-                            cleanAddress = cleanAddress.slice(0, -4); // Remove ":443"
-                        } else if (cleanAddress.startsWith('tls://') && cleanAddress.endsWith(':853')) {
-                            cleanAddress = cleanAddress.slice(0, -4); // Remove ":853"
-                        } else if (cleanAddress.startsWith('quic://') && cleanAddress.endsWith(':853')) {
-                            cleanAddress = cleanAddress.slice(0, -4); // Remove ":853"
-                        }
                         
-                        // Always remove brackets from IPv6 for standardization
+                        // Always remove brackets from IPv6 for standardization, but keep ports and prefixes.
                         cleanAddress = cleanAddress.replace(/[\[\]]/g, '');
 
                         if (cleanAddress) {
@@ -112,16 +110,26 @@ export function parseAdGuard(content) {
                         }
                     });
 
-                    const sdnstamp = row.querySelector('a[href^="sdns://"]');
-                    if (sdnstamp) {
+                    // Check for sdns:// links specifically
+                    const sdnstampLink = row.querySelector('a[href^="sdns://"]');
+                    if (sdnstampLink) {
                         currentProtocols.add('dnscrypt');
-                        currentAddresses.add(sdnstamp.href);
+                        currentAddresses.add(sdnstampLink.href);
                     }
                     
+                    // Only add if we found valid addresses and protocols
                     if (currentAddresses.size > 0 && currentProtocols.size > 0) {
                         server.protocols = [...currentProtocols];
                         server.addresses = [...currentAddresses];
                         servers.push(server);
+                    } else if (currentAddresses.size > 0 && !protocolCellText.includes('dns')) {
+                         // Fallback: If protocols weren't explicitly found but addresses exist, assume 'plain' for IP addresses
+                        const hasPlainAddress = [...currentAddresses].some(addr => /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/.test(addr) || /^[0-9a-fA-F:]+$/.test(addr));
+                        if (hasPlainAddress) {
+                            server.protocols.push('plain');
+                            server.addresses = [...currentAddresses];
+                            servers.push(server);
+                        }
                     }
                 });
             }
@@ -129,5 +137,8 @@ export function parseAdGuard(content) {
         }
     });
 
+    if (servers.length === 0) {
+        console.warn("  ⚠️ [هشدار AdGuard] هیچ سرور DNS معتبری از صفحه AdGuard استخراج نشد.");
+    }
     return servers;
 }
