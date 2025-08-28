@@ -48,10 +48,16 @@ export function parseCurl(content) {
         server.protocols.push('doh'); // DoH is the default for this list
         server.addresses.push(...urls);
 
-        // --- IMPROVED PROTOCOL & ADDRESS DETECTION ---
-        // Detects protocols from the comment text and extracts their specific addresses,
-        // adding standard prefixes like 'tls://' for DoT and 'quic://' for DoQ.
-        
+        // --- IMPROVED & BUG-FIXED PROTOCOL & ADDRESS DETECTION ---
+        // Extract base hostname from the main DoH URL to use as a safe fallback.
+        let baseHostname = null;
+        try {
+            const mainUrl = new URL(urls[0]);
+            baseHostname = mainUrl.hostname;
+        } catch (e) {
+            // Ignore if URL is invalid, though it shouldn't happen with the regex above.
+        }
+
         // Handle shared DoT/DoQ addresses (e.g., "DoT/DoQ: dns.example.com")
         const sharedMatch = rawCommentText.match(/(?:DoT\/DoQ|DoQ\/DoT)\s*:?\s*([a-zA-Z0-9.-]+(?::\d{1,5})?)/i);
         if (sharedMatch && sharedMatch[1]) {
@@ -65,20 +71,24 @@ export function parseCurl(content) {
         // Handle individual DoT (DNS-over-TLS)
         if (/\bdot\b/i.test(rawCommentText)) {
             if (!server.protocols.includes('dot')) server.protocols.push('dot');
-            // Try to find an explicitly defined address (e.g., "DoT (`dns.example.com`)")
+            // Try to find an explicitly defined address first
             const dotMatch = rawCommentText.match(/DoT\s*(?:\(|`|:)\s*([a-zA-Z0-9.-]+(?::\d{1,5})?)/i);
             if (dotMatch && dotMatch[1]) {
                 server.addresses.push(`tls://${dotMatch[1]}`);
+            } else if (baseHostname && !sharedMatch) { // Fallback to the base hostname if no explicit or shared address found
+                server.addresses.push(`tls://${baseHostname}`);
             }
         }
         
         // Handle individual DoQ (DNS-over-QUIC)
         if (/\bdoq\b/i.test(rawCommentText)) {
             if (!server.protocols.includes('doq')) server.protocols.push('doq');
-            // Try to find an explicitly defined address (e.g., "DoQ: dns.example.com")
+            // Try to find an explicitly defined address first
             const doqMatch = rawCommentText.match(/DoQ\s*(?:\(|`|:)\s*([a-zA-Z0-9.-]+(?::\d{1,5})?)/i);
             if (doqMatch && doqMatch[1]) {
                 server.addresses.push(`quic://${doqMatch[1]}`);
+            } else if (baseHostname && !sharedMatch) { // Fallback to the base hostname if no explicit or shared address found
+                server.addresses.push(`quic://${baseHostname}`);
             }
         }
 
