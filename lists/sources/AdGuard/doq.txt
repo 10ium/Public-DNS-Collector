@@ -1,8 +1,8 @@
 213.196.191.96
 quic://dandelionsprout.asuscomm.com:48582
 quic://dns.adguard-dns.com
-quic://dns.alidns.com
-quic://dns.caliph.dev
+quic://dns.alidns.com:853
+quic://dns.caliph.dev:853
 quic://dns.comss.one
 quic://dns.de.futuredns.eu.org
 quic://dns.jupitrdns.com

@@ -1,5 +1,3 @@
-1.0.0.3
-1.1.1.3
 103.87.68.196:8443
 114.114.114.110
 114.114.115.110
@@ -13,8 +11,6 @@
 185.228.169.168
 208.67.220.123
 208.67.222.123
-2606:4700:4700::1003
-2606:4700:4700::1113
 2610:a1:1018::3
 2610:a1:1019::3
 2620:10A:80BB::30
@@ -37,7 +33,6 @@ https://doh.cleanbrowsing.org/doh/family-filter/
 https://doh.familyshield.opendns.com/dns-query
 https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
-https://family.cloudflare-dns.com/dns-query
 https://family.dot.dns.yandex.net/dns-query
 https://family.rabbitdns.org/dns-query
 https://internetsehat.bebasid.com/adblock
@@ -49,11 +44,10 @@ sdns://AQIAAAAAAAAAGVsyYTEwOjUwYzA6OmJhZDE6ZmZdOjU0NDMguDFd17FLbuMgpHDcLtaxqjmMy
 sdns://AQMAAAAAAAAAEjEwMy44Ny42OC4xOTY6ODQ0MyD5k4vgIHmBCZ2DeLtmoDVu1C6nVrRNzSVgZ1T0m0-3rCkyLmRuc2NyeXB0LWNlcnQuaW50ZXJuZXRzZWhhdC5iZWJhc2lkLmNvbQ
 sdns://AQMAAAAAAAAAFDE4NS4yMjguMTY4LjE2ODo4NDQzILysMvrVQ2kXHwgy1gdQJ8MgjO7w6OmflBjcd2Bl1I8pEWNsZWFuYnJvd3Npbmcub3Jn
 sdns://AQMAAAAAAAAAFFsyYTBkOjJhMDA6MTo6XTo4NDQzILysMvrVQ2kXHwgy1gdQJ8MgjO7w6OmflBjcd2Bl1I8pEWNsZWFuYnJvd3Npbmcub3Jn
-tls://family-adblock.bebasid.com
+tls://family-adblock.bebasid.com:853
 tls://family-filter-dns.cleanbrowsing.org
 tls://family.adguard-dns.com
 tls://family.canadianshield.cira.ca
-tls://family.cloudflare-dns.com
 tls://family.dot.dns.yandex.net
 tls://familyshield.opendns.com
-tls://internetsehat.bebasid.com
+tls://internetsehat.bebasid.com:853
