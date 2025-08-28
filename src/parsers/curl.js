@@ -45,8 +45,24 @@ export function parseCurl(content) {
         // Create a server object for each group of URLs with the same comment
         const server = createServerObject();
         server.provider = currentProvider;
-        server.protocols.push('doh');
+        server.protocols.push('doh'); // DoH is the default for this list
         server.addresses.push(...urls);
+
+        // --- IMPROVED PROTOCOL DETECTION ---
+        // Dynamically detect other supported protocols from the comment text.
+        // Using word boundaries (\b) to avoid partial matches (e.g., 'dot' in 'dotcom').
+        const protocolPatterns = {
+            dot: /\bdot\b/i,
+            doq: /\bdoq\b/i,
+            doh3: /\bdoh3\b/i,
+            dnscrypt: /\bdnscrypt\b/i
+        };
+
+        for (const [protocol, pattern] of Object.entries(protocolPatterns)) {
+            if (pattern.test(commentText)) {
+                server.protocols.push(protocol);
+            }
+        }
 
         // Infer filters by searching for keywords in the comment text and URLs
         const combinedText = (commentText + " " + urls.join(' ')).toLowerCase();
