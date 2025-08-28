@@ -44,8 +44,8 @@ function isValidDnsAddress(address) {
 
 /**
  * Categorizes a list of server objects into different sets based on their properties.
- * This function has been rewritten to be address-aware, categorizing addresses
- * into protocol lists based on their format, not just the server's protocol list.
+ * This is the final, robust version. It categorizes based on address format first,
+ * then uses the server's protocol list as a fallback for ambiguous addresses (like plain hostnames).
  * @param {Array<object>} servers - The list of server objects to categorize.
  * @returns {object} An object containing sets of categorized addresses.
  */
@@ -60,26 +60,42 @@ function categorizeServers(servers) {
         for (const address of server.addresses) {
             const cleanedAddress = address.trim();
             if (!isValidDnsAddress(cleanedAddress)) {
-                // console.warn(`  ⚠️ [هشدار اعتبارسنجی] آدرس نامعتبر نادیده گرفته شد: "${cleanedAddress}"`);
                 continue;
             }
 
-            // Add to all list
             sets.all.add(cleanedAddress);
 
-            // **Critical Change**: Categorize by address format for protocol lists
-            if (cleanedAddress.startsWith('https://')) sets.doh.add(cleanedAddress);
-            else if (cleanedAddress.startsWith('tls://')) sets.dot.add(cleanedAddress);
-            else if (cleanedAddress.startsWith('quic://')) sets.doq.add(cleanedAddress);
-            else if (cleanedAddress.startsWith('sdns://')) sets.dnscrypt.add(cleanedAddress);
-            else if (IPV6_REGEX.test(cleanedAddress)) sets.ipv6.add(cleanedAddress);
-            else if (IPV4_REGEX.test(cleanedAddress)) sets.ipv4.add(cleanedAddress);
-            else if (server.protocols.includes('dot')) { // Fallback for hostnames that are DoT
-                 sets.dot.add(cleanedAddress)
+            // Primary categorization based on address format
+            let categorizedByPrefix = false;
+            if (cleanedAddress.startsWith('https://')) {
+                sets.doh.add(cleanedAddress);
+                categorizedByPrefix = true;
+            }
+            if (cleanedAddress.startsWith('tls://')) {
+                sets.dot.add(cleanedAddress);
+                categorizedByPrefix = true;
+            }
+            if (cleanedAddress.startsWith('quic://')) {
+                sets.doq.add(cleanedAddress);
+                categorizedByPrefix = true;
+            }
+            if (cleanedAddress.startsWith('sdns://')) {
+                sets.dnscrypt.add(cleanedAddress);
+                categorizedByPrefix = true;
             }
 
+            // Categorize IPs/Hostnames that can serve multiple protocols
+            if (IPV6_REGEX.test(cleanedAddress)) sets.ipv6.add(cleanedAddress);
+            if (IPV4_REGEX.test(cleanedAddress)) sets.ipv4.add(cleanedAddress);
 
-            // Categorize by server-wide properties (filters, features)
+            // Fallback for addresses without prefixes (e.g., dns.google, 1.1.1.1)
+            // If an IP/Hostname is part of a server object that supports a protocol, add it to that protocol's list.
+            if (server.protocols.includes('doh')) sets.doh.add(cleanedAddress);
+            if (server.protocols.includes('dot')) sets.dot.add(cleanedAddress);
+            if (server.protocols.includes('doq')) sets.doq.add(cleanedAddress);
+            if (server.protocols.includes('dnscrypt')) sets.dnscrypt.add(cleanedAddress);
+
+            // Categorize by server-wide properties
             if (server.filters.ads) sets.adblock.add(cleanedAddress);
             if (server.filters.malware) sets.malware.add(cleanedAddress);
             if (server.filters.family) sets.family.add(cleanedAddress);
@@ -90,6 +106,7 @@ function categorizeServers(servers) {
     }
     return sets;
 }
+
 
 // --- MAIN EXECUTION ---
 async function main() {
@@ -141,23 +158,12 @@ async function main() {
         }
     }
     
-    console.log('\n- - - - - - - - - - - - - - - - - را- - - -');
+    console.log('\n- - - - - - - - - - - - - - - - - - - - - -');
     console.log('\n📊 [تجمیع نهایی] در حال ترکیب و پاک‌سازی تمام داده‌ها...');
     const aggregatedSets = categorizeServers(allServers);
 
-    // This logic to separate plain IPs from encrypted is now less critical
-    // because the new categorizeServers is more precise, but we keep it as a safeguard.
-    const encryptedAddresses = new Set([...aggregatedSets.doh, ...aggregatedSets.dot, ...aggregatedSets.doq, ...aggregatedSets.dnscrypt]);
-    const plainIPv4s = new Set();
-    for(const ip of aggregatedSets.ipv4) {
-        if (!encryptedAddresses.has(ip)) {
-            const sourceServer = allServers.find(s => s.addresses.includes(ip) && s.protocols.includes('plain'));
-            if (sourceServer) {
-                plainIPv4s.add(ip);
-            }
-        }
-    }
-    aggregatedSets.ipv4 = plainIPv4s;
+    // **REMOVED**: The complex and buggy logic for purifying the ipv4 list is gone.
+    // The new categorizeServers is the single source of truth.
 
     console.log('\n💾 [نوشتن فایل‌های تجمیعی] در حال تولید و ذخیره فایل‌های خروجی اصلی...');
     for (const [listName, addressSet] of Object.entries(aggregatedSets)) {
