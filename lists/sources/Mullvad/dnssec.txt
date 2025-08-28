@@ -19,6 +19,15 @@ family.dns.mullvad.net
 https://adblock.dns.mullvad.net/dns-query
 https://all.dns.mullvad.net/dns-query
 https://base.dns.mullvad.net/dns-query
+https://de-fra-dns-001.mullvad.net/dns-query
 https://dns.mullvad.net/dns-query
 https://extended.dns.mullvad.net/dns-query
 https://family.dns.mullvad.net/dns-query
+https://gb-lon-dns-001.mullvad.net/dns-query
+https://gb-lon-dns-301.mullvad.net/dns-query
+https://se-got-dns-001.mullvad.net/dns-query
+https://se-mma-dns-001.mullvad.net/dns-query
+https://se-sto-dns-001.mullvad.net/dns-query
+https://sg-sin-dns-101.mullvad.net/dns-query
+https://us-dal-dns-001.mullvad.net/dns-query
+https://us-nyc-dns-601.mullvad.net/dns-query

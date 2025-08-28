@@ -1,8 +1,8 @@
-child-noads.joindns4.eu
-dns.adguard.com
 https://adblock.doh.mullvad.net/dns-query
 https://child-noads.joindns4.eu/dns-query
 https://dns.adguard.com/dns-query
 https://doh.mullvad.net/dns-query
 https://noads.joindns4.eu/dns-query
-noads.joindns4.eu
+tls://child-noads.joindns4.eu
+tls://dns.adguard.com
+tls://noads.joindns4.eu
