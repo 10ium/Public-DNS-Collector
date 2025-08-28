@@ -1,7 +1,5 @@
 https://cloudflare-dns.com/dns-query
 https://dns.google/dns-query
 https://mozilla.cloudflare-dns.com/dns-query
-quic://dns.adguard-dns.com
-tls://See Wikimedia DNS website
 tls://cloudflare-dns.com
 tls://dns.google

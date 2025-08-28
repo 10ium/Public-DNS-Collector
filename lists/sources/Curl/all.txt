@@ -491,6 +491,7 @@ tls://dns.cert.ee
 tls://dns.chenu.ch
 tls://dns.christerwaren.fi
 tls://dns.chunghwamc.com
+tls://dns.comss.one
 tls://dns.csa-rz.de
 tls://dns.csaonline.de
 tls://dns.csswg.org
