@@ -1,4 +1,6 @@
 https://dns.dnshome.de/dns-query
 https://nsec.arnor.org/dns-query
 quic://and
+quic://nsec.arnor.org
 tls://and
+tls://nsec.arnor.org

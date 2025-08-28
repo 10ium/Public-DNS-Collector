@@ -1,13 +1,7 @@
-1.0.0.1
-1.1.1.1
-2001:4860:4860::8844
-2001:4860:4860::8888
-2606:4700:4700::1001
-2606:4700:4700::1111
-8.8.4.4
-8.8.8.8
-cloudflare-dns.com
-dns.google
 https://cloudflare-dns.com/dns-query
 https://dns.google/dns-query
 https://mozilla.cloudflare-dns.com/dns-query
+quic://dns.adguard-dns.com
+tls://See Wikimedia DNS website
+tls://cloudflare-dns.com
+tls://dns.google
