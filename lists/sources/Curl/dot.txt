@@ -291,3 +291,5 @@ https://yvr01.dnscry.pt/dns-query
 https://yyc01.dnscry.pt/dns-query
 https://yyz01.dnscry.pt/dns-query
 https://zdn.ro/dns-query
+quic://and
+tls://and

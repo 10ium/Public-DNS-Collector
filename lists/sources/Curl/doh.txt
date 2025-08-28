@@ -412,3 +412,5 @@ https://yyc01.dnscry.pt/dns-query
 https://yyz01.dnscry.pt/dns-query
 https://zdn.ro/dns-query
 https://zero.dns0.eu
+quic://and
+tls://and

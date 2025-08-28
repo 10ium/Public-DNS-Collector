@@ -68,3 +68,5 @@ https://privacy.plumedns.com/dns-query
 https://tiger.dns.qwer.pw/dns-query
 https://unfiltered.adguard-dns.com/dns-query
 https://zdn.ro/dns-query
+quic://and
+tls://and

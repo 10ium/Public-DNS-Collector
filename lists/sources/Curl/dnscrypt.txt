@@ -1,1 +1,3 @@
 https://dns.dnshome.de/dns-query
+quic://and
+tls://and

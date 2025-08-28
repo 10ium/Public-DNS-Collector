@@ -69,6 +69,7 @@ https://privacy.plumedns.com/dns-query
 https://tiger.dns.qwer.pw/dns-query
 https://unfiltered.adguard-dns.com/dns-query
 https://zdn.ro/dns-query
+quic://and
 quic://dandelionsprout.asuscomm.com:48582
 quic://dns.adguard-dns.com
 quic://dns.alidns.com:853
@@ -86,3 +87,4 @@ quic://router.comss.one
 quic://rx.techomespace.com
 quic://unfiltered.adguard-dns.com
 quic://zero.dns0.eu
+tls://and

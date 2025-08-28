@@ -70,6 +70,7 @@
 240C::6666
 2620:74:1b::1:1
 2620:74:1c::2:2
+2620:fe::fe
 2a01:4f8:13a:250b::30:9443
 2a01:4f8:141:316d::117
 2a01:4f8:151:34aa::198
@@ -110,6 +111,7 @@
 80.80.81.81
 85.209.2.112
 88.198.92.222
+9.9.9.9
 94.130.180.225
 94.140.14.14
 94.140.14.14:5443
@@ -117,6 +119,7 @@
 adblock.dns.mullvad.net
 all.dns.mullvad.net
 base.dns.mullvad.net
+dns.quad9.net
 extended.dns.mullvad.net
 family.dns.mullvad.net
 https://123000123.xyz/dns-query
