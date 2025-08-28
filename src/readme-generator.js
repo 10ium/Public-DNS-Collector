@@ -11,6 +11,7 @@ export function generateReadme(sources, repoUrl, listFileCounts) {
     const mainListFiles = [
         { name: 'doh.txt', description: 'لیست تمام سرورهای DNS-over-HTTPS.' },
         { name: 'dot.txt', description: 'لیست تمام سرورهای DNS-over-TLS.' },
+        { name: 'doq.txt', description: 'لیست تمام سرورهای DNS-over-QUIC.' },
         { name: 'dnscrypt.txt', description: 'لیست تمام سرورهای DNSCrypt (به صورت Stamp).' },
         { name: 'ipv4.txt', description: 'لیست سرورهای DNS استاندارد روی IPv4.' },
         { name: 'ipv6.txt', description: 'لیست تمام آدرس‌های IPv6 موجود.' },
@@ -22,7 +23,7 @@ export function generateReadme(sources, repoUrl, listFileCounts) {
         { name: 'dnssec.txt', description: 'لیست سرورهایی که از DNSSEC برای افزایش امنیت پشتیبانی می‌کنند.' },
     ];
 
-    const sourceSubListFiles = ['all.txt', 'doh.txt', 'dot.txt', 'dnscrypt.txt', 'ipv4.txt', 'ipv6.txt', 'adblock.txt', 'malware.txt', 'family.txt', 'unfiltered.txt', 'no_log.txt', 'dnssec.txt'];
+    const sourceSubListFiles = ['all.txt', 'doh.txt', 'dot.txt', 'doq.txt', 'dnscrypt.txt', 'ipv4.txt', 'ipv6.txt', 'adblock.txt', 'malware.txt', 'family.txt', 'unfiltered.txt', 'no_log.txt', 'dnssec.txt'];
 
     let markdown = `# مجموعه DNS عمومی | Public DNS Collector\n\n`;
     markdown += `<p align="center">\n  <img src="https://raw.githubusercontent.com/1024-byte/resources/main/banner/Public-DNS-Collector-banner.png" alt="Public DNS Collector Banner">\n</p>\n`;
@@ -43,7 +44,6 @@ export function generateReadme(sources, repoUrl, listFileCounts) {
     markdown += `\n---\n\n`;
 
     markdown += `##  لیست‌ها بر اساس منبع | Lists by Source\n\n`;
-    // Corrected Line: The problematic backtick ` is now correctly part of the string.
     markdown += "در این بخش، خروجی‌های هر منبع به صورت جداگانه و فیلتر شده قرار دارند. هر منبع دارای یک فایل `all.txt` (شامل تمام آدرس‌های استخراج شده از آن منبع) و سپس لیست‌های فیلتر شده بر اساس پروتکل و ویژگی‌ها است.\n\n";
 
     sources.forEach(source => {
