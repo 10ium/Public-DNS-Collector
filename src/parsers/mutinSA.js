@@ -2,76 +2,95 @@ import { createServerObject } from '../utils.js';
 
 /**
  * Parses the content from the MutinSA Gist source.
- * The source is a Markdown file with a table of public recursive name servers.
- * @param {string} content The raw Markdown content.
- * @returns {Array<object>} A list of server objects.
+ * The source is a Markdown file with tables for standard DNS and DNS64 servers.
+ * It correctly identifies and categorizes IPv4, IPv6, and DNS64 addresses.
+ * @param {string} content The raw Markdown content from the source.
+ * @returns {Array<object>} A list of server objects, grouped by provider.
  */
 export function parseMutinSA(content) {
-    const servers = [];
+    const providerMap = new Map();
     const lines = content.split('\n');
-    let inDnsTable = false;
-    
-    // We will process the tables and the detailed sections below them
-    const ipv4Map = new Map();
-    const ipv6Map = new Map();
+
+    let currentTable = null; // Can be 'DNS' or 'DNS64'
 
     for (const line of lines) {
+        // Determine which table we are in
         if (line.startsWith('|    IPv4 Addr')) {
-            inDnsTable = true;
+            currentTable = 'DNS';
+            continue;
+        } else if (line.startsWith('|        IPv6 Addr')) {
+            // This header is for the DNS64 table
+            const isDns64Header = lines[lines.indexOf(line) - 2]?.trim() === '# DNS64:';
+            if (isDns64Header) {
+                currentTable = 'DNS64';
+                continue;
+            }
+        } else if (line.startsWith('#')) {
+            // A new section header means we've exited any table
+            currentTable = null;
             continue;
         }
-        if (line.startsWith('# DNS64:')) {
-            inDnsTable = false; // Stop processing the first table
+
+        // Skip lines that are not part of a table we care about
+        if (!currentTable || !line.startsWith('|') || line.includes('---')) {
+            continue;
         }
-        if (!inDnsTable || !line.startsWith('|')) continue;
 
         const parts = line.split('|').map(p => p.trim());
-        if (parts.length < 8 || parts[1].includes('---')) continue;
 
-        const ipv4 = parts[1];
-        const ipv6 = parts[2];
-        const provider = parts[7];
-        const svc = parts[6].toLowerCase();
+        if (currentTable === 'DNS' && parts.length >= 8) {
+            const ipv4 = parts[1];
+            const ipv6 = parts[2];
+            const provider = parts[7];
 
-        if (ipv4) ipv4Map.set(ipv4, { provider, svc });
-        if (ipv6) ipv6Map.set(ipv6, { provider, svc });
-    }
-    
-    const combinedServers = new Map();
+            if (!provider) continue;
 
-    // Combine IPv4 addresses
-    for (const [address, data] of ipv4Map.entries()) {
-        if (!combinedServers.has(data.provider)) {
-            const newServer = createServerObject();
-            newServer.provider = data.provider;
-            combinedServers.set(data.provider, newServer);
+            if (!providerMap.has(provider)) {
+                providerMap.set(provider, createServerObject());
+                providerMap.get(provider).provider = provider;
+            }
+            const server = providerMap.get(provider);
+
+            if (ipv4) {
+                server.addresses.push(ipv4);
+                if (!server.protocols.includes('ipv4')) {
+                    server.protocols.push('ipv4');
+                }
+            }
+            if (ipv6) {
+                server.addresses.push(ipv6);
+                server.features.ipv6 = true;
+                if (!server.protocols.includes('ipv6')) {
+                    server.protocols.push('ipv6');
+                }
+            }
+        } else if (currentTable === 'DNS64' && parts.length >= 7) {
+            const dns64Address = parts[1];
+            const provider = parts[6];
+
+            if (!provider || !dns64Address) continue;
+
+            if (!providerMap.has(provider)) {
+                providerMap.set(provider, createServerObject());
+                providerMap.get(provider).provider = provider;
+            }
+            const server = providerMap.get(provider);
+            
+            server.addresses.push(dns64Address);
+            server.features.dns64 = true; // Add DNS64 feature flag
+            if (!server.protocols.includes('dns64')) {
+                server.protocols.push('dns64');
+            }
         }
-        const server = combinedServers.get(data.provider);
-        server.addresses.push(address);
-        
-        if(data.svc.includes('doh') || data.svc.includes('cloudflare') || data.svc.includes('google')) server.protocols.push('doh');
-        if(data.svc.includes('dot')) server.protocols.push('dot');
     }
 
-    // Combine IPv6 addresses
-    for (const [address, data] of ipv6Map.entries()) {
-        if (!combinedServers.has(data.provider)) {
-             const newServer = createServerObject();
-            newServer.provider = data.provider;
-            combinedServers.set(data.provider, newServer);
-        }
-        const server = combinedServers.get(data.provider);
-        server.addresses.push(address);
-        server.features.ipv6 = true;
-
-        if(data.svc.includes('doh') || data.svc.includes('cloudflare') || data.svc.includes('google')) server.protocols.push('doh');
-        if(data.svc.includes('dot')) server.protocols.push('dot');
-    }
-
-    // Finalize server objects and assume unfiltered for this source
-    for (const server of combinedServers.values()) {
+    const servers = [];
+    for (const server of providerMap.values()) {
+        // General assumptions for these public servers
         server.filters.unfiltered = true;
-        server.features.dnssec = true; // A common feature for major providers
+        server.features.dnssec = true;
+        // Remove duplicates just in case
+        server.addresses = [...new Set(server.addresses)];
         servers.push(server);
     }
 
