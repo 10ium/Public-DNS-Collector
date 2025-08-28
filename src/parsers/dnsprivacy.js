@@ -3,7 +3,9 @@ import { createServerObject } from '../utils.js';
 
 /**
  * Parses the content from the dnsprivacy.org source.
- * The source is an HTML page with tables for DoT and DoH resolvers.
+ * The source is an HTML page with tables for DoT, DoH, and DoQ resolvers.
+ * This parser now correctly extracts DoQ addresses, often found in the 'notes' column,
+ * and preserves all address prefixes and ports.
  * @param {string} content The raw HTML content.
  * @returns {Array<object>} A list of server objects.
  */
@@ -11,10 +13,19 @@ export function parseDnsPrivacyOrg(content) {
     const servers = [];
     const dom = new JSDOM(content);
     const document = dom.window.document;
+    // Use a Map to store servers, keyed by provider name, to aggregate data from different tables.
     const providerMap = new Map();
 
+    // A robust regex to find all kinds of DNS addresses we're interested in.
+    const addressRegex = /(https?|tls|quic):\/\/[^\s<,)]+|\b\d{1,3}(?:\.\d{1,3}){3}(?::\d+)?\b|\[?[a-fA-F0-9:]+\]?(?::\d+)?|(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(?::\d+)?/g;
+
+    /**
+     * Helper function to get or create a server object for a given provider name.
+     * @param {string} providerName The raw provider name from the table.
+     * @returns {object} The server object.
+     */
     const getOrCreateServer = (providerName) => {
-        const cleanedName = providerName.replace(/'secure'|'insecure'/, '').trim();
+        const cleanedName = providerName.replace(/^(.*?)(\s*(\(secure\)|\(insecure\)))?$/, '$1').trim();
         if (!providerMap.has(cleanedName)) {
             const newServer = createServerObject();
             newServer.provider = cleanedName;
@@ -25,69 +36,65 @@ export function parseDnsPrivacyOrg(content) {
 
     const mainContent = document.querySelector('#body-inner');
     if (!mainContent) {
+        console.warn("  ⚠️ [هشدار DNSPrivacyOrg] بخش اصلی محتوای صفحه پیدا نشد.");
         return [];
     }
     
     const allTables = mainContent.querySelectorAll('table');
+    
     allTables.forEach(table => {
-        const headers = Array.from(table.querySelectorAll('thead th, tr.header th')).map(th => th.textContent.toLowerCase().replace(/\s+/g, ' ').trim());
-        
-        const isDoTTable = headers.some(h => h.includes('hostname for tls'));
-        if (isDoTTable) {
-            const rows = table.querySelectorAll('tbody tr');
-            rows.forEach(row => {
-                const cells = row.querySelectorAll('td');
-                if (cells.length < 6) return;
-                const providerName = cells[0].textContent.trim();
-                const ipsText = cells[1].textContent.trim();
-                const hostnameText = cells[3].textContent.trim();
-                
-                if (!providerName || hostnameText.toLowerCase().includes('various')) return;
-                
-                const server = getOrCreateServer(providerName);
-                if (!server.protocols.includes('dot')) server.protocols.push('dot');
+        const rows = table.querySelectorAll('tbody tr');
+        rows.forEach(row => {
+            const cells = Array.from(row.querySelectorAll('td'));
+            if (cells.length < 2) return;
 
-                // Final Correction: Use regex to extract only valid IPs and hostnames, ignoring surrounding text.
-                const foundAddresses = (ipsText + ' ' + hostnameText).match(/(\d{1,3}(\.\d{1,3}){3})|([0-9a-fA-F:]+::[0-9a-fA-F:]*)|(([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,63})/g) || [];
-                server.addresses.push(...foundAddresses);
+            const providerName = cells[0].textContent.trim();
+            if (!providerName || providerName.toLowerCase().includes('various')) return;
+
+            const server = getOrCreateServer(providerName);
+            
+            // Combine text from all cells to find any and all addresses
+            const combinedText = cells.map(cell => cell.textContent).join(' ');
+            const foundAddresses = combinedText.match(addressRegex) || [];
+
+            foundAddresses.forEach(addr => {
+                if (addr.startsWith('https://')) server.protocols.push('doh');
+                else if (addr.startsWith('tls://')) server.protocols.push('dot');
+                else if (addr.startsWith('quic://')) server.protocols.push('doq');
                 
-                const notes = cells[5].textContent.toLowerCase();
-                if (notes.includes('filter')) server.filters.ads = true;
-                if (notes.includes('dns-over-https is also available') || notes.includes('it also does doh')) {
-                    if (!server.protocols.includes('doh')) server.protocols.push('doh');
+                // Add any non-duplicate, valid address
+                if (!server.addresses.includes(addr)) {
+                    server.addresses.push(addr);
                 }
             });
-        }
-
-        const isDoHTable = headers.includes('url') && headers.includes('notes');
-        if (isDoHTable) {
-            const rows = table.querySelectorAll('tbody tr');
-            rows.forEach(row => {
-                const cells = row.querySelectorAll('td');
-                if (cells.length < 2) return;
-                const providerName = cells[0].textContent.trim();
-                const urlText = cells[1].textContent.trim();
-                if (!providerName || urlText.toLowerCase().includes('various')) return;
-
-                const server = getOrCreateServer(providerName);
-                if (!server.protocols.includes('doh')) server.protocols.push('doh');
-                
-                const urls = (urlText.match(/https:\/\/[^\s<]+/g) || []);
-                server.addresses.push(...urls);
-
-                const notes = (cells[2] ? cells[2].textContent : '').toLowerCase();
-                if (notes.includes('filter')) server.filters.ads = true;
-            });
-        }
+        });
     });
 
+    // Process the aggregated server data.
     for (const server of providerMap.values()) {
         server.addresses = [...new Set(server.addresses.filter(Boolean))];
         server.protocols = [...new Set(server.protocols)];
-        if (!server.filters.ads && !server.filters.malware && !server.filters.family) server.filters.unfiltered = true;
+        
+        // Default filtering status: if no specific filtering is detected, assume unfiltered.
+        // Note: This source is less explicit about filtering, so this is a heuristic.
+        if (server.addresses.some(addr => addr.toLowerCase().includes('filter'))) {
+             server.filters.ads = true;
+        }
+
+        if (!server.filters.ads && !server.filters.malware && !server.filters.family) {
+            server.filters.unfiltered = true;
+        }
+        
         server.features.dnssec = true;
         server.features.no_log = true;
-        if (server.addresses.length > 0) servers.push(server);
+        
+        if (server.addresses.length > 0) {
+            servers.push(server);
+        }
+    }
+
+    if (servers.length === 0) {
+        console.warn("  ⚠️ [هشدار DNSPrivacyOrg] هیچ سرور DNS معتبری از صفحه DNSPrivacyOrg یافت نشد.");
     }
 
     return servers;
