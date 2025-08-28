@@ -32,6 +32,6 @@ jobs:
           commit_message: "chore(automation): Update DNS lists and README"
           commit_user_name: "GitHub Actions Bot"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
-          # Corrected pattern to include subdirectories
-          file_pattern: "lists/**/*.txt README.md"
+          # Corrected pattern to add the entire 'lists' directory and the README
+          file_pattern: "lists/ README.md"
           commit_options: '--no-verify'
