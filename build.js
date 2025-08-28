@@ -63,7 +63,7 @@ function categorizeServers(servers) {
         for (const address of server.addresses) {
             const cleanedAddress = address.trim();
             if (!isValidDnsAddress(cleanedAddress)) {
-                // console.warn(`  ⚠️ [هشدار اعتبارسنجی] آدرس نامعتبر نادیده گرفته شد: "${cleanedAddress}"`);
+                console.warn(`  ⚠️ [هشدار اعتبارسنجی] آدرس نامعتبر نادیده گرفته شد: "${cleanedAddress}"`);
                 continue;
             }
 
