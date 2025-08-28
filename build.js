@@ -51,7 +51,7 @@ function isValidDnsAddress(address) {
  */
 function categorizeServers(servers) {
     const sets = {
-        all: new Set(), doh: new Set(), dot: new Set(), doq: new Set(), dnscrypt: new Set(),
+        all: new Set(), doh: new Set(), dot: new Set(), doq: new Set(), doh3: new Set(), dnscrypt: new Set(),
         adblock: new Set(), malware: new Set(), family: new Set(),
         unfiltered: new Set(), ipv4: new Set(), ipv6: new Set(), dns64: new Set(),
         no_log: new Set(), dnssec: new Set(),
@@ -93,6 +93,7 @@ function categorizeServers(servers) {
             if (server.protocols.includes('doh')) sets.doh.add(cleanedAddress);
             if (server.protocols.includes('dot')) sets.dot.add(cleanedAddress);
             if (server.protocols.includes('doq')) sets.doq.add(cleanedAddress);
+            if (server.protocols.includes('doh3')) sets.doh3.add(cleanedAddress);
             if (server.protocols.includes('dnscrypt')) sets.dnscrypt.add(cleanedAddress);
 
             // Categorize by server-wide properties
