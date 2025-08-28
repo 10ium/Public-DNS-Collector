@@ -28,44 +28,64 @@ export async function parsePaulmillr() {
             const server = createServerObject();
             server.provider = providerData.names?.en || providerData.name || 'Unknown';
 
-            // --- Final Corrected Logic: Extract ONLY the ServerURLOrName ---
+            // --- IMPROVED: Protocol Detection & Formatting ---
+            // Add DoH (DNS over HTTPS) address if available
             if (providerData.https && providerData.https.ServerURLOrName) {
                 server.protocols.push('doh');
                 server.addresses.push(providerData.https.ServerURLOrName);
             }
+            // Add DoT (DNS over TLS) address if available, with the required prefix
             if (providerData.tls && providerData.tls.ServerURLOrName) {
                 server.protocols.push('dot');
-                server.addresses.push(providerData.tls.ServerURLOrName);
+                server.addresses.push(`tls://${providerData.tls.ServerURLOrName}`);
+            }
+
+            // If no addresses were found after checking all protocols, skip this provider
+            if (server.addresses.length === 0) {
+                return null;
             }
             
-            // --- Corrected Logic for Filtering ---
-            const notes = (providerData.notes?.en || '').toLowerCase();
+            // --- REVISED: Filtering Logic ---
             if (providerData.censorship === false) {
                 server.filters.unfiltered = true;
-            } else { // censorship is true or undefined
-                if (notes.includes('malware') || server.provider.toLowerCase().includes('security') || server.provider.toLowerCase().includes('protected')) {
-                    server.filters.malware = true;
-                }
-                if (notes.includes('ads') || server.provider.toLowerCase().includes('adblock') || notes.includes('tracking')) {
-                    server.filters.ads = true;
-                }
-                if (notes.includes('adult content') || server.provider.toLowerCase().includes('family')) {
+            } else { // Handles censorship: true or undefined
+                // Create a comprehensive text corpus by combining relevant fields to search for keywords
+                const searchCorpus = [
+                    providerData.names?.en,
+                    providerData.name,
+                    providerData.id,
+                    providerData.profile,
+                    providerData.notes?.en
+                ].filter(Boolean).join(' ').toLowerCase();
+
+                // Check for "family" filters
+                if (searchCorpus.includes('family') || searchCorpus.includes('adult content') || searchCorpus.includes('child protection')) {
                     server.filters.family = true;
                 }
                 
-                // If censorship is true but no specific category is found, assume it's a general ad/malware filter
+                // Check for ad/tracking filters independently
+                if (searchCorpus.includes('ads') || searchCorpus.includes('ad-blocking') || searchCorpus.includes('adblock') || searchCorpus.includes('tracking') || searchCorpus.includes('noads')) {
+                    server.filters.ads = true;
+                }
+
+                // Check for security filters (malware/phishing) independently
+                if (searchCorpus.includes('malware') || searchCorpus.includes('phishing') || searchCorpus.includes('security') || searchCorpus.includes('protected') || searchCorpus.includes('protective')) {
+                    server.filters.malware = true;
+                }
+
+                // Fallback for providers marked with `censorship: true` but without specific keywords found.
+                // This assumes a general-purpose security and ad-blocking filter.
                 if (providerData.censorship === true && !server.filters.malware && !server.filters.ads && !server.filters.family) {
                     server.filters.ads = true;
                     server.filters.malware = true;
                 }
             }
 
-            if (server.addresses.length > 0) {
-                server.addresses = [...new Set(server.addresses)];
-                server.protocols = [...new Set(server.protocols)];
-                return server;
-            }
-            return null;
+            // Final cleanup of collected data
+            server.addresses = [...new Set(server.addresses)];
+            server.protocols = [...new Set(server.protocols)];
+            
+            return server;
 
         } catch (error) {
             console.error(`  ❌ [Paulmillr Parser] پردازش فایل ${file.name} با خطا مواجه شد: ${error.message}`);
