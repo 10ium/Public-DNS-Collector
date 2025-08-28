@@ -40,7 +40,7 @@ export function parseCurl(content) {
         const urls = (parts[2].match(/https:\/\/[^\s<]+/g) || []);
         if (urls.length === 0) continue;
 
-        const commentText = parts[4].toLowerCase();
+        const rawCommentText = parts[4]; // Use raw text for case-insensitive regex matching
         
         // Create a server object for each group of URLs with the same comment
         const server = createServerObject();
@@ -48,23 +48,60 @@ export function parseCurl(content) {
         server.protocols.push('doh'); // DoH is the default for this list
         server.addresses.push(...urls);
 
-        // --- IMPROVED PROTOCOL DETECTION ---
-        // Dynamically detect other supported protocols from the comment text.
-        // Using word boundaries (\b) to avoid partial matches (e.g., 'dot' in 'dotcom').
-        const protocolPatterns = {
-            dot: /\bdot\b/i,
-            doq: /\bdoq\b/i,
-            doh3: /\bdoh3\b/i,
-            dnscrypt: /\bdnscrypt\b/i
-        };
+        // --- IMPROVED PROTOCOL & ADDRESS DETECTION ---
+        // Detects protocols from the comment text and extracts their specific addresses,
+        // adding standard prefixes like 'tls://' for DoT and 'quic://' for DoQ.
+        
+        // Handle shared DoT/DoQ addresses (e.g., "DoT/DoQ: dns.example.com")
+        const sharedMatch = rawCommentText.match(/(?:DoT\/DoQ|DoQ\/DoT)\s*:?\s*([a-zA-Z0-9.-]+(?::\d{1,5})?)/i);
+        if (sharedMatch && sharedMatch[1]) {
+            const hostname = sharedMatch[1];
+            if (!server.protocols.includes('dot')) server.protocols.push('dot');
+            server.addresses.push(`tls://${hostname}`);
+            if (!server.protocols.includes('doq')) server.protocols.push('doq');
+            server.addresses.push(`quic://${hostname}`);
+        }
 
-        for (const [protocol, pattern] of Object.entries(protocolPatterns)) {
-            if (pattern.test(commentText)) {
-                server.protocols.push(protocol);
+        // Handle individual DoT (DNS-over-TLS)
+        if (/\bdot\b/i.test(rawCommentText)) {
+            if (!server.protocols.includes('dot')) server.protocols.push('dot');
+            // Try to find an explicitly defined address (e.g., "DoT (`dns.example.com`)")
+            const dotMatch = rawCommentText.match(/DoT\s*(?:\(|`|:)\s*([a-zA-Z0-9.-]+(?::\d{1,5})?)/i);
+            if (dotMatch && dotMatch[1]) {
+                server.addresses.push(`tls://${dotMatch[1]}`);
+            }
+        }
+        
+        // Handle individual DoQ (DNS-over-QUIC)
+        if (/\bdoq\b/i.test(rawCommentText)) {
+            if (!server.protocols.includes('doq')) server.protocols.push('doq');
+            // Try to find an explicitly defined address (e.g., "DoQ: dns.example.com")
+            const doqMatch = rawCommentText.match(/DoQ\s*(?:\(|`|:)\s*([a-zA-Z0-9.-]+(?::\d{1,5})?)/i);
+            if (doqMatch && doqMatch[1]) {
+                server.addresses.push(`quic://${doqMatch[1]}`);
             }
         }
 
+        // Handle DoH3
+        if (/\bdoh3\b/i.test(rawCommentText)) {
+            if (!server.protocols.includes('doh3')) server.protocols.push('doh3');
+        }
+
+        // Handle DNSCrypt (often includes full sdns:// URIs)
+        if (/\bdnscrypt\b/i.test(rawCommentText)) {
+            if (!server.protocols.includes('dnscrypt')) server.protocols.push('dnscrypt');
+            const dnsCryptMatches = rawCommentText.match(/sdns:\/\/[^\s`)]+/g);
+            if (dnsCryptMatches) {
+                server.addresses.push(...dnsCryptMatches);
+            }
+        }
+        
+        // Ensure addresses and protocols are unique before proceeding
+        server.addresses = [...new Set(server.addresses)];
+        server.protocols = [...new Set(server.protocols)];
+
         // Infer filters by searching for keywords in the comment text and URLs
+        const commentText = rawCommentText.toLowerCase(); // Lowercase for keyword matching
         const combinedText = (commentText + " " + urls.join(' ')).toLowerCase();
         if (combinedText.includes('adblock') || combinedText.includes('block ads')) server.filters.ads = true;
         if (combinedText.includes('malware') || combinedText.includes('phishing')) server.filters.malware = true;
