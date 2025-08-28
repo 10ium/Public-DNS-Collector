@@ -135,7 +135,11 @@ async function main() {
                 if (!parsedServers || parsedServers.length === 0) {
                      console.warn(`  ⚠️ [هشدار] هیچ سروری از منبع ${source.name} استخراج نشد.`);
                 } else {
-                    allServers.push(...parsedServers);
+                    // Add servers to the final aggregation list ONLY if the source is not Blacklantern
+                    if (source.name !== 'Blacklantern') {
+                        allServers.push(...parsedServers);
+                    }
+                    
                     console.log(`  ✅ [موفقیت] تعداد ${parsedServers.length} گروه سرور از ${source.name} با موفقیت استخراج شد.`);
                     
                     console.log(`  💾 [نوشتن فایل‌های منبع: ${source.name}] در حال تولید فایل‌های خروجی...`);
