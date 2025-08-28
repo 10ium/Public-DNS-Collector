@@ -1,29 +1,39 @@
 import fs from 'fs';
 
 /**
- * Generates the content for the README.md file with a nested structure.
+ * Generates the content for the README.md file with a dynamic and nested structure.
  * @param {object} sources - The list of source objects with names and URLs.
  * @param {string} repoUrl - The URL of the GitHub repository.
  * @param {object} listFileCounts - An object containing counts for all generated files.
  * @returns {string} The complete Markdown content for the README file.
  */
 export function generateReadme(sources, repoUrl, listFileCounts) {
-    const mainListFiles = [
-        { name: 'doh.txt', description: 'لیست تمام سرورهای DNS-over-HTTPS.' },
-        { name: 'dot.txt', description: 'لیست تمام سرورهای DNS-over-TLS.' },
-        { name: 'doq.txt', description: 'لیست تمام سرورهای DNS-over-QUIC.' },
-        { name: 'dnscrypt.txt', description: 'لیست تمام سرورهای DNSCrypt (به صورت Stamp).' },
-        { name: 'ipv4.txt', description: 'لیست سرورهای DNS استاندارد روی IPv4.' },
-        { name: 'ipv6.txt', description: 'لیست تمام آدرس‌های IPv6 موجود.' },
-        { name: 'adblock.txt', description: 'لیست سرورهایی که تبلیغات را مسدود می‌کنند.' },
-        { name: 'malware.txt', description: 'لیست سرورهایی که از بدافزار و فیشینگ جلوگیری می‌کنند.' },
-        { name: 'family.txt', description: 'لیست سرورهایی با فیلترینگ خانواده (محتوای بزرگسالان).' },
-        { name: 'unfiltered.txt', description: 'لیست سرورهای بدون فیلترینگ خاص.' },
-        { name: 'no_log.txt', description: 'لیست سرورهایی که ادعا می‌کنند لاگ کاربران را ذخیره نمی‌کنند.' },
-        { name: 'dnssec.txt', description: 'لیست سرورهایی که از DNSSEC برای افزایش امنیت پشتیبانی می‌کنند.' },
+    // A map for providing descriptions for known list types.
+    const DESCRIPTIONS = {
+        'doh.txt': 'لیست تمام سرورهای DNS-over-HTTPS.',
+        'dot.txt': 'لیست تمام سرورهای DNS-over-TLS.',
+        'doq.txt': 'لیست تمام سرورهای DNS-over-QUIC.',
+        'doh3.txt': 'لیست تمام سرورهای DNS-over-HTTP/3.',
+        'dnscrypt.txt': 'لیست تمام سرورهای DNSCrypt (به صورت Stamp).',
+        'ipv4.txt': 'لیست سرورهای DNS استاندارد روی IPv4.',
+        'ipv6.txt': 'لیست تمام آدرس‌های IPv6 موجود.',
+        'dns64.txt': 'لیست سرورهایی که از DNS64 پشتیبانی می‌کنند.',
+        'adblock.txt': 'لیست سرورهایی که تبلیغات را مسدود می‌کنند.',
+        'malware.txt': 'لیست سرورهایی که از بدافزار و فیشینگ جلوگیری می‌کنند.',
+        'family.txt': 'لیست سرورهایی با فیلترینگ خانواده (محتوای بزرگسالان).',
+        'unfiltered.txt': 'لیست سرورهای بدون فیلترینگ خاص.',
+        'no_log.txt': 'لیست سرورهایی که ادعا می‌کنند لاگ کاربران را ذخیره نمی‌کنند.',
+        'dnssec.txt': 'لیست سرورهایی که از DNSSEC برای افزایش امنیت پشتیبانی می‌کنند.',
+    };
+
+    // A preferred order for displaying main lists to keep the README consistent.
+    const PREFERRED_MAIN_LIST_ORDER = [
+        'doh.txt', 'dot.txt', 'doq.txt', 'doh3.txt', 'dnscrypt.txt',
+        'ipv4.txt', 'ipv6.txt',
+        'adblock.txt', 'malware.txt', 'family.txt', 'unfiltered.txt',
+        'no_log.txt', 'dnssec.txt', 'dns64.txt'
     ];
 
-    const sourceSubListFiles = ['all.txt', 'doh.txt', 'dot.txt', 'doq.txt', 'dnscrypt.txt', 'ipv4.txt', 'ipv6.txt', 'adblock.txt', 'malware.txt', 'family.txt', 'unfiltered.txt', 'no_log.txt', 'dnssec.txt'];
 
     let markdown = `# مجموعه DNS عمومی | Public DNS Collector\n\n`;
     markdown += `<p align="center">\n  <img src="https://raw.githubusercontent.com/1024-byte/resources/main/banner/Public-DNS-Collector-banner.png" alt="Public DNS Collector Banner">\n</p>\n`;
@@ -33,13 +43,27 @@ export function generateReadme(sources, repoUrl, listFileCounts) {
     markdown += `[![License](https://img.shields.io/github/license/${process.env.GITHUB_REPOSITORY}?style=for-the-badge&color=brightgreen)](LICENSE)\n\n</div>\n\n---\n\n`;
 
     markdown += `## 🗂️ لیست‌های تجمیع شده نهایی\n\n`;
-    markdown += `این لیست‌ها حاصل ترکیب، پاک‌سازی و دسته‌بندی داده‌ها از **تمام منابع** هستند و برای استفاده عمومی توصیه می‌شوند.\n\n`;
+    markdown += `این لیست‌ها حاصل ترکیب، پاک‌سازی و دسته‌بندی داده‌ها از **تمام منابعی که برای تجمیع فعال هستند** می‌باشند و برای استفاده عمومی توصیه می‌شوند.\n\n`;
     markdown += `| نام فایل | تعداد آدرس‌ها | توضیحات | لینک خام |\n`;
     markdown += `| :--- | :---: | :--- | :---: |\n`;
-    mainListFiles.forEach(file => {
-        const count = listFileCounts[file.name] || 0;
-        const rawUrl = `${repoUrl}/raw/main/lists/${file.name}`;
-        markdown += `| \`${file.name}\` | **${count}** | ${file.description} | [لینک](${rawUrl}) |\n`;
+
+    // Dynamically discover main list files from listFileCounts
+    const mainFiles = Object.keys(listFileCounts)
+        .filter(key => !key.includes('/'))
+        .sort((a, b) => {
+            const indexA = PREFERRED_MAIN_LIST_ORDER.indexOf(a);
+            const indexB = PREFERRED_MAIN_LIST_ORDER.indexOf(b);
+            if (indexA !== -1 && indexB !== -1) return indexA - indexB; // Both are in preferred order
+            if (indexA !== -1) return -1; // a is preferred, b is not
+            if (indexB !== -1) return 1;  // b is preferred, a is not
+            return a.localeCompare(b); // Neither is preferred, sort alphabetically
+        });
+
+    mainFiles.forEach(fileName => {
+        const count = listFileCounts[fileName] || 0;
+        const description = DESCRIPTIONS[fileName] || `لیست خودکار تولید شده برای ${fileName.replace('.txt', '')}.`;
+        const rawUrl = `${repoUrl}/raw/main/lists/${fileName}`;
+        markdown += `| \`${fileName}\` | **${count}** | ${description} | [لینک](${rawUrl}) |\n`;
     });
     markdown += `\n---\n\n`;
 
@@ -51,20 +75,32 @@ export function generateReadme(sources, repoUrl, listFileCounts) {
         markdown += `| نام فایل | تعداد آدرس‌ها | لینک خام |\n`;
         markdown += `| :--- | :---: | :---: |\n`;
         
-        sourceSubListFiles.forEach(fileName => {
+        // Dynamically discover source-specific files
+        const sourceFiles = Object.keys(listFileCounts)
+            .filter(key => key.startsWith(`${source.name}/`))
+            .map(key => key.split('/')[1]) // get just the filename
+            .sort((a, b) => {
+                if (a === 'all.txt') return -1; // always list 'all.txt' first
+                if (b === 'all.txt') return 1;
+                return a.localeCompare(b); // sort others alphabetically
+            });
+
+        sourceFiles.forEach(fileName => {
             const fileKey = `${source.name}/${fileName}`;
             const count = listFileCounts[fileKey];
-            if (count > 0) {
-                const rawUrl = `${repoUrl}/raw/main/lists/sources/${source.name}/${fileName}`;
-                markdown += `| \`${fileName}\` | **${count}** | [لینک](${rawUrl}) |\n`;
-            }
+            const rawUrl = `${repoUrl}/raw/main/lists/sources/${source.name}/${fileName}`;
+            markdown += `| \`${fileName}\` | **${count}** | [لینک](${rawUrl}) |\n`;
         });
         markdown += `\n</details>\n\n`;
     });
     
     markdown += `---\n\n## 📚 منابع اصلی داده‌ها\n\n`;
     sources.forEach(source => {
-        markdown += `- **[${source.name}](${source.url})**\n`;
+        if (source.url) {
+            markdown += `- **[${source.name}](${source.url})**\n`;
+        } else {
+             markdown += `- **${source.name}** (پردازشگر داخلی)\n`;
+        }
     });
     markdown += `\n---\n`;
     markdown += `<p align="center">ساخته شده با ❤️ و به صورت خودکار توسط GitHub Actions</p>\n`;
