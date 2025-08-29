@@ -11,7 +11,7 @@
 <br />
 <br />
 
-**آخرین بروزرسانی:** 2025-08-29 05:25:15 UTC
+**آخرین بروزرسانی:** 2025-08-29 05:29:14 UTC
 <br />
 <br />
 
@@ -29,20 +29,17 @@
 
 | نام فایل | تعداد آدرس‌ها | توضیحات | لینک خام |
 | :--- | :---: | ---: | :---: |
-| `all.txt` | **15308** | لیست جامع تمام دی ان اس ها از همه منابع و پروتکل‌ها | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/all.txt) |
+| `all.txt` | **1692** | لیست جامع تمام دی ان اس ها از همه منابع و پروتکل‌ها | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/all.txt) |
 | `doh.txt` | **551** | لیست تمام سرورهای دی ان اس روی اچ تی تی پی اس | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/doh.txt) |
 | `dot.txt` | **300** | لیست تمام سرورهای دی ان اس روی تی ال اس | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dot.txt) |
 | `doq.txt` | **56** | لیست تمام سرورهای دی ان اس روی کوییک | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/doq.txt) |
 | `doh3.txt` | **2** | لیست تمام سرورهای دی ان اس روی اچ تی تی پی اس ۳ | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/doh3.txt) |
 | `dnscrypt.txt` | **635** | لیست تمام سرورهای دی ان اس کریپت | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dnscrypt.txt) |
-| `ipv4.txt` | **6808** | لیست سرورهای دی ان اس استاندارد روی آی‌پی‌وی۴ (بدون پیشوند) | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/ipv4.txt) |
 | `ipv6.txt` | **24** | لیست سرورهای دی ان اس استاندارد روی آی‌پی‌وی۶ | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/ipv6.txt) |
-| `udp.txt` | **6808** | لیست تمام سرورهای دی ان اس استاندارد با پیشوند یو دی پی | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/udp.txt) |
-| `tcp.txt` | **6808** | لیست تمام سرورهای دی ان اس استاندارد با پیشوند تی سی پی | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/tcp.txt) |
 | `adblock.txt` | **478** | لیست سرورهایی که تبلیغات را مسدود می‌کنند | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/adblock.txt) |
 | `malware.txt` | **413** | لیست سرورهایی که از بدافزار و فیشینگ جلوگیری می‌کنند | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/malware.txt) |
 | `family.txt` | **162** | لیست سرورهایی با فیلترینگ خانواده (محتوای بزرگسالان) | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/family.txt) |
-| `unfiltered.txt` | **14537** | لیست سرورهای بدون فیلترینگ خاص | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/unfiltered.txt) |
+| `unfiltered.txt` | **921** | لیست سرورهای بدون فیلترینگ خاص | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/unfiltered.txt) |
 | `no_log.txt` | **378** | لیست سرورهایی که ادعا می‌کنند لاگ کاربران را ذخیره نمی‌کنند | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/no_log.txt) |
 | `dnssec.txt` | **543** | لیست سرورهایی که از دی ان اس سک برای افزایش امنیت پشتیبانی می‌کنند | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dnssec.txt) |
 | `dns64.txt` | **6** | لیست سرورهایی که از دی‌ان‌اس۶۴ پشتیبانی می‌کنند | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dns64.txt) |
