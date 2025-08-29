@@ -145,60 +145,70 @@ function categorizeServers(servers) {
         adblock: new Set(), malware: new Set(), family: new Set(),
         unfiltered: new Set(), ipv4: new Set(), ipv6: new Set(), dns64: new Set(),
         no_log: new Set(), dnssec: new Set(),
-        // New sets for tcp and udp
         tcp: new Set(), udp: new Set(),
     };
 
     for (const info of addressInfoMap.values()) {
         const addr = info.originalAddress;
-        sets.all.add(addr);
+        
+        const bracketedMatch = addr.match(/^\[(.+)\]/);
+        const ipAddrPart = bracketedMatch ? bracketedMatch[1] : getAddressKey(addr).replace(/\[|\]/g, '');
+        const isIPv4 = IPV4_REGEX.test(ipAddrPart);
+        
+        const tcpAddr = isIPv4 ? `tcp://${ipAddrPart}` : null;
+        const udpAddr = isIPv4 ? `udp://${ipAddrPart}` : null;
 
-        // Protocol-specific lists are not changed
+        // Populate `all.txt` for per-source lists
+        if (isIPv4) {
+            sets.all.add(tcpAddr);
+            sets.all.add(udpAddr);
+        } else {
+            sets.all.add(addr);
+        }
+
+        // Protocol-specific lists
         if (info.protocols.has('doh') && addr.startsWith('https://')) sets.doh.add(addr);
         if (info.protocols.has('dot') && addr.startsWith('tls://')) sets.dot.add(addr);
         if (info.protocols.has('doq') && addr.startsWith('quic://')) sets.doq.add(addr);
         if (info.protocols.has('doh3') && addr.startsWith('https://')) sets.doh3.add(addr);
         if (info.protocols.has('dnscrypt') && addr.startsWith('sdns://')) sets.dnscrypt.add(addr);
 
-        const bracketedMatch = addr.match(/^\[(.+)\]/);
-        const ipAddrPart = bracketedMatch ? bracketedMatch[1] : getAddressKey(addr).replace(/\[|\]/g, '');
-        const isIPv4 = IPV4_REGEX.test(ipAddrPart);
-
+        // IP, TCP, UDP lists
         if (isIPv4) {
-            // Populate ipv4.txt with plain, port-less IPs
             sets.ipv4.add(ipAddrPart);
-            
-            // Create prefixed addresses for new lists and filtering lists
-            const tcpAddr = `tcp://${ipAddrPart}`;
-            const udpAddr = `udp://${ipAddrPart}`;
-
-            // Populate new tcp.txt and udp.txt lists
             sets.tcp.add(tcpAddr);
             sets.udp.add(udpAddr);
-
-            // For filtering lists, add both tcp and udp prefixed versions for IPv4 servers
-            if (info.filters.ads) { sets.adblock.add(tcpAddr); sets.adblock.add(udpAddr); }
-            if (info.filters.malware) { sets.malware.add(tcpAddr); sets.malware.add(udpAddr); }
-            if (info.filters.family) { sets.family.add(tcpAddr); sets.family.add(udpAddr); }
-            if (!info.filters.ads && !info.filters.malware && !info.filters.family && info.filters.unfiltered) {
-                sets.unfiltered.add(tcpAddr);
-                sets.unfiltered.add(udpAddr);
-            }
-        } else {
-            // For non-IPv4 addresses (DoH, DoT, IPv6 etc.), add them to filtering lists as is.
-            if (info.filters.ads) sets.adblock.add(addr);
-            if (info.filters.malware) sets.malware.add(addr);
-            if (info.filters.family) sets.family.add(addr);
-            if (!info.filters.ads && !info.filters.malware && !info.filters.family && info.filters.unfiltered) {
-                 sets.unfiltered.add(addr);
+        }
+        if (IPV6_REGEX.test(ipAddrPart)) sets.ipv6.add(addr);
+        
+        // Filtering lists
+        const filterSets = [];
+        if (info.filters.ads) filterSets.push(sets.adblock);
+        if (info.filters.malware) filterSets.push(sets.malware);
+        if (info.filters.family) filterSets.push(sets.family);
+        if (!info.filters.ads && !info.filters.malware && !info.filters.family && info.filters.unfiltered) {
+            filterSets.push(sets.unfiltered);
+        }
+        if (filterSets.length > 0) {
+            if (isIPv4) {
+                filterSets.forEach(s => { s.add(tcpAddr); s.add(udpAddr); });
+            } else {
+                filterSets.forEach(s => s.add(addr));
             }
         }
-        
-        // Handle other lists as before
-        if (IPV6_REGEX.test(ipAddrPart)) sets.ipv6.add(addr);
-        if (info.features.no_log) sets.no_log.add(addr);
-        if (info.features.dnssec) sets.dnssec.add(addr);
-        if (info.features.dns64) sets.dns64.add(addr);
+
+        // Feature lists
+        const featureSets = [];
+        if (info.features.no_log) featureSets.push(sets.no_log);
+        if (info.features.dnssec) featureSets.push(sets.dnssec);
+        if (info.features.dns64) featureSets.push(sets.dns64);
+        if (featureSets.length > 0) {
+            if (isIPv4) {
+                featureSets.forEach(s => { s.add(tcpAddr); s.add(udpAddr); });
+            } else {
+                featureSets.forEach(s => s.add(addr));
+            }
+        }
     }
     return sets;
 }
@@ -265,29 +275,34 @@ async function main() {
 
     console.log('\n💾 [نوشتن فایل‌های تجمیعی] در حال تولید و ذخیره فایل‌های خروجی اصلی...');
     
-    // --- SPECIAL: Generate port-less `all.txt` ---
-    const portlessUniqueAddresses = new Map();
+    // --- SPECIAL: Generate `all.txt` with new tcp/udp format ---
+    const allAddresses = new Set();
     for (const server of allServers) {
         for (const address of server.addresses) {
             const cleanedAddress = address.trim();
             const standardizedAddress = standardizeIPv6WithPort(cleanedAddress);
             if (isValidDnsAddress(standardizedAddress)) {
                 const key = getAddressKey(standardizedAddress);
-                if (!portlessUniqueAddresses.has(key)) {
-                    portlessUniqueAddresses.set(key, standardizedAddress);
+                const ipAddrPart = key.replace(/\[|\]/g, '');
+
+                if (IPV4_REGEX.test(ipAddrPart)) {
+                    allAddresses.add(`tcp://${ipAddrPart}`);
+                    allAddresses.add(`udp://${ipAddrPart}`);
+                } else {
+                    allAddresses.add(standardizedAddress);
                 }
             }
         }
     }
-    const allList = Array.from(portlessUniqueAddresses.values()).sort();
+    const allList = Array.from(allAddresses).sort();
     const allFilePath = path.join(OUTPUT_DIR, 'all.txt');
     fs.writeFileSync(allFilePath, allList.join('\n'));
     listFileCounts['all.txt'] = allList.length;
-    console.log(`  📄 فایل ${allFilePath} با ${allList.length} آدرس منحصر به فرد (بدون در نظر گرفتن پورت) نوشته شد.`);
+    console.log(`  📄 فایل ${allFilePath} با ${allList.length} آدرس منحصر به فرد (با فرمت tcp/udp) نوشته شد.`);
     // --- END SPECIAL ---
     
     for (const [listName, addressSet] of Object.entries(aggregatedSets)) {
-        // We already generated the special 'all.txt', so skip the one from `aggregatedSets`.
+        // We already generated the special 'all.txt', so skip the one from `aggregatedSets` generated by `categorizeServers`.
         if(listName !== 'all' && addressSet.size > 0) {
             const sortedList = Array.from(addressSet).sort();
             const fileName = `${listName}.txt`;
