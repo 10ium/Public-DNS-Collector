@@ -21,18 +21,52 @@ const SOURCES = [
     { name: 'Thiagozs', url: 'https://gist.githubusercontent.com/thiagozs/088fd8f8129ca06df524f6711116ee8f/raw/', parser: parsers.parseThiagozs },
 ];
 
-// --- FINAL VALIDATION UTILITY ---
+// --- UTILITY FUNCTIONS ---
 const IPV4_REGEX = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 const IPV6_REGEX = /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/i;
 const HOSTNAME_REGEX = /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][a-zA-Z0-9-]*[A-Za-z0-9])$/;
 
+/**
+ * Corrects non-standard IPv6 with port to the standard `[address]:port` format.
+ * @param {string} address The address to check and standardize.
+ * @returns {string} The standardized address or the original address if no change is needed.
+ */
+function standardizeIPv6WithPort(address) {
+    // Return early if it's already in the standard bracketed format or doesn't have multiple colons.
+    if (address.startsWith('[') || !address.includes(':') || address.lastIndexOf(':') === address.indexOf(':')) {
+        return address;
+    }
+    
+    const lastColonIndex = address.lastIndexOf(':');
+    const base = address.substring(0, lastColonIndex);
+    const port = address.substring(lastColonIndex + 1);
+
+    // Check if the part after the last colon is a valid port and the base is a valid IPv6 address.
+    if (/^\d+$/.test(port) && IPV6_REGEX.test(base)) {
+        return `[${base}]:${port}`;
+    }
+
+    return address;
+}
+
+
 function isValidDnsAddress(address) {
     if (typeof address !== 'string' || address.length === 0) return false;
     const addr = address.trim();
+
+    // RULE: Reject addresses ending in '::' as they are likely network base addresses, not usable resolvers.
+    if (addr.endsWith('::')) return false;
+
     if (addr.startsWith('https://') || addr.startsWith('tls://') || addr.startsWith('quic://') || addr.startsWith('sdns://')) {
         return true;
     }
-    // Test the base address part, ignoring potential ports
+
+    // Handle bracketed IPv6 with port
+    const bracketedMatch = addr.match(/^\[(.+)\](?::(\d+))?$/);
+    if (bracketedMatch && IPV6_REGEX.test(bracketedMatch[1])) {
+        return true;
+    }
+    
     const baseAddr = addr.split(':')[0];
     if (IPV4_REGEX.test(addr) || IPV6_REGEX.test(addr) || HOSTNAME_REGEX.test(baseAddr)) {
         return true;
@@ -44,12 +78,6 @@ function isValidDnsAddress(address) {
     return false;
 }
 
-/**
- * Generates a deduplication key for a DNS address by removing its port, if present.
- * This allows 'dns.example.com' and 'dns.example.com:853' to be treated as the same entry.
- * @param {string} address The DNS address.
- * @returns {string} The address without the port, used as a key.
- */
 function getAddressKey(address) {
     try {
         if (address.startsWith('https://') || address.startsWith('tls://') || address.startsWith('quic://')) {
@@ -61,14 +89,14 @@ function getAddressKey(address) {
     if (address.startsWith('sdns://')) {
         return address;
     }
-
-    const bracketedIpv6Match = address.match(/^(\[.*\]):[0-9]+$/);
-    if (bracketedIpv6Match) {
-        return bracketedIpv6Match[1];
+    
+    // For bracketed IPv6, remove the port to get the key.
+    const bracketedMatch = address.match(/^(\[.+\]):[0-9]+$/);
+    if (bracketedMatch) {
+        return bracketedMatch[1];
     }
 
     const lastColonIndex = address.lastIndexOf(':');
-    // Check if there is a colon, it's not the first character, and the base doesn't have a colon (to avoid IPv6).
     if (lastColonIndex > 0 && !address.substring(0, lastColonIndex).includes(':')) {
         const portPart = address.substring(lastColonIndex + 1);
         if (/^[0-9]+$/.test(portPart)) {
@@ -80,32 +108,23 @@ function getAddressKey(address) {
 }
 
 
-/**
- * Merges and categorizes a list of server objects into different sets based on their properties.
- * This version aggregates all information for a unique address (across multiple server objects)
- * before categorization to prevent data loss from premature de-duplication. For example, if one
- * source lists an address for 'doh' and another lists the same address for 'doh3', this function
- * ensures the final address is correctly categorized under both.
- * @param {Array<object>} servers - The list of server objects to categorize.
- * @returns {object} An object containing sets of categorized addresses.
- */
 function categorizeServers(servers) {
     const addressInfoMap = new Map();
 
-    // Step 1: Aggregate all properties for each unique address key.
     for (const server of servers) {
         for (const address of server.addresses) {
             const cleanedAddress = address.trim();
-            if (!isValidDnsAddress(cleanedAddress)) {
+            const standardizedAddress = standardizeIPv6WithPort(cleanedAddress);
+
+            if (!isValidDnsAddress(standardizedAddress)) {
                 continue;
             }
 
-            const key = getAddressKey(cleanedAddress);
+            const key = getAddressKey(standardizedAddress);
             
-            // Initialize if it's the first time we see this address key.
             if (!addressInfoMap.has(key)) {
                 addressInfoMap.set(key, {
-                    originalAddress: cleanedAddress, // Store the first encountered version with port, etc.
+                    originalAddress: standardizedAddress,
                     protocols: new Set(),
                     filters: { ads: false, malware: false, family: false, unfiltered: false },
                     features: { no_log: false, dnssec: false, dns64: false },
@@ -114,21 +133,17 @@ function categorizeServers(servers) {
 
             const info = addressInfoMap.get(key);
 
-            // Merge properties from the current server object.
             server.protocols.forEach(p => info.protocols.add(p));
-            
             if (server.filters.ads) info.filters.ads = true;
             if (server.filters.malware) info.filters.malware = true;
             if (server.filters.family) info.filters.family = true;
             if (server.filters.unfiltered) info.filters.unfiltered = true;
-
             if (server.features.no_log) info.features.no_log = true;
             if (server.features.dnssec) info.features.dnssec = true;
             if (server.features.dns64) info.features.dns64 = true;
         }
     }
 
-    // Step 2: Populate the final sets from the aggregated data map.
     const sets = {
         all: new Set(), doh: new Set(), dot: new Set(), doq: new Set(), doh3: new Set(), dnscrypt: new Set(),
         adblock: new Set(), malware: new Set(), family: new Set(),
@@ -140,36 +155,26 @@ function categorizeServers(servers) {
         const addr = info.originalAddress;
         sets.all.add(addr);
 
-        // --- STRICT PROTOCOL CATEGORIZATION ---
-        // An address is added to a protocol list ONLY IF it's flagged for that protocol
-        // AND its prefix matches the protocol's standard scheme.
         if (info.protocols.has('doh') && addr.startsWith('https://')) sets.doh.add(addr);
         if (info.protocols.has('dot') && addr.startsWith('tls://')) sets.dot.add(addr);
         if (info.protocols.has('doq') && addr.startsWith('quic://')) sets.doq.add(addr);
         if (info.protocols.has('doh3') && addr.startsWith('https://')) sets.doh3.add(addr);
         if (info.protocols.has('dnscrypt') && addr.startsWith('sdns://')) sets.dnscrypt.add(addr);
 
+        const bracketedMatch = addr.match(/^\[(.+)\]/);
+        const ipAddrPart = bracketedMatch ? bracketedMatch[1] : getAddressKey(addr).replace(/\[|\]/g, '');
 
-        // Handle plain IP/Hostname addresses (for Do53)
-        const isUrlBased = addr.startsWith('https://') || addr.startsWith('tls://') || addr.startsWith('quic://') || addr.startsWith('sdns://');
-        if (!isUrlBased) {
-            const ipAddrPart = getAddressKey(addr).replace(/\[|\]/g, ''); // Get base IP/host
-            if (IPV6_REGEX.test(ipAddrPart)) sets.ipv6.add(addr);
-            if (IPV4_REGEX.test(ipAddrPart)) sets.ipv4.add(addr);
-        }
+        if (IPV6_REGEX.test(ipAddrPart)) sets.ipv6.add(addr);
+        if (IPV4_REGEX.test(ipAddrPart)) sets.ipv4.add(addr);
 
-        // Populate filter sets
         if (info.filters.ads) sets.adblock.add(addr);
         if (info.filters.malware) sets.malware.add(addr);
         if (info.filters.family) sets.family.add(addr);
         
-        // An address is only 'unfiltered' if it has no filtering flags AND
-        // at least one source explicitly marked it as unfiltered.
         if (!info.filters.ads && !info.filters.malware && !info.filters.family && info.filters.unfiltered) {
              sets.unfiltered.add(addr);
         }
 
-        // Populate feature sets
         if (info.features.no_log) sets.no_log.add(addr);
         if (info.features.dnssec) sets.dnssec.add(addr);
         if (info.features.dns64) sets.dns64.add(addr);
@@ -179,7 +184,6 @@ function categorizeServers(servers) {
 }
 
 
-// --- MAIN EXECUTION ---
 async function main() {
     console.log('🚀 [شروع] فرآیند جمع‌آوری و به‌روزرسانی لیست‌های DNS آغاز شد.');
     let allServers = [];
@@ -204,7 +208,6 @@ async function main() {
                 if (!parsedServers || parsedServers.length === 0) {
                      console.warn(`  ⚠️ [هشدار] هیچ سروری از منبع ${source.name} استخراج نشد.`);
                 } else {
-                    // Add servers to the final aggregation list ONLY if the source is not Blacklantern
                     if (source.name !== 'Blacklantern') {
                         allServers.push(...parsedServers);
                     }
