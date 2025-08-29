@@ -170,7 +170,9 @@ function categorizeServers(servers) {
         if (info.protocols.has('doh') && addr.startsWith('https://')) sets.doh.add(addr);
         if (info.protocols.has('dot') && addr.startsWith('tls://')) sets.dot.add(addr);
         if (info.protocols.has('doq') && addr.startsWith('quic://')) sets.doq.add(addr);
-        if (info.protocols.has('doh3') && addr.startsWith('https://')) sets.doh3.add(addr);
+        if (info.protocols.has('doh3') && addr.startsWith('https://')) {
+            sets.doh3.add(addr.replace('https://', 'h3://'));
+        }
         if (info.protocols.has('dnscrypt') && addr.startsWith('sdns://')) sets.dnscrypt.add(addr);
 
         // IP, TCP, UDP lists
