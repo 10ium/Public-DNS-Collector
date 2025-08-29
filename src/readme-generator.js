@@ -16,10 +16,8 @@ export function generateReadme(sources, repoUrl, listFileCounts) {
         'doq.txt': 'لیست تمام سرورهای دی ان اس روی کوییک',
         'doh3.txt': 'لیست تمام سرورهای دی ان اس روی اچ تی تی پی اس ۳',
         'dnscrypt.txt': 'لیست تمام سرورهای دی ان اس کریپت',
-        'ipv4.txt': 'لیست سرورهای دی ان اس استاندارد روی آی‌پی‌وی۴ (بدون پیشوند)',
-        'ipv6.txt': 'لیست سرورهای دی ان اس استاندارد روی آی‌پی‌وی۶',
-        'udp.txt': 'لیست تمام سرورهای دی ان اس استاندارد با پیشوند یو دی پی',
-        'tcp.txt': 'لیست تمام سرورهای دی ان اس استاندارد با پیشوند تی سی پی',
+        'ipv4.txt': 'لیست سرورهای دی ان اس استاندارد روی آی‌پی‌وی۴',
+        'ipv6.txt': '۶لیست سرورهای دی ان اس استاندارد روی آی‌پی‌وی',
         'dns64.txt': 'لیست سرورهایی که از دی‌ان‌اس۶۴ پشتیبانی می‌کنند',
         'adblock.txt': 'لیست سرورهایی که تبلیغات را مسدود می‌کنند',
         'malware.txt': 'لیست سرورهایی که از بدافزار و فیشینگ جلوگیری می‌کنند',
@@ -32,7 +30,7 @@ export function generateReadme(sources, repoUrl, listFileCounts) {
     // A preferred order for displaying main lists to keep the README consistent.
     const PREFERRED_MAIN_LIST_ORDER = [
         'all.txt', 'doh.txt', 'dot.txt', 'doq.txt', 'doh3.txt', 'dnscrypt.txt',
-        'ipv4.txt', 'ipv6.txt', 'udp.txt', 'tcp.txt',
+        'ipv4.txt', 'ipv6.txt',
         'adblock.txt', 'malware.txt', 'family.txt', 'unfiltered.txt',
         'no_log.txt', 'dnssec.txt', 'dns64.txt'
     ];
