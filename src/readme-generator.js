@@ -96,8 +96,9 @@ export function generateReadme(sources, repoUrl, listFileCounts) {
     
     markdown += `---\n\n## 📚 منابع اصلی داده‌ها\n\n`;
     sources.forEach(source => {
-        if (source.url) {
-            markdown += `- **[${source.name}](${source.url})**\n`;
+        const link = source.readmeUrl || source.url; // Use readmeUrl if available, otherwise fallback to url
+        if (link) {
+            markdown += `- **[${source.name}](${link})**\n`;
         } else {
              markdown += `- **${source.name}** (پردازشگر داخلی)\n`;
         }
