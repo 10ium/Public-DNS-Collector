@@ -81,24 +81,18 @@ function getAddressKey(address) {
 
 
 /**
- * Categorizes a list of server objects into different sets based on their properties.
- * This version ensures protocol-specific lists (DoH, DoT, etc.) only contain addresses
- * with the correct URI scheme prefix. It also de-duplicates servers that are identical
- * except for the port number.
+ * Merges and categorizes a list of server objects into different sets based on their properties.
+ * This version aggregates all information for a unique address (across multiple server objects)
+ * before categorization to prevent data loss from premature de-duplication. For example, if one
+ * source lists an address for 'doh' and another lists the same address for 'doh3', this function
+ * ensures the final address is correctly categorized under both.
  * @param {Array<object>} servers - The list of server objects to categorize.
  * @returns {object} An object containing sets of categorized addresses.
  */
 function categorizeServers(servers) {
-    const sets = {
-        all: new Set(), doh: new Set(), dot: new Set(), doq: new Set(), doh3: new Set(), dnscrypt: new Set(),
-        adblock: new Set(), malware: new Set(), family: new Set(),
-        unfiltered: new Set(), ipv4: new Set(), ipv6: new Set(), dns64: new Set(),
-        no_log: new Set(), dnssec: new Set(),
-    };
-    
-    // Use a helper Set to track processed address keys for de-duplication.
-    const processedKeys = new Set();
+    const addressInfoMap = new Map();
 
+    // Step 1: Aggregate all properties for each unique address key.
     for (const server of servers) {
         for (const address of server.addresses) {
             const cleanedAddress = address.trim();
@@ -106,57 +100,78 @@ function categorizeServers(servers) {
                 continue;
             }
 
-            // De-duplicate addresses with and without ports.
             const key = getAddressKey(cleanedAddress);
-            if (processedKeys.has(key)) {
-                continue; // Already added a variant of this address.
+            
+            // Initialize if it's the first time we see this address key.
+            if (!addressInfoMap.has(key)) {
+                addressInfoMap.set(key, {
+                    originalAddress: cleanedAddress, // Store the first encountered version with port, etc.
+                    protocols: new Set(),
+                    filters: { ads: false, malware: false, family: false, unfiltered: false },
+                    features: { no_log: false, dnssec: false, dns64: false },
+                });
             }
-            processedKeys.add(key);
 
-            // Add the original, cleaned address to the main lists.
-            sets.all.add(cleanedAddress);
+            const info = addressInfoMap.get(key);
 
-            // Strictly categorize protocols based on their required prefix.
-            let isUrlBased = false;
-            if (cleanedAddress.startsWith('https://')) {
-                sets.doh.add(cleanedAddress);
-                isUrlBased = true;
-            } else if (cleanedAddress.startsWith('tls://')) {
-                sets.dot.add(cleanedAddress);
-                isUrlBased = true;
-            } else if (cleanedAddress.startsWith('quic://')) {
-                sets.doq.add(cleanedAddress);
-                isUrlBased = true;
-            } else if (cleanedAddress.startsWith('sdns://')) {
-                sets.dnscrypt.add(cleanedAddress);
-                isUrlBased = true;
-            }
+            // Merge properties from the current server object.
+            server.protocols.forEach(p => info.protocols.add(p));
             
-            // Categorize IPs and Hostnames that are not full URLs.
-            // This also fixes a bug where IPs with ports were not being categorized.
-            if (!isUrlBased) {
-                const ipAddrPart = getAddressKey(cleanedAddress).replace(/\[|\]/g, '');
-                if (IPV6_REGEX.test(ipAddrPart)) {
-                    sets.ipv6.add(cleanedAddress);
-                }
-                if (IPV4_REGEX.test(ipAddrPart)) {
-                    sets.ipv4.add(cleanedAddress);
-                }
-            }
-            
-            // This allows hostnames that support DoH3 to be added.
-            if (server.protocols.includes('doh3')) sets.doh3.add(cleanedAddress);
-            
-            // Categorize by server-wide properties (filters, features) for all valid addresses.
-            if (server.filters.ads) sets.adblock.add(cleanedAddress);
-            if (server.filters.malware) sets.malware.add(cleanedAddress);
-            if (server.filters.family) sets.family.add(cleanedAddress);
-            if (server.filters.unfiltered) sets.unfiltered.add(cleanedAddress);
-            if (server.features.no_log) sets.no_log.add(cleanedAddress);
-            if (server.features.dnssec) sets.dnssec.add(cleanedAddress);
-            if (server.features.dns64) sets.dns64.add(cleanedAddress);
+            if (server.filters.ads) info.filters.ads = true;
+            if (server.filters.malware) info.filters.malware = true;
+            if (server.filters.family) info.filters.family = true;
+            if (server.filters.unfiltered) info.filters.unfiltered = true;
+
+            if (server.features.no_log) info.features.no_log = true;
+            if (server.features.dnssec) info.features.dnssec = true;
+            if (server.features.dns64) info.features.dns64 = true;
         }
     }
+
+    // Step 2: Populate the final sets from the aggregated data map.
+    const sets = {
+        all: new Set(), doh: new Set(), dot: new Set(), doq: new Set(), doh3: new Set(), dnscrypt: new Set(),
+        adblock: new Set(), malware: new Set(), family: new Set(),
+        unfiltered: new Set(), ipv4: new Set(), ipv6: new Set(), dns64: new Set(),
+        no_log: new Set(), dnssec: new Set(),
+    };
+
+    for (const info of addressInfoMap.values()) {
+        const addr = info.originalAddress;
+        sets.all.add(addr);
+
+        // Populate protocol sets from aggregated info
+        if (info.protocols.has('doh')) sets.doh.add(addr);
+        if (info.protocols.has('dot')) sets.dot.add(addr);
+        if (info.protocols.has('doq')) sets.doq.add(addr);
+        if (info.protocols.has('doh3')) sets.doh3.add(addr);
+        if (info.protocols.has('dnscrypt')) sets.dnscrypt.add(addr);
+
+        // Handle plain IP/Hostname addresses (for Do53)
+        const isUrlBased = addr.startsWith('https://') || addr.startsWith('tls://') || addr.startsWith('quic://') || addr.startsWith('sdns://');
+        if (!isUrlBased) {
+            const ipAddrPart = getAddressKey(addr).replace(/\[|\]/g, ''); // Get base IP/host
+            if (IPV6_REGEX.test(ipAddrPart)) sets.ipv6.add(addr);
+            if (IPV4_REGEX.test(ipAddrPart)) sets.ipv4.add(addr);
+        }
+
+        // Populate filter sets
+        if (info.filters.ads) sets.adblock.add(addr);
+        if (info.filters.malware) sets.malware.add(addr);
+        if (info.filters.family) sets.family.add(addr);
+        
+        // An address is only 'unfiltered' if it has no filtering flags AND
+        // at least one source explicitly marked it as unfiltered.
+        if (!info.filters.ads && !info.filters.malware && !info.filters.family && info.filters.unfiltered) {
+             sets.unfiltered.add(addr);
+        }
+
+        // Populate feature sets
+        if (info.features.no_log) sets.no_log.add(addr);
+        if (info.features.dnssec) sets.dnssec.add(addr);
+        if (info.features.dns64) sets.features.dns64.add(addr);
+    }
+
     return sets;
 }
 
