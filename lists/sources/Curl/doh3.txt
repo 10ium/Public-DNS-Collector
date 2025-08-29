@@ -1,2 +1,2 @@
-https://dns.dnshome.de/dns-query
-https://nsec.arnor.org/dns-query
+h3://dns.dnshome.de/dns-query
+h3://nsec.arnor.org/dns-query
