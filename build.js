@@ -23,129 +23,116 @@ const SOURCES = [
 
 // --- UTILITY FUNCTIONS ---
 const IPV4_REGEX = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
-const IPV6_REGEX = /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/i;
-const HOSTNAME_REGEX = /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][a-zA-Z0-9-]*[A-Za-z0-9])$/;
 
-function standardizeIPv6WithPort(address) {
-    if (address.startsWith('[') || !address.includes(':') || address.lastIndexOf(':') === address.indexOf(':')) {
-        return address;
-    }
-    const lastColonIndex = address.lastIndexOf(':');
-    const base = address.substring(0, lastColonIndex);
-    const port = address.substring(lastColonIndex + 1);
-    if (/^\d+$/.test(port) && IPV6_REGEX.test(base)) {
-        return `[${base}]:${port}`;
-    }
-    return address;
-}
-
-function isValidDnsAddress(address) {
-    if (typeof address !== 'string' || address.length === 0) return false;
-    const addr = address.trim();
-    if (addr.endsWith('::')) return false;
-    if (addr.startsWith('https://') || addr.startsWith('tls://') || addr.startsWith('quic://') || addr.startsWith('sdns://')) {
-        return true;
-    }
-    const bracketedMatch = addr.match(/^\[(.+)\](?::(\d+))?$/);
-    if (bracketedMatch && IPV6_REGEX.test(bracketedMatch[1])) {
-        return true;
-    }
-    const baseAddr = addr.split(':')[0];
-    if (IPV4_REGEX.test(addr) || IPV6_REGEX.test(addr) || HOSTNAME_REGEX.test(baseAddr)) {
-        return true;
-    }
-    const hostnamePart = addr.split(':')[0];
-    if (HOSTNAME_REGEX.test(hostnamePart)) {
-        return true;
-    }
-    return false;
-}
-
-function getAddressKey(address) {
+/**
+ * Generates a unique key for a server based on its protocol and address (ignoring port).
+ * This is the core of the de-duplication logic.
+ * @param {string} protocol The protocol (e.g., 'doh', 'dot', 'unspecified' for plain IPs).
+ * @param {string} address The full address string.
+ * @returns {string|null} A unique key or null if the address is invalid.
+ */
+function generateServerKey(protocol, address) {
+    let baseAddress = address.trim();
     try {
-        if (address.startsWith('https://') || address.startsWith('tls://') || address.startsWith('quic://')) {
-            const url = new URL(address);
-            return `${url.protocol}//${url.hostname}${url.pathname}${url.search}${url.hash}`;
+        if (baseAddress.startsWith('https://') || baseAddress.startsWith('tls://') || baseAddress.startsWith('quic://')) {
+            const url = new URL(baseAddress);
+            baseAddress = `${url.hostname}${url.pathname}${url.search}${url.hash}`.replace(/\/$/, "");
+        } else if (baseAddress.startsWith('sdns://')) {
+            return `dnscrypt:${baseAddress}`; // Ensure protocol is part of the key for sdns
+        } else {
+            const bracketedMatch = baseAddress.match(/^\[(.+)\](?::\d+)?$/);
+            if (bracketedMatch) {
+                baseAddress = bracketedMatch[1]; // IPv6
+            } else {
+                baseAddress = baseAddress.split(':')[0]; // IPv4 or hostname
+            }
         }
-    } catch (e) { /* Not a standard URL, continue. */ }
-    if (address.startsWith('sdns://')) {
-        return address;
+        return `${protocol}:${baseAddress}`;
+    } catch (e) {
+        return null;
     }
-    const bracketedMatch = address.match(/^(\[.+\]):[0-9]+$/);
-    if (bracketedMatch) {
-        return bracketedMatch[1];
-    }
-    const lastColonIndex = address.lastIndexOf(':');
-    if (lastColonIndex > 0 && !address.substring(0, lastColonIndex).includes(':')) {
-        const portPart = address.substring(lastColonIndex + 1);
-        if (/^[0-9]+$/.test(portPart)) {
-            return address.substring(0, lastColonIndex);
-        }
-    }
-    return address;
 }
 
-function categorizeServers(servers) {
-    const addressInfoMap = new Map();
+
+/**
+ * Aggregates servers, de-duplicates them, merges properties, and categorizes them.
+ * @param {Array<object>} servers The array of all server objects.
+ * @returns {object} An object containing the categorized sets of addresses.
+ */
+function aggregateAndCategorizeServers(servers) {
+    const uniqueServersMap = new Map();
+
     for (const server of servers) {
         for (const address of server.addresses) {
-            const cleanedAddress = address.trim();
-            const standardizedAddress = standardizeIPv6WithPort(cleanedAddress);
-            if (!isValidDnsAddress(standardizedAddress)) {
-                continue;
+            // Treat plain IPs as 'unspecified' protocol for key generation
+            const protocols = server.protocols && server.protocols.length > 0 ? server.protocols : ['unspecified'];
+            
+            for (const protocol of protocols) {
+                const key = generateServerKey(protocol, address);
+                if (!key) continue;
+
+                if (!uniqueServersMap.has(key)) {
+                    uniqueServersMap.set(key, {
+                        originalAddress: address,
+                        protocol: protocol,
+                        filters: { ...server.filters },
+                        features: { ...server.features },
+                        isIPv4: protocol === 'unspecified' && IPV4_REGEX.test(address.split(':')[0])
+                    });
+                } else {
+                    const existing = uniqueServersMap.get(key);
+                    Object.keys(server.filters).forEach(k => { if (server.filters[k]) existing.filters[k] = true; });
+                    Object.keys(server.features).forEach(k => { if (server.features[k]) existing.features[k] = true; });
+                }
             }
-            const key = getAddressKey(standardizedAddress);
-            if (!addressInfoMap.has(key)) {
-                addressInfoMap.set(key, {
-                    originalAddress: standardizedAddress,
-                    protocols: new Set(),
-                    filters: { ads: false, malware: false, family: false, unfiltered: false },
-                    features: { no_log: false, dnssec: false, dns64: false },
-                });
-            }
-            const info = addressInfoMap.get(key);
-            server.protocols.forEach(p => info.protocols.add(p));
-            if (server.filters.ads) info.filters.ads = true;
-            if (server.filters.malware) info.filters.malware = true;
-            if (server.filters.family) info.filters.family = true;
-            if (server.filters.unfiltered) info.filters.unfiltered = true;
-            if (server.features.no_log) info.features.no_log = true;
-            if (server.features.dnssec) info.features.dnssec = true;
-            if (server.features.dns64) info.features.dns64 = true;
         }
     }
 
     const sets = {
         all: new Set(), doh: new Set(), dot: new Set(), doq: new Set(), doh3: new Set(), dnscrypt: new Set(),
-        adblock: new Set(), malware: new Set(), family: new Set(),
-        unfiltered: new Set(), ipv4: new Set(), ipv6: new Set(), dns64: new Set(),
-        no_log: new Set(), dnssec: new Set(),
+        udp: new Set(), tcp: new Set(), ipv4: new Set(), ipv6: new Set(),
+        adblock: new Set(), malware: new Set(), family: new Set(), unfiltered: new Set(),
+        no_log: new Set(), dnssec: new Set(), dns64: new Set()
     };
 
-    for (const info of addressInfoMap.values()) {
-        const addr = info.originalAddress;
-        sets.all.add(addr);
-        if (info.protocols.has('doh') && addr.startsWith('https://')) sets.doh.add(addr);
-        if (info.protocols.has('dot') && addr.startsWith('tls://')) sets.dot.add(addr);
-        if (info.protocols.has('doq') && addr.startsWith('quic://')) sets.doq.add(addr);
-        if (info.protocols.has('doh3') && addr.startsWith('https://')) sets.doh3.add(addr);
-        if (info.protocols.has('dnscrypt') && addr.startsWith('sdns://')) sets.dnscrypt.add(addr);
-        const bracketedMatch = addr.match(/^\[(.+)\]/);
-        const ipAddrPart = bracketedMatch ? bracketedMatch[1] : getAddressKey(addr).replace(/\[|\]/g, '');
-        if (IPV6_REGEX.test(ipAddrPart)) sets.ipv6.add(addr);
-        if (IPV4_REGEX.test(ipAddrPart)) sets.ipv4.add(addr);
-        if (info.filters.ads) sets.adblock.add(addr);
-        if (info.filters.malware) sets.malware.add(addr);
-        if (info.filters.family) sets.family.add(addr);
-        if (!info.filters.ads && !info.filters.malware && !info.filters.family && info.filters.unfiltered) {
-             sets.unfiltered.add(addr);
+    for (const info of uniqueServersMap.values()) {
+        const transformedAddresses = [];
+        if (info.isIPv4) {
+            // Handle plain IPv4: add to ipv4.txt, and add transformed versions for other lists
+            sets.ipv4.add(info.originalAddress);
+            transformedAddresses.push(`udp://${info.originalAddress}`, `tcp://${info.originalAddress}`);
+        } else {
+            // For all other protocols, use the original address
+            transformedAddresses.push(info.originalAddress);
         }
-        if (info.features.no_log) sets.no_log.add(addr);
-        if (info.features.dnssec) sets.dnssec.add(addr);
-        if (info.features.dns64) sets.dns64.add(addr);
+
+        for (const addr of transformedAddresses) {
+            sets.all.add(addr);
+
+            // Add to protocol-specific sets
+            if (addr.startsWith('udp://')) sets.udp.add(addr);
+            if (addr.startsWith('tcp://')) sets.tcp.add(addr);
+            if (info.protocol === 'doh') sets.doh.add(addr);
+            if (info.protocol === 'doh3') sets.doh3.add(addr);
+            if (info.protocol === 'dot') sets.dot.add(addr);
+            if (info.protocol === 'doq') sets.doq.add(addr);
+            if (info.protocol === 'dnscrypt') sets.dnscrypt.add(addr);
+            if (info.protocol === 'ipv6') sets.ipv6.add(addr);
+
+            // Add to filter/feature sets
+            if (info.filters.ads) sets.adblock.add(addr);
+            if (info.filters.malware) sets.malware.add(addr);
+            if (info.filters.family) sets.family.add(addr);
+            if (info.filters.unfiltered) sets.unfiltered.add(addr);
+            if (info.features.no_log) sets.no_log.add(addr);
+            if (info.features.dnssec) sets.dnssec.add(addr);
+            if (info.features.dns64) sets.dns64.add(addr);
+        }
     }
+
     return sets;
 }
+
 
 async function main() {
     console.log('🚀 [شروع] فرآیند جمع‌آوری و به‌روزرسانی لیست‌های DNS آغاز شد.');
@@ -170,24 +157,40 @@ async function main() {
                 const parsedServers = await Promise.resolve(source.parser(content));
                 if (!parsedServers || parsedServers.length === 0) {
                      console.warn(`  ⚠️ [هشدار] هیچ سروری از منبع ${source.name} استخراج نشد.`);
-                } else {
-                    if (source.name !== 'Blacklantern') {
-                        allServers.push(...parsedServers);
-                    }
-                    console.log(`  ✅ [موفقیت] تعداد ${parsedServers.length} گروه سرور از ${source.name} با موفقیت استخراج شد.`);
-                    console.log(`  💾 [نوشتن فایل‌های منبع: ${source.name}] در حال تولید فایل‌های خروجی...`);
+                     continue;
+                }
+
+                if (source.name === 'Blacklantern') {
                     const sourceDir = path.join(SOURCES_DIR, source.name);
                     if (!fs.existsSync(sourceDir)) fs.mkdirSync(sourceDir);
-                    const sourceSets = categorizeServers(parsedServers);
-                    for (const [listName, addressSet] of Object.entries(sourceSets)) {
-                        if(addressSet.size > 0) {
-                            const sortedList = Array.from(addressSet).sort();
-                            const fileName = `${listName}.txt`;
-                            listFileCounts[`${source.name}/${fileName}`] = sortedList.length;
-                            const filePath = path.join(sourceDir, fileName);
-                            fs.writeFileSync(filePath, sortedList.join('\n'));
-                            console.log(`    📄 فایل ${filePath} با ${sortedList.length} آدرس نوشته شد.`);
-                        }
+                    const plainAddresses = (parsedServers[0]?.addresses || []).sort();
+                    if (plainAddresses.length > 0) {
+                        fs.writeFileSync(path.join(sourceDir, 'all.txt'), plainAddresses.join('\n'));
+                        listFileCounts[`${source.name}/all.txt`] = plainAddresses.length;
+                        fs.writeFileSync(path.join(sourceDir, 'ipv4.txt'), plainAddresses.join('\n'));
+                        listFileCounts[`${source.name}/ipv4.txt`] = plainAddresses.length;
+                        const udpList = plainAddresses.map(ip => `udp://${ip}`);
+                        fs.writeFileSync(path.join(sourceDir, 'udp.txt'), udpList.join('\n'));
+                        listFileCounts[`${source.name}/udp.txt`] = udpList.length;
+                        const tcpList = plainAddresses.map(ip => `tcp://${ip}`);
+                        fs.writeFileSync(path.join(sourceDir, 'tcp.txt'), tcpList.join('\n'));
+                        listFileCounts[`${source.name}/tcp.txt`] = tcpList.length;
+                        console.log(`    📄 فایل‌های ویژه منبع ${source.name} نوشته شدند.`);
+                    }
+                    allServers.push(...parsedServers);
+                    continue; 
+                }
+
+                allServers.push(...parsedServers);
+                console.log(`  ✅ [موفقیت] تعداد ${parsedServers.length} گروه سرور از ${source.name} با موفقیت استخراج شد.`);
+                const sourceDir = path.join(SOURCES_DIR, source.name);
+                if (!fs.existsSync(sourceDir)) fs.mkdirSync(sourceDir);
+                const sourceSets = aggregateAndCategorizeServers(parsedServers);
+                for (const [listName, addressSet] of Object.entries(sourceSets)) {
+                    if(addressSet.size > 0) {
+                        const sortedList = Array.from(addressSet).sort();
+                        fs.writeFileSync(path.join(sourceDir, `${listName}.txt`), sortedList.join('\n'));
+                        listFileCounts[`${source.name}/${listName}.txt`] = sortedList.length;
                     }
                 }
             } catch (error) {
@@ -197,35 +200,12 @@ async function main() {
     }
     
     console.log('\n- - - - - - - - - - - - - - - - - - - - - -');
-    console.log('\n📊 [تجمیع نهایی] در حال ترکیب و پاک‌سازی تمام داده‌ها...');
-    const aggregatedSets = categorizeServers(allServers);
+    console.log('\n📊 [تجمیع نهایی] در حال ترکیب، پاک‌سازی هوشمند و دسته‌بندی تمام داده‌ها...');
+    const aggregatedSets = aggregateAndCategorizeServers(allServers);
 
     console.log('\n💾 [نوشتن فایل‌های تجمیعی] در حال تولید و ذخیره فایل‌های خروجی اصلی...');
-    
-    // --- SPECIAL: Generate port-less `all.txt` ---
-    const portlessUniqueAddresses = new Map();
-    for (const server of allServers) {
-        for (const address of server.addresses) {
-            const cleanedAddress = address.trim();
-            const standardizedAddress = standardizeIPv6WithPort(cleanedAddress);
-            if (isValidDnsAddress(standardizedAddress)) {
-                const key = getAddressKey(standardizedAddress);
-                if (!portlessUniqueAddresses.has(key)) {
-                    portlessUniqueAddresses.set(key, standardizedAddress);
-                }
-            }
-        }
-    }
-    const allList = Array.from(portlessUniqueAddresses.values()).sort();
-    const allFilePath = path.join(OUTPUT_DIR, 'all.txt');
-    fs.writeFileSync(allFilePath, allList.join('\n'));
-    listFileCounts['all.txt'] = allList.length;
-    console.log(`  📄 فایل ${allFilePath} با ${allList.length} آدرس منحصر به فرد (بدون در نظر گرفتن پورت) نوشته شد.`);
-    // --- END SPECIAL ---
-    
     for (const [listName, addressSet] of Object.entries(aggregatedSets)) {
-        // We already generated the special 'all.txt', so skip the one from `aggregatedSets`.
-        if(listName !== 'all' && addressSet.size > 0) {
+        if (addressSet.size > 0) {
             const sortedList = Array.from(addressSet).sort();
             const fileName = `${listName}.txt`;
             listFileCounts[fileName] = sortedList.length;
@@ -234,7 +214,7 @@ async function main() {
             console.log(`  📄 فایل ${filePath} با ${sortedList.length} آدرس منحصر به فرد نوشته شد.`);
         }
     }
-
+    
     console.log('\n📝 [تولید README] در حال ساخت فایل README.md پویا...');
     const readmeContent = generateReadme(SOURCES, GITHUB_REPO_URL, listFileCounts);
     writeReadme(readmeContent);
