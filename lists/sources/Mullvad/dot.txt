@@ -1,15 +1,3 @@
-194.242.2.2
-194.242.2.3
-194.242.2.4
-194.242.2.5
-194.242.2.6
-194.242.2.9
-2a07:e340::2
-2a07:e340::3
-2a07:e340::4
-2a07:e340::5
-2a07:e340::6
-2a07:e340::9
 tls://adblock.dns.mullvad.net
 tls://all.dns.mullvad.net
 tls://base.dns.mullvad.net

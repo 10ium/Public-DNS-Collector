@@ -2,7 +2,6 @@
 149.112.122.10
 208.67.220.2
 208.67.222.2
-2620:0:ccc::2
 2620:0:ccd::2
 2620:10A:80BB::10
 2620:10A:80BC::10
@@ -13,7 +12,6 @@ https://dns.bebasid.com/unfiltered
 https://doh.sandbox.opendns.com/dns-query
 https://private.canadianshield.cira.ca/dns-query
 https://unfiltered.joindns4.eu/dns-query
-tls://child-noads.joindns4.eu
 tls://private.canadianshield.cira.ca
 tls://sandbox.opendns.com
 tls://unfiltered.dns.bebasid.com:853

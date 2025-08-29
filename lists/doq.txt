@@ -1,4 +1,3 @@
-213.196.191.96
 quic://adblock.krctech.dev
 quic://adfreedns.top
 quic://agh.dshubham.xyz
@@ -7,7 +6,6 @@ quic://blocker.thethorsens.org
 quic://dandelionsprout.asuscomm.com:48582
 quic://dart.kpsn.org
 quic://dns.adguard-dns.com
-quic://dns.alidns.com
 quic://dns.alidns.com:853
 quic://dns.anon.no
 quic://dns.bitservices.io

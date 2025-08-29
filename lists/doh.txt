@@ -1,8 +1,3 @@
-158.64.1.29
-185.95.218.42
-2001:a18:1::29
-213.196.191.96
-2a05:fc84::42
 https://123000123.xyz/dns-query
 https://3dns.eu/dns-query
 https://8888.google/dns-query
@@ -176,7 +171,6 @@ https://dns.mullvad.net/dns-query
 https://dns.mzjtechnology.com/dns-query
 https://dns.neeb.it/dns-query
 https://dns.nextdns.io
-https://dns.nextdns.io/
 https://dns.nick-slowinski.de/dns-query
 https://dns.ningkelle.id/dns-query
 https://dns.njal.la/dns-query
@@ -546,8 +540,4 @@ https://yvr01.dnscry.pt/dns-query
 https://yyc01.dnscry.pt/dns-query
 https://yyz01.dnscry.pt/dns-query
 https://zdn.ro/dns-query
-https://zero.dns0.eu
 https://zero.dns0.eu/
-sdns://AgAAAAAAAAAAAAAPYWRhLm9wZW5ibGQubmV0Ci9kbnMtcXVlcnk
-sdns://AgAAAAAAAAAAAAAPcmljLm9wZW5ibGQubmV0Ci9kbnMtcXVlcnk
-sdns://AgcAAAAAAAAAAAAVaHR0cHM6Ly96ZXJvLmRuczAuZXUvCi9kbnMtcXVlcnk
