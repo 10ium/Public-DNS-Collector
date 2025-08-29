@@ -8,12 +8,21 @@ const RAW_LIST_DIR_URL = (listName) => `https://raw.githubusercontent.com/${proc
 const SOURCE_LIST_DIR_URL = (repoUrl, sourceName, listName) => `${repoUrl}/blob/main/lists/sources/${sourceName}/${listName}.txt`;
 
 // --- DATA ---
+// Combine all list categories into a single array for a unified table
+const AGGREGATED_LISTS = [
+    'all', 'doh', 'dot', 'doq', 'dnscrypt', 'ipv4', 'ipv6',
+    'adblock', 'malware', 'family', 'unfiltered',
+    'dnssec', 'no_log', 'dns64'
+];
+
+// Re-add the individual lists here for the source-specific table generation logic
 const PRIMARY_LISTS = ['all', 'doh', 'dot', 'doq', 'dnscrypt', 'ipv4', 'ipv6'];
 const FILTER_LISTS = ['adblock', 'malware', 'family', 'unfiltered'];
 const FEATURE_LISTS = ['dnssec', 'no_log', 'dns64'];
 
+
 const LIST_DESCRIPTIONS = {
-    'all': 'لیست جامع تمام DNS ها از همه منابع و پروتکل‌ها .',
+    'all': 'لیست جامع تمام DNS ها از همه منابع و پروتکل‌ها.',
     'doh': 'سرورهای DNS over HTTPS (DoH)',
     'dot': 'سرورهای DNS over TLS (DoT)',
     'doq': 'سرورهای DNS over QUIC (DoQ)',
@@ -60,8 +69,9 @@ function generateSourceListRows(sources, repoUrl, listFileCounts) {
         const sourceLink = source.readmeUrl ? `[${sourceName}](${source.readmeUrl})` : sourceName;
         let isFirstRowForSource = true;
 
-        const allLists = [...PRIMARY_LISTS, ...FILTER_LISTS, ...FEATURE_LISTS];
-        allLists.forEach(list => {
+        // Note: The logic for source-specific tables still needs the categorized lists
+        const allListsForSourceTable = [...PRIMARY_LISTS, ...FILTER_LISTS, ...FEATURE_LISTS];
+        allListsForSourceTable.forEach(list => {
             const fileName = `${sourceName}/${list}.txt`;
             const count = listFileCounts[fileName] || 0;
             if (count > 0) {
@@ -85,9 +95,7 @@ function generateSourceListRows(sources, repoUrl, listFileCounts) {
 export function generateReadme(sources, repoUrl, listFileCounts) {
     const lastUpdated = new Date().toUTCString();
 
-    const primaryRows = generateListRows(PRIMARY_LISTS, repoUrl, listFileCounts);
-    const filterRows = generateListRows(FILTER_LISTS, repoUrl, listFileCounts);
-    const featureRows = generateListRows(FEATURE_LISTS, repoUrl, listFileCounts);
+    const aggregatedRows = generateListRows(AGGREGATED_LISTS, repoUrl, listFileCounts);
     const sourceRows = generateSourceListRows(sources, repoUrl, listFileCounts);
     
     const sourcesList = sources.map(source => {
@@ -112,14 +120,7 @@ export function generateReadme(sources, repoUrl, listFileCounts) {
 
 این لیست‌ها نتیجه ترکیب، پاک‌سازی و حذف موارد تکراری از تمام منابع هستند.
 
-### پروتکل‌ها و IPها
-${generateMarkdownTable(['نام لیست', 'توضیحات', 'تعداد', 'لینک دانلود'], primaryRows)}
-
-### لیست‌های فیلترینگ
-${generateMarkdownTable(['نام لیست', 'توضیحات', 'تعداد', 'لینک دانلود'], filterRows)}
-
-### لیست‌های مبتنی بر ویژگی‌ها
-${generateMarkdownTable(['نام لیست', 'توضیحات', 'تعداد', 'لینک دانلود'], featureRows)}
+${generateMarkdownTable(['نام لیست', 'توضیحات', 'تعداد', 'لینک دانلود'], aggregatedRows)}
 
 ## لیست‌های مبتنی بر منبع (Source-Specific Lists)
 
