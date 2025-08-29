@@ -85,6 +85,31 @@ function getAddressKey(address) {
     return address;
 }
 
+function processBlacklanternSource(servers) {
+    const sets = {
+        all: new Set(),
+        ipv4: new Set(),
+        tcp: new Set(),
+        udp: new Set(),
+    };
+
+    for (const server of servers) {
+        for (const address of server.addresses) {
+            const ip = address.trim();
+            if (IPV4_REGEX.test(ip)) {
+                sets.ipv4.add(ip);
+                const tcpAddr = `tcp://${ip}`;
+                const udpAddr = `udp://${ip}`;
+                sets.tcp.add(tcpAddr);
+                sets.udp.add(udpAddr);
+                sets.all.add(tcpAddr);
+                sets.all.add(udpAddr);
+            }
+        }
+    }
+    return sets;
+}
+
 function categorizeServers(servers) {
     const addressInfoMap = new Map();
     for (const server of servers) {
@@ -120,26 +145,57 @@ function categorizeServers(servers) {
         adblock: new Set(), malware: new Set(), family: new Set(),
         unfiltered: new Set(), ipv4: new Set(), ipv6: new Set(), dns64: new Set(),
         no_log: new Set(), dnssec: new Set(),
+        // New sets for tcp and udp
+        tcp: new Set(), udp: new Set(),
     };
 
     for (const info of addressInfoMap.values()) {
         const addr = info.originalAddress;
         sets.all.add(addr);
+
+        // Protocol-specific lists are not changed
         if (info.protocols.has('doh') && addr.startsWith('https://')) sets.doh.add(addr);
         if (info.protocols.has('dot') && addr.startsWith('tls://')) sets.dot.add(addr);
         if (info.protocols.has('doq') && addr.startsWith('quic://')) sets.doq.add(addr);
         if (info.protocols.has('doh3') && addr.startsWith('https://')) sets.doh3.add(addr);
         if (info.protocols.has('dnscrypt') && addr.startsWith('sdns://')) sets.dnscrypt.add(addr);
+
         const bracketedMatch = addr.match(/^\[(.+)\]/);
         const ipAddrPart = bracketedMatch ? bracketedMatch[1] : getAddressKey(addr).replace(/\[|\]/g, '');
-        if (IPV6_REGEX.test(ipAddrPart)) sets.ipv6.add(addr);
-        if (IPV4_REGEX.test(ipAddrPart)) sets.ipv4.add(addr);
-        if (info.filters.ads) sets.adblock.add(addr);
-        if (info.filters.malware) sets.malware.add(addr);
-        if (info.filters.family) sets.family.add(addr);
-        if (!info.filters.ads && !info.filters.malware && !info.filters.family && info.filters.unfiltered) {
-             sets.unfiltered.add(addr);
+        const isIPv4 = IPV4_REGEX.test(ipAddrPart);
+
+        if (isIPv4) {
+            // Populate ipv4.txt with plain, port-less IPs
+            sets.ipv4.add(ipAddrPart);
+            
+            // Create prefixed addresses for new lists and filtering lists
+            const tcpAddr = `tcp://${ipAddrPart}`;
+            const udpAddr = `udp://${ipAddrPart}`;
+
+            // Populate new tcp.txt and udp.txt lists
+            sets.tcp.add(tcpAddr);
+            sets.udp.add(udpAddr);
+
+            // For filtering lists, add both tcp and udp prefixed versions for IPv4 servers
+            if (info.filters.ads) { sets.adblock.add(tcpAddr); sets.adblock.add(udpAddr); }
+            if (info.filters.malware) { sets.malware.add(tcpAddr); sets.malware.add(udpAddr); }
+            if (info.filters.family) { sets.family.add(tcpAddr); sets.family.add(udpAddr); }
+            if (!info.filters.ads && !info.filters.malware && !info.filters.family && info.filters.unfiltered) {
+                sets.unfiltered.add(tcpAddr);
+                sets.unfiltered.add(udpAddr);
+            }
+        } else {
+            // For non-IPv4 addresses (DoH, DoT, IPv6 etc.), add them to filtering lists as is.
+            if (info.filters.ads) sets.adblock.add(addr);
+            if (info.filters.malware) sets.malware.add(addr);
+            if (info.filters.family) sets.family.add(addr);
+            if (!info.filters.ads && !info.filters.malware && !info.filters.family && info.filters.unfiltered) {
+                 sets.unfiltered.add(addr);
+            }
         }
+        
+        // Handle other lists as before
+        if (IPV6_REGEX.test(ipAddrPart)) sets.ipv6.add(addr);
         if (info.features.no_log) sets.no_log.add(addr);
         if (info.features.dnssec) sets.dnssec.add(addr);
         if (info.features.dns64) sets.dns64.add(addr);
@@ -178,7 +234,14 @@ async function main() {
                     console.log(`  💾 [نوشتن فایل‌های منبع: ${source.name}] در حال تولید فایل‌های خروجی...`);
                     const sourceDir = path.join(SOURCES_DIR, source.name);
                     if (!fs.existsSync(sourceDir)) fs.mkdirSync(sourceDir);
-                    const sourceSets = categorizeServers(parsedServers);
+                    
+                    let sourceSets;
+                    if (source.name === 'Blacklantern') {
+                        sourceSets = processBlacklanternSource(parsedServers);
+                    } else {
+                        sourceSets = categorizeServers(parsedServers);
+                    }
+                    
                     for (const [listName, addressSet] of Object.entries(sourceSets)) {
                         if(addressSet.size > 0) {
                             const sortedList = Array.from(addressSet).sort();
