@@ -140,12 +140,15 @@ function categorizeServers(servers) {
         const addr = info.originalAddress;
         sets.all.add(addr);
 
-        // Populate protocol sets from aggregated info
-        if (info.protocols.has('doh')) sets.doh.add(addr);
-        if (info.protocols.has('dot')) sets.dot.add(addr);
-        if (info.protocols.has('doq')) sets.doq.add(addr);
-        if (info.protocols.has('doh3')) sets.doh3.add(addr);
-        if (info.protocols.has('dnscrypt')) sets.dnscrypt.add(addr);
+        // --- STRICT PROTOCOL CATEGORIZATION ---
+        // An address is added to a protocol list ONLY IF it's flagged for that protocol
+        // AND its prefix matches the protocol's standard scheme.
+        if (info.protocols.has('doh') && addr.startsWith('https://')) sets.doh.add(addr);
+        if (info.protocols.has('dot') && addr.startsWith('tls://')) sets.dot.add(addr);
+        if (info.protocols.has('doq') && addr.startsWith('quic://')) sets.doq.add(addr);
+        if (info.protocols.has('doh3') && addr.startsWith('https://')) sets.doh3.add(addr);
+        if (info.protocols.has('dnscrypt') && addr.startsWith('sdns://')) sets.dnscrypt.add(addr);
+
 
         // Handle plain IP/Hostname addresses (for Do53)
         const isUrlBased = addr.startsWith('https://') || addr.startsWith('tls://') || addr.startsWith('quic://') || addr.startsWith('sdns://');
@@ -169,7 +172,7 @@ function categorizeServers(servers) {
         // Populate feature sets
         if (info.features.no_log) sets.no_log.add(addr);
         if (info.features.dnssec) sets.dnssec.add(addr);
-        if (info.features.dns64) sets.dns64.add(addr); // *** BUG FIX IS HERE ***
+        if (info.features.dns64) sets.dns64.add(addr);
     }
 
     return sets;
