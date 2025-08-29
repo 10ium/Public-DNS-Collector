@@ -169,7 +169,7 @@ function categorizeServers(servers) {
         // Populate feature sets
         if (info.features.no_log) sets.no_log.add(addr);
         if (info.features.dnssec) sets.dnssec.add(addr);
-        if (info.features.dns64) sets.features.dns64.add(addr);
+        if (info.features.dns64) sets.dns64.add(addr); // *** BUG FIX IS HERE ***
     }
 
     return sets;
