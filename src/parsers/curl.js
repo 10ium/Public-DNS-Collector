@@ -13,9 +13,6 @@ export function parseCurl(content) {
     let inTable = false;
     let currentProvider = '';
 
-    // A more robust regex to validate a potential hostname.
-    const isValidHostname = (str) => /^[a-zA-Z0-9.-]+(?::\d{1,5})?$/.test(str) && !/^\d+$/.test(str.split(':')[0]);
-
     for (const line of lines) {
         // Find the table header to start parsing
         if (line.includes('| Who runs it') && line.includes('| Base URL')) {
@@ -28,7 +25,7 @@ export function parseCurl(content) {
         // Basic validation for a valid table row
         if (parts.length < 5 || parts[1].includes('---')) continue;
         
-        // Ignore single-letter section headers like | A | | | |
+        // Ignore single-letter section headers
         const providerNameRaw = parts[1];
         if (providerNameRaw.length === 1 && providerNameRaw.match(/[A-Z]/) && parts[2] === '' && parts[3] === '') {
             continue;
@@ -61,11 +58,7 @@ export function parseCurl(content) {
             if (commentTextLower.includes('no log') || commentTextLower.includes('no-log') || commentTextLower.includes('non-logging')) server.features.no_log = true;
 
             if (!server.filters.ads && !server.filters.malware && !server.filters.family) {
-                if (commentTextLower.includes('no filter') || commentTextLower.includes('unfiltered') || commentTextLower.includes('non-filtering')) {
-                    server.filters.unfiltered = true;
-                } else {
-                    server.filters.unfiltered = true;
-                }
+                server.filters.unfiltered = true;
             }
             return server;
         };
@@ -83,24 +76,25 @@ export function parseCurl(content) {
             baseHostname = new URL(dohUrls[0]).hostname;
         } catch (e) { /* Ignore invalid URLs */ }
 
-        // --- Helper function to find explicit hostnames with very strict patterns ---
-        const findExplicitHostname = (protocolKeywordRegex) => {
-            const patterns = [
-                new RegExp(`${protocolKeywordRegex.source}\\s*:\\s*([a-zA-Z0-9.-]+(?::\\d{1,5})?)`, 'i'), // Pattern: DoT: hostname
-                new RegExp(`${protocolKeywordRegex.source}\\s*\\(\\s*([a-zA-Z0-9.-]+(?::\\d{1,5})?)\\s*\\)`, 'i'), // Pattern: DoT (hostname)
-                new RegExp(`${protocolKeywordRegex.source}\\s*\\s*\`\\s*([a-zA-Z0-9.-]+(?::\\d{1,5})?)\\s*\`\\s*`, 'i'), // Pattern: DoT `hostname`
-            ];
-            for (const pattern of patterns) {
-                const match = rawCommentText.match(pattern);
-                if (match && match[1] && isValidHostname(match[1])) {
-                    return match[1];
-                }
+        // --- Helper function to find explicit hostnames with definitive patterns ---
+        const findExplicitHostname = (protocolKeywords) => {
+            // This regex is the key fix: It REQUIRES at least one dot in the captured hostname.
+            // This makes it impossible to match single words like "and".
+            const hostnameRegex = /([a-zA-Z0-9.-]*\.[a-zA-Z0-9-]+(?::\d{1,5})?)/;
+            const pattern = new RegExp(`(?:${protocolKeywords})\\s*(?:\\(|:|\`)\\s*${hostnameRegex.source}`, 'i');
+            
+            const match = rawCommentText.match(pattern);
+            if (match && match[1]) {
+                return match[1];
             }
-            // Check for shared pattern as a last resort
-            const sharedMatch = rawCommentText.match(/(?:DoT\/DoQ|DoQ\/DoT)\s*:?\s*([a-zA-Z0-9.-]+(?::\d{1,5})?)/i);
-            if (sharedMatch && sharedMatch[1] && isValidHostname(sharedMatch[1])) {
+
+            // Also check for the shared "DoT/DoQ: hostname" pattern
+            const sharedPattern = new RegExp(`(?:DoT\\/DoQ|DoQ\\/DoT)\\s*:?\\s*${hostnameRegex.source}`, 'i');
+            const sharedMatch = rawCommentText.match(sharedPattern);
+            if(sharedMatch && sharedMatch[1]) {
                 return sharedMatch[1];
             }
+
             return null;
         };
         
@@ -108,7 +102,7 @@ export function parseCurl(content) {
         if (/\b(dot|tls)\b/i.test(rawCommentText)) {
             const dotServer = createBaseServer();
             dotServer.protocols.push('dot');
-            const explicitHostname = findExplicitHostname(/(?:DoT|TLS)/);
+            const explicitHostname = findExplicitHostname('DoT|TLS');
             
             if (explicitHostname) {
                 dotServer.addresses.push(`tls://${explicitHostname}`);
@@ -122,7 +116,7 @@ export function parseCurl(content) {
         if (/\bdoq\b/i.test(rawCommentText)) {
             const doqServer = createBaseServer();
             doqServer.protocols.push('doq');
-            const explicitHostname = findExplicitHostname(/DoQ/);
+            const explicitHostname = findExplicitHostname('DoQ');
 
             if (explicitHostname) {
                 doqServer.addresses.push(`quic://${explicitHostname}`);
