@@ -5,9 +5,9 @@
 2620:0:ccd::2
 2620:10A:80BB::10
 2620:10A:80BC::10
-2a13:1001::86:54:11:100
 86.54.11.100
 86.54.11.200
+[2a13:1001::86:54:11]:1
 https://dns.bebasid.com/unfiltered
 https://doh.sandbox.opendns.com/dns-query
 https://private.canadianshield.cira.ca/dns-query
