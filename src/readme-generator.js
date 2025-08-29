@@ -14,12 +14,12 @@ const FEATURE_LISTS = ['dnssec', 'no_log', 'dns64'];
 
 const LIST_DESCRIPTIONS = {
     'all': 'لیست جامع تمام DNSها از همه منابع و پروتکل‌ها (بدون تکرار و بدون در نظر گرفتن پورت).',
-    'doh': 'DNS over HTTPS (DoH) - (RFC 8484)',
-    'dot': 'DNS over TLS (DoT) - (RFC 7858)',
-    'doq': 'DNS over QUIC (DoQ) - (RFC 9250)',
+    'doh': 'سرورهای DNS over HTTPS (DoH)',
+    'dot': 'سرورهای DNS over TLS (DoT)',
+    'doq': 'سرورهای DNS over QUIC (DoQ)',
     'dnscrypt': 'سرورهای DNSCrypt',
-    'ipv4': 'سرورهای DNS سنتی IPv4 (Do53)',
-    'ipv6': 'سرورهای DNS سنتی IPv6 (Do53)',
+    'ipv4': 'سرورهای DNS سنتی IPv4',
+    'ipv6': 'سرورهای DNS سنتی IPv6',
     'adblock': 'مسدودکننده تبلیغات',
     'malware': 'مسدودکننده بدافزارها و فیشینگ',
     'family': 'محافظت از خانواده (مسدودکننده محتوای بزرگسالان)',
