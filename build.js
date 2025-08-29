@@ -32,7 +32,9 @@ function isValidDnsAddress(address) {
     if (addr.startsWith('https://') || addr.startsWith('tls://') || addr.startsWith('quic://') || addr.startsWith('sdns://')) {
         return true;
     }
-    if (IPV4_REGEX.test(addr) || IPV6_REGEX.test(addr)) {
+    // Test the base address part, ignoring potential ports
+    const baseAddr = addr.split(':')[0];
+    if (IPV4_REGEX.test(addr) || IPV6_REGEX.test(addr) || HOSTNAME_REGEX.test(baseAddr)) {
         return true;
     }
     const hostnamePart = addr.split(':')[0];
@@ -43,9 +45,46 @@ function isValidDnsAddress(address) {
 }
 
 /**
+ * Generates a deduplication key for a DNS address by removing its port, if present.
+ * This allows 'dns.example.com' and 'dns.example.com:853' to be treated as the same entry.
+ * @param {string} address The DNS address.
+ * @returns {string} The address without the port, used as a key.
+ */
+function getAddressKey(address) {
+    try {
+        if (address.startsWith('https://') || address.startsWith('tls://') || address.startsWith('quic://')) {
+            const url = new URL(address);
+            return `${url.protocol}//${url.hostname}${url.pathname}${url.search}${url.hash}`;
+        }
+    } catch (e) { /* Not a standard URL, continue. */ }
+
+    if (address.startsWith('sdns://')) {
+        return address;
+    }
+
+    const bracketedIpv6Match = address.match(/^(\[.*\]):[0-9]+$/);
+    if (bracketedIpv6Match) {
+        return bracketedIpv6Match[1];
+    }
+
+    const lastColonIndex = address.lastIndexOf(':');
+    // Check if there is a colon, it's not the first character, and the base doesn't have a colon (to avoid IPv6).
+    if (lastColonIndex > 0 && !address.substring(0, lastColonIndex).includes(':')) {
+        const portPart = address.substring(lastColonIndex + 1);
+        if (/^[0-9]+$/.test(portPart)) {
+            return address.substring(0, lastColonIndex);
+        }
+    }
+    
+    return address;
+}
+
+
+/**
  * Categorizes a list of server objects into different sets based on their properties.
- * This is the final, robust version. It categorizes based on address format first,
- * then uses the server's protocol list as a fallback for ambiguous addresses (like plain hostnames).
+ * This version ensures protocol-specific lists (DoH, DoT, etc.) only contain addresses
+ * with the correct URI scheme prefix. It also de-duplicates servers that are identical
+ * except for the port number.
  * @param {Array<object>} servers - The list of server objects to categorize.
  * @returns {object} An object containing sets of categorized addresses.
  */
@@ -56,6 +95,10 @@ function categorizeServers(servers) {
         unfiltered: new Set(), ipv4: new Set(), ipv6: new Set(), dns64: new Set(),
         no_log: new Set(), dnssec: new Set(),
     };
+    
+    // Use a helper Set to track processed address keys for de-duplication.
+    const processedKeys = new Set();
+
     for (const server of servers) {
         for (const address of server.addresses) {
             const cleanedAddress = address.trim();
@@ -63,40 +106,48 @@ function categorizeServers(servers) {
                 continue;
             }
 
+            // De-duplicate addresses with and without ports.
+            const key = getAddressKey(cleanedAddress);
+            if (processedKeys.has(key)) {
+                continue; // Already added a variant of this address.
+            }
+            processedKeys.add(key);
+
+            // Add the original, cleaned address to the main lists.
             sets.all.add(cleanedAddress);
 
-            // Primary categorization based on address format
-            let categorizedByPrefix = false;
+            // Strictly categorize protocols based on their required prefix.
+            let isUrlBased = false;
             if (cleanedAddress.startsWith('https://')) {
                 sets.doh.add(cleanedAddress);
-                categorizedByPrefix = true;
-            }
-            if (cleanedAddress.startsWith('tls://')) {
+                isUrlBased = true;
+            } else if (cleanedAddress.startsWith('tls://')) {
                 sets.dot.add(cleanedAddress);
-                categorizedByPrefix = true;
-            }
-            if (cleanedAddress.startsWith('quic://')) {
+                isUrlBased = true;
+            } else if (cleanedAddress.startsWith('quic://')) {
                 sets.doq.add(cleanedAddress);
-                categorizedByPrefix = true;
-            }
-            if (cleanedAddress.startsWith('sdns://')) {
+                isUrlBased = true;
+            } else if (cleanedAddress.startsWith('sdns://')) {
                 sets.dnscrypt.add(cleanedAddress);
-                categorizedByPrefix = true;
+                isUrlBased = true;
             }
-
-            // Categorize IPs/Hostnames that can serve multiple protocols
-            if (IPV6_REGEX.test(cleanedAddress)) sets.ipv6.add(cleanedAddress);
-            if (IPV4_REGEX.test(cleanedAddress)) sets.ipv4.add(cleanedAddress);
-
-            // Fallback for addresses without prefixes (e.g., dns.google, 1.1.1.1)
-            // If an IP/Hostname is part of a server object that supports a protocol, add it to that protocol's list.
-            if (server.protocols.includes('doh')) sets.doh.add(cleanedAddress);
-            if (server.protocols.includes('dot')) sets.dot.add(cleanedAddress);
-            if (server.protocols.includes('doq')) sets.doq.add(cleanedAddress);
+            
+            // Categorize IPs and Hostnames that are not full URLs.
+            // This also fixes a bug where IPs with ports were not being categorized.
+            if (!isUrlBased) {
+                const ipAddrPart = getAddressKey(cleanedAddress).replace(/\[|\]/g, '');
+                if (IPV6_REGEX.test(ipAddrPart)) {
+                    sets.ipv6.add(cleanedAddress);
+                }
+                if (IPV4_REGEX.test(ipAddrPart)) {
+                    sets.ipv4.add(cleanedAddress);
+                }
+            }
+            
+            // This allows hostnames that support DoH3 to be added.
             if (server.protocols.includes('doh3')) sets.doh3.add(cleanedAddress);
-            if (server.protocols.includes('dnscrypt')) sets.dnscrypt.add(cleanedAddress);
-
-            // Categorize by server-wide properties
+            
+            // Categorize by server-wide properties (filters, features) for all valid addresses.
             if (server.filters.ads) sets.adblock.add(cleanedAddress);
             if (server.filters.malware) sets.malware.add(cleanedAddress);
             if (server.filters.family) sets.family.add(cleanedAddress);
@@ -167,9 +218,6 @@ async function main() {
     console.log('\n- - - - - - - - - - - - - - - - - - - - - -');
     console.log('\n📊 [تجمیع نهایی] در حال ترکیب و پاک‌سازی تمام داده‌ها...');
     const aggregatedSets = categorizeServers(allServers);
-
-    // **REMOVED**: The complex and buggy logic for purifying the ipv4 list is gone.
-    // The new categorizeServers is the single source of truth.
 
     console.log('\n💾 [نوشتن فایل‌های تجمیعی] در حال تولید و ذخیره فایل‌های خروجی اصلی...');
     for (const [listName, addressSet] of Object.entries(aggregatedSets)) {
