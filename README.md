@@ -1,7 +1,7 @@
 # مجموعه DNS عمومی | Public DNS Collector
 
 <p align="center">
-  <img src="https://www.svgrepo.com/show/491884/dns.svg" alt="Public DNS Collector Banner">
+  <img src="https://img.favpng.com/24/12/22/domain-name-system-ip-address-web-browser-internet-png-favpng-3gn43k48UBxUGStUKpgZ7HDmt.jpg" alt="Public DNS Collector Banner" width="200">
 </p>
 <div align="center">
 
@@ -11,7 +11,7 @@
 <br />
 <br />
 
-**آخرین بروزرسانی:** 2025-08-29 01:44:08 UTC
+**آخرین بروزرسانی:** 2025-08-29 01:48:55 UTC
 <br />
 <br />
 
@@ -28,7 +28,7 @@
 این لیست‌ها حاصل ترکیب، پاک‌سازی و دسته‌بندی داده‌ها از **تمام منابعی که برای تجمیع فعال هستند** می‌باشند و برای استفاده عمومی توصیه می‌شوند.
 
 | نام فایل | تعداد آدرس‌ها | توضیحات | لینک خام |
-| :--- | :---: | :--- | :---: |
+| :--- | :---: | ---: | :---: |
 | `all.txt` | **1769** | لیست جامع تمام DNSها از همه منابع و پروتکل‌ها. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/all.txt) |
 | `doh.txt` | **543** | لیست تمام سرورهای DNS-over-HTTPS. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/doh.txt) |
 | `dot.txt` | **259** | لیست تمام سرورهای DNS-over-TLS. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dot.txt) |
