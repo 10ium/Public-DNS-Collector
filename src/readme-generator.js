@@ -10,21 +10,21 @@ import fs from 'fs';
 export function generateReadme(sources, repoUrl, listFileCounts) {
     // A map for providing descriptions for known list types.
     const DESCRIPTIONS = {
-        'all.txt': 'لیست جامع تمام DNSها از همه منابع و پروتکل‌ها.',
-        'doh.txt': 'لیست تمام سرورهای DNS-over-HTTPS.',
-        'dot.txt': 'لیست تمام سرورهای DNS-over-TLS.',
-        'doq.txt': 'لیست تمام سرورهای DNS-over-QUIC.',
-        'doh3.txt': 'لیست تمام سرورهای DNS-over-HTTP/3.',
-        'dnscrypt.txt': 'لیست تمام سرورهای DNSCrypt (به صورت Stamp).',
-        'ipv4.txt': 'لیست سرورهای DNS استاندارد روی IPv4.',
-        'ipv6.txt': 'لیست تمام آدرس‌های IPv6 موجود.',
-        'dns64.txt': 'لیست سرورهایی که از DNS64 پشتیبانی می‌کنند.',
-        'adblock.txt': 'لیست سرورهایی که تبلیغات را مسدود می‌کنند.',
-        'malware.txt': 'لیست سرورهایی که از بدافزار و فیشینگ جلوگیری می‌کنند.',
-        'family.txt': 'لیست سرورهایی با فیلترینگ خانواده (محتوای بزرگسالان).',
-        'unfiltered.txt': 'لیست سرورهای بدون فیلترینگ خاص.',
-        'no_log.txt': 'لیست سرورهایی که ادعا می‌کنند لاگ کاربران را ذخیره نمی‌کنند.',
-        'dnssec.txt': 'لیست سرورهایی که از DNSSEC برای افزایش امنیت پشتیبانی می‌کنند.',
+        'all.txt': 'لیست جامع تمام DNSها از همه منابع و پروتکل‌ها',
+        'doh.txt': 'لیست تمام سرورهای DNS-over-HTTPS',
+        'dot.txt': 'لیست تمام سرورهای DNS-over-TLS',
+        'doq.txt': 'لیست تمام سرورهای DNS-over-QUIC',
+        'doh3.txt': 'لیست تمام سرورهای DNS-over-HTTP/3',
+        'dnscrypt.txt': 'لیست تمام سرورهای DNSCrypt (به صورت Stamp)',
+        'ipv4.txt': 'لیست سرورهای DNS استاندارد روی IPv4',
+        'ipv6.txt': 'لیست تمام آدرس‌های IPv6 موجود',
+        'dns64.txt': 'لیست سرورهایی که از DNS64 پشتیبانی می‌کنند',
+        'adblock.txt': 'لیست سرورهایی که تبلیغات را مسدود می‌کنند',
+        'malware.txt': 'لیست سرورهایی که از بدافزار و فیشینگ جلوگیری می‌کنند',
+        'family.txt': 'لیست سرورهایی با فیلترینگ خانواده (محتوای بزرگسالان)',
+        'unfiltered.txt': 'لیست سرورهای بدون فیلترینگ خاص',
+        'no_log.txt': 'لیست سرورهایی که ادعا می‌کنند لاگ کاربران را ذخیره نمی‌کنند',
+        'dnssec.txt': 'لیست سرورهایی که از DNSSEC برای افزایش امنیت پشتیبانی می‌کنند',
     };
 
     // A preferred order for displaying main lists to keep the README consistent.
@@ -38,7 +38,7 @@ export function generateReadme(sources, repoUrl, listFileCounts) {
     const updateDate = new Date().toISOString().replace('T', ' ').substring(0, 19) + ' UTC';
 
     let markdown = `# مجموعه DNS عمومی | Public DNS Collector\n\n`;
-    markdown += `<p align="center">\n  <img src="https://img.favpng.com/24/12/22/domain-name-system-ip-address-web-browser-internet-png-favpng-3gn43k48UBxUGStUKpgZ7HDmt.jpg" alt="Public DNS Collector Banner" width="200">\n</p>\n`;
+    markdown += `<p align="center">\n  <img src="https://www.svgrepo.com/show/491884/dns.svg" alt="Public DNS Collector Banner" width="200">\n</p>\n`;
     markdown += `<div align="center">\n\n**یک مخزن جامع برای جمع‌آوری، تجمیع و به‌روزرسانی خودکار لیست‌های DNS عمومی از منابع معتبر.**\n<br />\nاین پروژه توسط GitHub Actions به صورت هفتگی اجرا شده و لیست‌های زیر را به‌روز می‌کند.\n<br />\n<br />\n\n`;
     markdown += `**آخرین بروزرسانی:** ${updateDate}\n<br />\n<br />\n\n`;
     markdown += `[![GitHub last commit](https://img.shields.io/github/last-commit/${process.env.GITHUB_REPOSITORY}?style=for-the-badge&logo=github&color=blue)](https://github.com/${process.env.GITHUB_REPOSITORY}/commits/main)\n`;
