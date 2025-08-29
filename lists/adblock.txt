@@ -114,11 +114,6 @@
 94.140.14.14
 94.140.14.14:5443
 94.140.15.15
-adblock.dns.mullvad.net
-all.dns.mullvad.net
-base.dns.mullvad.net
-extended.dns.mullvad.net
-family.dns.mullvad.net
 https://123000123.xyz/dns-query
 https://ada.openbld.net/dns-query
 https://adblock.dns.mullvad.net/dns-query
@@ -394,6 +389,8 @@ tls://adfreedns.top
 tls://adguard.meddy94.de
 tls://ag.apollohct.com
 tls://agh.dshubham.xyz
+tls://all.dns.mullvad.net
+tls://base.dns.mullvad.net
 tls://blocker.thethorsens.org
 tls://child-noads.joindns4.eu
 tls://dandelionsprout.asuscomm.com:853
@@ -476,6 +473,8 @@ tls://dot.libredns.gr
 tls://dot.pub
 tls://dot.sb
 tls://dot1.applied-privacy.net
+tls://extended.dns.mullvad.net
+tls://family.dns.mullvad.net
 tls://frd4wvnobp.cloudflare-gateway.com
 tls://freedom.mydns.network
 tls://ibksturm.synology.me

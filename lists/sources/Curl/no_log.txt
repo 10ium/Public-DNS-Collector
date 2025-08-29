@@ -83,14 +83,14 @@ https://yvr01.dnscry.pt/dns-query
 https://yyc01.dnscry.pt/dns-query
 https://yyz01.dnscry.pt/dns-query
 https://zero.dns0.eu
-quic://and
+quic://dns.dnshome.de
 quic://dnsforge.de
 quic://doh.dns4all.eu
 tls://ams01.dnscry.pt
-tls://and
 tls://dns.aa.net.uk
 tls://dns.blokada.org
 tls://dns.brahma.world
+tls://dns.dnshome.de
 tls://dnsforge.de
 tls://doh-2.seby.io
 tls://doh.dns.sb

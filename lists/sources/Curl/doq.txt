@@ -1,7 +1,6 @@
 quic://adblock.krctech.dev
 quic://adfreedns.top
 quic://agh.dshubham.xyz
-quic://and
 quic://anycast.uncensoreddns.org
 quic://blocker.thethorsens.org
 quic://dart.kpsn.org
@@ -11,6 +10,7 @@ quic://dns.anon.no
 quic://dns.bitservices.io
 quic://dns.chunghwamc.com
 quic://dns.dns-53.us
+quic://dns.dnshome.de
 quic://dns.dynx.pro
 quic://dns.faked.org
 quic://dns.froth.zone

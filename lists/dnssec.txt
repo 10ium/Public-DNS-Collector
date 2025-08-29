@@ -50,12 +50,6 @@
 9.9.9.10
 9.9.9.9
 95.85.95.85
-adblock.dns.mullvad.net
-all.dns.mullvad.net
-base.dns.mullvad.net
-dns.mullvad.net
-extended.dns.mullvad.net
-family.dns.mullvad.net
 https://8888.google/dns-query
 https://abn01.dnscry.pt/dns-query
 https://adblock.dns.mullvad.net/dns-query
@@ -540,7 +534,10 @@ sdns://AgcAAAAAAAAAIFsyNDAwOjg5MDI6OmYwM2M6OTFmZjpmZWRhOmM1MTRdoMwQYNOcgym2K2-8f
 sdns://AgcAAAAAAAAAJ1syMDAxOjE5ZjA6OTAwMjpkZTQ6NTQwMDo0ZmY6ZmUwODo3ZGUzXSCaOjT3J965vKUQA9nOnDn48n3ZxSQpAcK6saROY1oCGRRwbHV0b24ucGxhbjktZG5zLmNvbQovZG5zLXF1ZXJ5
 sdns://AgcAAAAAAAAAJVsyMDAxOjE5ZjA6NTozYmQ3OjU0MDA6NGZmOmZlMDU6ZGE4M10gmjo09yfeubylEAPZzpw5-PJ92cUkKQHCurGkTmNaAhkUa3Jvbm9zLnBsYW45LWRucy5jb20KL2Rucy1xdWVyeQ
 sdns://AgcAAAAAAAAAKFsyMDAxOjE5ZjA6YjQwMDoxZDhjOjU0MDA6NGZmOmZlMTE6YjE1YV0gmjo09yfeubylEAPZzpw5-PJ92cUkKQHCurGkTmNaAhkUaGVsaW9zLnBsYW45LWRucy5jb20KL2Rucy1xdWVyeQ
+tls://adblock.dns.mullvad.net
+tls://all.dns.mullvad.net
 tls://ams01.dnscry.pt
+tls://base.dns.mullvad.net
 tls://cloudflare-dns.com
 tls://dns.adguard-dns.com
 tls://dns.brahma.world
@@ -548,6 +545,7 @@ tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
 tls://dns.google
 tls://dns.kescher.at
+tls://dns.mullvad.net
 tls://dns.quad9.net
 tls://dns.rbn.gr
 tls://dnsforge.de
@@ -556,6 +554,8 @@ tls://doh-2.seby.io
 tls://doh.applied-privacy.net
 tls://doh.dns.sb
 tls://doh.ffmuc.net
+tls://extended.dns.mullvad.net
+tls://family.dns.mullvad.net
 tls://ibuki.cgnat.net
 tls://ns0.fdn.fr
 tls://nsec.arnor.org

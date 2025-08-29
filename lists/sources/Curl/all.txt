@@ -415,7 +415,6 @@ https://zero.dns0.eu
 quic://adblock.krctech.dev
 quic://adfreedns.top
 quic://agh.dshubham.xyz
-quic://and
 quic://anycast.uncensoreddns.org
 quic://blocker.thethorsens.org
 quic://dart.kpsn.org
@@ -425,6 +424,7 @@ quic://dns.anon.no
 quic://dns.bitservices.io
 quic://dns.chunghwamc.com
 quic://dns.dns-53.us
+quic://dns.dnshome.de
 quic://dns.dynx.pro
 quic://dns.faked.org
 quic://dns.froth.zone
@@ -467,7 +467,6 @@ tls://adguard.shoupperuser.com
 tls://ag.apollohct.com
 tls://agh.dshubham.xyz
 tls://ams01.dnscry.pt
-tls://and
 tls://anycast.uncensoreddns.org
 tls://blocker.thethorsens.org
 tls://ca01.dns4me.net
@@ -503,6 +502,7 @@ tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
 tls://dns.dns-53.us
+tls://dns.dnshome.de
 tls://dns.dremaxx.de
 tls://dns.dynx.pro
 tls://dns.elemental.software

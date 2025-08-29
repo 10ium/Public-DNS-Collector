@@ -55,18 +55,6 @@
 91.239.100.100
 94.130.110.178
 94.130.110.185
-adblock.dns.mullvad.net
-all.dns.mullvad.net
-base.dns.mullvad.net
-dns.mullvad.net
-extended.dns.mullvad.net
-family.dns.mullvad.net
-https://adblock.dns.mullvad.net/dns-query
-https://all.dns.mullvad.net/dns-query
-https://base.dns.mullvad.net/dns-query
-https://dns.mullvad.net/dns-query
-https://extended.dns.mullvad.net/dns-query
-https://family.dns.mullvad.net/dns-query
 sdns://AwAAAAAAAAAAAAAPYWRhLm9wZW5ibGQubmV0
 sdns://AwAAAAAAAAAAAAAPcmljLm9wZW5ibGQubmV0
 sdns://AwcAAAAAAAAAAAASdGxzOi8vemVyby5kbnMwLmV1
@@ -87,7 +75,6 @@ tls://ag.apollohct.com
 tls://agh.dshubham.xyz
 tls://all.dns.mullvad.net
 tls://ams01.dnscry.pt
-tls://and
 tls://antivirus.bebasid.com:853
 tls://anycast.censurfridns.dk
 tls://anycast.dns.nextdns.io
@@ -145,6 +132,7 @@ tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
 tls://dns.dns-53.us
+tls://dns.dnshome.de
 tls://dns.dremaxx.de
 tls://dns.dynx.pro
 tls://dns.elemental.software

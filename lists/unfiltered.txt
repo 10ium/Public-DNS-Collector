@@ -49,7 +49,6 @@
 9.9.9.10
 9.9.9.9
 95.85.95.85
-dns.mullvad.net
 https://3dns.eu/dns-query
 https://8888.google/dns-query
 https://abel.waringer-atg.de/dns-query
@@ -352,10 +351,10 @@ https://yvr01.dnscry.pt/dns-query
 https://yyc01.dnscry.pt/dns-query
 https://yyz01.dnscry.pt/dns-query
 https://zero.dns0.eu
-quic://and
 quic://anycast.uncensoreddns.org
 quic://dns.alidns.com
 quic://dns.dns-53.us
+quic://dns.dnshome.de
 quic://dns.froth.zone
 quic://dns.kescher.at
 quic://dns.nextdns.io
@@ -858,7 +857,6 @@ tls://3dns.eu
 tls://adguard-kartoffel.zernico.de
 tls://adguard.bonis.de
 tls://ams01.dnscry.pt
-tls://and
 tls://anycast.uncensoreddns.org
 tls://ca01.dns4me.net
 tls://child-noads.joindns4.eu
@@ -876,6 +874,7 @@ tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
 tls://dns.dns-53.us
+tls://dns.dnshome.de
 tls://dns.dremaxx.de
 tls://dns.elemental.software
 tls://dns.fdn
@@ -889,6 +888,7 @@ tls://dns.liberador.net
 tls://dns.lobbygod.com
 tls://dns.marbledfennec.net
 tls://dns.mnet-online.de
+tls://dns.mullvad.net
 tls://dns.mzjtechnology.com
 tls://dns.nextdns.io
 tls://dns.pub

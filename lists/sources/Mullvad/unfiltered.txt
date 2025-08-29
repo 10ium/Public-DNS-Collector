@@ -1,6 +1,5 @@
 194.242.2.2
 2a07:e340::2
-dns.mullvad.net
 https://de-fra-dns-001.mullvad.net/dns-query
 https://dns.mullvad.net/dns-query
 https://gb-lon-dns-001.mullvad.net/dns-query
@@ -11,3 +10,4 @@ https://se-sto-dns-001.mullvad.net/dns-query
 https://sg-sin-dns-101.mullvad.net/dns-query
 https://us-dal-dns-001.mullvad.net/dns-query
 https://us-nyc-dns-601.mullvad.net/dns-query
+tls://dns.mullvad.net

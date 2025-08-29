@@ -33,8 +33,6 @@
 94.140.14.15
 94.140.14.15:5443
 94.140.15.16
-all.dns.mullvad.net
-family.dns.mullvad.net
 https://adblock.dns.mullvad.net/dns-query
 https://adblock.mydns.network/dns-query
 https://adguard.shoupperuser.com/dns-query
@@ -138,6 +136,7 @@ sdns://AgMAAAAAAAAAFFsyYTEwOjUwYzA6OmJhZDE6ZmZdIJo6NPcn3rm8pRAD2c6cOfjyfdnFJCkBw
 sdns://AgMAAAAAAAAAFFsyYTEwOjUwYzA6OmJhZDI6ZmZdIJo6NPcn3rm8pRAD2c6cOfjyfdnFJCkBwrqxpE5jWgIZFmZhbWlseS5hZGd1YXJkLWRucy5jb20KL2Rucy1xdWVyeQ
 tls://adguard.shoupperuser.com
 tls://adult-filter-dns.cleanbrowsing.org
+tls://all.dns.mullvad.net
 tls://child-noads.joindns4.eu
 tls://child.joindns4.eu
 tls://cloudflare-dns.com
@@ -158,6 +157,7 @@ tls://family-adblock.bebasid.com:853
 tls://family-filter-dns.cleanbrowsing.org
 tls://family.adguard-dns.com
 tls://family.canadianshield.cira.ca
+tls://family.dns.mullvad.net
 tls://family.dot.dns.yandex.net
 tls://familyshield.opendns.com
 tls://freedns.controld.com
