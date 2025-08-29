@@ -5,11 +5,6 @@
 194.242.2.6
 194.242.2.9
 2a07:e340::2
-2a07:e340::3
-2a07:e340::4
-2a07:e340::5
-2a07:e340::6
-2a07:e340::9
 https://adblock.dns.mullvad.net/dns-query
 https://all.dns.mullvad.net/dns-query
 https://base.dns.mullvad.net/dns-query

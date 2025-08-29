@@ -1,7 +1,6 @@
 194.242.2.6
 194.242.2.9
-2a07:e340::6
-2a07:e340::9
+2a07:e340::2
 https://all.dns.mullvad.net/dns-query
 https://family.dns.mullvad.net/dns-query
 tls://all.dns.mullvad.net

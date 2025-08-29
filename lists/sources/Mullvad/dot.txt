@@ -1,3 +1,10 @@
+194.242.2.2
+194.242.2.3
+194.242.2.4
+194.242.2.5
+194.242.2.6
+194.242.2.9
+2a07:e340::2
 tls://adblock.dns.mullvad.net
 tls://all.dns.mullvad.net
 tls://base.dns.mullvad.net

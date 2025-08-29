@@ -2,12 +2,11 @@
 149.112.122.10
 208.67.220.2
 208.67.222.2
-2620:0:ccd::2
-2620:10A:80BB::10
-2620:10A:80BC::10
+2620:119:35::35
+2620:ff:c000:0:1::64:25
+2a13:1001::86:54:11:1
 86.54.11.100
 86.54.11.200
-[2a13:1001::86:54:11]:1
 https://dns.bebasid.com/unfiltered
 https://doh.sandbox.opendns.com/dns-query
 https://private.canadianshield.cira.ca/dns-query
