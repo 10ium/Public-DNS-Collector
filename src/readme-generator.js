@@ -10,21 +10,21 @@ import fs from 'fs';
 export function generateReadme(sources, repoUrl, listFileCounts) {
     // A map for providing descriptions for known list types.
     const DESCRIPTIONS = {
-        'all.txt': 'لیست جامع تمام DNSها از همه منابع و پروتکل‌ها',
-        'doh.txt': 'لیست تمام سرورهای DNS-over-HTTPS',
-        'dot.txt': 'لیست تمام سرورهای DNS-over-TLS',
-        'doq.txt': 'لیست تمام سرورهای DNS-over-QUIC',
-        'doh3.txt': 'لیست تمام سرورهای DNS-over-HTTP/3',
-        'dnscrypt.txt': 'لیست تمام سرورهای DNSCrypt (به صورت Stamp)',
-        'ipv4.txt': 'لیست سرورهای DNS استاندارد روی IPv4',
-        'ipv6.txt': 'لیست تمام آدرس‌های IPv6 موجود',
-        'dns64.txt': 'لیست سرورهایی که از DNS64 پشتیبانی می‌کنند',
+        'all.txt': 'لیست جامع تمام دی ان اس ها از همه منابع و پروتکل‌ها',
+        'doh.txt': 'لیست تمام سرورهای دی ان اس روی اچ تی تی پی اس',
+        'dot.txt': 'لیست تمام سرورهای دی ان اس روی تی ال اس',
+        'doq.txt': 'لیست تمام سرورهای دی ان اس روی کوییک',
+        'doh3.txt': 'لیست تمام سرورهای دی ان اس روی اچ تی تی پی اس 3',
+        'dnscrypt.txt': 'لیست تمام سرورهای دی ان اس کریپت',
+        'ipv4.txt': 'لیست سرورهای دی ان اس استاندارد روی آی‌پی‌وی۴',
+        'ipv6.txt': '۶لیست سرورهای دی ان اس استاندارد روی آی‌پی‌وی',
+        'dns64.txt': 'لیست سرورهایی که از دی‌ان‌اس۶۴ پشتیبانی می‌کنند',
         'adblock.txt': 'لیست سرورهایی که تبلیغات را مسدود می‌کنند',
         'malware.txt': 'لیست سرورهایی که از بدافزار و فیشینگ جلوگیری می‌کنند',
         'family.txt': 'لیست سرورهایی با فیلترینگ خانواده (محتوای بزرگسالان)',
         'unfiltered.txt': 'لیست سرورهای بدون فیلترینگ خاص',
         'no_log.txt': 'لیست سرورهایی که ادعا می‌کنند لاگ کاربران را ذخیره نمی‌کنند',
-        'dnssec.txt': 'لیست سرورهایی که از DNSSEC برای افزایش امنیت پشتیبانی می‌کنند',
+        'dnssec.txt': 'لیست سرورهایی که از دی ان اس سک برای افزایش امنیت پشتیبانی می‌کنند',
     };
 
     // A preferred order for displaying main lists to keep the README consistent.
