@@ -11,7 +11,7 @@ const GITHUB_REPO_URL = `https://github.com/${process.env.GITHUB_REPOSITORY}`;
 
 const SOURCES = [
     { name: 'DNSCrypt', url: 'https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/refs/heads/master/v3/public-resolvers.md', parser: parsers.parseDNSCrypt },
-    { name: 'Paulmillr', url: null, parser: parsers.parsePaulmillr },
+    { name: 'Paulmillr', url: null, readmeUrl: 'https://github.com/paulmillr/encrypted-dns', parser: parsers.parsePaulmillr },
     { name: 'Blacklantern', url: 'https://raw.githubusercontent.com/blacklanternsecurity/public-dns-servers/refs/heads/master/nameservers.txt', parser: parsers.parseBlacklantern },
     { name: 'MutinSA', url: 'https://gist.githubusercontent.com/mutin-sa/5dcbd35ee436eb629db7872581093bc5/raw/', parser: parsers.parseMutinSA },
     { name: 'AdGuard', url: 'https://adguard-dns.io/kb/general/dns-providers/', parser: parsers.parseAdGuard },
