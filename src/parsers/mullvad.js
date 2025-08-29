@@ -3,8 +3,8 @@ import { createServerObject } from '../utils.js';
 
 /**
  * Parses DNS server information from the Mullvad DNS documentation page.
- * This parser dynamically detects supported protocols (DoH, DoT) and extracts
- * servers from multiple tables on the page.
+ * This parser creates separate server objects for each protocol (DoH, DoT)
+ * to ensure data integrity and standardizes DoT hostnames.
  * @param {string} content The raw HTML content from the Mullvad source.
  * @returns {Array<object>} A list of server objects.
  */
@@ -13,7 +13,7 @@ export function parseMullvad(content) {
     const dom = new JSDOM(content);
     const document = dom.window.document;
 
-    // --- Step 1: Parse the "Hostnames and content blockers" table to map hostnames to filters ---
+    // --- مرحله ۱: استخراج نقشه فیلترها از جدول "Hostnames and content blockers" ---
     const filterMap = new Map();
     const headers = Array.from(document.querySelectorAll('h3'));
     const hostnamesHeader = headers.find(h => h.textContent.includes('Hostnames and content blockers'));
@@ -47,7 +47,7 @@ export function parseMullvad(content) {
     }
 
 
-    // --- Step 2: Parse the "IP-addresses and ports" table for main servers ---
+    // --- مرحله ۲: پردازش جدول اصلی سرورها ("IP-addresses and ports") ---
     const ipsHeader = headers.find(h => h.textContent.includes('IP-addresses and ports'));
     if (ipsHeader) {
         let ipTable = ipsHeader.nextElementSibling;
@@ -59,7 +59,7 @@ export function parseMullvad(content) {
             const ipRows = ipTable.querySelectorAll('tbody tr');
             ipRows.forEach(row => {
                 const cells = row.querySelectorAll('td');
-                if (cells.length < 5) return; // Expecting at least 5 columns now
+                if (cells.length < 5) return;
 
                 const hostname = cells[0].textContent.trim();
                 const ipv4 = cells[1].textContent.trim();
@@ -68,51 +68,58 @@ export function parseMullvad(content) {
                 const dotPort = cells[4].textContent.trim();
 
                 if (filterMap.has(hostname)) {
-                    const server = createServerObject();
-                    server.provider = 'Mullvad';
+                    // ایجاد یک آبجکت پایه با اطلاعات مشترک
+                    const baseServer = createServerObject();
+                    baseServer.provider = 'Mullvad';
 
-                    // Set filters
                     const serverFilters = filterMap.get(hostname);
-                    server.filters.ads = serverFilters.ads || serverFilters.trackers;
-                    server.filters.malware = serverFilters.malware;
-                    server.filters.family = serverFilters.adult || serverFilters.gambling;
-                    if (!server.filters.ads && !server.filters.malware && !server.filters.family && !serverFilters.social) {
-                        server.filters.unfiltered = true;
+                    baseServer.filters.ads = serverFilters.ads || serverFilters.trackers;
+                    baseServer.filters.malware = serverFilters.malware;
+                    baseServer.filters.family = serverFilters.adult || serverFilters.gambling;
+                    if (!baseServer.filters.ads && !baseServer.filters.malware && !baseServer.filters.family && !serverFilters.social) {
+                        baseServer.filters.unfiltered = true;
                     }
 
-                    // Dynamically detect protocols
-                    const protocols = [];
-                    if (dohPort) protocols.push('doh');
-                    if (dotPort) protocols.push('dot');
-                    server.protocols = protocols;
+                    baseServer.features.dnssec = true; // Mullvad likely supports DNSSEC
+                    baseServer.features.no_log = true;
+                    baseServer.features.ipv6 = !!ipv6;
 
-                    // Add addresses based on detected protocols
-                    if (ipv4) server.addresses.push(ipv4);
-                    if (ipv6) server.addresses.push(ipv6);
-                    if (protocols.includes('doh')) {
-                        server.addresses.push(`https://${hostname}/dns-query`);
+                    // **بهبود اصلی: برای هر پروتکل یک آبجکت جداگانه بساز**
+
+                    // اگر از DoH پشتیبانی می‌کند، یک سرور DoH بساز
+                    if (dohPort) {
+                        const dohServer = {
+                            ...baseServer,
+                            protocols: ['doh'],
+                            addresses: [`https://${hostname}/dns-query`],
+                        };
+                        servers.push(dohServer);
                     }
-                    if (protocols.includes('dot')) {
-                        server.addresses.push(hostname);
+
+                    // اگر از DoT پشتیبانی می‌کند، یک سرور DoT بساز
+                    if (dotPort) {
+                        const dotAddresses = [`tls://${hostname}`]; // اضافه کردن پیشوند استاندارد
+                        if (ipv4) dotAddresses.push(ipv4);
+                        if (ipv6) dotAddresses.push(ipv6);
+
+                        const dotServer = {
+                            ...baseServer,
+                            protocols: ['dot'],
+                            addresses: [...new Set(dotAddresses)],
+                        };
+                        servers.push(dotServer);
                     }
-                    
-                    // Set features
-                    server.features.dnssec = true;
-                    server.features.no_log = true;
-                    server.features.ipv6 = !!ipv6;
-                    
-                    server.addresses = [...new Set(server.addresses)];
-                    servers.push(server);
                 }
             });
         } else {
-             console.warn('  ⚠️ [Mullvad Parser] جدول IP آدرس‌ها ("IP-addresses and ports") پیدا نشد.');
+            console.warn('  ⚠️ [Mullvad Parser] جدول IP آدرس‌ها ("IP-addresses and ports") پیدا نشد.');
         }
     } else {
-         console.warn('  ⚠️ [Mullvad Parser] هدر جدول IP آدرس‌ها پیدا نشد.');
+        console.warn('  ⚠️ [Mullvad Parser] هدر جدول IP آدرس‌ها پیدا نشد.');
     }
 
-    // --- Step 3: Parse the "Using a specific DNS server" table for DoH-only servers ---
+    // --- مرحله ۳: پردازش سرورهای خاص DoH-Only در جدول "Using a specific DNS server" ---
+    // این بخش از قبل درست کار می‌کرد و نیازی به تغییر نداشت
     const specificHeader = headers.find(h => h.textContent.includes('Using a specific DNS server'));
     if (specificHeader) {
         let specificTable = specificHeader.nextElementSibling;
@@ -135,9 +142,7 @@ export function parseMullvad(content) {
                     server.addresses = [dohUrl];
                     server.features.dnssec = true;
                     server.features.no_log = true;
-                    
-                    // IPv6 support is likely but not explicitly stated for these, so we leave it false
-                    server.features.ipv6 = false; 
+                    server.features.ipv6 = false; // پشتیبانی از IPv6 برای این سرورها مشخص نیست
 
                     servers.push(server);
                 }
