@@ -38,7 +38,7 @@ export function generateReadme(sources, repoUrl, listFileCounts) {
     const updateDate = new Date().toISOString().replace('T', ' ').substring(0, 19) + ' UTC';
 
     let markdown = `# مجموعه DNS عمومی | Public DNS Collector\n\n`;
-    markdown += `<p align="center">\n  <img src="https://www.svgrepo.com/show/491884/dns.svg" alt="Public DNS Collector Banner">\n</p>\n`;
+    markdown += `<p align="center">\n  <img src="https://img.favpng.com/24/12/22/domain-name-system-ip-address-web-browser-internet-png-favpng-3gn43k48UBxUGStUKpgZ7HDmt.jpg" alt="Public DNS Collector Banner" width="200">\n</p>\n`;
     markdown += `<div align="center">\n\n**یک مخزن جامع برای جمع‌آوری، تجمیع و به‌روزرسانی خودکار لیست‌های DNS عمومی از منابع معتبر.**\n<br />\nاین پروژه توسط GitHub Actions به صورت هفتگی اجرا شده و لیست‌های زیر را به‌روز می‌کند.\n<br />\n<br />\n\n`;
     markdown += `**آخرین بروزرسانی:** ${updateDate}\n<br />\n<br />\n\n`;
     markdown += `[![GitHub last commit](https://img.shields.io/github/last-commit/${process.env.GITHUB_REPOSITORY}?style=for-the-badge&logo=github&color=blue)](https://github.com/${process.env.GITHUB_REPOSITORY}/commits/main)\n`;
@@ -48,7 +48,7 @@ export function generateReadme(sources, repoUrl, listFileCounts) {
     markdown += `## 🗂️ لیست‌های تجمیع شده نهایی\n\n`;
     markdown += `این لیست‌ها حاصل ترکیب، پاک‌سازی و دسته‌بندی داده‌ها از **تمام منابعی که برای تجمیع فعال هستند** می‌باشند و برای استفاده عمومی توصیه می‌شوند.\n\n`;
     markdown += `| نام فایل | تعداد آدرس‌ها | توضیحات | لینک خام |\n`;
-    markdown += `| :--- | :---: | :--- | :---: |\n`;
+    markdown += `| :--- | :---: | ---: | :---: |\n`;
 
     // Dynamically discover main list files from listFileCounts
     const mainFiles = Object.keys(listFileCounts)
