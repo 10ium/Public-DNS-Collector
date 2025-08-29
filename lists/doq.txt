@@ -1,4 +1,3 @@
-213.196.191.96
 quic://adblock.krctech.dev
 quic://adfreedns.top
 quic://agh.dshubham.xyz
