@@ -1,210 +1,140 @@
-# مجموعه DNS عمومی | Public DNS Collector
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/1024-byte/resources/main/banner/Public-DNS-Collector-banner.png" alt="Public DNS Collector Banner">
-</p>
 <div align="center">
 
-**یک مخزن جامع برای جمع‌آوری، تجمیع و به‌روزرسانی خودکار لیست‌های DNS عمومی از منابع معتبر.**
-<br />
-این پروژه توسط GitHub Actions به صورت هفتگی اجرا شده و لیست‌های زیر را به‌روز می‌کند.
-<br />
-<br />
-
-[![GitHub last commit](https://img.shields.io/github/last-commit/10ium/Public-DNS-Collector?style=for-the-badge&logo=github&color=blue)](https://github.com/10ium/Public-DNS-Collector/commits/main)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/10ium/Public-DNS-Collector/update-lists.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/10ium/Public-DNS-Collector/actions)
-[![License](https://img.shields.io/github/license/10ium/Public-DNS-Collector?style=for-the-badge&color=brightgreen)](LICENSE)
+# 🛡️ Public DNS Collector 🛡️
+### لیست‌های عمومی DNS جمع‌آوری شده
 
 </div>
 
 ---
 
-## 🗂️ لیست‌های تجمیع شده نهایی
+این مخزن به طور خودکار لیستی از سرورهای DNS عمومی را از منابع مختلف معتبر جمع‌آوری، پاک‌سازی و تجمیع می‌کند.
 
-این لیست‌ها حاصل ترکیب، پاک‌سازی و دسته‌بندی داده‌ها از **تمام منابعی که برای تجمیع فعال هستند** می‌باشند و برای استفاده عمومی توصیه می‌شوند.
+*آخرین به‌روزرسانی: `Fri, 29 Aug 2025 01:27:35 GMT`*
 
-| نام فایل | تعداد آدرس‌ها | توضیحات | لینک خام |
-| :--- | :---: | :--- | :---: |
-| `doh.txt` | **543** | لیست تمام سرورهای DNS-over-HTTPS. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/doh.txt) |
-| `dot.txt` | **259** | لیست تمام سرورهای DNS-over-TLS. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dot.txt) |
-| `doq.txt` | **55** | لیست تمام سرورهای DNS-over-QUIC. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/doq.txt) |
-| `doh3.txt` | **2** | لیست تمام سرورهای DNS-over-HTTP/3. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/doh3.txt) |
-| `dnscrypt.txt` | **602** | لیست تمام سرورهای DNSCrypt (به صورت Stamp). | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dnscrypt.txt) |
-| `ipv4.txt` | **186** | لیست سرورهای DNS استاندارد روی IPv4. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/ipv4.txt) |
-| `ipv6.txt` | **124** | لیست تمام آدرس‌های IPv6 موجود. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/ipv6.txt) |
-| `adblock.txt` | **495** | لیست سرورهایی که تبلیغات را مسدود می‌کنند. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/adblock.txt) |
-| `malware.txt` | **441** | لیست سرورهایی که از بدافزار و فیشینگ جلوگیری می‌کنند. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/malware.txt) |
-| `family.txt` | **163** | لیست سرورهایی با فیلترینگ خانواده (محتوای بزرگسالان). | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/family.txt) |
-| `unfiltered.txt` | **862** | لیست سرورهای بدون فیلترینگ خاص. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/unfiltered.txt) |
-| `no_log.txt` | **383** | لیست سرورهایی که ادعا می‌کنند لاگ کاربران را ذخیره نمی‌کنند. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/no_log.txt) |
-| `dnssec.txt` | **564** | لیست سرورهایی که از DNSSEC برای افزایش امنیت پشتیبانی می‌کنند. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dnssec.txt) |
-| `dns64.txt` | **12** | لیست سرورهایی که از DNS64 پشتیبانی می‌کنند. | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dns64.txt) |
+## لیست‌های تجمیعی (Aggregated Lists)
 
----
+این لیست‌ها نتیجه ترکیب، پاک‌سازی و حذف موارد تکراری از تمام منابع هستند.
 
-##  لیست‌ها بر اساس منبع | Lists by Source
+### پروتکل‌ها و IPها
+| نام لیست | توضیحات | تعداد | لینک دانلود |
+| --- | --- | --- | --- |
+| **all** | لیست جامع تمام DNS ها از همه منابع و پروتکل‌ها . | [1769](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/all.txt) | [لینک خام](https://raw.githubusercontent.com/10ium/Public-DNS-Collector/main/lists/all.txt) |
+| **doh** | سرورهای DNS over HTTPS (DoH) | [543](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/doh.txt) | [لینک خام](https://raw.githubusercontent.com/10ium/Public-DNS-Collector/main/lists/doh.txt) |
+| **dot** | سرورهای DNS over TLS (DoT) | [259](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/dot.txt) | [لینک خام](https://raw.githubusercontent.com/10ium/Public-DNS-Collector/main/lists/dot.txt) |
+| **doq** | سرورهای DNS over QUIC (DoQ) | [55](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/doq.txt) | [لینک خام](https://raw.githubusercontent.com/10ium/Public-DNS-Collector/main/lists/doq.txt) |
+| **dnscrypt** | سرورهای DNSCrypt | [602](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/dnscrypt.txt) | [لینک خام](https://raw.githubusercontent.com/10ium/Public-DNS-Collector/main/lists/dnscrypt.txt) |
+| **ipv4** | سرورهای DNS سنتی IPv4 | [186](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/ipv4.txt) | [لینک خام](https://raw.githubusercontent.com/10ium/Public-DNS-Collector/main/lists/ipv4.txt) |
+| **ipv6** | سرورهای DNS سنتی IPv6 | [124](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/ipv6.txt) | [لینک خام](https://raw.githubusercontent.com/10ium/Public-DNS-Collector/main/lists/ipv6.txt) |
 
-در این بخش، خروجی‌های هر منبع به صورت جداگانه و فیلتر شده قرار دارند. هر منبع دارای یک فایل `all.txt` (شامل تمام آدرس‌های استخراج شده از آن منبع) و سپس لیست‌های فیلتر شده بر اساس پروتکل و ویژگی‌ها است.
 
-<details>
-<summary><h3>📂 DNSCrypt</h3></summary>
+### لیست‌های فیلترینگ
+| نام لیست | توضیحات | تعداد | لینک دانلود |
+| --- | --- | --- | --- |
+| **adblock** | مسدودکننده تبلیغات | [495](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/adblock.txt) | [لینک خام](https://raw.githubusercontent.com/10ium/Public-DNS-Collector/main/lists/adblock.txt) |
+| **malware** | مسدودکننده بدافزارها و فیشینگ | [441](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/malware.txt) | [لینک خام](https://raw.githubusercontent.com/10ium/Public-DNS-Collector/main/lists/malware.txt) |
+| **family** | محافظت از خانواده (مسدودکننده محتوای بزرگسالان) | [163](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/family.txt) | [لینک خام](https://raw.githubusercontent.com/10ium/Public-DNS-Collector/main/lists/family.txt) |
+| **unfiltered** | بدون فیلتر | [862](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/unfiltered.txt) | [لینک خام](https://raw.githubusercontent.com/10ium/Public-DNS-Collector/main/lists/unfiltered.txt) |
 
-| نام فایل | تعداد آدرس‌ها | لینک خام |
-| :--- | :---: | :---: |
-| `all.txt` | **565** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/all.txt) |
-| `adblock.txt` | **17** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/adblock.txt) |
-| `dnscrypt.txt` | **565** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/dnscrypt.txt) |
-| `dnssec.txt` | **319** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/dnssec.txt) |
-| `family.txt` | **15** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/family.txt) |
-| `malware.txt` | **59** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/malware.txt) |
-| `no_log.txt` | **221** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/no_log.txt) |
-| `unfiltered.txt` | **492** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/unfiltered.txt) |
 
-</details>
+### لیست‌های مبتنی بر ویژگی‌ها
+| نام لیست | توضیحات | تعداد | لینک دانلود |
+| --- | --- | --- | --- |
+| **dnssec** | پشتیبانی از DNSSEC | [564](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/dnssec.txt) | [لینک خام](https://raw.githubusercontent.com/10ium/Public-DNS-Collector/main/lists/dnssec.txt) |
+| **no_log** | ادعای عدم ثبت لاگ (No-Log Policy) | [383](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/no_log.txt) | [لینک خام](https://raw.githubusercontent.com/10ium/Public-DNS-Collector/main/lists/no_log.txt) |
+| **dns64** | پشتیبانی از DNS64 | [12](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/dns64.txt) | [لینک خام](https://raw.githubusercontent.com/10ium/Public-DNS-Collector/main/lists/dns64.txt) |
 
-<details>
-<summary><h3>📂 Paulmillr</h3></summary>
 
-| نام فایل | تعداد آدرس‌ها | لینک خام |
-| :--- | :---: | :---: |
-| `all.txt` | **49** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Paulmillr/all.txt) |
-| `adblock.txt` | **8** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Paulmillr/adblock.txt) |
-| `doh.txt` | **27** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Paulmillr/doh.txt) |
-| `dot.txt` | **22** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Paulmillr/dot.txt) |
-| `family.txt` | **14** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Paulmillr/family.txt) |
-| `malware.txt` | **30** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Paulmillr/malware.txt) |
-| `unfiltered.txt` | **18** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Paulmillr/unfiltered.txt) |
+## لیست‌های مبتنی بر منبع (Source-Specific Lists)
 
-</details>
+این لیست‌ها حاوی سرورهای استخراج شده از هر منبع به صورت جداگانه هستند.
 
-<details>
-<summary><h3>📂 Blacklantern</h3></summary>
+| منبع | نام لیست | توضیحات | تعداد |
+| --- | --- | --- | --- |
+| DNSCrypt | **all** | لیست جامع تمام DNS ها از همه منابع و پروتکل‌ها . | [565](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSCrypt/all.txt) |
+|  | **dnscrypt** | سرورهای DNSCrypt | [565](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSCrypt/dnscrypt.txt) |
+|  | **adblock** | مسدودکننده تبلیغات | [17](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSCrypt/adblock.txt) |
+|  | **malware** | مسدودکننده بدافزارها و فیشینگ | [59](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSCrypt/malware.txt) |
+|  | **family** | محافظت از خانواده (مسدودکننده محتوای بزرگسالان) | [15](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSCrypt/family.txt) |
+|  | **unfiltered** | بدون فیلتر | [492](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSCrypt/unfiltered.txt) |
+|  | **dnssec** | پشتیبانی از DNSSEC | [319](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSCrypt/dnssec.txt) |
+|  | **no_log** | ادعای عدم ثبت لاگ (No-Log Policy) | [221](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSCrypt/no_log.txt) |
+| [Paulmillr](https://github.com/paulmillr/encrypted-dns) | **all** | لیست جامع تمام DNS ها از همه منابع و پروتکل‌ها . | [49](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Paulmillr/all.txt) |
+|  | **doh** | سرورهای DNS over HTTPS (DoH) | [27](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Paulmillr/doh.txt) |
+|  | **dot** | سرورهای DNS over TLS (DoT) | [22](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Paulmillr/dot.txt) |
+|  | **adblock** | مسدودکننده تبلیغات | [8](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Paulmillr/adblock.txt) |
+|  | **malware** | مسدودکننده بدافزارها و فیشینگ | [30](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Paulmillr/malware.txt) |
+|  | **family** | محافظت از خانواده (مسدودکننده محتوای بزرگسالان) | [14](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Paulmillr/family.txt) |
+|  | **unfiltered** | بدون فیلتر | [18](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Paulmillr/unfiltered.txt) |
+| Blacklantern | **all** | لیست جامع تمام DNS ها از همه منابع و پروتکل‌ها . | [6808](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Blacklantern/all.txt) |
+|  | **ipv4** | سرورهای DNS سنتی IPv4 | [6808](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Blacklantern/ipv4.txt) |
+|  | **unfiltered** | بدون فیلتر | [6808](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Blacklantern/unfiltered.txt) |
+| MutinSA | **all** | لیست جامع تمام DNS ها از همه منابع و پروتکل‌ها . | [40](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/MutinSA/all.txt) |
+|  | **ipv4** | سرورهای DNS سنتی IPv4 | [18](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/MutinSA/ipv4.txt) |
+|  | **ipv6** | سرورهای DNS سنتی IPv6 | [22](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/MutinSA/ipv6.txt) |
+|  | **unfiltered** | بدون فیلتر | [40](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/MutinSA/unfiltered.txt) |
+|  | **dnssec** | پشتیبانی از DNSSEC | [40](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/MutinSA/dnssec.txt) |
+|  | **dns64** | پشتیبانی از DNS64 | [12](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/MutinSA/dns64.txt) |
+| AdGuard | **all** | لیست جامع تمام DNS ها از همه منابع و پروتکل‌ها . | [563](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/AdGuard/all.txt) |
+|  | **doh** | سرورهای DNS over HTTPS (DoH) | [107](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/AdGuard/doh.txt) |
+|  | **dot** | سرورهای DNS over TLS (DoT) | [109](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/AdGuard/dot.txt) |
+|  | **doq** | سرورهای DNS over QUIC (DoQ) | [17](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/AdGuard/doq.txt) |
+|  | **dnscrypt** | سرورهای DNSCrypt | [50](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/AdGuard/dnscrypt.txt) |
+|  | **ipv4** | سرورهای DNS سنتی IPv4 | [172](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/AdGuard/ipv4.txt) |
+|  | **ipv6** | سرورهای DNS سنتی IPv6 | [108](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/AdGuard/ipv6.txt) |
+|  | **adblock** | مسدودکننده تبلیغات | [209](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/AdGuard/adblock.txt) |
+|  | **malware** | مسدودکننده بدافزارها و فیشینگ | [275](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/AdGuard/malware.txt) |
+|  | **family** | محافظت از خانواده (مسدودکننده محتوای بزرگسالان) | [49](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/AdGuard/family.txt) |
+|  | **unfiltered** | بدون فیلتر | [18](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/AdGuard/unfiltered.txt) |
+| Mullvad | **all** | لیست جامع تمام DNS ها از همه منابع و پروتکل‌ها . | [33](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Mullvad/all.txt) |
+|  | **doh** | سرورهای DNS over HTTPS (DoH) | [15](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Mullvad/doh.txt) |
+|  | **dot** | سرورهای DNS over TLS (DoT) | [6](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Mullvad/dot.txt) |
+|  | **ipv4** | سرورهای DNS سنتی IPv4 | [6](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Mullvad/ipv4.txt) |
+|  | **ipv6** | سرورهای DNS سنتی IPv6 | [6](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Mullvad/ipv6.txt) |
+|  | **adblock** | مسدودکننده تبلیغات | [20](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Mullvad/adblock.txt) |
+|  | **malware** | مسدودکننده بدافزارها و فیشینگ | [16](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Mullvad/malware.txt) |
+|  | **family** | محافظت از خانواده (مسدودکننده محتوای بزرگسالان) | [8](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Mullvad/family.txt) |
+|  | **unfiltered** | بدون فیلتر | [13](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Mullvad/unfiltered.txt) |
+|  | **dnssec** | پشتیبانی از DNSSEC | [33](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Mullvad/dnssec.txt) |
+|  | **no_log** | ادعای عدم ثبت لاگ (No-Log Policy) | [33](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Mullvad/no_log.txt) |
+| DNSPrivacyOrg | **all** | لیست جامع تمام DNS ها از همه منابع و پروتکل‌ها . | [7](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSPrivacyOrg/all.txt) |
+|  | **doh** | سرورهای DNS over HTTPS (DoH) | [3](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSPrivacyOrg/doh.txt) |
+|  | **dot** | سرورهای DNS over TLS (DoT) | [3](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSPrivacyOrg/dot.txt) |
+|  | **doq** | سرورهای DNS over QUIC (DoQ) | [1](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSPrivacyOrg/doq.txt) |
+|  | **adblock** | مسدودکننده تبلیغات | [1](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSPrivacyOrg/adblock.txt) |
+|  | **malware** | مسدودکننده بدافزارها و فیشینگ | [2](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSPrivacyOrg/malware.txt) |
+|  | **unfiltered** | بدون فیلتر | [5](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSPrivacyOrg/unfiltered.txt) |
+|  | **dnssec** | پشتیبانی از DNSSEC | [7](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSPrivacyOrg/dnssec.txt) |
+|  | **no_log** | ادعای عدم ثبت لاگ (No-Log Policy) | [7](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/DNSPrivacyOrg/no_log.txt) |
+| Curl | **all** | لیست جامع تمام DNS ها از همه منابع و پروتکل‌ها . | [620](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Curl/all.txt) |
+|  | **doh** | سرورهای DNS over HTTPS (DoH) | [414](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Curl/doh.txt) |
+|  | **dot** | سرورهای DNS over TLS (DoT) | [164](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Curl/dot.txt) |
+|  | **doq** | سرورهای DNS over QUIC (DoQ) | [42](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Curl/doq.txt) |
+|  | **adblock** | مسدودکننده تبلیغات | [241](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Curl/adblock.txt) |
+|  | **malware** | مسدودکننده بدافزارها و فیشینگ | [74](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Curl/malware.txt) |
+|  | **family** | محافظت از خانواده (مسدودکننده محتوای بزرگسالان) | [90](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Curl/family.txt) |
+|  | **unfiltered** | بدون فیلتر | [301](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Curl/unfiltered.txt) |
+|  | **dnssec** | پشتیبانی از DNSSEC | [122](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Curl/dnssec.txt) |
+|  | **no_log** | ادعای عدم ثبت لاگ (No-Log Policy) | [104](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Curl/no_log.txt) |
+| Thiagozs | **all** | لیست جامع تمام DNS ها از همه منابع و پروتکل‌ها . | [121](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Thiagozs/all.txt) |
+|  | **doh** | سرورهای DNS over HTTPS (DoH) | [121](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Thiagozs/doh.txt) |
+|  | **adblock** | مسدودکننده تبلیغات | [12](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Thiagozs/adblock.txt) |
+|  | **malware** | مسدودکننده بدافزارها و فیشینگ | [21](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Thiagozs/malware.txt) |
+|  | **family** | محافظت از خانواده (مسدودکننده محتوای بزرگسالان) | [3](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Thiagozs/family.txt) |
+|  | **unfiltered** | بدون فیلتر | [87](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Thiagozs/unfiltered.txt) |
+|  | **dnssec** | پشتیبانی از DNSSEC | [66](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Thiagozs/dnssec.txt) |
+|  | **no_log** | ادعای عدم ثبت لاگ (No-Log Policy) | [27](https://github.com/10ium/Public-DNS-Collector/blob/main/lists/sources/Thiagozs/no_log.txt) |
 
-| نام فایل | تعداد آدرس‌ها | لینک خام |
-| :--- | :---: | :---: |
-| `all.txt` | **6808** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/all.txt) |
-| `ipv4.txt` | **6808** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/ipv4.txt) |
-| `unfiltered.txt` | **6808** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/unfiltered.txt) |
 
-</details>
+## منابع داده (Data Sources)
+* [DNSCrypt](https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/refs/heads/master/v3/public-resolvers.md)
+* [Paulmillr](https://github.com/paulmillr/encrypted-dns)
+* [Blacklantern](https://raw.githubusercontent.com/blacklanternsecurity/public-dns-servers/refs/heads/master/nameservers.txt)
+* [MutinSA](https://gist.githubusercontent.com/mutin-sa/5dcbd35ee436eb629db7872581093bc5/raw/)
+* [AdGuard](https://adguard-dns.io/kb/general/dns-providers/)
+* [Mullvad](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls)
+* [DNSPrivacyOrg](https://dnsprivacy.org/public_resolvers/)
+* [Curl](https://raw.githubusercontent.com/wiki/curl/curl/DNS-over-HTTPS.md)
+* [Thiagozs](https://gist.githubusercontent.com/thiagozs/088fd8f8129ca06df524f6711116ee8f/raw/)
 
-<details>
-<summary><h3>📂 MutinSA</h3></summary>
-
-| نام فایل | تعداد آدرس‌ها | لینک خام |
-| :--- | :---: | :---: |
-| `all.txt` | **40** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/MutinSA/all.txt) |
-| `dns64.txt` | **12** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/MutinSA/dns64.txt) |
-| `dnssec.txt` | **40** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/MutinSA/dnssec.txt) |
-| `ipv4.txt` | **18** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/MutinSA/ipv4.txt) |
-| `ipv6.txt` | **22** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/MutinSA/ipv6.txt) |
-| `unfiltered.txt` | **40** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/MutinSA/unfiltered.txt) |
-
-</details>
-
-<details>
-<summary><h3>📂 AdGuard</h3></summary>
-
-| نام فایل | تعداد آدرس‌ها | لینک خام |
-| :--- | :---: | :---: |
-| `all.txt` | **563** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/all.txt) |
-| `adblock.txt` | **209** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/adblock.txt) |
-| `dnscrypt.txt` | **50** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/dnscrypt.txt) |
-| `doh.txt` | **107** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/doh.txt) |
-| `doq.txt` | **17** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/doq.txt) |
-| `dot.txt` | **109** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/dot.txt) |
-| `family.txt` | **49** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/family.txt) |
-| `ipv4.txt` | **172** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/ipv4.txt) |
-| `ipv6.txt` | **108** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/ipv6.txt) |
-| `malware.txt` | **275** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/malware.txt) |
-| `unfiltered.txt` | **18** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/unfiltered.txt) |
-
-</details>
-
-<details>
-<summary><h3>📂 Mullvad</h3></summary>
-
-| نام فایل | تعداد آدرس‌ها | لینک خام |
-| :--- | :---: | :---: |
-| `all.txt` | **33** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Mullvad/all.txt) |
-| `adblock.txt` | **20** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Mullvad/adblock.txt) |
-| `dnssec.txt` | **33** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Mullvad/dnssec.txt) |
-| `doh.txt` | **15** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Mullvad/doh.txt) |
-| `dot.txt` | **6** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Mullvad/dot.txt) |
-| `family.txt` | **8** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Mullvad/family.txt) |
-| `ipv4.txt` | **6** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Mullvad/ipv4.txt) |
-| `ipv6.txt` | **6** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Mullvad/ipv6.txt) |
-| `malware.txt` | **16** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Mullvad/malware.txt) |
-| `no_log.txt` | **33** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Mullvad/no_log.txt) |
-| `unfiltered.txt` | **13** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Mullvad/unfiltered.txt) |
-
-</details>
-
-<details>
-<summary><h3>📂 DNSPrivacyOrg</h3></summary>
-
-| نام فایل | تعداد آدرس‌ها | لینک خام |
-| :--- | :---: | :---: |
-| `all.txt` | **7** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSPrivacyOrg/all.txt) |
-| `adblock.txt` | **1** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSPrivacyOrg/adblock.txt) |
-| `dnssec.txt` | **7** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSPrivacyOrg/dnssec.txt) |
-| `doh.txt` | **3** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSPrivacyOrg/doh.txt) |
-| `doq.txt` | **1** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSPrivacyOrg/doq.txt) |
-| `dot.txt` | **3** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSPrivacyOrg/dot.txt) |
-| `malware.txt` | **2** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSPrivacyOrg/malware.txt) |
-| `no_log.txt` | **7** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSPrivacyOrg/no_log.txt) |
-| `unfiltered.txt` | **5** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSPrivacyOrg/unfiltered.txt) |
-
-</details>
-
-<details>
-<summary><h3>📂 Curl</h3></summary>
-
-| نام فایل | تعداد آدرس‌ها | لینک خام |
-| :--- | :---: | :---: |
-| `all.txt` | **620** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/all.txt) |
-| `adblock.txt` | **241** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/adblock.txt) |
-| `dnssec.txt` | **122** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/dnssec.txt) |
-| `doh.txt` | **414** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/doh.txt) |
-| `doh3.txt` | **2** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/doh3.txt) |
-| `doq.txt` | **42** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/doq.txt) |
-| `dot.txt` | **164** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/dot.txt) |
-| `family.txt` | **90** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/family.txt) |
-| `malware.txt` | **74** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/malware.txt) |
-| `no_log.txt` | **104** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/no_log.txt) |
-| `unfiltered.txt` | **301** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/unfiltered.txt) |
-
-</details>
-
-<details>
-<summary><h3>📂 Thiagozs</h3></summary>
-
-| نام فایل | تعداد آدرس‌ها | لینک خام |
-| :--- | :---: | :---: |
-| `all.txt` | **121** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Thiagozs/all.txt) |
-| `adblock.txt` | **12** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Thiagozs/adblock.txt) |
-| `dnssec.txt` | **66** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Thiagozs/dnssec.txt) |
-| `doh.txt` | **121** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Thiagozs/doh.txt) |
-| `family.txt` | **3** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Thiagozs/family.txt) |
-| `malware.txt` | **21** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Thiagozs/malware.txt) |
-| `no_log.txt` | **27** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Thiagozs/no_log.txt) |
-| `unfiltered.txt` | **87** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Thiagozs/unfiltered.txt) |
-
-</details>
-
----
-
-## 📚 منابع اصلی داده‌ها
-
-- **[DNSCrypt](https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/refs/heads/master/v3/public-resolvers.md)**
-- **[Paulmillr](https://github.com/paulmillr/encrypted-dns)**
-- **[Blacklantern](https://raw.githubusercontent.com/blacklanternsecurity/public-dns-servers/refs/heads/master/nameservers.txt)**
-- **[MutinSA](https://gist.githubusercontent.com/mutin-sa/5dcbd35ee436eb629db7872581093bc5/raw/)**
-- **[AdGuard](https://adguard-dns.io/kb/general/dns-providers/)**
-- **[Mullvad](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls)**
-- **[DNSPrivacyOrg](https://dnsprivacy.org/public_resolvers/)**
-- **[Curl](https://raw.githubusercontent.com/wiki/curl/curl/DNS-over-HTTPS.md)**
-- **[Thiagozs](https://gist.githubusercontent.com/thiagozs/088fd8f8129ca06df524f6711116ee8f/raw/)**
-
----
-<p align="center">ساخته شده با ❤️ و به صورت خودکار توسط GitHub Actions</p>
+## مشارکت
+این پروژه توسط اسکریپت‌ها به طور خودکار به‌روز می‌شود. اگر منبع جدیدی می‌شناسید یا در فرآیند استخراج مشکلی مشاهده کردید، لطفاً یک [Issue](https://github.com/10ium/Public-DNS-Collector/issues) ثبت کنید.
