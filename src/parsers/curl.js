@@ -126,12 +126,14 @@ export function parseCurl(content) {
             if (doqServer.addresses.length > 0) servers.push(doqServer);
         }
 
-        // 4. DoH3
+        // 4. DoH3 (DNS over HTTP/3)
+        // DoH3 uses the same https:// URLs as standard DoH. The protocol negotiation
+        // to HTTP/3 is handled by the client. No special URL prefix is needed.
         if (/\bdoh3\b/i.test(rawCommentText)) {
             const doh3Server = createBaseServer();
             doh3Server.protocols.push('doh3');
-            doh3Server.addresses.push(...dohUrls);
-            servers.push(doh3Server);
+            doh3Server.addresses.push(...dohUrls); // Re-use the https URLs
+            if (doh3Server.addresses.length > 0) servers.push(doh3Server);
         }
 
         // 5. DNSCrypt
