@@ -8,27 +8,18 @@ const RAW_LIST_DIR_URL = (listName) => `https://raw.githubusercontent.com/${proc
 const SOURCE_LIST_DIR_URL = (repoUrl, sourceName, listName) => `${repoUrl}/blob/main/lists/sources/${sourceName}/${listName}.txt`;
 
 // --- DATA ---
-// Combine all list categories into a single array for a unified table
-const AGGREGATED_LISTS = [
-    'all', 'doh', 'dot', 'doq', 'dnscrypt', 'ipv4', 'ipv6',
-    'adblock', 'malware', 'family', 'unfiltered',
-    'dnssec', 'no_log', 'dns64'
-];
-
-// Re-add the individual lists here for the source-specific table generation logic
 const PRIMARY_LISTS = ['all', 'doh', 'dot', 'doq', 'dnscrypt', 'ipv4', 'ipv6'];
 const FILTER_LISTS = ['adblock', 'malware', 'family', 'unfiltered'];
 const FEATURE_LISTS = ['dnssec', 'no_log', 'dns64'];
 
-
 const LIST_DESCRIPTIONS = {
-    'all': 'لیست جامع تمام DNS ها از همه منابع و پروتکل‌ها.',
-    'doh': 'سرورهای DNS over HTTPS (DoH)',
-    'dot': 'سرورهای DNS over TLS (DoT)',
-    'doq': 'سرورهای DNS over QUIC (DoQ)',
+    'all': 'لیست جامع تمام DNSها از همه منابع و پروتکل‌ها (بدون تکرار و بدون در نظر گرفتن پورت).',
+    'doh': 'DNS over HTTPS (DoH) - (RFC 8484)',
+    'dot': 'DNS over TLS (DoT) - (RFC 7858)',
+    'doq': 'DNS over QUIC (DoQ) - (RFC 9250)',
     'dnscrypt': 'سرورهای DNSCrypt',
-    'ipv4': 'سرورهای DNS سنتی IPv4',
-    'ipv6': 'سرورهای DNS سنتی IPv6',
+    'ipv4': 'سرورهای DNS سنتی IPv4 (Do53)',
+    'ipv6': 'سرورهای DNS سنتی IPv6 (Do53)',
     'adblock': 'مسدودکننده تبلیغات',
     'malware': 'مسدودکننده بدافزارها و فیشینگ',
     'family': 'محافظت از خانواده (مسدودکننده محتوای بزرگسالان)',
@@ -69,9 +60,8 @@ function generateSourceListRows(sources, repoUrl, listFileCounts) {
         const sourceLink = source.readmeUrl ? `[${sourceName}](${source.readmeUrl})` : sourceName;
         let isFirstRowForSource = true;
 
-        // Note: The logic for source-specific tables still needs the categorized lists
-        const allListsForSourceTable = [...PRIMARY_LISTS, ...FILTER_LISTS, ...FEATURE_LISTS];
-        allListsForSourceTable.forEach(list => {
+        const allLists = [...PRIMARY_LISTS, ...FILTER_LISTS, ...FEATURE_LISTS];
+        allLists.forEach(list => {
             const fileName = `${sourceName}/${list}.txt`;
             const count = listFileCounts[fileName] || 0;
             if (count > 0) {
@@ -95,22 +85,12 @@ function generateSourceListRows(sources, repoUrl, listFileCounts) {
 export function generateReadme(sources, repoUrl, listFileCounts) {
     const lastUpdated = new Date().toUTCString();
 
-    const aggregatedRows = generateListRows(AGGREGATED_LISTS, repoUrl, listFileCounts);
+    const primaryRows = generateListRows(PRIMARY_LISTS, repoUrl, listFileCounts);
+    const filterRows = generateListRows(FILTER_LISTS, repoUrl, listFileCounts);
+    const featureRows = generateListRows(FEATURE_LISTS, repoUrl, listFileCounts);
     const sourceRows = generateSourceListRows(sources, repoUrl, listFileCounts);
     
-    const sourcesList = sources.map(source => {
-        const url = source.readmeUrl || source.url;
-        return url ? `* [${source.name}](${url})` : `* ${source.name}`;
-    }).join('\n');
-
-    return `<div align="center">
-
-# 🛡️ Public DNS Collector 🛡️
-### لیست‌های عمومی DNS جمع‌آوری شده
-
-</div>
-
----
+    return `# لیست‌های عمومی DNS جمع‌آوری شده
 
 این مخزن به طور خودکار لیستی از سرورهای DNS عمومی را از منابع مختلف معتبر جمع‌آوری، پاک‌سازی و تجمیع می‌کند.
 
@@ -120,7 +100,14 @@ export function generateReadme(sources, repoUrl, listFileCounts) {
 
 این لیست‌ها نتیجه ترکیب، پاک‌سازی و حذف موارد تکراری از تمام منابع هستند.
 
-${generateMarkdownTable(['نام لیست', 'توضیحات', 'تعداد', 'لینک دانلود'], aggregatedRows)}
+### پروتکل‌ها و IPها
+${generateMarkdownTable(['نام لیست', 'توضیحات', 'تعداد', 'لینک دانلود'], primaryRows)}
+
+### لیست‌های فیلترینگ
+${generateMarkdownTable(['نام لیست', 'توضیحات', 'تعداد', 'لینک دانلود'], filterRows)}
+
+### لیست‌های مبتنی بر ویژگی‌ها
+${generateMarkdownTable(['نام لیست', 'توضیحات', 'تعداد', 'لینک دانلود'], featureRows)}
 
 ## لیست‌های مبتنی بر منبع (Source-Specific Lists)
 
@@ -128,11 +115,8 @@ ${generateMarkdownTable(['نام لیست', 'توضیحات', 'تعداد', 'ل�
 
 ${generateMarkdownTable(['منبع', 'نام لیست', 'توضیحات', 'تعداد'], sourceRows)}
 
-## منابع داده (Data Sources)
-${sourcesList}
-
 ## مشارکت
-این پروژه توسط اسکریپت‌ها به طور خودکار به‌روز می‌شود. اگر منبع جدیدی می‌شناسید یا در فرآیند استخراج مشکلی مشاهده کردید، لطفاً یک [Issue](https://github.com/10ium/Public-DNS-Collector/issues) ثبت کنید.
+این پروژه توسط اسکریپت‌ها به طور خودکار به‌روز می‌شود. اگر منبع جدیدی می‌شناسید یا در فرآیند استخراج مشکلی مشاهده کردید، لطفاً یک [Issue](https://github.com/black-lantern-se/Public-DNS-Collector/issues) ثبت کنید.
 `;
 }
 
