@@ -161,6 +161,7 @@ async function main() {
                 }
 
                 if (source.name === 'Blacklantern') {
+                    console.log(`  ℹ️ [استثناء] پردازش منبع ${source.name} فقط برای فایل‌های خود منبع.`);
                     const sourceDir = path.join(SOURCES_DIR, source.name);
                     if (!fs.existsSync(sourceDir)) fs.mkdirSync(sourceDir);
                     const plainAddresses = (parsedServers[0]?.addresses || []).sort();
@@ -177,7 +178,7 @@ async function main() {
                         listFileCounts[`${source.name}/tcp.txt`] = tcpList.length;
                         console.log(`    📄 فایل‌های ویژه منبع ${source.name} نوشته شدند.`);
                     }
-                    allServers.push(...parsedServers);
+                    // Do NOT add Blacklantern servers to the main aggregation pool.
                     continue; 
                 }
 
