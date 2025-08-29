@@ -12,6 +12,7 @@ https://dns.bebasid.com/unfiltered
 https://doh.sandbox.opendns.com/dns-query
 https://private.canadianshield.cira.ca/dns-query
 https://unfiltered.joindns4.eu/dns-query
+tls://child-noads.joindns4.eu
 tls://private.canadianshield.cira.ca
 tls://sandbox.opendns.com
 tls://unfiltered.dns.bebasid.com:853
