@@ -132,6 +132,9 @@ https://us-kan-w-p-1.nashkan.net/dns-query
 https://us-nyc-w-p-1.nashkan.net/dns-query
 https://us-saj-w-f-1.nashkan.net/dns-query
 https://us-saj-w-p-1.nashkan.net/dns-query
+https://v.recipes/dns-adblock
+https://v.recipes/dns-ecs
+https://v.recipes/dns-query
 https://zdn.ro/dns-query
 quic://adblock.krctech.dev
 quic://adfreedns.top

@@ -1,2 +1,5 @@
 h3://dns.dnshome.de/dns-query
 h3://nsec.arnor.org/dns-query
+h3://v.recipes/dns-adblock
+h3://v.recipes/dns-ecs
+h3://v.recipes/dns-query

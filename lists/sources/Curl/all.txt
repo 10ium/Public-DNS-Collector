@@ -399,6 +399,9 @@ https://us-saj-w-f-1.nashkan.net/dns-query
 https://us-saj-w-p-1.nashkan.net/dns-query
 https://us01.dns4me.net
 https://us02.dns4me.net
+https://v.recipes/dns-adblock
+https://v.recipes/dns-ecs
+https://v.recipes/dns-query
 https://vie01.dnscry.pt/dns-query
 https://vno01.dnscry.pt/dns-query
 https://waw02.dnscry.pt/dns-query
