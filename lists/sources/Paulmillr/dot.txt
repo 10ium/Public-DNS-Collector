@@ -10,6 +10,7 @@ tls://dns.google
 tls://dns.quad9.net
 tls://dns10.quad9.net
 tls://dns11.quad9.net
+tls://dot.ffmuc.net
 tls://dot.pub
 tls://family-filter-dns.cleanbrowsing.org
 tls://family.canadianshield.cira.ca

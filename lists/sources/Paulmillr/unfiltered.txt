@@ -3,6 +3,7 @@ https://dns-unfiltered.adguard.com/dns-query
 https://dns.alidns.com/dns-query
 https://dns.google/dns-query
 https://dns10.quad9.net/dns-query
+https://doh.ffmuc.net/dns-query
 https://doh.pub/dns-query
 https://ns0.fdn.fr/dns-query
 https://private.canadianshield.cira.ca/dns-query
@@ -12,6 +13,7 @@ tls://dns.alidns.com
 tls://dns.fdn
 tls://dns.google
 tls://dns10.quad9.net
+tls://dot.ffmuc.net
 tls://dot.pub
 tls://one.one.one.one
 tls://private.canadianshield.cira.ca
