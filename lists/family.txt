@@ -75,12 +75,10 @@ https://freedns.controld.com/x-stevenblack
 https://freedom.mydns.network/dns-query
 https://internetsehat.bebasid.com/adblock
 https://internetsehat.bebasid.com/dns-query
-https://kids.ns.nwps.fi/dns-query
 https://mozilla.cloudflare-dns.com/dns-query
 https://paranoia.mydns.network/dns-query
 https://private.canadianshield.cira.ca/dns-query
 https://protected.canadianshield.cira.ca/dns-query
-https://public.ns.nwps.fi/dns-query
 https://security.cloudflare-dns.com/dns-query
 https://security.rabbitdns.org/dns-query
 https://unfiltered.adguard-dns.com/dns-query
@@ -160,7 +158,6 @@ tls://freedns.controld.com
 tls://freedom.mydns.network
 tls://internetsehat.bebasid.com:853
 tls://private.canadianshield.cira.ca
-tls://public.ns.nwps.fi
 udp://103.87.68.196
 udp://114.114.114.110
 udp://114.114.115.110

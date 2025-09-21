@@ -31,7 +31,6 @@ https://abn01.dnscry.pt/dns-query
 https://adblock.dns.mullvad.net/dns-query
 https://adblock.mydns.network/dns-query
 https://all.dns.mullvad.net/dns-query
-https://ams01.dnscry.pt/dns-query
 https://ath01.dnscry.pt/dns-query
 https://atl01.dnscry.pt/dns-query
 https://base.dns.mullvad.net/dns-query
@@ -136,7 +135,6 @@ https://jp.tiar.app/dns-query
 https://jp.tiarap.org/dns-query
 https://kiv01.dnscry.pt/dns-query
 https://las01.dnscry.pt/dns-query
-https://lim02.dnscry.pt/dns-query
 https://lis01.dnscry.pt/dns-query
 https://lon01.dnscry.pt/dns-query
 https://mad01.dnscry.pt/dns-query
@@ -613,9 +611,9 @@ tcp://8.8.8.8
 tcp://9.9.9.10
 tcp://9.9.9.9
 tcp://95.85.95.85
+tls://abn01.dnscry.pt
 tls://adblock.dns.mullvad.net
 tls://all.dns.mullvad.net
-tls://ams01.dnscry.pt
 tls://base.dns.mullvad.net
 tls://cloudflare-dns.com
 tls://dns.adguard-dns.com

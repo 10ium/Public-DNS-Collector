@@ -25,7 +25,6 @@ https://ae-fuj-w-p-3.nashkan.net/dns-query
 https://ag.apollohct.com/dns-query
 https://agh.dshubham.xyz/dns-query
 https://all.dns.mullvad.net/dns-query
-https://ams01.dnscry.pt/dns-query
 https://antivirus.bebasid.com/dns-query
 https://anycast.dns.nextdns.io
 https://anycast.uncensoreddns.org/dns-query
@@ -42,7 +41,6 @@ https://bazooki-infra.dev/dns-query
 https://blitz.ahadns.com
 https://blitz.ahadns.com/1:1
 https://blitz.ahadns.com/1:1.12
-https://blocker.thethorsens.org/dns-query
 https://blog.cloudflare.com/welcome-hidden-resolver
 https://bne01.dnscry.pt/dns-query
 https://bog01.dnscry.pt/dns-query
@@ -143,7 +141,6 @@ https://dns.google/dns-query
 https://dns.green-ping.lol/dns-query
 https://dns.guard.io/dns-query
 https://dns.haka.se/dns-query
-https://dns.henek.ovh/dns-query
 https://dns.hoody.com/dns-query
 https://dns.hostux.net/ads
 https://dns.hostux.net/dns-query
@@ -163,7 +160,6 @@ https://dns.marasov.id/dns-query
 https://dns.marbledfennec.net/dns-query
 https://dns.mateo.ovh/dns-query
 https://dns.mayx.eu.org/dns-query
-https://dns.mbrjun.cn/dns-query
 https://dns.mh4ckt3mh4ckt1c4s.xyz/dns-query
 https://dns.mnet-online.de/dns-query
 https://dns.moulticast.net/dns-query
@@ -210,9 +206,6 @@ https://dns.szpadel.ovh/dns-query
 https://dns.t53.de/dns-query
 https://dns.technologycage.com/dns-query
 https://dns.telekom.de/dns-query
-https://dns.thebuckners.org/dns-query
-https://dns.thiz.top/1:IAAgAA==
-https://dns.thiz.top/dns-query
 https://dns.tipsy.coffee/dns-query
 https://dns.tls-data.de/dns-query
 https://dns.twnic.tw/dns-query
@@ -226,14 +219,11 @@ https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
 https://dns0.eu
 https://dns1.in-berlin.de/dns-query
-https://dns1.nordvpn.com/dns-query
-https://dns1.pietjacobs.be/dns-query
 https://dns1.serdcebolit.ru/dns-query
 https://dns10.quad9.net/dns-query
 https://dns11.quad9.net/dns-query
 https://dns12.quad9.net/dns-query
 https://dns2.in-berlin.de/dns-query
-https://dns2.nordvpn.com/dns-query
 https://dns64.cloudflare-dns.com/dns-query
 https://dns64.dns.google/dns-query
 https://dns9.quad9.net/dns-query
@@ -403,7 +393,6 @@ https://kiv01.dnscry.pt/dns-query
 https://kronos.plan9-dns.com/dns-query
 https://las01.dnscry.pt/dns-query
 https://lifeisa.live/dns-query
-https://lim02.dnscry.pt/dns-query
 https://lion.dns.qwer.pw/dns-query
 https://lis01.dnscry.pt/dns-query
 https://loadlow.me/dns-query
@@ -412,13 +401,10 @@ https://mabuktogel.directory/dns-query
 https://mad01.dnscry.pt/dns-query
 https://maqgie.xyz/dns-query
 https://masters-of-cloud.de/dns-query
-https://megumin.is.my.waifu.cz/dns-query
 https://mil01.dnscry.pt/dns-query
 https://mozilla.cloudflare-dns.com/dns-query
 https://my.nextdns.io/start
-https://myatris.sbs/dns-query
 https://nicsezcheckfbi.gov
-https://nl.dns.privex.io
 https://noads.joindns4.eu/dns-query
 https://ns.00dani.me/dns-query
 https://ns.data.haus/dns-query
@@ -537,7 +523,6 @@ https://wikimedia-dns.org/dns-query
 https://xn--durhre-yxa.de/dns-query
 https://yarp.lefolgoc.net/dns-query
 https://yhz01.dnscry.pt/dns-query
-https://yunyun.is.my.waifu.cz/dns-query
 https://yvr01.dnscry.pt/dns-query
 https://yyc01.dnscry.pt/dns-query
 https://yyz01.dnscry.pt/dns-query

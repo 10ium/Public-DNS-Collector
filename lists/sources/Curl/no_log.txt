@@ -1,5 +1,4 @@
 https://abn01.dnscry.pt/dns-query
-https://ams01.dnscry.pt/dns-query
 https://ath01.dnscry.pt/dns-query
 https://atl01.dnscry.pt/dns-query
 https://bne01.dnscry.pt/dns-query
@@ -41,7 +40,6 @@ https://ist01.dnscry.pt/dns-query
 https://kids.dns0.eu
 https://kiv01.dnscry.pt/dns-query
 https://las01.dnscry.pt/dns-query
-https://lim02.dnscry.pt/dns-query
 https://lis01.dnscry.pt/dns-query
 https://lon01.dnscry.pt/dns-query
 https://mad01.dnscry.pt/dns-query
@@ -86,7 +84,7 @@ https://zero.dns0.eu
 quic://dns.dnshome.de
 quic://dnsforge.de
 quic://doh.dns4all.eu
-tls://ams01.dnscry.pt
+tls://abn01.dnscry.pt
 tls://dns.aa.net.uk
 tls://dns.blokada.org
 tls://dns.brahma.world

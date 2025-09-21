@@ -1,6 +1,5 @@
 https://8888.google/dns-query
 https://abn01.dnscry.pt/dns-query
-https://ams01.dnscry.pt/dns-query
 https://ath01.dnscry.pt/dns-query
 https://atl01.dnscry.pt/dns-query
 https://bne01.dnscry.pt/dns-query
@@ -53,7 +52,6 @@ https://ibuki.cgnat.net/dns-query
 https://ist01.dnscry.pt/dns-query
 https://kiv01.dnscry.pt/dns-query
 https://las01.dnscry.pt/dns-query
-https://lim02.dnscry.pt/dns-query
 https://lis01.dnscry.pt/dns-query
 https://lon01.dnscry.pt/dns-query
 https://mad01.dnscry.pt/dns-query
@@ -99,7 +97,7 @@ quic://dns.adguard-dns.com
 quic://dns.kescher.at
 quic://dnsforge.de
 quic://nsec.arnor.org
-tls://ams01.dnscry.pt
+tls://abn01.dnscry.pt
 tls://dns.adguard-dns.com
 tls://dns.brahma.world
 tls://dns.digitale-gesellschaft.ch

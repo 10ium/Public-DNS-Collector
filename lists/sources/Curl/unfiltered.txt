@@ -5,7 +5,6 @@ https://abn01.dnscry.pt/dns-query
 https://adg.geili.me/dns-query
 https://adguard-kartoffel.zernico.de/dns-query
 https://adguard.bonis.de/dns-query
-https://ams01.dnscry.pt/dns-query
 https://anycast.uncensoreddns.org/dns-query
 https://arashi.net.eu.org/dns-query
 https://ath01.dnscry.pt/dns-query
@@ -74,17 +73,13 @@ https://dns.surfsharkdns.com/dns-query
 https://dns.svoi.dev/dns-query
 https://dns.t53.de/dns-query
 https://dns.telekom.de/dns-query
-https://dns.thiz.top/1:IAAgAA==
-https://dns.thiz.top/dns-query
 https://dns.tls-data.de/dns-query
 https://dns.twnic.tw/dns-query
 https://dns.vaioswolke.xyz/dns-query
 https://dns.w3ctag.org/dns-query
 https://dns0.eu
 https://dns1.in-berlin.de/dns-query
-https://dns1.nordvpn.com/dns-query
 https://dns2.in-berlin.de/dns-query
-https://dns2.nordvpn.com/dns-query
 https://dns64.dns.google/dns-query
 https://dnsforge.de/dns-query
 https://dnspub.restena.lu/dns-query
@@ -137,7 +132,6 @@ https://kiv01.dnscry.pt/dns-query
 https://kronos.plan9-dns.com/dns-query
 https://las01.dnscry.pt/dns-query
 https://lifeisa.live/dns-query
-https://lim02.dnscry.pt/dns-query
 https://lis01.dnscry.pt/dns-query
 https://loadlow.me/dns-query
 https://lon01.dnscry.pt/dns-query
@@ -145,10 +139,7 @@ https://mabuktogel.directory/dns-query
 https://mad01.dnscry.pt/dns-query
 https://maqgie.xyz/dns-query
 https://masters-of-cloud.de/dns-query
-https://megumin.is.my.waifu.cz/dns-query
 https://mil01.dnscry.pt/dns-query
-https://myatris.sbs/dns-query
-https://nl.dns.privex.io
 https://noads.joindns4.eu/dns-query
 https://ns.00dani.me/dns-query
 https://ns.net.kg/dns-query
@@ -213,7 +204,6 @@ https://wikimedia-dns.org/dns-query
 https://xn--durhre-yxa.de/dns-query
 https://yarp.lefolgoc.net/dns-query
 https://yhz01.dnscry.pt/dns-query
-https://yunyun.is.my.waifu.cz/dns-query
 https://yvr01.dnscry.pt/dns-query
 https://yyc01.dnscry.pt/dns-query
 https://yyz01.dnscry.pt/dns-query
@@ -229,9 +219,9 @@ quic://dns.surfsharkdns.com
 quic://dnsforge.de
 quic://doh.dns4all.eu
 tls://3dns.eu
+tls://abn01.dnscry.pt
 tls://adguard-kartoffel.zernico.de
 tls://adguard.bonis.de
-tls://ams01.dnscry.pt
 tls://anycast.uncensoreddns.org
 tls://ca01.dns4me.net
 tls://dns.aa.net.uk
@@ -271,7 +261,6 @@ tls://dns.t53.de
 tls://dns.telekom.de
 tls://dns.w3ctag.org
 tls://dns1.in-berlin.de
-tls://dns1.nordvpn.com
 tls://dnsforge.de
 tls://dnspub.restena.lu
 tls://doh-2.seby.io

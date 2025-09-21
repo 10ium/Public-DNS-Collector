@@ -55,7 +55,6 @@ https://agh.dshubham.xyz/dns-query
 https://all.dns.mullvad.net/dns-query
 https://au-syd-w-f-1.nashkan.net/dns-query
 https://base.dns.mullvad.net/dns-query
-https://blocker.thethorsens.org/dns-query
 https://child-noads.joindns4.eu/dns-query
 https://dandelionsprout.asuscomm.com:2501/dns-query
 https://dart.kpsn.org/dns-query
@@ -103,7 +102,6 @@ https://dns.glf.wtf/dns-query
 https://dns.google/dns-query
 https://dns.green-ping.lol/dns-query
 https://dns.haka.se/dns-query
-https://dns.henek.ovh/dns-query
 https://dns.inforlogia.com/dns-query
 https://dns.jupitrdns.com/dns-query
 https://dns.kapite.in/dns-query
@@ -115,7 +113,6 @@ https://dns.luma-medien.com/dns-query
 https://dns.marasov.id/dns-query
 https://dns.marbledfennec.net/dns-query
 https://dns.mateo.ovh/dns-query
-https://dns.mbrjun.cn/dns-query
 https://dns.mh4ckt3mh4ckt1c4s.xyz/dns-query
 https://dns.mullvad.net/dns-query
 https://dns.neeb.it/dns-query
@@ -139,13 +136,11 @@ https://dns.surfsharkdns.com/dns-query
 https://dns.switch.ch/dns-query
 https://dns.szpadel.ovh/dns-query
 https://dns.technologycage.com/dns-query
-https://dns.thebuckners.org/dns-query
 https://dns.tipsy.coffee/dns-query
 https://dns.unx.io/dns-query
 https://dns.wang.art/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
-https://dns1.pietjacobs.be/dns-query
 https://dns1.serdcebolit.ru/dns-query
 https://dnsforge.de/dns-query
 https://dnsguard.pub/dns-query
@@ -183,7 +178,6 @@ https://frog.dns.qwer.pw/dns-query
 https://gb-lon-w-p-2.nashkan.net/dns-query
 https://ibksturm.synology.me/dns-query
 https://kaitain.restena.lu/dns-query
-https://kids.ns.nwps.fi/dns-query
 https://lion.dns.qwer.pw/dns-query
 https://noads.joindns4.eu/dns-query
 https://ns.data.haus/dns-query
@@ -198,7 +192,6 @@ https://pihole.aws.ketan.dev/dns-query
 https://pooblet.co.za/dns-query
 https://privacy.plumedns.com/dns-query
 https://public.dns.iij.jp/dns-query
-https://public.ns.nwps.fi/dns-query
 https://resolver-eu.lelux.fi/dns-query
 https://resolver.dnsprivacy.org.uk/dns-query
 https://ro-buc-w-p-1.nashkan.net/dns-query
@@ -230,7 +223,6 @@ https://zero.dns0.eu/
 quic://adblock.krctech.dev
 quic://adfreedns.top
 quic://agh.dshubham.xyz
-quic://blocker.thethorsens.org
 quic://dandelionsprout.asuscomm.com:48582
 quic://dart.kpsn.org
 quic://dns.adguard-dns.com
@@ -253,7 +245,6 @@ quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.skrep.eu
 quic://dns.surfsharkdns.com
-quic://dns.thebuckners.org
 quic://dns.wang.art
 quic://dns.yuu-g.net
 quic://dnsguard.pub
@@ -387,7 +378,6 @@ tls://ag.apollohct.com
 tls://agh.dshubham.xyz
 tls://all.dns.mullvad.net
 tls://base.dns.mullvad.net
-tls://blocker.thethorsens.org
 tls://child-noads.joindns4.eu
 tls://dandelionsprout.asuscomm.com:853
 tls://dart.kpsn.org
@@ -449,7 +439,6 @@ tls://dns.surfsharkdns.com
 tls://dns.switch.ch
 tls://dns.szpadel.ovh
 tls://dns.technologycage.com
-tls://dns.thebuckners.org
 tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.wang.art
@@ -488,7 +477,6 @@ tls://per.adfilter.net
 tls://pihole.aws.ketan.dev
 tls://privacy.plumedns.com
 tls://public.dns.iij.jp
-tls://public.ns.nwps.fi
 tls://resolver-eu.lelux.fi
 tls://resolver.dnsprivacy.org.uk
 tls://secure.anudeep.me

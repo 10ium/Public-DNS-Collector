@@ -18,7 +18,6 @@ https://agh.dshubham.xyz/dns-query
 https://all.dns.mullvad.net/dns-query
 https://au-syd-w-f-1.nashkan.net/dns-query
 https://base.dns.mullvad.net/dns-query
-https://blocker.thethorsens.org/dns-query
 https://dart.kpsn.org/dns-query
 https://dns.akbxr.com/dns-query
 https://dns.anon.no/dns-query
@@ -47,7 +46,6 @@ https://dns.girino.org/dns-query
 https://dns.glf.wtf/dns-query
 https://dns.green-ping.lol/dns-query
 https://dns.haka.se/dns-query
-https://dns.henek.ovh/dns-query
 https://dns.inforlogia.com/dns-query
 https://dns.jupitrdns.com/dns-query
 https://dns.kapite.in/dns-query
@@ -58,7 +56,6 @@ https://dns.l337.site/dns-query
 https://dns.luma-medien.com/dns-query
 https://dns.marasov.id/dns-query
 https://dns.mateo.ovh/dns-query
-https://dns.mbrjun.cn/dns-query
 https://dns.mh4ckt3mh4ckt1c4s.xyz/dns-query
 https://dns.mullvad.net/dns-query
 https://dns.neeb.it/dns-query
@@ -79,13 +76,11 @@ https://dns.suhaila.dev/dns-query
 https://dns.superstefan.win/dns-query
 https://dns.szpadel.ovh/dns-query
 https://dns.technologycage.com/dns-query
-https://dns.thebuckners.org/dns-query
 https://dns.tipsy.coffee/dns-query
 https://dns.unx.io/dns-query
 https://dns.wang.art/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
-https://dns1.pietjacobs.be/dns-query
 https://dns1.serdcebolit.ru/dns-query
 https://dnsvps.familiamv.net/dns-query
 https://dog.dns.qwer.pw/dns-query
@@ -106,7 +101,6 @@ https://family.mydns.network/dns-query
 https://freedom.mydns.network/dns-query
 https://frog.dns.qwer.pw/dns-query
 https://gb-lon-w-p-2.nashkan.net/dns-query
-https://kids.ns.nwps.fi/dns-query
 https://lion.dns.qwer.pw/dns-query
 https://ns.data.haus/dns-query
 https://ns2.4netguides.org/dns-query
@@ -117,7 +111,6 @@ https://per.adfilter.net/dns-query
 https://pihole.aws.ketan.dev/dns-query
 https://pooblet.co.za/dns-query
 https://privacy.plumedns.com/dns-query
-https://public.ns.nwps.fi/dns-query
 https://ro-buc-w-p-1.nashkan.net/dns-query
 https://secure.anudeep.me/dns-query
 https://sg-w-p-1.nashkan.net/dns-query
@@ -139,7 +132,6 @@ https://zdn.ro/dns-query
 quic://adblock.krctech.dev
 quic://adfreedns.top
 quic://agh.dshubham.xyz
-quic://blocker.thethorsens.org
 quic://dart.kpsn.org
 quic://dns.anon.no
 quic://dns.bitservices.io
@@ -157,7 +149,6 @@ quic://dns.reitmeier.me
 quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.skrep.eu
-quic://dns.thebuckners.org
 quic://dns.wang.art
 quic://dns.yuu-g.net
 quic://dog.dns.qwer.pw
@@ -173,7 +164,6 @@ tls://adfreedns.top
 tls://adguard.meddy94.de
 tls://ag.apollohct.com
 tls://agh.dshubham.xyz
-tls://blocker.thethorsens.org
 tls://dart.kpsn.org
 tls://dns.akbxr.com
 tls://dns.anon.no
@@ -218,7 +208,6 @@ tls://dns.skrep.eu
 tls://dns.slinkyman.net
 tls://dns.szpadel.ovh
 tls://dns.technologycage.com
-tls://dns.thebuckners.org
 tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.wang.art
@@ -238,7 +227,6 @@ tls://ntwrkh.pro
 tls://per.adfilter.net
 tls://pihole.aws.ketan.dev
 tls://privacy.plumedns.com
-tls://public.ns.nwps.fi
 tls://secure.anudeep.me
 tls://sunnygyl.com
 tls://zdn.ro

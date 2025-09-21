@@ -2,7 +2,6 @@ quic://adblock.krctech.dev
 quic://adfreedns.top
 quic://agh.dshubham.xyz
 quic://anycast.uncensoreddns.org
-quic://blocker.thethorsens.org
 quic://dart.kpsn.org
 quic://dns.adguard-dns.com
 quic://dns.alidns.com
@@ -29,7 +28,6 @@ quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.skrep.eu
 quic://dns.surfsharkdns.com
-quic://dns.thebuckners.org
 quic://dns.wang.art
 quic://dns.yuu-g.net
 quic://dnsforge.de

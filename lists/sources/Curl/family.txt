@@ -56,12 +56,10 @@ https://freedns.controld.com/x-oisd
 https://freedns.controld.com/x-oisd-basic
 https://freedns.controld.com/x-stevenblack
 https://freedom.mydns.network/dns-query
-https://kids.ns.nwps.fi/dns-query
 https://mozilla.cloudflare-dns.com/dns-query
 https://paranoia.mydns.network/dns-query
 https://private.canadianshield.cira.ca/dns-query
 https://protected.canadianshield.cira.ca/dns-query
-https://public.ns.nwps.fi/dns-query
 https://security.cloudflare-dns.com/dns-query
 https://security.rabbitdns.org/dns-query
 https://unfiltered.adguard-dns.com/dns-query
@@ -87,4 +85,3 @@ tls://doh.domreg.lt
 tls://freedns.controld.com
 tls://freedom.mydns.network
 tls://private.canadianshield.cira.ca
-tls://public.ns.nwps.fi

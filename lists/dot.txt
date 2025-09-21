@@ -1,6 +1,7 @@
 tls://101.101.101.101
 tls://123000123.xyz
 tls://3dns.eu
+tls://abn01.dnscry.pt
 tls://ada.openbld.net
 tls://adblock.dns.mullvad.net
 tls://adblock.krctech.dev
@@ -14,13 +15,11 @@ tls://adult-filter-dns.cleanbrowsing.org
 tls://ag.apollohct.com
 tls://agh.dshubham.xyz
 tls://all.dns.mullvad.net
-tls://ams01.dnscry.pt
 tls://antivirus.bebasid.com:853
 tls://anycast.censurfridns.dk
 tls://anycast.dns.nextdns.io
 tls://anycast.uncensoreddns.org
 tls://base.dns.mullvad.net
-tls://blocker.thethorsens.org
 tls://ca01.dns4me.net
 tls://child-noads.joindns4.eu
 tls://child.joindns4.eu
@@ -136,7 +135,6 @@ tls://dns.szpadel.ovh
 tls://dns.t53.de
 tls://dns.technologycage.com
 tls://dns.telekom.de
-tls://dns.thebuckners.org
 tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.us.futuredns.eu.org
@@ -144,7 +142,6 @@ tls://dns.w3ctag.org
 tls://dns.wang.art
 tls://dns.yuu-g.net
 tls://dns1.in-berlin.de
-tls://dns1.nordvpn.com
 tls://dns1.serdcebolit.ru
 tls://dns10.quad9.net
 tls://dns11.quad9.net

@@ -1,5 +1,6 @@
 tls://123000123.xyz
 tls://3dns.eu
+tls://abn01.dnscry.pt
 tls://ada.openbld.net
 tls://adblock.krctech.dev
 tls://adfree.usableprivacy.net
@@ -10,9 +11,7 @@ tls://adguard.meddy94.de
 tls://adguard.shoupperuser.com
 tls://ag.apollohct.com
 tls://agh.dshubham.xyz
-tls://ams01.dnscry.pt
 tls://anycast.uncensoreddns.org
-tls://blocker.thethorsens.org
 tls://ca01.dns4me.net
 tls://cloudflare-dns.com
 tls://dart.kpsn.org
@@ -103,14 +102,12 @@ tls://dns.szpadel.ovh
 tls://dns.t53.de
 tls://dns.technologycage.com
 tls://dns.telekom.de
-tls://dns.thebuckners.org
 tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.w3ctag.org
 tls://dns.wang.art
 tls://dns.yuu-g.net
 tls://dns1.in-berlin.de
-tls://dns1.nordvpn.com
 tls://dns1.serdcebolit.ru
 tls://dnsforge.de
 tls://dnslow.me
@@ -149,7 +146,6 @@ tls://pihole.aws.ketan.dev
 tls://privacy.plumedns.com
 tls://private.canadianshield.cira.ca
 tls://public.dns.iij.jp
-tls://public.ns.nwps.fi
 tls://renardbleu.dev
 tls://resolver.dnsprivacy.org.uk
 tls://resolver.sunet.se
