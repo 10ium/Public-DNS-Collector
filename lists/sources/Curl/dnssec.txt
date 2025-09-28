@@ -52,7 +52,6 @@ https://ibuki.cgnat.net/dns-query
 https://ist01.dnscry.pt/dns-query
 https://kiv01.dnscry.pt/dns-query
 https://las01.dnscry.pt/dns-query
-https://lis01.dnscry.pt/dns-query
 https://lon01.dnscry.pt/dns-query
 https://mad01.dnscry.pt/dns-query
 https://mil01.dnscry.pt/dns-query
