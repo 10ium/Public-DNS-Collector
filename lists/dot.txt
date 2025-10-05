@@ -84,7 +84,6 @@ tls://dns.froth.zone
 tls://dns.girino.org
 tls://dns.glf.wtf
 tls://dns.google
-tls://dns.green-ping.lol
 tls://dns.hoody.com
 tls://dns.inforlogia.com
 tls://dns.jupitrdns.com

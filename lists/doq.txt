@@ -17,7 +17,6 @@ quic://dns.dnshome.de
 quic://dns.dynx.pro
 quic://dns.faked.org
 quic://dns.froth.zone
-quic://dns.green-ping.lol
 quic://dns.inforlogia.com
 quic://dns.jupitrdns.com
 quic://dns.kapite.in

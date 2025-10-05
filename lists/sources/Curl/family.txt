@@ -9,7 +9,6 @@ https://dns.brembeck.cloud/dns-query
 https://dns.cert.ee/dns-query
 https://dns.dynx.pro/dns-query
 https://dns.dynx.pro/dns-query/family
-https://dns.green-ping.lol/dns-query
 https://dns.mateo.ovh/dns-query
 https://dns.mullvad.net/dns-query
 https://dns.ningkelle.id/dns-query
@@ -65,7 +64,6 @@ https://security.rabbitdns.org/dns-query
 https://unfiltered.adguard-dns.com/dns-query
 quic://dns.adguard-dns.com
 quic://dns.dynx.pro
-quic://dns.green-ping.lol
 quic://dns.mateo.ovh
 quic://freedns.controld.com
 tls://adguard.shoupperuser.com
@@ -73,7 +71,6 @@ tls://cloudflare-dns.com
 tls://dns.adguard-dns.com
 tls://dns.cert.ee
 tls://dns.dynx.pro
-tls://dns.green-ping.lol
 tls://dns.mateo.ovh
 tls://dns.mullvad.net
 tls://dns.ningkelle.id

@@ -272,7 +272,6 @@ https://dns.gamban.com/dns-query
 https://dns.girino.org/dns-query
 https://dns.glf.wtf/dns-query
 https://dns.google/dns-query
-https://dns.green-ping.lol/dns-query
 https://dns.guard.io/dns-query
 https://dns.haka.se/dns-query
 https://dns.hoody.com/dns-query
@@ -533,7 +532,6 @@ https://loadlow.me/dns-query
 https://lon01.dnscry.pt/dns-query
 https://mabuktogel.directory/dns-query
 https://mad01.dnscry.pt/dns-query
-https://maqgie.xyz/dns-query
 https://masters-of-cloud.de/dns-query
 https://mil01.dnscry.pt/dns-query
 https://mozilla.cloudflare-dns.com/dns-query
@@ -683,7 +681,6 @@ quic://dns.dnshome.de
 quic://dns.dynx.pro
 quic://dns.faked.org
 quic://dns.froth.zone
-quic://dns.green-ping.lol
 quic://dns.inforlogia.com
 quic://dns.jupitrdns.com
 quic://dns.kapite.in
@@ -1669,7 +1666,6 @@ tls://dns.froth.zone
 tls://dns.girino.org
 tls://dns.glf.wtf
 tls://dns.google
-tls://dns.green-ping.lol
 tls://dns.hoody.com
 tls://dns.inforlogia.com
 tls://dns.jupitrdns.com

@@ -100,7 +100,6 @@ https://dns.flymc.cc/dns-query
 https://dns.girino.org/dns-query
 https://dns.glf.wtf/dns-query
 https://dns.google/dns-query
-https://dns.green-ping.lol/dns-query
 https://dns.haka.se/dns-query
 https://dns.inforlogia.com/dns-query
 https://dns.jupitrdns.com/dns-query
@@ -232,7 +231,6 @@ quic://dns.bitservices.io
 quic://dns.caliph.dev:853
 quic://dns.chunghwamc.com
 quic://dns.faked.org
-quic://dns.green-ping.lol
 quic://dns.inforlogia.com
 quic://dns.jupitrdns.com
 quic://dns.kapite.in
@@ -412,7 +410,6 @@ tls://dns.farshidhakimy.de
 tls://dns.girino.org
 tls://dns.glf.wtf
 tls://dns.google
-tls://dns.green-ping.lol
 tls://dns.inforlogia.com
 tls://dns.jupitrdns.com
 tls://dns.kapite.in

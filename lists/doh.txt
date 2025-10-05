@@ -138,7 +138,6 @@ https://dns.gamban.com/dns-query
 https://dns.girino.org/dns-query
 https://dns.glf.wtf/dns-query
 https://dns.google/dns-query
-https://dns.green-ping.lol/dns-query
 https://dns.guard.io/dns-query
 https://dns.haka.se/dns-query
 https://dns.hoody.com/dns-query
@@ -398,7 +397,6 @@ https://loadlow.me/dns-query
 https://lon01.dnscry.pt/dns-query
 https://mabuktogel.directory/dns-query
 https://mad01.dnscry.pt/dns-query
-https://maqgie.xyz/dns-query
 https://masters-of-cloud.de/dns-query
 https://mil01.dnscry.pt/dns-query
 https://mozilla.cloudflare-dns.com/dns-query
