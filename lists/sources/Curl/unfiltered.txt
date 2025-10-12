@@ -25,6 +25,8 @@ https://chuncheon.dnsovertor.cc/dns-query
 https://clean.dnsforge.de/dns-query
 https://cph01.dnscry.pt/dns-query
 https://cvt01.dnscry.pt/dns-query
+https://de-d2.foxyfy.net/dns-query
+https://de-f1.foxyfy.net/dns-query
 https://de01.dns4me.net
 https://dns.a47.me/dns-query
 https://dns.aa.net.uk/dns-query
@@ -46,6 +48,7 @@ https://dns.dnshome.de/dns-query
 https://dns.dremaxx.de/dns-query
 https://dns.elemental.software/dns-query
 https://dns.floriantinney.de/dns-query
+https://dns.foxyfy.net/dns-query
 https://dns.froth.zone/dns-query
 https://dns.gamban.com/dns-query
 https://dns.google/dns-query
@@ -64,7 +67,6 @@ https://dns.njal.la/dns-query
 https://dns.novg.net/dns-query
 https://dns.paulo.nom.za/dns-query
 https://dns.pub/dns-query
-https://dns.reckoningslug.name/dns-query
 https://dns.smartguard.io/dns-query
 https://dns.startupstack.tech/dns-query
 https://dns.stirringphoto.com/dns-query
@@ -80,12 +82,12 @@ https://dns.w3ctag.org/dns-query
 https://dns0.eu
 https://dns1.in-berlin.de/dns-query
 https://dns2.in-berlin.de/dns-query
+https://dns4eu.online/dns-query
 https://dns64.dns.google/dns-query
 https://dnsforge.de/dns-query
 https://dnspub.restena.lu/dns-query
 https://doh-01.spectrum.com/dns-query
 https://doh-02.spectrum.com/dns-query
-https://doh-2.seby.io/dns-query
 https://doh.aaaab3n.moe/dns-query-114514
 https://doh.applied-privacy.net/query
 https://doh.beauty
@@ -102,12 +104,14 @@ https://doh.libredns.gr/noads
 https://doh.lv/dns-query
 https://doh.nic.lv/dns-query
 https://doh.niyawe.de/dns-query
+https://doh.seby.io/dns-query
 https://doh.zknt.org/dns-query
 https://doth.huque.com/dns-query
 https://droyd.top/dns-query
 https://dub01.dnscry.pt/dns-query
 https://dukun.de/dns-query
 https://dus01.dnscry.pt/dns-query
+https://es-ma.foxyfy.net/dns-query
 https://eu1.dns.lavate.ch/dns-query
 https://evn01.dnscry.pt/dns-query
 https://fidelius.top/dns-query
@@ -127,6 +131,7 @@ https://ie01.dns4me.net
 https://imperio.top/dns-query
 https://ist01.dnscry.pt/dns-query
 https://japan.dnsovertor.cc/dns-query
+https://jp-to.foxyfy.net/dns-query
 https://kids.dns0.eu
 https://kiv01.dnscry.pt/dns-query
 https://kronos.plan9-dns.com/dns-query
@@ -168,10 +173,12 @@ https://resolver3.absolight.net/dns-query
 https://revelio.top/dns-query
 https://rfree1.blue-shield.at/dns-query
 https://rfree2.blue-shield.at/dns-query
+https://ro-bu.foxyfy.net/dns-query
 https://sa01.dns4me.net
 https://safeservedns.com/dns-query
 https://sea01.dnscry.pt/dns-query
 https://secure.avastdns.com/dns-query
+https://secure.hafnova.com/dns-query
 https://seoul.dnsovertor.cc/dns-query
 https://sg01.dns4me.net
 https://sgn01.dnscry.pt/dns-query
@@ -193,6 +200,8 @@ https://tsm01.dnscry.pt/dns-query
 https://tujenasnaszato.xyz/dns-query
 https://uk01.dns4me.net
 https://unfiltered.joindns4.eu/dns-query
+https://us-ny.foxyfy.net/dns-query
+https://us-sj.foxyfy.net/dns-query
 https://us01.dns4me.net
 https://us02.dns4me.net
 https://vie01.dnscry.pt/dns-query
@@ -261,7 +270,6 @@ tls://dns.w3ctag.org
 tls://dns1.in-berlin.de
 tls://dnsforge.de
 tls://dnspub.restena.lu
-tls://doh-2.seby.io
 tls://doh.applied-privacy.net
 tls://doh.dns.sb
 tls://doh.dns4all.eu
@@ -269,6 +277,7 @@ tls://doh.ffmuc.net
 tls://doh.libredns.gr
 tls://doh.lv
 tls://doh.niyawe.de
+tls://doh.seby.io
 tls://doh.zknt.org
 tls://doth.huque.com
 tls://dukun.de

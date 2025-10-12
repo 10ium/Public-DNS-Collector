@@ -16,12 +16,12 @@ https://dns.dnshome.de/dns-query
 https://dns.paesa.es/dns-query
 https://dns0.eu
 https://dnsforge.de/dns-query
-https://doh-2.seby.io/dns-query
 https://doh.dns.sb/dns-query
 https://doh.dns4all.eu/dns-query
 https://doh.ffmuc.net/dns-query
 https://doh.libredns.gr/dns-query
 https://doh.libredns.gr/noads
+https://doh.seby.io/dns-query
 https://doh.tiar.app/dns-query
 https://dub01.dnscry.pt/dns-query
 https://dus01.dnscry.pt/dns-query
@@ -89,11 +89,11 @@ tls://dns.blokada.org
 tls://dns.brahma.world
 tls://dns.dnshome.de
 tls://dnsforge.de
-tls://doh-2.seby.io
 tls://doh.dns.sb
 tls://doh.dns4all.eu
 tls://doh.ffmuc.net
 tls://doh.libredns.gr
+tls://doh.seby.io
 tls://ibuki.cgnat.net
 tls://ns.data.haus
 tls://ns0.fdn.fr

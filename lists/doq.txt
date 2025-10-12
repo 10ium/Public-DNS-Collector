@@ -34,6 +34,7 @@ quic://dns.surfsharkdns.com
 quic://dns.us.futuredns.eu.org
 quic://dns.wang.art
 quic://dns.yuu-g.net
+quic://dns.yuzia.cc
 quic://dnsforge.de
 quic://dnsguard.pub
 quic://dog.dns.qwer.pw

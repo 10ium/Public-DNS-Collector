@@ -25,13 +25,13 @@ https://dns64.dns.google/dns-query
 https://dns9.quad9.net/dns-query
 https://dnsforge.de/dns-query
 https://dnspub.restena.lu/dns-query
-https://doh-2.seby.io/dns-query
 https://doh.applied-privacy.net/query
 https://doh.dns.sb/dns-query
 https://doh.familyshield.opendns.com/dns-query
 https://doh.ffmuc.net/dns-query
 https://doh.lacontrevoie.fr/dns-query
 https://doh.opendns.com/dns-query
+https://doh.seby.io/dns-query
 https://doh.tiar.app/dns-query
 https://doh.umbrella.com/dns-query
 https://dub01.dnscry.pt/dns-query
@@ -107,10 +107,10 @@ tls://dns.quad9.net
 tls://dns.rbn.gr
 tls://dnsforge.de
 tls://dnspub.restena.lu
-tls://doh-2.seby.io
 tls://doh.applied-privacy.net
 tls://doh.dns.sb
 tls://doh.ffmuc.net
+tls://doh.seby.io
 tls://ibuki.cgnat.net
 tls://ns0.fdn.fr
 tls://nsec.arnor.org

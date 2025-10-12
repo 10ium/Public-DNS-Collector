@@ -23,18 +23,17 @@ https://dns.akbxr.com/dns-query
 https://dns.anon.no/dns-query
 https://dns.applewebkit.dev/dns-query
 https://dns.asterimoon.com/dns-query
+https://dns.bibica.net/dns-query
 https://dns.bitservices.io/dns-query
 https://dns.braene.com/dns-query
 https://dns.brembeck.cloud/dns-query
 https://dns.busold.ws/dns-query
-https://dns.cabbage.zone/dns-query
 https://dns.caspervk.net/dns-query
 https://dns.chenu.ch/dns-query
 https://dns.chunghwamc.com/dns-query
 https://dns.comff.net/dns-query
 https://dns.cynthialabs.net/dns-query
 https://dns.d94.xyz/dns-query
-https://dns.d96.info/dns-query
 https://dns.datenquark.de/dns-query
 https://dns.decky.eu/dns-query
 https://dns.eliv.kr/dns-query
@@ -80,6 +79,7 @@ https://dns.unx.io/dns-query
 https://dns.wang.art/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
+https://dns.yuzia.cc/dns-query
 https://dns1.serdcebolit.ru/dns-query
 https://dnsvps.familiamv.net/dns-query
 https://dog.dns.qwer.pw/dns-query
@@ -149,6 +149,7 @@ quic://dns.roedel.cloud
 quic://dns.skrep.eu
 quic://dns.wang.art
 quic://dns.yuu-g.net
+quic://dns.yuzia.cc
 quic://dog.dns.qwer.pw
 quic://doh.sz-dns.com
 quic://nsec.arnor.org
@@ -174,7 +175,6 @@ tls://dns.caspervk.net
 tls://dns.chenu.ch
 tls://dns.chunghwamc.com
 tls://dns.d94.xyz
-tls://dns.d96.info
 tls://dns.datenquark.de
 tls://dns.decky.eu
 tls://dns.eliv.kr
@@ -209,6 +209,7 @@ tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.wang.art
 tls://dns.yuu-g.net
+tls://dns.yuzia.cc
 tls://dns1.serdcebolit.ru
 tls://dnsvps.familiamv.net
 tls://dog.dns.qwer.pw

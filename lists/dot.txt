@@ -62,7 +62,6 @@ tls://dns.csa-rz.de
 tls://dns.csaonline.de
 tls://dns.csswg.org
 tls://dns.d94.xyz
-tls://dns.d96.info
 tls://dns.datenquark.de
 tls://dns.de.futuredns.eu.org
 tls://dns.decky.eu
@@ -140,6 +139,7 @@ tls://dns.us.futuredns.eu.org
 tls://dns.w3ctag.org
 tls://dns.wang.art
 tls://dns.yuu-g.net
+tls://dns.yuzia.cc
 tls://dns1.in-berlin.de
 tls://dns1.serdcebolit.ru
 tls://dns10.quad9.net
@@ -152,7 +152,6 @@ tls://dnsovertls1.sinodun.com
 tls://dnspub.restena.lu
 tls://dnsvps.familiamv.net
 tls://dog.dns.qwer.pw
-tls://doh-2.seby.io
 tls://doh.applied-privacy.net
 tls://doh.archuser.org
 tls://doh.cleanbrowsing.org
@@ -165,6 +164,7 @@ tls://doh.kel.pe
 tls://doh.libredns.gr
 tls://doh.lv
 tls://doh.niyawe.de
+tls://doh.seby.io
 tls://doh.sz-dns.com
 tls://doh.zknt.org
 tls://dot-pure.onedns.net

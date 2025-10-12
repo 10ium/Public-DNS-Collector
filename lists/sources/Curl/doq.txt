@@ -29,6 +29,7 @@ quic://dns.skrep.eu
 quic://dns.surfsharkdns.com
 quic://dns.wang.art
 quic://dns.yuu-g.net
+quic://dns.yuzia.cc
 quic://dnsforge.de
 quic://dog.dns.qwer.pw
 quic://doh.dns4all.eu
