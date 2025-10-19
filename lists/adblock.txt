@@ -71,7 +71,6 @@ https://dns.applewebkit.dev/dns-query
 https://dns.arapurayil.com/dns-query
 https://dns.asterimoon.com/dns-query
 https://dns.bebasid.com/dns-query
-https://dns.bibica.net/dns-query
 https://dns.bitservices.io/dns-query
 https://dns.braene.com/dns-query
 https://dns.brembeck.cloud/dns-query
@@ -88,6 +87,7 @@ https://dns.datenquark.de/dns-query
 https://dns.decky.eu/dns-query
 https://dns.decloudus.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
+https://dns.dnsguard.pub/dns-query
 https://dns.dnswarden.com/uncensored
 https://dns.doh.my.id/dns-query
 https://dns.edgy.network/dns-query
@@ -136,13 +136,11 @@ https://dns.szpadel.ovh/dns-query
 https://dns.technologycage.com/dns-query
 https://dns.tipsy.coffee/dns-query
 https://dns.unx.io/dns-query
-https://dns.wang.art/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
 https://dns.yuzia.cc/dns-query
 https://dns1.serdcebolit.ru/dns-query
 https://dnsforge.de/dns-query
-https://dnsguard.pub/dns-query
 https://dnsvps.familiamv.net/dns-query
 https://dog.dns.qwer.pw/dns-query
 https://doh-own-recursion.nicolas-dorriere.fr/dns-query
@@ -230,6 +228,7 @@ quic://dns.anon.no
 quic://dns.bitservices.io
 quic://dns.caliph.dev:853
 quic://dns.chunghwamc.com
+quic://dns.dnsguard.pub
 quic://dns.faked.org
 quic://dns.inforlogia.com
 quic://dns.jupitrdns.com
@@ -243,12 +242,11 @@ quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.skrep.eu
 quic://dns.surfsharkdns.com
-quic://dns.wang.art
 quic://dns.yuu-g.net
 quic://dns.yuzia.cc
-quic://dnsguard.pub
 quic://dog.dns.qwer.pw
 quic://doh.sz-dns.com
+quic://doq.ffmuc.net
 quic://ibksturm.synology.me
 quic://nsec.arnor.org
 quic://privacy.plumedns.com
@@ -270,7 +268,7 @@ sdns://AQQAAAAAAAAAEjEzOS41OS40OC4yMjI6NDQzNCAFOt_yxaMpFtga2IpneSwwK6rV0oAyleham
 sdns://AQYAAAAAAAAAFDE2OS4yMzkuMjAyLjIwMjo1MzUzIBpq0KMrTFphppXRU2cNaasWkD-ew_f2TxPlNaMYsiilHTIuZG5zY3J5cHQtY2VydC5kbnNyZWMubWVvLndz
 sdns://AQYAAAAAAAAAFDE4NS4xMjEuMTc3LjE3Nzo1MzUzIBpq0KMrTFphppXRU2cNaasWkD-ew_f2TxPlNaMYsiilHTIuZG5zY3J5cHQtY2VydC5kbnNyZWMubWVvLndz
 sdns://AQcAAAAAAAAADzUuMS42Ni4yNTU6ODQ0MyAH0Hrxz9xdmXadPwJmkKcESWXCdCdseRyu9a7zuQxG-hkyLmRuc2NyeXB0LWNlcnQuZmZtdWMubmV0
-sdns://AQcAAAAAAAAAEzIxMy4xOTYuMTkxLjk2Ojg0NDMgKmPSv6jOgF7lERDduUMH7a4Z5ShV7PrD-IcS23XUsPkYMi5kbnNjcnlwdC1jZXJ0Lmlia3N0dXJt
+sdns://AQcAAAAAAAAAEzIxMy4xOTYuMTkxLjk2Ojg0NDMgK374BJKvK0aJHWKjmXdkG8_X2KEoao_LALK_nK6PM_AYMi5kbnNjcnlwdC1jZXJ0Lmlia3N0dXJt
 sdns://AQcAAAAAAAAAGlsyMDAxOjY3ODplNjg6ZjAwMDo6XTo4NDQzIAfQevHP3F2Zdp0_AmaQpwRJZcJ0J2x5HK71rvO5DEb6GTIuZG5zY3J5cHQtY2VydC5mZm11Yy5uZXQ
 sdns://AgMAAAAAAAAACzE3Ni45LjEuMTE3oPf1ryiAHod9ffOivij-FJ8ydKftKfE2_VA845jLqAsNoPV1fXhvFz9qtTGX7JwikIrAbSrk6qKltvWOu_ADl6HfoLNeBZUM-9gln5N1uhAYcLjDxMDsWlKXV-YxZ-neJqnooOzwYgv8MNRE3vV3rcZcN1Bac7otL9nm_0HD7TrQ1loPoKLjJ0NjdtjnZAWr6f7IjLQd4tTQNQ1OgpKlMRjEuN9boJB40hpWwOCJHZBiIbaZIzG90XFy6w8z3aB9XGXG4Uw5oNatcE00F04SCMlSqquYNescBmsNzaO02tQPRRPo4YJaoLJfLzaWf3OU8Jk3iFszP6o1bXGf6s84zOnwNVAA8-F0oOZEumlj4zX-dly5l2sSsQ61QpS0JHd2TMs6OsyjrLL8oCquP7e_BeTIHEGU3KRFEdT5rzBHhuwa5yGECc9ioINVoNYdluv7P6GQluLAAuNgO_f9qu-yJwTahmgGK76G7UuTIJ1IMrtMjXcgeyXeF1kmgu_DykX1edxmSg7V8kj1yTOYC2Ruc2ZvcmdlLmRlCi9kbnMtcXVlcnk
 sdns://AgMAAAAAAAAACzE5NC4yNDIuMi40ABRiYXNlLmRucy5tdWxsdmFkLm5ldAovZG5zLXF1ZXJ5
@@ -403,6 +401,7 @@ tls://dns.datenquark.de
 tls://dns.decky.eu
 tls://dns.decloudus.com
 tls://dns.digitale-gesellschaft.ch
+tls://dns.dnsguard.pub
 tls://dns.eliv.kr
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
@@ -437,12 +436,10 @@ tls://dns.szpadel.ovh
 tls://dns.technologycage.com
 tls://dns.tipsy.coffee
 tls://dns.unx.io
-tls://dns.wang.art
 tls://dns.yuu-g.net
 tls://dns.yuzia.cc
 tls://dns1.serdcebolit.ru
 tls://dnsforge.de
-tls://dnsguard.pub
 tls://dnsvps.familiamv.net
 tls://dog.dns.qwer.pw
 tls://doh.archuser.org

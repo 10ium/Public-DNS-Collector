@@ -21,9 +21,9 @@ https://dns.caliph.dev/dns-query
 https://dns.cfiec.net/dns-query
 https://dns.cloudflare.com/dns-query
 https://dns.comss.one/dns-query
-https://dns.de.futuredns.eu.org/dns-query/
 https://dns.decloudus.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
+https://dns.dnsguard.pub/dns-query
 https://dns.dnswarden.com/uncensored
 https://dns.google/dns-query
 https://dns.jupitrdns.com/dns-query
@@ -38,11 +38,9 @@ https://dns.rabbitdns.org/dns-query
 https://dns.seia.io/dns-query
 https://dns.surfsharkdns.com/dns-query
 https://dns.switch.ch/dns-query
-https://dns.us.futuredns.eu.org/dns-query
 https://dns10.quad9.net/dns-query
 https://dns11.quad9.net/dns-query
 https://dnsforge.de/dns-query
-https://dnsguard.pub/dns-query
 https://doh-pure.onedns.net/dns-query
 https://doh.18bit.cn/dns-query
 https://doh.360.cn/dns-query

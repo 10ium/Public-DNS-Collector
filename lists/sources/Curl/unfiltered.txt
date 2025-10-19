@@ -44,6 +44,7 @@ https://dns.dev-umbrellagov.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.digitalsize.net/dns-query
 https://dns.dns-53.us/dns-query
+https://dns.dnsguard.pub/dns-query
 https://dns.dnshome.de/dns-query
 https://dns.dremaxx.de/dns-query
 https://dns.elemental.software/dns-query
@@ -110,7 +111,6 @@ https://doth.huque.com/dns-query
 https://droyd.top/dns-query
 https://dub01.dnscry.pt/dns-query
 https://dukun.de/dns-query
-https://dus01.dnscry.pt/dns-query
 https://es-ma.foxyfy.net/dns-query
 https://eu1.dns.lavate.ch/dns-query
 https://evn01.dnscry.pt/dns-query
@@ -144,7 +144,6 @@ https://mad01.dnscry.pt/dns-query
 https://masters-of-cloud.de/dns-query
 https://mil01.dnscry.pt/dns-query
 https://noads.joindns4.eu/dns-query
-https://ns.00dani.me/dns-query
 https://ns.net.kg/dns-query
 https://ns0.fdn.fr/dns-query
 https://ns1.fdn.fr/dns-query
@@ -197,7 +196,6 @@ https://tlv01.dnscry.pt/dns-query
 https://tpa01.dnscry.pt/dns-query
 https://trf01.dnscry.pt/dns-query
 https://tsm01.dnscry.pt/dns-query
-https://tujenasnaszato.xyz/dns-query
 https://uk01.dns4me.net
 https://unfiltered.joindns4.eu/dns-query
 https://us-ny.foxyfy.net/dns-query
@@ -218,6 +216,7 @@ https://zero.dns0.eu
 quic://anycast.uncensoreddns.org
 quic://dns.alidns.com
 quic://dns.dns-53.us
+quic://dns.dnsguard.pub
 quic://dns.dnshome.de
 quic://dns.froth.zone
 quic://dns.kescher.at
@@ -243,6 +242,7 @@ tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
 tls://dns.dns-53.us
+tls://dns.dnsguard.pub
 tls://dns.dnshome.de
 tls://dns.dremaxx.de
 tls://dns.elemental.software

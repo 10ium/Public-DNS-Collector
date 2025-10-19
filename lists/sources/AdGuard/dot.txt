@@ -23,9 +23,9 @@ tls://dns.caliph.dev:853
 tls://dns.cfiec.net
 tls://dns.cmrg.net
 tls://dns.comss.one
-tls://dns.de.futuredns.eu.org
 tls://dns.decloudus.com
 tls://dns.digitale-gesellschaft.ch
+tls://dns.dnsguard.pub
 tls://dns.google
 tls://dns.jupitrdns.com
 tls://dns.larsdebruin.net
@@ -40,11 +40,9 @@ tls://dns.quad9.net
 tls://dns.seia.io
 tls://dns.surfsharkdns.com
 tls://dns.switch.ch
-tls://dns.us.futuredns.eu.org
 tls://dns10.quad9.net
 tls://dns11.quad9.net
 tls://dnsforge.de
-tls://dnsguard.pub
 tls://dnsovertls.sinodun.com
 tls://dnsovertls1.sinodun.com
 tls://dot-pure.onedns.net

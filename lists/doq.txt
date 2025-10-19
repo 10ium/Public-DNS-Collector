@@ -11,8 +11,8 @@ quic://dns.bitservices.io
 quic://dns.caliph.dev:853
 quic://dns.chunghwamc.com
 quic://dns.comss.one
-quic://dns.de.futuredns.eu.org
 quic://dns.dns-53.us
+quic://dns.dnsguard.pub
 quic://dns.dnshome.de
 quic://dns.dynx.pro
 quic://dns.faked.org
@@ -31,16 +31,14 @@ quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.skrep.eu
 quic://dns.surfsharkdns.com
-quic://dns.us.futuredns.eu.org
-quic://dns.wang.art
 quic://dns.yuu-g.net
 quic://dns.yuzia.cc
 quic://dnsforge.de
-quic://dnsguard.pub
 quic://dog.dns.qwer.pw
 quic://doh.dns4all.eu
 quic://doh.sz-dns.com
 quic://doh.tiar.app
+quic://doq.ffmuc.net
 quic://family.adguard-dns.com
 quic://freedns.controld.com
 quic://ibksturm.synology.me

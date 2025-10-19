@@ -23,7 +23,6 @@ https://dns.akbxr.com/dns-query
 https://dns.anon.no/dns-query
 https://dns.applewebkit.dev/dns-query
 https://dns.asterimoon.com/dns-query
-https://dns.bibica.net/dns-query
 https://dns.bitservices.io/dns-query
 https://dns.braene.com/dns-query
 https://dns.brembeck.cloud/dns-query
@@ -76,7 +75,6 @@ https://dns.szpadel.ovh/dns-query
 https://dns.technologycage.com/dns-query
 https://dns.tipsy.coffee/dns-query
 https://dns.unx.io/dns-query
-https://dns.wang.art/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
 https://dns.yuzia.cc/dns-query
@@ -147,7 +145,6 @@ quic://dns.reitmeier.me
 quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.skrep.eu
-quic://dns.wang.art
 quic://dns.yuu-g.net
 quic://dns.yuzia.cc
 quic://dog.dns.qwer.pw
@@ -207,7 +204,6 @@ tls://dns.szpadel.ovh
 tls://dns.technologycage.com
 tls://dns.tipsy.coffee
 tls://dns.unx.io
-tls://dns.wang.art
 tls://dns.yuu-g.net
 tls://dns.yuzia.cc
 tls://dns1.serdcebolit.ru

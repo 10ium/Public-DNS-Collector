@@ -44,6 +44,7 @@ tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
 tls://dns.dns-53.us
+tls://dns.dnsguard.pub
 tls://dns.dnshome.de
 tls://dns.dremaxx.de
 tls://dns.dynx.pro
@@ -103,7 +104,6 @@ tls://dns.telekom.de
 tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.w3ctag.org
-tls://dns.wang.art
 tls://dns.yuu-g.net
 tls://dns.yuzia.cc
 tls://dns1.in-berlin.de

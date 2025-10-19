@@ -111,7 +111,6 @@ https://doh.us.dnswarden.com/adultfilter
 https://doh.us.dnswarden.com/uncensored
 https://doh.xfinity.com/dns-query
 https://dub01.dnscry.pt/dns-query
-https://dus01.dnscry.pt/dns-query
 https://eu1.dns.lavate.ch/dns-query
 https://evn01.dnscry.pt/dns-query
 https://extended.dns.mullvad.net/dns-query

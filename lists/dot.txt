@@ -63,13 +63,13 @@ tls://dns.csaonline.de
 tls://dns.csswg.org
 tls://dns.d94.xyz
 tls://dns.datenquark.de
-tls://dns.de.futuredns.eu.org
 tls://dns.decky.eu
 tls://dns.decloudus.com
 tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
 tls://dns.dns-53.us
+tls://dns.dnsguard.pub
 tls://dns.dnshome.de
 tls://dns.dremaxx.de
 tls://dns.dynx.pro
@@ -135,9 +135,7 @@ tls://dns.technologycage.com
 tls://dns.telekom.de
 tls://dns.tipsy.coffee
 tls://dns.unx.io
-tls://dns.us.futuredns.eu.org
 tls://dns.w3ctag.org
-tls://dns.wang.art
 tls://dns.yuu-g.net
 tls://dns.yuzia.cc
 tls://dns1.in-berlin.de
@@ -145,7 +143,6 @@ tls://dns1.serdcebolit.ru
 tls://dns10.quad9.net
 tls://dns11.quad9.net
 tls://dnsforge.de
-tls://dnsguard.pub
 tls://dnslow.me
 tls://dnsovertls.sinodun.com
 tls://dnsovertls1.sinodun.com

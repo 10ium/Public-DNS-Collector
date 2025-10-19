@@ -85,7 +85,6 @@ https://dns.bebasid.com/dns-oisd
 https://dns.bebasid.com/dns-query
 https://dns.bebasid.com/unfiltered
 https://dns.belnet.be/dns-query
-https://dns.bibica.net/dns-query
 https://dns.bitdefender.net/dns-query
 https://dns.bitservices.io/dns-query
 https://dns.blokada.org/dns-query
@@ -111,7 +110,6 @@ https://dns.csswg.org/dns-query
 https://dns.cynthialabs.net/dns-query
 https://dns.d94.xyz/dns-query
 https://dns.datenquark.de/dns-query
-https://dns.de.futuredns.eu.org/dns-query/
 https://dns.decky.eu/dns-query
 https://dns.decloudus.com/dns-query
 https://dns.dev-umbrellagov.com/dns-query
@@ -119,6 +117,7 @@ https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.digitalsize.net/dns-query
 https://dns.dns-53.us/dns-query
 https://dns.dns-over-https.com/dns-query
+https://dns.dnsguard.pub/dns-query
 https://dns.dnshome.de/dns-query
 https://dns.dnswarden.com/uncensored
 https://dns.doh.my.id/dns-query
@@ -210,10 +209,8 @@ https://dns.tipsy.coffee/dns-query
 https://dns.tls-data.de/dns-query
 https://dns.twnic.tw/dns-query
 https://dns.unx.io/dns-query
-https://dns.us.futuredns.eu.org/dns-query
 https://dns.vaioswolke.xyz/dns-query
 https://dns.w3ctag.org/dns-query
-https://dns.wang.art/dns-query
 https://dns.wevpn.com/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
@@ -232,7 +229,6 @@ https://dns9.quad9.net/dns-query
 https://dnscache.e-utp.net/dns-query
 https://dnses.alekberg.net/dns-query
 https://dnsforge.de/dns-query
-https://dnsguard.pub/dns-query
 https://dnslow.me/dns-query
 https://dnsnl.alekberg.net/dns-query
 https://dnspub.restena.lu/dns-query
@@ -323,7 +319,6 @@ https://draco.plan9-ns2.com/dns-query
 https://droyd.top/dns-query
 https://dub01.dnscry.pt/dns-query
 https://dukun.de/dns-query
-https://dus01.dnscry.pt/dns-query
 https://es-ma.foxyfy.net/dns-query
 https://eu1.dns.lavate.ch/dns-query
 https://evn01.dnscry.pt/dns-query
@@ -408,7 +403,6 @@ https://mozilla.cloudflare-dns.com/dns-query
 https://my.nextdns.io/start
 https://nicsezcheckfbi.gov
 https://noads.joindns4.eu/dns-query
-https://ns.00dani.me/dns-query
 https://ns.data.haus/dns-query
 https://ns.net.kg/dns-query
 https://ns0.fdn.fr/dns-query
@@ -497,7 +491,6 @@ https://tlv01.dnscry.pt/dns-query
 https://tpa01.dnscry.pt/dns-query
 https://trf01.dnscry.pt/dns-query
 https://tsm01.dnscry.pt/dns-query
-https://tujenasnaszato.xyz/dns-query
 https://uk.adhole.org/dns-query
 https://uk01.dns4me.net
 https://unfiltered.adguard-dns.com/dns-query

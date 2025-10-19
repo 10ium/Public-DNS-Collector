@@ -3,12 +3,11 @@ quic://dns.adguard-dns.com
 quic://dns.alidns.com:853
 quic://dns.caliph.dev:853
 quic://dns.comss.one
-quic://dns.de.futuredns.eu.org
+quic://dns.dnsguard.pub
 quic://dns.jupitrdns.com
 quic://dns.surfsharkdns.com
-quic://dns.us.futuredns.eu.org
-quic://dnsguard.pub
 quic://doh.tiar.app
+quic://doq.ffmuc.net
 quic://family.adguard-dns.com
 quic://ibksturm.synology.me
 quic://router.comss.one
