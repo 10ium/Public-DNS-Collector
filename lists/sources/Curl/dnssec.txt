@@ -78,7 +78,6 @@ https://sto01.dnscry.pt/dns-query
 https://syd02.dnscry.pt/dns-query
 https://tbs01.dnscry.pt/dns-query
 https://tll01.dnscry.pt/dns-query
-https://tlv01.dnscry.pt/dns-query
 https://tpa01.dnscry.pt/dns-query
 https://trf01.dnscry.pt/dns-query
 https://tsm01.dnscry.pt/dns-query

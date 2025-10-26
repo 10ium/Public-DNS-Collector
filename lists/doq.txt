@@ -48,4 +48,3 @@ quic://router.comss.one
 quic://rx.techomespace.com
 quic://unfiltered.adguard-dns.com
 quic://zdn.ro
-quic://zero.dns0.eu

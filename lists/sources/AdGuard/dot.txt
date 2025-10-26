@@ -104,4 +104,3 @@ tls://security.cloudflare-dns.com
 tls://unfiltered.adguard-dns.com
 tls://unfiltered.dns.bebasid.com:853
 tls://unicast.censurfridns.dk
-tls://zero.dns0.eu

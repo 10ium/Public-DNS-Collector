@@ -33,7 +33,6 @@ https://dns.google/dns-query
 https://dns.moulticast.net/dns-query
 https://dns.mullvad.net/dns-query
 https://dns.paesa.es/dns-query
-https://dns0.eu
 https://dnses.alekberg.net/dns-query
 https://dnsforge.de/dns-query
 https://dnsnl.alekberg.net/dns-query
@@ -69,7 +68,6 @@ https://ibuki.cgnat.net/dns-query
 https://ist01.dnscry.pt/dns-query
 https://jp.tiar.app/dns-query
 https://jp.tiarap.org/dns-query
-https://kids.dns0.eu
 https://kiv01.dnscry.pt/dns-query
 https://las01.dnscry.pt/dns-query
 https://lon01.dnscry.pt/dns-query
@@ -82,7 +80,6 @@ https://ns1.fdn.fr/dns-query
 https://ns1.opennameserver.org/dns-query
 https://nue01.dnscry.pt/dns-query
 https://omr01.dnscry.pt/dns-query
-https://open.dns0.eu
 https://par01.dnscry.pt/dns-query
 https://pdx01.dnscry.pt/dns-query
 https://phl01.dnscry.pt/dns-query
@@ -105,7 +102,6 @@ https://sto01.dnscry.pt/dns-query
 https://syd02.dnscry.pt/dns-query
 https://tbs01.dnscry.pt/dns-query
 https://tll01.dnscry.pt/dns-query
-https://tlv01.dnscry.pt/dns-query
 https://tpa01.dnscry.pt/dns-query
 https://trf01.dnscry.pt/dns-query
 https://tsm01.dnscry.pt/dns-query
@@ -120,7 +116,6 @@ https://yhz01.dnscry.pt/dns-query
 https://yvr01.dnscry.pt/dns-query
 https://yyc01.dnscry.pt/dns-query
 https://yyz01.dnscry.pt/dns-query
-https://zero.dns0.eu/
 quic://dns.adguard-dns.com
 quic://dns.dnshome.de
 quic://dnsforge.de

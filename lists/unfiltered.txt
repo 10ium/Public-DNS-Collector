@@ -106,7 +106,6 @@ https://dns.twnic.tw/dns-query
 https://dns.vaioswolke.xyz/dns-query
 https://dns.w3ctag.org/dns-query
 https://dns.wevpn.com/dns-query
-https://dns0.eu
 https://dns1.in-berlin.de/dns-query
 https://dns2.in-berlin.de/dns-query
 https://dns4eu.online/dns-query
@@ -189,7 +188,6 @@ https://jit.ddns.net/dns-query
 https://jp-to.foxyfy.net/dns-query
 https://jp.tiar.app/dns-query
 https://jp.tiarap.org/dns-query
-https://kids.dns0.eu
 https://kiv01.dnscry.pt/dns-query
 https://kronos.plan9-dns.com/dns-query
 https://las01.dnscry.pt/dns-query
@@ -209,7 +207,6 @@ https://nue01.dnscry.pt/dns-query
 https://nz01.dns4me.net
 https://odvr.nic.cz/dns-query
 https://omr01.dnscry.pt/dns-query
-https://open.dns0.eu
 https://par01.dnscry.pt/dns-query
 https://pdx01.dnscry.pt/dns-query
 https://pepetio.xyz/dns-query
@@ -252,7 +249,6 @@ https://sto01.dnscry.pt/dns-query
 https://syd02.dnscry.pt/dns-query
 https://tbs01.dnscry.pt/dns-query
 https://tll01.dnscry.pt/dns-query
-https://tlv01.dnscry.pt/dns-query
 https://tpa01.dnscry.pt/dns-query
 https://trf01.dnscry.pt/dns-query
 https://tsm01.dnscry.pt/dns-query

@@ -249,4 +249,3 @@ tls://unicast.censurfridns.dk
 tls://wikimedia-dns.org
 tls://yarp.lefolgoc.net
 tls://zdn.ro
-tls://zero.dns0.eu
