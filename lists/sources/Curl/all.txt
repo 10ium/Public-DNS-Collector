@@ -13,7 +13,6 @@ https://adfreedns.top/dns-query
 https://adg.geili.me/dns-query
 https://adg.khon.dev/dns-query
 https://adguard-kartoffel.zernico.de/dns-query
-https://adguard.bonis.de/dns-query
 https://adguard.kasbot.net/dns-query
 https://adguard.meddy94.de/dns-query
 https://adguard.shoupperuser.com/dns-query
@@ -64,7 +63,6 @@ https://dns.bitdefender.net/dns-query
 https://dns.bitservices.io/dns-query
 https://dns.blokada.org/dns-query
 https://dns.bmwhocking.com/dns-query
-https://dns.braene.com/dns-query
 https://dns.brahma.world/dns-query
 https://dns.brembeck.cloud/dns-query
 https://dns.busold.ws/dns-query
@@ -74,7 +72,6 @@ https://dns.cert.ee/dns-query
 https://dns.chenu.ch/dns-query
 https://dns.christerwaren.fi
 https://dns.chunghwamc.com/dns-query
-https://dns.comff.net/dns-query
 https://dns.comss.one/dns-query
 https://dns.csa-rz.de/dns-query
 https://dns.csaonline.de/dns-query
@@ -109,7 +106,6 @@ https://dns.guard.io/dns-query
 https://dns.haka.se/dns-query
 https://dns.hoody.com/dns-query
 https://dns.inforlogia.com/dns-query
-https://dns.jupitrdns.com/dns-query
 https://dns.kapite.in/dns-query
 https://dns.kebree.fr/dns-query
 https://dns.kernel-error.de/dns-query
@@ -172,7 +168,6 @@ https://dns.vaioswolke.xyz/dns-query
 https://dns.w3ctag.org/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
-https://dns.yuzia.cc/dns-query
 https://dns1.in-berlin.de/dns-query
 https://dns1.serdcebolit.ru/dns-query
 https://dns10.quad9.net/dns-query
@@ -340,7 +335,6 @@ https://router.comss.one/dns-query
 https://sa01.dns4me.net
 https://safeservedns.com/dns-query
 https://sea01.dnscry.pt/dns-query
-https://secure.anudeep.me/dns-query
 https://secure.avastdns.com/dns-query
 https://secure.hafnova.com/dns-query
 https://security.cloudflare-dns.com/dns-query
@@ -374,7 +368,6 @@ https://us-chi-w-p-1.nashkan.net/dns-query
 https://us-jac-w-f-1.nashkan.net/dns-query
 https://us-jac-w-p-1.nashkan.net/dns-query
 https://us-kan-w-p-1.nashkan.net/dns-query
-https://us-ny.foxyfy.net/dns-query
 https://us-nyc-w-p-1.nashkan.net/dns-query
 https://us-saj-w-f-1.nashkan.net/dns-query
 https://us-saj-w-p-1.nashkan.net/dns-query
@@ -412,7 +405,6 @@ quic://dns.dynx.pro
 quic://dns.faked.org
 quic://dns.froth.zone
 quic://dns.inforlogia.com
-quic://dns.jupitrdns.com
 quic://dns.kapite.in
 quic://dns.kescher.at
 quic://dns.l337.site
@@ -426,7 +418,6 @@ quic://dns.roedel.cloud
 quic://dns.skrep.eu
 quic://dns.surfsharkdns.com
 quic://dns.yuu-g.net
-quic://dns.yuzia.cc
 quic://dnsforge.de
 quic://dog.dns.qwer.pw
 quic://doh.dns4all.eu
@@ -443,7 +434,6 @@ tls://adblock.krctech.dev
 tls://adfree.usableprivacy.net
 tls://adfreedns.top
 tls://adguard-kartoffel.zernico.de
-tls://adguard.bonis.de
 tls://adguard.meddy94.de
 tls://adguard.shoupperuser.com
 tls://ag.apollohct.com
@@ -462,7 +452,6 @@ tls://dns.asterimoon.com
 tls://dns.bitdefender.net
 tls://dns.bitservices.io
 tls://dns.blokada.org
-tls://dns.braene.com
 tls://dns.brahma.world
 tls://dns.busold.ws
 tls://dns.caspervk.net
@@ -496,7 +485,6 @@ tls://dns.glf.wtf
 tls://dns.google
 tls://dns.hoody.com
 tls://dns.inforlogia.com
-tls://dns.jupitrdns.com
 tls://dns.kapite.in
 tls://dns.kebree.fr
 tls://dns.kernel-error.de
@@ -542,7 +530,6 @@ tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.w3ctag.org
 tls://dns.yuu-g.net
-tls://dns.yuzia.cc
 tls://dns1.in-berlin.de
 tls://dns1.serdcebolit.ru
 tls://dnsforge.de
@@ -588,7 +575,6 @@ tls://resolver.sunet.se
 tls://resolver1.absolight.net
 tls://rfree1.blue-shield.at
 tls://safeservedns.com
-tls://secure.anudeep.me
 tls://sky.rethinkdns.com
 tls://sunnygyl.com
 tls://wikimedia-dns.org

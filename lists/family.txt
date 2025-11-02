@@ -15,8 +15,6 @@ https://adblock.mydns.network/dns-query
 https://adguard.shoupperuser.com/dns-query
 https://all.dns.mullvad.net/dns-query
 https://base.dns.mullvad.net/dns-query
-https://child-noads.joindns4.eu/dns-query
-https://child.joindns4.eu/dns-query
 https://cloudflare-dns.com/dns-query
 https://dns-family.adguard.com/dns-query
 https://dns.adguard-dns.com/dns-query
@@ -127,12 +125,8 @@ tcp://77.88.8.7
 tcp://94.140.14.15
 tcp://94.140.15.16
 tls://adguard.shoupperuser.com
-tls://adult-filter-dns.cleanbrowsing.org
 tls://all.dns.mullvad.net
-tls://child-noads.joindns4.eu
-tls://child.joindns4.eu
 tls://cloudflare-dns.com
-tls://dns-family.adguard.com
 tls://dns.adguard-dns.com
 tls://dns.cert.ee
 tls://dns.dynx.pro

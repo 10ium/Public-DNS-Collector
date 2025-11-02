@@ -4,7 +4,6 @@ https://abel.waringer-atg.de/dns-query
 https://abn01.dnscry.pt/dns-query
 https://adg.geili.me/dns-query
 https://adguard-kartoffel.zernico.de/dns-query
-https://adguard.bonis.de/dns-query
 https://anycast.uncensoreddns.org/dns-query
 https://arashi.net.eu.org/dns-query
 https://ath01.dnscry.pt/dns-query
@@ -194,7 +193,6 @@ https://trf01.dnscry.pt/dns-query
 https://tsm01.dnscry.pt/dns-query
 https://uk01.dns4me.net
 https://unfiltered.joindns4.eu/dns-query
-https://us-ny.foxyfy.net/dns-query
 https://us-sj.foxyfy.net/dns-query
 https://us01.dns4me.net
 https://us02.dns4me.net
@@ -222,7 +220,6 @@ quic://doh.dns4all.eu
 tls://3dns.eu
 tls://abn01.dnscry.pt
 tls://adguard-kartoffel.zernico.de
-tls://adguard.bonis.de
 tls://anycast.uncensoreddns.org
 tls://ca01.dns4me.net
 tls://dns.aa.net.uk

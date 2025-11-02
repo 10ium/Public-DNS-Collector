@@ -6,7 +6,6 @@ tls://adblock.krctech.dev
 tls://adfree.usableprivacy.net
 tls://adfreedns.top
 tls://adguard-kartoffel.zernico.de
-tls://adguard.bonis.de
 tls://adguard.meddy94.de
 tls://adguard.shoupperuser.com
 tls://ag.apollohct.com
@@ -25,7 +24,6 @@ tls://dns.asterimoon.com
 tls://dns.bitdefender.net
 tls://dns.bitservices.io
 tls://dns.blokada.org
-tls://dns.braene.com
 tls://dns.brahma.world
 tls://dns.busold.ws
 tls://dns.caspervk.net
@@ -59,7 +57,6 @@ tls://dns.glf.wtf
 tls://dns.google
 tls://dns.hoody.com
 tls://dns.inforlogia.com
-tls://dns.jupitrdns.com
 tls://dns.kapite.in
 tls://dns.kebree.fr
 tls://dns.kernel-error.de
@@ -105,7 +102,6 @@ tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.w3ctag.org
 tls://dns.yuu-g.net
-tls://dns.yuzia.cc
 tls://dns1.in-berlin.de
 tls://dns1.serdcebolit.ru
 tls://dnsforge.de
@@ -151,7 +147,6 @@ tls://resolver.sunet.se
 tls://resolver1.absolight.net
 tls://rfree1.blue-shield.at
 tls://safeservedns.com
-tls://secure.anudeep.me
 tls://sky.rethinkdns.com
 tls://sunnygyl.com
 tls://wikimedia-dns.org

@@ -15,7 +15,6 @@ quic://dns.dynx.pro
 quic://dns.faked.org
 quic://dns.froth.zone
 quic://dns.inforlogia.com
-quic://dns.jupitrdns.com
 quic://dns.kapite.in
 quic://dns.kescher.at
 quic://dns.l337.site
@@ -29,7 +28,6 @@ quic://dns.roedel.cloud
 quic://dns.skrep.eu
 quic://dns.surfsharkdns.com
 quic://dns.yuu-g.net
-quic://dns.yuzia.cc
 quic://dnsforge.de
 quic://dog.dns.qwer.pw
 quic://doh.dns4all.eu

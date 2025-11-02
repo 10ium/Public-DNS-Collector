@@ -24,13 +24,11 @@ https://dns.anon.no/dns-query
 https://dns.applewebkit.dev/dns-query
 https://dns.asterimoon.com/dns-query
 https://dns.bitservices.io/dns-query
-https://dns.braene.com/dns-query
 https://dns.brembeck.cloud/dns-query
 https://dns.busold.ws/dns-query
 https://dns.caspervk.net/dns-query
 https://dns.chenu.ch/dns-query
 https://dns.chunghwamc.com/dns-query
-https://dns.comff.net/dns-query
 https://dns.cynthialabs.net/dns-query
 https://dns.d94.xyz/dns-query
 https://dns.datenquark.de/dns-query
@@ -44,7 +42,6 @@ https://dns.girino.org/dns-query
 https://dns.glf.wtf/dns-query
 https://dns.haka.se/dns-query
 https://dns.inforlogia.com/dns-query
-https://dns.jupitrdns.com/dns-query
 https://dns.kapite.in/dns-query
 https://dns.kebree.fr/dns-query
 https://dns.koala.us.to/dns-query
@@ -77,7 +74,6 @@ https://dns.tipsy.coffee/dns-query
 https://dns.unx.io/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
-https://dns.yuzia.cc/dns-query
 https://dns1.serdcebolit.ru/dns-query
 https://dnsvps.familiamv.net/dns-query
 https://dog.dns.qwer.pw/dns-query
@@ -109,7 +105,6 @@ https://pihole.aws.ketan.dev/dns-query
 https://pooblet.co.za/dns-query
 https://privacy.plumedns.com/dns-query
 https://ro-buc-w-p-1.nashkan.net/dns-query
-https://secure.anudeep.me/dns-query
 https://sg-w-p-1.nashkan.net/dns-query
 https://sunnygyl.com/dns-query
 https://syd.adfilter.net/dns-query
@@ -135,7 +130,6 @@ quic://dns.bitservices.io
 quic://dns.chunghwamc.com
 quic://dns.faked.org
 quic://dns.inforlogia.com
-quic://dns.jupitrdns.com
 quic://dns.kapite.in
 quic://dns.l337.site
 quic://dns.luma-medien.com
@@ -146,7 +140,6 @@ quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.skrep.eu
 quic://dns.yuu-g.net
-quic://dns.yuzia.cc
 quic://dog.dns.qwer.pw
 quic://doh.sz-dns.com
 quic://nsec.arnor.org
@@ -166,7 +159,6 @@ tls://dns.anon.no
 tls://dns.applewebkit.dev
 tls://dns.asterimoon.com
 tls://dns.bitservices.io
-tls://dns.braene.com
 tls://dns.busold.ws
 tls://dns.caspervk.net
 tls://dns.chenu.ch
@@ -180,7 +172,6 @@ tls://dns.farshidhakimy.de
 tls://dns.girino.org
 tls://dns.glf.wtf
 tls://dns.inforlogia.com
-tls://dns.jupitrdns.com
 tls://dns.kapite.in
 tls://dns.kebree.fr
 tls://dns.koala.us.to
@@ -205,7 +196,6 @@ tls://dns.technologycage.com
 tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.yuu-g.net
-tls://dns.yuzia.cc
 tls://dns1.serdcebolit.ru
 tls://dnsvps.familiamv.net
 tls://dog.dns.qwer.pw
@@ -221,6 +211,5 @@ tls://ntwrkh.pro
 tls://per.adfilter.net
 tls://pihole.aws.ketan.dev
 tls://privacy.plumedns.com
-tls://secure.anudeep.me
 tls://sunnygyl.com
 tls://zdn.ro
