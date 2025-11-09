@@ -42,7 +42,6 @@ https://dns.csswg.org/dns-query
 https://dns.dev-umbrellagov.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.digitalsize.net/dns-query
-https://dns.dns-53.us/dns-query
 https://dns.dnsguard.pub/dns-query
 https://dns.dnshome.de/dns-query
 https://dns.dremaxx.de/dns-query
@@ -129,7 +128,6 @@ https://ie01.dns4me.net
 https://imperio.top/dns-query
 https://ist01.dnscry.pt/dns-query
 https://japan.dnsovertor.cc/dns-query
-https://jp-to.foxyfy.net/dns-query
 https://kiv01.dnscry.pt/dns-query
 https://kronos.plan9-dns.com/dns-query
 https://las01.dnscry.pt/dns-query
@@ -208,7 +206,6 @@ https://yyc01.dnscry.pt/dns-query
 https://yyz01.dnscry.pt/dns-query
 quic://anycast.uncensoreddns.org
 quic://dns.alidns.com
-quic://dns.dns-53.us
 quic://dns.dnsguard.pub
 quic://dns.dnshome.de
 quic://dns.froth.zone
@@ -233,7 +230,6 @@ tls://dns.csswg.org
 tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
-tls://dns.dns-53.us
 tls://dns.dnsguard.pub
 tls://dns.dnshome.de
 tls://dns.dremaxx.de

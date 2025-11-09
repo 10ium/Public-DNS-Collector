@@ -41,7 +41,6 @@ tls://dns.decky.eu
 tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
-tls://dns.dns-53.us
 tls://dns.dnsguard.pub
 tls://dns.dnshome.de
 tls://dns.dremaxx.de

@@ -71,6 +71,7 @@ https://rx.techomespace.com/dns-query
 https://sm2.doh.pub/dns-query
 https://v.recipes/dns-query
 https://wikimedia-dns.org/dns-query
+https://zero.dns0.eu/
 quic://dandelionsprout.asuscomm.com:48582
 quic://dns.adguard-dns.com
 quic://dns.alidns.com:853
@@ -81,6 +82,7 @@ quic://dns.surfsharkdns.com
 quic://doq.ffmuc.net
 quic://ibksturm.synology.me
 quic://rx.techomespace.com
+quic://zero.dns0.eu
 sdns://AQAAAAAAAAAACjguMjAuMjQ3LjIg0sJUqpYcHsoXmZb1X7yAHwg2xyN5q1J-zaiGG-Dgs7AoMi5kbnNjcnlwdC1jZXJ0LnNoaWVsZC0yLmRuc2J5Y29tb2RvLmNvbQ
 sdns://AQAAAAAAAAAADzE4MC4xMzEuMTQ0LjE0NCDGC-b_38Dj4-ikI477AO1GXcLPfETOFpE36KZIHdOzLhkyLmRuc2NyeXB0LWNlcnQubmF3YWxhLmlk
 sdns://AQIAAAAAAAAADjk0LjEzMC4xODAuMjI1ILtn1Ada3rLi6VNcj4pB-I5eHBqFzFbs_XFRHG-6KenTEGRuc2ZvcmZhbWlseS5jb20
@@ -98,6 +100,8 @@ sdns://AQYAAAAAAAAAFDE4NS4xMjEuMTc3LjE3Nzo1MzUzIBpq0KMrTFphppXRU2cNaasWkD-ew_f2T
 sdns://AQcAAAAAAAAADzUuMS42Ni4yNTU6ODQ0MyAH0Hrxz9xdmXadPwJmkKcESWXCdCdseRyu9a7zuQxG-hkyLmRuc2NyeXB0LWNlcnQuZmZtdWMubmV0
 sdns://AQcAAAAAAAAAEzIxMy4xOTYuMTkxLjk2Ojg0NDMgK374BJKvK0aJHWKjmXdkG8_X2KEoao_LALK_nK6PM_AYMi5kbnNjcnlwdC1jZXJ0Lmlia3N0dXJt
 sdns://AQcAAAAAAAAAGlsyMDAxOjY3ODplNjg6ZjAwMDo6XTo4NDQzIAfQevHP3F2Zdp0_AmaQpwRJZcJ0J2x5HK71rvO5DEb6GTIuZG5zY3J5cHQtY2VydC5mZm11Yy5uZXQ
+sdns://AgcAAAAAAAAAAAAVaHR0cHM6Ly96ZXJvLmRuczAuZXUvCi9kbnMtcXVlcnk
+sdns://AwcAAAAAAAAAAAASdGxzOi8vemVyby5kbnMwLmV1
 tcp://101.101.101.101
 tcp://101.102.103.104
 tcp://101.226.4.6
@@ -123,10 +127,12 @@ tcp://180.184.1.1
 tcp://180.184.2.2
 tcp://185.121.177.177
 tcp://185.222.222.222
+tcp://185.253.5.0
 tcp://185.43.135.1
 tcp://185.71.138.138
 tcp://185.95.218.42
 tcp://185.95.218.43
+tcp://193.110.81.0
 tcp://193.17.47.1
 tcp://193.58.251.251
 tcp://194.169.169.169
@@ -201,6 +207,7 @@ tls://p3.freedns.controld.com
 tls://public.dns.iij.jp
 tls://resolver-eu.lelux.fi
 tls://resolver.dnsprivacy.org.uk
+tls://zero.dns0.eu
 udp://101.101.101.101
 udp://101.102.103.104
 udp://101.226.4.6
@@ -226,10 +233,12 @@ udp://180.184.1.1
 udp://180.184.2.2
 udp://185.121.177.177
 udp://185.222.222.222
+udp://185.253.5.0
 udp://185.43.135.1
 udp://185.71.138.138
 udp://185.95.218.42
 udp://185.95.218.43
+udp://193.110.81.0
 udp://193.17.47.1
 udp://193.58.251.251
 udp://194.169.169.169

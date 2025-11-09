@@ -7,7 +7,6 @@ https://addns1.m-it.ro/dns-query
 https://adfree.usableprivacy.net/dns-query
 https://adfreedns.top/dns-query
 https://adg.khon.dev/dns-query
-https://adguard.kasbot.net/dns-query
 https://adguard.meddy94.de/dns-query
 https://adl.adfilter.net/dns-query
 https://ae-fuj-w-p-1.nashkan.net/dns-query

@@ -148,7 +148,6 @@ https://adfreedns.top/dns-query
 https://adg.geili.me/dns-query
 https://adg.khon.dev/dns-query
 https://adguard-kartoffel.zernico.de/dns-query
-https://adguard.kasbot.net/dns-query
 https://adguard.meddy94.de/dns-query
 https://adguard.shoupperuser.com/dns-query
 https://adl.adfilter.net/dns-query
@@ -201,6 +200,7 @@ https://de01.dns4me.net
 https://dns-doh.dnsforfamily.com/dns-query
 https://dns-family.adguard.com/dns-query
 https://dns-nyc.aaflalo.me/dns-query
+https://dns-unfiltered.adguard.com/dns-query
 https://dns-weblock.wevpn.com/dns-query
 https://dns.a47.me/dns-query
 https://dns.aa.net.uk/dns-query
@@ -245,7 +245,6 @@ https://dns.decloudus.com/dns-query
 https://dns.dev-umbrellagov.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.digitalsize.net/dns-query
-https://dns.dns-53.us/dns-query
 https://dns.dns-over-https.com/dns-query
 https://dns.dnsguard.pub/dns-query
 https://dns.dnshome.de/dns-query
@@ -428,6 +427,7 @@ https://doh.opendns.com/dns-query
 https://doh.pl.ahadns.net/dns-query
 https://doh.post-factum.tk/dns-query
 https://doh.powerdns.org
+https://doh.pub/dns-query
 https://doh.qis.io/dns-query
 https://doh.sandbox.opendns.com/dns-query
 https://doh.seby.io/dns-query
@@ -511,7 +511,6 @@ https://internetsehat.bebasid.com/dns-query
 https://ist01.dnscry.pt/dns-query
 https://japan.dnsovertor.cc/dns-query
 https://jit.ddns.net/dns-query
-https://jp-to.foxyfy.net/dns-query
 https://jp.tiar.app/dns-query
 https://jp.tiarap.org/dns-query
 https://kaitain.restena.lu/dns-query
@@ -650,6 +649,7 @@ https://yvr01.dnscry.pt/dns-query
 https://yyc01.dnscry.pt/dns-query
 https://yyz01.dnscry.pt/dns-query
 https://zdn.ro/dns-query
+https://zero.dns0.eu/
 quic://adblock.krctech.dev
 quic://adfreedns.top
 quic://agh.dshubham.xyz
@@ -664,7 +664,6 @@ quic://dns.bitservices.io
 quic://dns.caliph.dev:853
 quic://dns.chunghwamc.com
 quic://dns.comss.one
-quic://dns.dns-53.us
 quic://dns.dnsguard.pub
 quic://dns.dnshome.de
 quic://dns.dynx.pro
@@ -700,6 +699,7 @@ quic://router.comss.one
 quic://rx.techomespace.com
 quic://unfiltered.adguard-dns.com
 quic://zdn.ro
+quic://zero.dns0.eu
 sdns://AQAAAAAAAAAACjguMjAuMjQ3LjIg0sJUqpYcHsoXmZb1X7yAHwg2xyN5q1J-zaiGG-Dgs7AoMi5kbnNjcnlwdC1jZXJ0LnNoaWVsZC0yLmRuc2J5Y29tb2RvLmNvbQ
 sdns://AQAAAAAAAAAAD1syNjIwOjA6Y2NjOjoyXSC3NRFAIG8iXT4r2CLX_WkeocM8yNZmjQy-BL-rykP7eRsyLmRuc2NyeXB0LWNlcnQub3BlbmRucy5jb20
 sdns://AQAAAAAAAAAADjIwOC42Ny4yMjAuMTIzILc1EUAgbyJdPivYItf9aR6hwzzI1maNDL4Ev6vKQ_t5GzIuZG5zY3J5cHQtY2VydC5vcGVuZG5zLmNvbQ
@@ -1299,6 +1299,7 @@ sdns://AgYAAAAAAAAAEVsyMDAxOjY3YzoyOGE0OjpdoPf1ryiAHod9ffOivij-FJ8ydKftKfE2_VA84
 sdns://AgYAAAAAAAAAElsyYTAwOjU5ODA6OTQ6OjcxXQAMZG5zLmNpcmNsLmx1Ci9kbnMtcXVlcnk
 sdns://AgYAAAAAAAAAElsyYTAxOjNhMDo1Mzo1Mzo6XaD39a8ogB6HfX3zor4o_hSfMnSn7SnxNv1QPOOYy6gLDaD1dX14bxc_arUxl-ycIpCKwG0q5Oqipbb1jrvwA5eh36CzXgWVDPvYJZ-TdboQGHC4w8TA7FpSl1fmMWfp3iap6KDs8GIL_DDURN71d63GXDdQWnO6LS_Z5v9Bw-060NZaD6Ci4ydDY3bY52QFq-n-yIy0HeLU0DUNToKSpTEYxLjfW6CQeNIaVsDgiR2QYiG2mSMxvdFxcusPM92gfVxlxuFMOaDWrXBNNBdOEgjJUqqrmDXrHAZrDc2jtNrUD0UT6OGCWqCyXy82ln9zlPCZN4hbMz-qNW1xn-rPOMzp8DVQAPPhdKDmRLppY-M1_nZcuZdrErEOtUKUtCR3dkzLOjrMo6yy_KAqrj-3vwXkyBxBlNykRRHU-a8wR4bsGuchhAnPYqCDVaDWHZbr-z-hkJbiwALjYDv3_arvsicE2oZoBiu-hu1LkyCdSDK7TI13IHsl3hdZJoLvw8pF9XncZkoO1fJI9ckzmBl1bmljYXN0LnVuY2Vuc29yZWRkbnMub3JnCi9kbnMtcXVlcnk
 sdns://AgcAAAAAAAAAAAANanAudGlhcmFwLm9yZwovZG5zLXF1ZXJ5
+sdns://AgcAAAAAAAAAAAAVaHR0cHM6Ly96ZXJvLmRuczAuZXUvCi9kbnMtcXVlcnk
 sdns://AgcAAAAAAAAAACCaOjT3J965vKUQA9nOnDn48n3ZxSQpAcK6saROY1oCGQ5kbnMubmV4dGRucy5pbw8vZG5zY3J5cHQtcHJveHk
 sdns://AgcAAAAAAAAAACCaOjT3J965vKUQA9nOnDn48n3ZxSQpAcK6saROY1oCGQxvcGVuLmRuczAuZXUKL2Rucy1xdWVyeQ
 sdns://AgcAAAAAAAAAACD6FZeNKdZtjheTM0R4As184g4uTh98W5hVNgufwCLevgxkbnMudHduaWMudHcKL2Rucy1xdWVyeQ
@@ -1378,6 +1379,7 @@ sdns://AgcAAAAAAAAAJVsyMDAxOjE5ZjA6NTozYmQ3OjU0MDA6NGZmOmZlMDU6ZGE4M10gmjo09yfeu
 sdns://AgcAAAAAAAAAKFsyMDAxOjE5ZjA6YjQwMDoxZDhjOjU0MDA6NGZmOmZlMTE6YjE1YV0gmjo09yfeubylEAPZzpw5-PJ92cUkKQHCurGkTmNaAhkUaGVsaW9zLnBsYW45LWRucy5jb20KL2Rucy1xdWVyeQ
 sdns://AwAAAAAAAAAAAAAPYWRhLm9wZW5ibGQubmV0
 sdns://AwAAAAAAAAAAAAAPcmljLm9wZW5ibGQubmV0
+sdns://AwcAAAAAAAAAAAASdGxzOi8vemVyby5kbnMwLmV1
 tcp://1.0.0.1
 tcp://1.0.0.2
 tcp://1.0.0.3
@@ -1451,11 +1453,13 @@ tcp://185.228.168.9
 tcp://185.228.169.11
 tcp://185.228.169.168
 tcp://185.228.169.9
+tcp://185.253.5.0
 tcp://185.43.135.1
 tcp://185.49.141.37
 tcp://185.71.138.138
 tcp://185.95.218.42
 tcp://185.95.218.43
+tcp://193.110.81.0
 tcp://193.17.47.1
 tcp://193.58.251.251
 tcp://194.169.169.169
@@ -1589,11 +1593,14 @@ tls://common.dot.dns.yandex.net
 tls://dandelionsprout.asuscomm.com:853
 tls://dart.kpsn.org
 tls://dns-dot.dnsforfamily.com
+tls://dns-family.adguard.com
 tls://dns-tls.bitwiseshift.net
 tls://dns-tls.qis.io
+tls://dns-unfiltered.adguard.com
 tls://dns.18bit.cn
 tls://dns.aa.net.uk
 tls://dns.adguard-dns.com
+tls://dns.adguard.com
 tls://dns.akbxr.com
 tls://dns.alidns.com
 tls://dns.anon.no
@@ -1625,7 +1632,6 @@ tls://dns.decloudus.com
 tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
-tls://dns.dns-53.us
 tls://dns.dnsguard.pub
 tls://dns.dnshome.de
 tls://dns.dremaxx.de
@@ -1634,6 +1640,7 @@ tls://dns.elemental.software
 tls://dns.eliv.kr
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
+tls://dns.fdn
 tls://dns.floriantinney.de
 tls://dns.froth.zone
 tls://dns.girino.org
@@ -1798,10 +1805,12 @@ tls://sky.rethinkdns.com
 tls://sunnygyl.com
 tls://unfiltered.adguard-dns.com
 tls://unfiltered.dns.bebasid.com:853
+tls://unfiltered.joindns4.eu
 tls://unicast.censurfridns.dk
 tls://wikimedia-dns.org
 tls://yarp.lefolgoc.net
 tls://zdn.ro
+tls://zero.dns0.eu
 udp://1.0.0.1
 udp://1.0.0.2
 udp://1.0.0.3
@@ -1875,11 +1884,13 @@ udp://185.228.168.9
 udp://185.228.169.11
 udp://185.228.169.168
 udp://185.228.169.9
+udp://185.253.5.0
 udp://185.43.135.1
 udp://185.49.141.37
 udp://185.71.138.138
 udp://185.95.218.42
 udp://185.95.218.43
+udp://193.110.81.0
 udp://193.17.47.1
 udp://193.58.251.251
 udp://194.169.169.169

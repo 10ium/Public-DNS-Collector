@@ -8,7 +8,6 @@ quic://dns.alidns.com
 quic://dns.anon.no
 quic://dns.bitservices.io
 quic://dns.chunghwamc.com
-quic://dns.dns-53.us
 quic://dns.dnsguard.pub
 quic://dns.dnshome.de
 quic://dns.dynx.pro

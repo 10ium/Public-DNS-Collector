@@ -14,7 +14,6 @@ https://adfreedns.top/dns-query
 https://adg.geili.me/dns-query
 https://adg.khon.dev/dns-query
 https://adguard-kartoffel.zernico.de/dns-query
-https://adguard.kasbot.net/dns-query
 https://adguard.meddy94.de/dns-query
 https://adguard.shoupperuser.com/dns-query
 https://adl.adfilter.net/dns-query
@@ -67,6 +66,7 @@ https://de01.dns4me.net
 https://dns-doh.dnsforfamily.com/dns-query
 https://dns-family.adguard.com/dns-query
 https://dns-nyc.aaflalo.me/dns-query
+https://dns-unfiltered.adguard.com/dns-query
 https://dns-weblock.wevpn.com/dns-query
 https://dns.a47.me/dns-query
 https://dns.aa.net.uk/dns-query
@@ -111,7 +111,6 @@ https://dns.decloudus.com/dns-query
 https://dns.dev-umbrellagov.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.digitalsize.net/dns-query
-https://dns.dns-53.us/dns-query
 https://dns.dns-over-https.com/dns-query
 https://dns.dnsguard.pub/dns-query
 https://dns.dnshome.de/dns-query
@@ -293,6 +292,7 @@ https://doh.opendns.com/dns-query
 https://doh.pl.ahadns.net/dns-query
 https://doh.post-factum.tk/dns-query
 https://doh.powerdns.org
+https://doh.pub/dns-query
 https://doh.qis.io/dns-query
 https://doh.sandbox.opendns.com/dns-query
 https://doh.seby.io/dns-query
@@ -375,7 +375,6 @@ https://internetsehat.bebasid.com/dns-query
 https://ist01.dnscry.pt/dns-query
 https://japan.dnsovertor.cc/dns-query
 https://jit.ddns.net/dns-query
-https://jp-to.foxyfy.net/dns-query
 https://jp.tiar.app/dns-query
 https://jp.tiarap.org/dns-query
 https://kaitain.restena.lu/dns-query
@@ -514,3 +513,4 @@ https://yvr01.dnscry.pt/dns-query
 https://yyc01.dnscry.pt/dns-query
 https://yyz01.dnscry.pt/dns-query
 https://zdn.ro/dns-query
+https://zero.dns0.eu/
