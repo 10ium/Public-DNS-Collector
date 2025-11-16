@@ -25,7 +25,6 @@ quic://dns.luma-medien.com
 quic://dns.mateo.ovh
 quic://dns.nextdns.io
 quic://dns.petqa.ru
-quic://dns.reitmeier.me
 quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.skrep.eu
@@ -46,4 +45,3 @@ quic://router.comss.one
 quic://rx.techomespace.com
 quic://unfiltered.adguard-dns.com
 quic://zdn.ro
-quic://zero.dns0.eu

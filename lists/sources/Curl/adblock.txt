@@ -42,7 +42,6 @@ https://dns.glf.wtf/dns-query
 https://dns.haka.se/dns-query
 https://dns.inforlogia.com/dns-query
 https://dns.kapite.in/dns-query
-https://dns.kebree.fr/dns-query
 https://dns.koala.us.to/dns-query
 https://dns.kosan.moe/dns-query
 https://dns.l337.site/dns-query
@@ -59,7 +58,6 @@ https://dns.paesa.es/dns-query
 https://dns.petqa.ru/dns-query
 https://dns.quiet.rocks/dns-query
 https://dns.redhosting.com.ar/dns-query
-https://dns.reitmeier.me/dns-query
 https://dns.retakecs.com/dns-query
 https://dns.roedel.cloud/dns-query
 https://dns.silen.org/dns-query
@@ -73,7 +71,6 @@ https://dns.tipsy.coffee/dns-query
 https://dns.unx.io/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
-https://dns1.serdcebolit.ru/dns-query
 https://dnsvps.familiamv.net/dns-query
 https://dog.dns.qwer.pw/dns-query
 https://doh-own-recursion.nicolas-dorriere.fr/dns-query
@@ -134,7 +131,6 @@ quic://dns.l337.site
 quic://dns.luma-medien.com
 quic://dns.mateo.ovh
 quic://dns.petqa.ru
-quic://dns.reitmeier.me
 quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.skrep.eu
@@ -172,7 +168,6 @@ tls://dns.girino.org
 tls://dns.glf.wtf
 tls://dns.inforlogia.com
 tls://dns.kapite.in
-tls://dns.kebree.fr
 tls://dns.koala.us.to
 tls://dns.l337.site
 tls://dns.luma-medien.com
@@ -185,7 +180,6 @@ tls://dns.ofdoom.net
 tls://dns.petqa.ru
 tls://dns.quiet.rocks
 tls://dns.redhosting.com.ar
-tls://dns.reitmeier.me
 tls://dns.retakecs.com
 tls://dns.roedel.cloud
 tls://dns.skrep.eu
@@ -195,7 +189,6 @@ tls://dns.technologycage.com
 tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.yuu-g.net
-tls://dns1.serdcebolit.ru
 tls://dnsvps.familiamv.net
 tls://dog.dns.qwer.pw
 tls://doh.archuser.org

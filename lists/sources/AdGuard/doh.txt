@@ -102,4 +102,3 @@ https://unfiltered.adguard-dns.com/dns-query
 https://unfiltered.joindns4.eu/dns-query
 https://v.recipes/dns-query
 https://wikimedia-dns.org/dns-query
-https://zero.dns0.eu/

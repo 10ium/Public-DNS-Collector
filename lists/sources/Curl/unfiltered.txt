@@ -52,7 +52,6 @@ https://dns.froth.zone/dns-query
 https://dns.gamban.com/dns-query
 https://dns.google/dns-query
 https://dns.guard.io/dns-query
-https://dns.hoody.com/dns-query
 https://dns.kernel-error.de/dns-query
 https://dns.kescher.at/dns-query
 https://dns.liberador.net
@@ -71,7 +70,6 @@ https://dns.startupstack.tech/dns-query
 https://dns.stirringphoto.com/dns-query
 https://dns.stormycloud.org/dns-query
 https://dns.surfsharkdns.com/dns-query
-https://dns.svoi.dev/dns-query
 https://dns.t53.de/dns-query
 https://dns.telekom.de/dns-query
 https://dns.tls-data.de/dns-query
@@ -94,7 +92,6 @@ https://doh.disconnect.app/dns-query
 https://doh.dns.sb/dns-query
 https://doh.dns4all.eu/dns-query
 https://doh.ffmuc.net/dns-query
-https://doh.kidzonet.io/dns-query
 https://doh.lacontrevoie.fr/dns-query
 https://doh.li/dns-query
 https://doh.libredns.gr/dns-query
@@ -134,7 +131,6 @@ https://las01.dnscry.pt/dns-query
 https://lifeisa.live/dns-query
 https://loadlow.me/dns-query
 https://lon01.dnscry.pt/dns-query
-https://mabuktogel.directory/dns-query
 https://mad01.dnscry.pt/dns-query
 https://masters-of-cloud.de/dns-query
 https://mil01.dnscry.pt/dns-query
@@ -162,7 +158,6 @@ https://resolver.dnsprivacy.org.uk/dns-query
 https://resolver.sunet.se/dns-query
 https://resolver1.absolight.net/dns-query
 https://resolver2.absolight.net/dns-query
-https://resolver3.absolight.net/dns-query
 https://revelio.top/dns-query
 https://rfree1.blue-shield.at/dns-query
 https://rfree2.blue-shield.at/dns-query
@@ -237,7 +232,6 @@ tls://dns.elemental.software
 tls://dns.floriantinney.de
 tls://dns.froth.zone
 tls://dns.google
-tls://dns.hoody.com
 tls://dns.kernel-error.de
 tls://dns.kescher.at
 tls://dns.liberador.net

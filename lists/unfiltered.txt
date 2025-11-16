@@ -76,7 +76,6 @@ https://dns.foxyfy.net/dns-query
 https://dns.froth.zone/dns-query
 https://dns.gamban.com/dns-query
 https://dns.guard.io/dns-query
-https://dns.hoody.com/dns-query
 https://dns.hostux.net/ads
 https://dns.hostux.net/dns-query
 https://dns.kernel-error.de/dns-query
@@ -96,7 +95,6 @@ https://dns.smartguard.io/dns-query
 https://dns.startupstack.tech/dns-query
 https://dns.stirringphoto.com/dns-query
 https://dns.stormycloud.org/dns-query
-https://dns.svoi.dev/dns-query
 https://dns.t53.de/dns-query
 https://dns.telekom.de/dns-query
 https://dns.tls-data.de/dns-query
@@ -135,7 +133,6 @@ https://doh.dnslify.com/dns-query
 https://doh.eu.dnswarden.com/adblock
 https://doh.eu.dnswarden.com/adultfilter
 https://doh.eu.dnswarden.com/uncensored
-https://doh.kidzonet.io/dns-query
 https://doh.lacontrevoie.fr/dns-query
 https://doh.li/dns-query
 https://doh.libredns.gr/noads
@@ -191,7 +188,6 @@ https://las01.dnscry.pt/dns-query
 https://lifeisa.live/dns-query
 https://loadlow.me/dns-query
 https://lon01.dnscry.pt/dns-query
-https://mabuktogel.directory/dns-query
 https://mad01.dnscry.pt/dns-query
 https://masters-of-cloud.de/dns-query
 https://mil01.dnscry.pt/dns-query
@@ -217,7 +213,6 @@ https://renardbleu.dev/dns-query
 https://resolver.sunet.se/dns-query
 https://resolver1.absolight.net/dns-query
 https://resolver2.absolight.net/dns-query
-https://resolver3.absolight.net/dns-query
 https://rethinkdns.com/configure
 https://revelio.top/dns-query
 https://rfree1.blue-shield.at/dns-query
@@ -528,6 +523,7 @@ sdns://AQcAAAAAAAAAEzE0OS4yOC4xMDEuMTE5Ojg0NDMgVaFV4a8StIfx8fnCxDxVlxppqm-hJYyCK
 sdns://AQcAAAAAAAAAEzE1My4xMjcuMTYuMjM1OjUzNTMgZOO-8ssZk3pyPBipr0JNdsRFG_AWDnOBF3eKrk7Evj0hMi5kbnNjcnlwdC1jZXJ0LmpwMi52ci5la2luYW8uY29t
 sdns://AQcAAAAAAAAAEzE4NS42Ni4xNDMuMTc4OjUzNTMg-Y2MQmGOXiggAEKulN-ITGEn_Kj3TIP1UK1X2wh3o7wXMi5kbnNjcnlwdC1jZXJ0LnNlcmJpY2E
 sdns://AQcAAAAAAAAAEzE4NS4xMTEuMTg4LjQ2Ojg0NDMgC-tbTwd-08e_JtBJmgsvjAG9i10itE-LBNCwjTflezQiMi5kbnNjcnlwdC1jZXJ0LmRuc2NyeXB0LmNhLTEtaXB2NA
+sdns://AQcAAAAAAAAAEzE4NS4xOTUuMjM2LjE2OjU0NDMgL5FKFwxJ_35yPTqBA_GxELJMhgzr8RCbThTPXO_0OgEYMi5kbnNjcnlwdC1jZXJ0LnNlYXJ4LWNj
 sdns://AQcAAAAAAAAAEzIxNi4yMzguODAuMjE5Ojg0NDMgKmPCui35rtOj9yk7c07sEtC_Khyo_9_HcpO23GCroNskMi5kbnNjcnlwdC1jZXJ0LmhlbGlvcy5wbGFuOS1kbnMuY29t
 sdns://AQcAAAAAAAAAF1syMDAxOjFiNDA6NTAwMDphMjo6NTNdIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
 sdns://AQcAAAAAAAAAF1syMDAxOjQ3MDoxZjI5OjIwNDo6NTNdIDEzcq1ZVjLCQWuHLwmPhRvduWUoTGy-mk8ZCWQw26laHjIuZG5zY3J5cHQtY2VydC5jcnlwdG9zdG9ybS5pcw
@@ -649,6 +645,7 @@ sdns://AQcAAAAAAAAAGVsyYzBmOmVmMTg6OWZmZjoxOmJmZjo6YV0gl5gSCbDT-YddaU5UmF50enEt6
 sdns://AQcAAAAAAAAAGVsyYzBmOmYwMzA6MTAwMDoyMzM6OjI0NV0gk0LrGH5kLM_YBbbYBPP97pehHsBb1_gA4FWKzHhGv6MZMi5kbnNjcnlwdC1jZXJ0LmRuc2NyeS5wdA
 sdns://AQcAAAAAAAAAGlsyNjA2OjY2ODA6NDU6MTo6Zjc4Yzo5YjBdIKwIUHoSQwl1ktD4iWwFu2O1KVqwJ-xPHtDq7Rs4jw7AGTIuZG5zY3J5cHQtY2VydC5kbnNjcnkucHQ
 sdns://AQcAAAAAAAAAGlsyYTA2OmU4ODE6NzAwMDo6Yjg1Mzo0OTVdIM3cVPGKJ3KsfAsDGsEDpItjlU2H7A9I0igL0qYzpoqjGTIuZG5zY3J5cHQtY2VydC5kbnNjcnkucHQ
+sdns://AQcAAAAAAAAAGlsyYTA5OmIyODA6ZmUwMTplOjphXTo1NDQzIC-RShcMSf9-cj06gQPxsRCyTIYM6_EQm04Uz1zv9DoBGDIuZG5zY3J5cHQtY2VydC5zZWFyeC1jYw
 sdns://AQcAAAAAAAAAGlsyYTAzOmIwYzA6MTplMDo6NDg3OjEwMDFdIAHTDugOIE3aGHHToQ8oUVRnZb8UtNpEBKT_BG19qWg8GzIuZG5zY3J5cHQtY2VydC5kbnNjcnlwdC51aw
 sdns://AQcAAAAAAAAAGlsyYTBjOjhmYzA6MTc0OTo2NjoxODo6MTZdIELQu7u_TRhDtjBrHLEVkCcCWcvJr7w8HNYKWP1YxH9iGTIuZG5zY3J5cHQtY2VydC5kbnNjcnkucHQ
 sdns://AQcAAAAAAAAAGlsyYTEyOmUzNDA6MzAwOjoxNzY4OmE5NWZdIPJzhjdxZyM26tndoRa3Wn6BzROxmvxxTEWO0Kd-ffu8GTIuZG5zY3J5cHQtY2VydC5kbnNjcnkucHQ
@@ -879,7 +876,6 @@ tls://dns.elemental.software
 tls://dns.fdn
 tls://dns.floriantinney.de
 tls://dns.froth.zone
-tls://dns.hoody.com
 tls://dns.kernel-error.de
 tls://dns.kescher.at
 tls://dns.liberador.net

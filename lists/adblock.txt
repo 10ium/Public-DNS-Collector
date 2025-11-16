@@ -100,7 +100,6 @@ https://dns.haka.se/dns-query
 https://dns.inforlogia.com/dns-query
 https://dns.jupitrdns.com/dns-query
 https://dns.kapite.in/dns-query
-https://dns.kebree.fr/dns-query
 https://dns.koala.us.to/dns-query
 https://dns.kosan.moe/dns-query
 https://dns.l337.site/dns-query
@@ -119,7 +118,6 @@ https://dns.petqa.ru/dns-query
 https://dns.pub/dns-query
 https://dns.quiet.rocks/dns-query
 https://dns.redhosting.com.ar/dns-query
-https://dns.reitmeier.me/dns-query
 https://dns.retakecs.com/dns-query
 https://dns.roedel.cloud/dns-query
 https://dns.silen.org/dns-query
@@ -135,7 +133,6 @@ https://dns.tipsy.coffee/dns-query
 https://dns.unx.io/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
-https://dns1.serdcebolit.ru/dns-query
 https://dnsforge.de/dns-query
 https://dnsvps.familiamv.net/dns-query
 https://dog.dns.qwer.pw/dns-query
@@ -211,7 +208,6 @@ https://v.recipes/dns-ecs
 https://v.recipes/dns-query
 https://wikimedia-dns.org/dns-query
 https://zdn.ro/dns-query
-https://zero.dns0.eu/
 quic://adblock.krctech.dev
 quic://adfreedns.top
 quic://agh.dshubham.xyz
@@ -232,7 +228,6 @@ quic://dns.l337.site
 quic://dns.luma-medien.com
 quic://dns.mateo.ovh
 quic://dns.petqa.ru
-quic://dns.reitmeier.me
 quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.skrep.eu
@@ -246,7 +241,6 @@ quic://nsec.arnor.org
 quic://privacy.plumedns.com
 quic://rx.techomespace.com
 quic://zdn.ro
-quic://zero.dns0.eu
 sdns://AQAAAAAAAAAACjguMjAuMjQ3LjIg0sJUqpYcHsoXmZb1X7yAHwg2xyN5q1J-zaiGG-Dgs7AoMi5kbnNjcnlwdC1jZXJ0LnNoaWVsZC0yLmRuc2J5Y29tb2RvLmNvbQ
 sdns://AQAAAAAAAAAADzE4MC4xMzEuMTQ0LjE0NCDGC-b_38Dj4-ikI477AO1GXcLPfETOFpE36KZIHdOzLhkyLmRuc2NyeXB0LWNlcnQubmF3YWxhLmlk
 sdns://AQIAAAAAAAAADjk0LjEzMC4xODAuMjI1ILtn1Ada3rLi6VNcj4pB-I5eHBqFzFbs_XFRHG-6KenTEGRuc2ZvcmZhbWlseS5jb20
@@ -280,8 +274,6 @@ sdns://AgMAAAAAAAAAGFsyNDA0Ojk0MDA6NDFhOTo0ODAwOjoxXaD39a8ogB6HfX3zor4o_hSfMnSn7
 sdns://AgMAAAAAAAAAGFsyYTAxOjRmODoxNDE6MzE2ZDo6MTE3XaD39a8ogB6HfX3zor4o_hSfMnSn7SnxNv1QPOOYy6gLDaD1dX14bxc_arUxl-ycIpCKwG0q5Oqipbb1jrvwA5eh36CzXgWVDPvYJZ-TdboQGHC4w8TA7FpSl1fmMWfp3iap6KDs8GIL_DDURN71d63GXDdQWnO6LS_Z5v9Bw-060NZaD6Ci4ydDY3bY52QFq-n-yIy0HeLU0DUNToKSpTEYxLjfW6CQeNIaVsDgiR2QYiG2mSMxvdFxcusPM92gfVxlxuFMOaDWrXBNNBdOEgjJUqqrmDXrHAZrDc2jtNrUD0UT6OGCWqCyXy82ln9zlPCZN4hbMz-qNW1xn-rPOMzp8DVQAPPhdKDmRLppY-M1_nZcuZdrErEOtUKUtCR3dkzLOjrMo6yy_KAqrj-3vwXkyBxBlNykRRHU-a8wR4bsGuchhAnPYqCDVaDWHZbr-z-hkJbiwALjYDv3_arvsicE2oZoBiu-hu1LkyCdSDK7TI13IHsl3hdZJoLvw8pF9XncZkoO1fJI9ckzmAtkbnNmb3JnZS5kZQovZG5zLXF1ZXJ5
 sdns://AgMAAAAAAAAAGFsyYTAxOjRmODoxNTE6MzRhYTo6MTk4XaD39a8ogB6HfX3zor4o_hSfMnSn7SnxNv1QPOOYy6gLDaD1dX14bxc_arUxl-ycIpCKwG0q5Oqipbb1jrvwA5eh36CzXgWVDPvYJZ-TdboQGHC4w8TA7FpSl1fmMWfp3iap6KDs8GIL_DDURN71d63GXDdQWnO6LS_Z5v9Bw-060NZaD6Ci4ydDY3bY52QFq-n-yIy0HeLU0DUNToKSpTEYxLjfW6CQeNIaVsDgiR2QYiG2mSMxvdFxcusPM92gfVxlxuFMOaDWrXBNNBdOEgjJUqqrmDXrHAZrDc2jtNrUD0UT6OGCWqCyXy82ln9zlPCZN4hbMz-qNW1xn-rPOMzp8DVQAPPhdKDmRLppY-M1_nZcuZdrErEOtUKUtCR3dkzLOjrMo6yy_KAqrj-3vwXkyBxBlNykRRHU-a8wR4bsGuchhAnPYqCDVaDWHZbr-z-hkJbiwALjYDv3_arvsicE2oZoBiu-hu1LkyCdSDK7TI13IHsl3hdZJoLvw8pF9XncZkoO1fJI9ckzmAtkbnNmb3JnZS5kZQovZG5zLXF1ZXJ5
 sdns://AgMAAAAAAAAAHlsyNDAwOmM0MDE6OjUwNTQ6ZmY6ZmUxYjpiMDM2XaD39a8ogB6HfX3zor4o_hSfMnSn7SnxNv1QPOOYy6gLDaD1dX14bxc_arUxl-ycIpCKwG0q5Oqipbb1jrvwA5eh36CzXgWVDPvYJZ-TdboQGHC4w8TA7FpSl1fmMWfp3iap6KDs8GIL_DDURN71d63GXDdQWnO6LS_Z5v9Bw-060NZaD6Ci4ydDY3bY52QFq-n-yIy0HeLU0DUNToKSpTEYxLjfW6CQeNIaVsDgiR2QYiG2mSMxvdFxcusPM92gfVxlxuFMOaDWrXBNNBdOEgjJUqqrmDXrHAZrDc2jtNrUD0UT6OGCWqCyXy82ln9zlPCZN4hbMz-qNW1xn-rPOMzp8DVQAPPhdKDmRLppY-M1_nZcuZdrErEOtUKUtCR3dkzLOjrMo6yy_KAqrj-3vwXkyBxBlNykRRHU-a8wR4bsGuchhAnPYqCDVaDWHZbr-z-hkJbiwALjYDv3_arvsicE2oZoBiu-hu1LkyCdSDK7TI13IHsl3hdZJoLvw8pF9XncZkoO1fJI9ckzmBBhZGwuYWRmaWx0ZXIubmV0Ci9kbnMtcXVlcnk
-sdns://AgcAAAAAAAAAAAAVaHR0cHM6Ly96ZXJvLmRuczAuZXUvCi9kbnMtcXVlcnk
-sdns://AwcAAAAAAAAAAAASdGxzOi8vemVyby5kbnMwLmV1
 tcp://101.101.101.101
 tcp://101.102.103.104
 tcp://101.226.4.6
@@ -307,12 +299,10 @@ tcp://180.184.1.1
 tcp://180.184.2.2
 tcp://185.121.177.177
 tcp://185.222.222.222
-tcp://185.253.5.0
 tcp://185.43.135.1
 tcp://185.71.138.138
 tcp://185.95.218.42
 tcp://185.95.218.43
-tcp://193.110.81.0
 tcp://193.17.47.1
 tcp://193.58.251.251
 tcp://194.169.169.169
@@ -404,7 +394,6 @@ tls://dns.google
 tls://dns.inforlogia.com
 tls://dns.jupitrdns.com
 tls://dns.kapite.in
-tls://dns.kebree.fr
 tls://dns.koala.us.to
 tls://dns.l337.site
 tls://dns.luma-medien.com
@@ -418,7 +407,6 @@ tls://dns.ofdoom.net
 tls://dns.petqa.ru
 tls://dns.quiet.rocks
 tls://dns.redhosting.com.ar
-tls://dns.reitmeier.me
 tls://dns.retakecs.com
 tls://dns.roedel.cloud
 tls://dns.skrep.eu
@@ -430,7 +418,6 @@ tls://dns.technologycage.com
 tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.yuu-g.net
-tls://dns1.serdcebolit.ru
 tls://dnsforge.de
 tls://dnsvps.familiamv.net
 tls://dog.dns.qwer.pw
@@ -467,7 +454,6 @@ tls://resolver-eu.lelux.fi
 tls://resolver.dnsprivacy.org.uk
 tls://sunnygyl.com
 tls://zdn.ro
-tls://zero.dns0.eu
 udp://101.101.101.101
 udp://101.102.103.104
 udp://101.226.4.6
@@ -493,12 +479,10 @@ udp://180.184.1.1
 udp://180.184.2.2
 udp://185.121.177.177
 udp://185.222.222.222
-udp://185.253.5.0
 udp://185.43.135.1
 udp://185.71.138.138
 udp://185.95.218.42
 udp://185.95.218.43
-udp://193.110.81.0
 udp://193.17.47.1
 udp://193.58.251.251
 udp://194.169.169.169

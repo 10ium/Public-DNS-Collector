@@ -21,7 +21,6 @@ quic://dns.luma-medien.com
 quic://dns.mateo.ovh
 quic://dns.nextdns.io
 quic://dns.petqa.ru
-quic://dns.reitmeier.me
 quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.skrep.eu

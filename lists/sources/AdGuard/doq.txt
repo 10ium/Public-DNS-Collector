@@ -13,4 +13,3 @@ quic://ibksturm.synology.me
 quic://router.comss.one
 quic://rx.techomespace.com
 quic://unfiltered.adguard-dns.com
-quic://zero.dns0.eu

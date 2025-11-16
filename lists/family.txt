@@ -31,7 +31,6 @@ https://dns.ningkelle.id/dns-query
 https://dns.rabbitdns.org/dns-query
 https://dns.sheggi.ch/dns-query
 https://dns.switch.ch/dns-query
-https://dns1.serdcebolit.ru/dns-query
 https://dns64.cloudflare-dns.com/dns-query
 https://doh.cleanbrowsing.org/doh/adult-filter/
 https://doh.cleanbrowsing.org/doh/family-filter/
@@ -141,7 +140,6 @@ tls://dns.mullvad.net
 tls://dns.ningkelle.id
 tls://dns.sheggi.ch
 tls://dns.switch.ch
-tls://dns1.serdcebolit.ru
 tls://doh.cleanbrowsing.org
 tls://doh.domreg.lt
 tls://family-adblock.bebasid.com:853

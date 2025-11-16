@@ -136,13 +136,11 @@ https://dns.glf.wtf/dns-query
 https://dns.google/dns-query
 https://dns.guard.io/dns-query
 https://dns.haka.se/dns-query
-https://dns.hoody.com/dns-query
 https://dns.hostux.net/ads
 https://dns.hostux.net/dns-query
 https://dns.inforlogia.com/dns-query
 https://dns.jupitrdns.com/dns-query
 https://dns.kapite.in/dns-query
-https://dns.kebree.fr/dns-query
 https://dns.kernel-error.de/dns-query
 https://dns.kescher.at/dns-query
 https://dns.koala.us.to/dns-query
@@ -178,7 +176,6 @@ https://dns.quiet.rocks/dns-query
 https://dns.rabbitdns.org/dns-query
 https://dns.rbn.gr/dns-query
 https://dns.redhosting.com.ar/dns-query
-https://dns.reitmeier.me/dns-query
 https://dns.retakecs.com/dns-query
 https://dns.roedel.cloud/dns-query
 https://dns.rubyfish.cn/dns-query
@@ -194,7 +191,6 @@ https://dns.stormycloud.org/dns-query
 https://dns.suhaila.dev/dns-query
 https://dns.superstefan.win/dns-query
 https://dns.surfsharkdns.com/dns-query
-https://dns.svoi.dev/dns-query
 https://dns.switch.ch/dns-query
 https://dns.szpadel.ovh/dns-query
 https://dns.t53.de/dns-query
@@ -210,7 +206,6 @@ https://dns.wevpn.com/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
 https://dns1.in-berlin.de/dns-query
-https://dns1.serdcebolit.ru/dns-query
 https://dns10.quad9.net/dns-query
 https://dns11.quad9.net/dns-query
 https://dns12.quad9.net/dns-query
@@ -272,7 +267,6 @@ https://doh.futa.gg/dns-query
 https://doh.in.ahadns.net/dns-query
 https://doh.it.ahadns.net/dns-query
 https://doh.kel.pe
-https://doh.kidzonet.io/dns-query
 https://doh.la.ahadns.net/dns-query
 https://doh.lacontrevoie.fr/dns-query
 https://doh.li/dns-query
@@ -386,7 +380,6 @@ https://lifeisa.live/dns-query
 https://lion.dns.qwer.pw/dns-query
 https://loadlow.me/dns-query
 https://lon01.dnscry.pt/dns-query
-https://mabuktogel.directory/dns-query
 https://mad01.dnscry.pt/dns-query
 https://masters-of-cloud.de/dns-query
 https://mil01.dnscry.pt/dns-query
@@ -433,7 +426,6 @@ https://resolver.dnsprivacy.org.uk/dns-query
 https://resolver.sunet.se/dns-query
 https://resolver1.absolight.net/dns-query
 https://resolver2.absolight.net/dns-query
-https://resolver3.absolight.net/dns-query
 https://rethinkdns.com/configure
 https://revelio.top/dns-query
 https://rfree1.blue-shield.at/dns-query
@@ -513,4 +505,3 @@ https://yvr01.dnscry.pt/dns-query
 https://yyc01.dnscry.pt/dns-query
 https://yyz01.dnscry.pt/dns-query
 https://zdn.ro/dns-query
-https://zero.dns0.eu/

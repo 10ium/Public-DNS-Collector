@@ -80,11 +80,9 @@ tls://dns.froth.zone
 tls://dns.girino.org
 tls://dns.glf.wtf
 tls://dns.google
-tls://dns.hoody.com
 tls://dns.inforlogia.com
 tls://dns.jupitrdns.com
 tls://dns.kapite.in
-tls://dns.kebree.fr
 tls://dns.kernel-error.de
 tls://dns.kescher.at
 tls://dns.koala.us.to
@@ -113,7 +111,6 @@ tls://dns.quad9.net
 tls://dns.quiet.rocks
 tls://dns.rbn.gr
 tls://dns.redhosting.com.ar
-tls://dns.reitmeier.me
 tls://dns.retakecs.com
 tls://dns.roedel.cloud
 tls://dns.seia.io
@@ -135,7 +132,6 @@ tls://dns.unx.io
 tls://dns.w3ctag.org
 tls://dns.yuu-g.net
 tls://dns1.in-berlin.de
-tls://dns1.serdcebolit.ru
 tls://dns10.quad9.net
 tls://dns11.quad9.net
 tls://dnsforge.de
@@ -244,4 +240,3 @@ tls://unicast.censurfridns.dk
 tls://wikimedia-dns.org
 tls://yarp.lefolgoc.net
 tls://zdn.ro
-tls://zero.dns0.eu
