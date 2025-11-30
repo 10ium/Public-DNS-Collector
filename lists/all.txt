@@ -200,7 +200,6 @@ https://de01.dns4me.net
 https://dns-doh.dnsforfamily.com/dns-query
 https://dns-family.adguard.com/dns-query
 https://dns-nyc.aaflalo.me/dns-query
-https://dns-unfiltered.adguard.com/dns-query
 https://dns-weblock.wevpn.com/dns-query
 https://dns.a47.me/dns-query
 https://dns.aa.net.uk/dns-query
@@ -421,7 +420,6 @@ https://doh.opendns.com/dns-query
 https://doh.pl.ahadns.net/dns-query
 https://doh.post-factum.tk/dns-query
 https://doh.powerdns.org
-https://doh.pub/dns-query
 https://doh.qis.io/dns-query
 https://doh.sandbox.opendns.com/dns-query
 https://doh.seby.io/dns-query
@@ -512,7 +510,6 @@ https://kids.ns.nwps.fi/dns-query
 https://kiv01.dnscry.pt/dns-query
 https://kronos.plan9-dns.com/dns-query
 https://las01.dnscry.pt/dns-query
-https://lifeisa.live/dns-query
 https://lion.dns.qwer.pw/dns-query
 https://loadlow.me/dns-query
 https://lon01.dnscry.pt/dns-query
@@ -1580,14 +1577,11 @@ tls://common.dot.dns.yandex.net
 tls://dandelionsprout.asuscomm.com:853
 tls://dart.kpsn.org
 tls://dns-dot.dnsforfamily.com
-tls://dns-family.adguard.com
 tls://dns-tls.bitwiseshift.net
 tls://dns-tls.qis.io
-tls://dns-unfiltered.adguard.com
 tls://dns.18bit.cn
 tls://dns.aa.net.uk
 tls://dns.adguard-dns.com
-tls://dns.adguard.com
 tls://dns.akbxr.com
 tls://dns.alidns.com
 tls://dns.anon.no
@@ -1627,7 +1621,6 @@ tls://dns.elemental.software
 tls://dns.eliv.kr
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
-tls://dns.fdn
 tls://dns.floriantinney.de
 tls://dns.froth.zone
 tls://dns.girino.org
@@ -1788,7 +1781,6 @@ tls://sky.rethinkdns.com
 tls://sunnygyl.com
 tls://unfiltered.adguard-dns.com
 tls://unfiltered.dns.bebasid.com:853
-tls://unfiltered.joindns4.eu
 tls://unicast.censurfridns.dk
 tls://wikimedia-dns.org
 tls://yarp.lefolgoc.net

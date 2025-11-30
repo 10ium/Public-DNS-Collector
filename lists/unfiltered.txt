@@ -20,6 +20,7 @@ https://3dns.eu/dns-query
 https://8888.google/dns-query
 https://abel.waringer-atg.de/dns-query
 https://abn01.dnscry.pt/dns-query
+https://adblock.doh.mullvad.net/dns-query
 https://adg.geili.me/dns-query
 https://adguard-kartoffel.zernico.de/dns-query
 https://anycast.uncensoreddns.org/dns-query
@@ -41,6 +42,8 @@ https://bru01.dnscry.pt/dns-query
 https://bts01.dnscry.pt/dns-query
 https://ca01.dns4me.net
 https://ca02.dns4me.net
+https://child-noads.joindns4.eu/dns-query
+https://child.joindns4.eu/dns-query
 https://chuncheon.dnsovertor.cc/dns-query
 https://clean.dnsforge.de/dns-query
 https://commons.host/
@@ -50,7 +53,6 @@ https://de-d2.foxyfy.net/dns-query
 https://de-f1.foxyfy.net/dns-query
 https://de-fra-dns-001.mullvad.net/dns-query
 https://de01.dns4me.net
-https://dns-unfiltered.adguard.com/dns-query
 https://dns-weblock.wevpn.com/dns-query
 https://dns.a47.me/dns-query
 https://dns.aa.net.uk/dns-query
@@ -137,11 +139,11 @@ https://doh.lacontrevoie.fr/dns-query
 https://doh.li/dns-query
 https://doh.libredns.gr/noads
 https://doh.lv/dns-query
+https://doh.mullvad.net/dns-query
 https://doh.nic.lv/dns-query
 https://doh.niyawe.de/dns-query
 https://doh.post-factum.tk/dns-query
 https://doh.powerdns.org
-https://doh.pub/dns-query
 https://doh.sandbox.opendns.com/dns-query
 https://doh.seby.io/dns-query
 https://doh.this.web.id/dns-query
@@ -185,13 +187,13 @@ https://jp.tiarap.org/dns-query
 https://kiv01.dnscry.pt/dns-query
 https://kronos.plan9-dns.com/dns-query
 https://las01.dnscry.pt/dns-query
-https://lifeisa.live/dns-query
 https://loadlow.me/dns-query
 https://lon01.dnscry.pt/dns-query
 https://mad01.dnscry.pt/dns-query
 https://masters-of-cloud.de/dns-query
 https://mil01.dnscry.pt/dns-query
 https://my.nextdns.io/start
+https://noads.joindns4.eu/dns-query
 https://ns.net.kg/dns-query
 https://ns0.fdn.fr/dns-query
 https://ns1.fdn.fr/dns-query
@@ -206,6 +208,7 @@ https://pepetio.xyz/dns-query
 https://phl01.dnscry.pt/dns-query
 https://phx01.dnscry.pt/dns-query
 https://pluton.plan9-dns.com/dns-query
+https://protective.joindns4.eu/dns-query
 https://rdd01.dnscry.pt/dns-query
 https://rdns.faelix.net/
 https://regiopolis.cloud/dns-query
@@ -860,7 +863,7 @@ tls://abn01.dnscry.pt
 tls://adguard-kartoffel.zernico.de
 tls://anycast.uncensoreddns.org
 tls://ca01.dns4me.net
-tls://dns-unfiltered.adguard.com
+tls://child-noads.joindns4.eu
 tls://dns.aa.net.uk
 tls://dns.bitdefender.net
 tls://dns.blokada.org
@@ -873,7 +876,6 @@ tls://dns.digitalsize.net
 tls://dns.dnshome.de
 tls://dns.dremaxx.de
 tls://dns.elemental.software
-tls://dns.fdn
 tls://dns.floriantinney.de
 tls://dns.froth.zone
 tls://dns.kernel-error.de
@@ -892,7 +894,6 @@ tls://dns.t53.de
 tls://dns.telekom.de
 tls://dns.w3ctag.org
 tls://dns1.in-berlin.de
-tls://dns10.quad9.net
 tls://dnspub.restena.lu
 tls://doh.applied-privacy.net
 tls://doh.dns.sb
@@ -916,7 +917,6 @@ tls://safeservedns.com
 tls://sandbox.opendns.com
 tls://sky.rethinkdns.com
 tls://unfiltered.dns.bebasid.com:853
-tls://unfiltered.joindns4.eu
 tls://wikimedia-dns.org
 tls://yarp.lefolgoc.net
 udp://149.112.121.10

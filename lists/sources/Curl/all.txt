@@ -271,7 +271,6 @@ https://japan.dnsovertor.cc/dns-query
 https://kiv01.dnscry.pt/dns-query
 https://kronos.plan9-dns.com/dns-query
 https://las01.dnscry.pt/dns-query
-https://lifeisa.live/dns-query
 https://lion.dns.qwer.pw/dns-query
 https://loadlow.me/dns-query
 https://lon01.dnscry.pt/dns-query

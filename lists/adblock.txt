@@ -37,7 +37,6 @@
 https://123000123.xyz/dns-query
 https://ada.openbld.net/dns-query
 https://adblock.dns.mullvad.net/dns-query
-https://adblock.doh.mullvad.net/dns-query
 https://adblock.krctech.dev/dns-query
 https://adblock.mydns.network/dns-query
 https://addns1.m-it.ro/dns-query
@@ -54,7 +53,6 @@ https://agh.dshubham.xyz/dns-query
 https://all.dns.mullvad.net/dns-query
 https://au-syd-w-f-1.nashkan.net/dns-query
 https://base.dns.mullvad.net/dns-query
-https://child-noads.joindns4.eu/dns-query
 https://dandelionsprout.asuscomm.com:2501/dns-query
 https://dart.kpsn.org/dns-query
 https://de.adhole.org/dns-query
@@ -150,7 +148,6 @@ https://doh.kel.pe
 https://doh.libredns.gr/ads
 https://doh.libredns.gr/dns-query
 https://doh.mmmalia.com/dns-query
-https://doh.mullvad.net/dns-query
 https://doh.qis.io/dns-query
 https://doh.sz-dns.com/dns-query
 https://doh.tiar.app/dns-query
@@ -169,7 +166,6 @@ https://gb-lon-w-p-2.nashkan.net/dns-query
 https://ibksturm.synology.me/dns-query
 https://kaitain.restena.lu/dns-query
 https://lion.dns.qwer.pw/dns-query
-https://noads.joindns4.eu/dns-query
 https://ns.data.haus/dns-query
 https://ns2.4netguides.org/dns-query
 https://nsec.arnor.org/dns-query
@@ -358,14 +354,12 @@ tls://ag.apollohct.com
 tls://agh.dshubham.xyz
 tls://all.dns.mullvad.net
 tls://base.dns.mullvad.net
-tls://child-noads.joindns4.eu
 tls://dandelionsprout.asuscomm.com:853
 tls://dart.kpsn.org
 tls://dns-dot.dnsforfamily.com
 tls://dns-tls.qis.io
 tls://dns.18bit.cn
 tls://dns.adguard-dns.com
-tls://dns.adguard.com
 tls://dns.akbxr.com
 tls://dns.alidns.com
 tls://dns.anon.no
@@ -437,7 +431,6 @@ tls://frd4wvnobp.cloudflare-gateway.com
 tls://freedom.mydns.network
 tls://ibksturm.synology.me
 tls://kaitain.restena.lu
-tls://noads.joindns4.eu
 tls://ns.data.haus
 tls://ns2.4netguides.org
 tls://nsec.arnor.org
