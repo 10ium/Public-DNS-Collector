@@ -71,6 +71,7 @@ https://dns.tipsy.coffee/dns-query
 https://dns.unx.io/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
+https://dnsdoh.art/dns-query
 https://dnsvps.familiamv.net/dns-query
 https://dog.dns.qwer.pw/dns-query
 https://doh-own-recursion.nicolas-dorriere.fr/dns-query
@@ -94,7 +95,6 @@ https://lion.dns.qwer.pw/dns-query
 https://ns.data.haus/dns-query
 https://ns2.4netguides.org/dns-query
 https://nsec.arnor.org/dns-query
-https://ntwrkh.pro/dns-query
 https://paranoia.mydns.network/dns-query
 https://per.adfilter.net/dns-query
 https://pihole.aws.ketan.dev/dns-query
@@ -111,8 +111,6 @@ https://us-jac-w-f-1.nashkan.net/dns-query
 https://us-jac-w-p-1.nashkan.net/dns-query
 https://us-kan-w-p-1.nashkan.net/dns-query
 https://us-nyc-w-p-1.nashkan.net/dns-query
-https://us-saj-w-f-1.nashkan.net/dns-query
-https://us-saj-w-p-1.nashkan.net/dns-query
 https://v.recipes/dns-adblock
 https://v.recipes/dns-ecs
 https://v.recipes/dns-query
@@ -135,6 +133,7 @@ quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.skrep.eu
 quic://dns.yuu-g.net
+quic://dnsdoh.art
 quic://dog.dns.qwer.pw
 quic://doh.sz-dns.com
 quic://nsec.arnor.org
@@ -189,6 +188,7 @@ tls://dns.technologycage.com
 tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.yuu-g.net
+tls://dnsdoh.art
 tls://dnsvps.familiamv.net
 tls://dog.dns.qwer.pw
 tls://doh.archuser.org
@@ -199,7 +199,6 @@ tls://freedom.mydns.network
 tls://ns.data.haus
 tls://ns2.4netguides.org
 tls://nsec.arnor.org
-tls://ntwrkh.pro
 tls://per.adfilter.net
 tls://pihole.aws.ketan.dev
 tls://privacy.plumedns.com

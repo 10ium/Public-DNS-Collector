@@ -3,7 +3,6 @@ https://8888.google/dns-query
 https://abel.waringer-atg.de/dns-query
 https://abn01.dnscry.pt/dns-query
 https://adg.geili.me/dns-query
-https://adguard-kartoffel.zernico.de/dns-query
 https://anycast.uncensoreddns.org/dns-query
 https://arashi.net.eu.org/dns-query
 https://ath01.dnscry.pt/dns-query
@@ -42,7 +41,6 @@ https://dns.csswg.org/dns-query
 https://dns.dev-umbrellagov.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.digitalsize.net/dns-query
-https://dns.dnsguard.pub/dns-query
 https://dns.dnshome.de/dns-query
 https://dns.dremaxx.de/dns-query
 https://dns.elemental.software/dns-query
@@ -125,6 +123,7 @@ https://ie01.dns4me.net
 https://imperio.top/dns-query
 https://ist01.dnscry.pt/dns-query
 https://japan.dnsovertor.cc/dns-query
+https://juuri.hagezi.org/dns-query
 https://kiv01.dnscry.pt/dns-query
 https://kronos.plan9-dns.com/dns-query
 https://las01.dnscry.pt/dns-query
@@ -160,7 +159,7 @@ https://resolver2.absolight.net/dns-query
 https://revelio.top/dns-query
 https://rfree1.blue-shield.at/dns-query
 https://rfree2.blue-shield.at/dns-query
-https://ro-bu.foxyfy.net/dns-query
+https://root.hagezi.org/dns-query
 https://sa01.dns4me.net
 https://safeservedns.com/dns-query
 https://sea01.dnscry.pt/dns-query
@@ -185,13 +184,13 @@ https://trf01.dnscry.pt/dns-query
 https://tsm01.dnscry.pt/dns-query
 https://uk01.dns4me.net
 https://unfiltered.joindns4.eu/dns-query
-https://us-sj.foxyfy.net/dns-query
 https://us01.dns4me.net
 https://us02.dns4me.net
 https://vie01.dnscry.pt/dns-query
 https://vno01.dnscry.pt/dns-query
 https://waw02.dnscry.pt/dns-query
 https://wikimedia-dns.org/dns-query
+https://wurzn.hagezi.org/dns-query
 https://xn--durhre-yxa.de/dns-query
 https://yarp.lefolgoc.net/dns-query
 https://yhz01.dnscry.pt/dns-query
@@ -200,7 +199,6 @@ https://yyc01.dnscry.pt/dns-query
 https://yyz01.dnscry.pt/dns-query
 quic://anycast.uncensoreddns.org
 quic://dns.alidns.com
-quic://dns.dnsguard.pub
 quic://dns.dnshome.de
 quic://dns.froth.zone
 quic://dns.kescher.at
@@ -210,7 +208,6 @@ quic://dnsforge.de
 quic://doh.dns4all.eu
 tls://3dns.eu
 tls://abn01.dnscry.pt
-tls://adguard-kartoffel.zernico.de
 tls://anycast.uncensoreddns.org
 tls://ca01.dns4me.net
 tls://dns.aa.net.uk
@@ -224,7 +221,6 @@ tls://dns.csswg.org
 tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
-tls://dns.dnsguard.pub
 tls://dns.dnshome.de
 tls://dns.dremaxx.de
 tls://dns.elemental.software

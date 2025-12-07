@@ -147,7 +147,6 @@ https://adfree.usableprivacy.net/dns-query
 https://adfreedns.top/dns-query
 https://adg.geili.me/dns-query
 https://adg.khon.dev/dns-query
-https://adguard-kartoffel.zernico.de/dns-query
 https://adguard.meddy94.de/dns-query
 https://adguard.shoupperuser.com/dns-query
 https://adl.adfilter.net/dns-query
@@ -200,6 +199,7 @@ https://de01.dns4me.net
 https://dns-doh.dnsforfamily.com/dns-query
 https://dns-family.adguard.com/dns-query
 https://dns-nyc.aaflalo.me/dns-query
+https://dns-unfiltered.adguard.com/dns-query
 https://dns-weblock.wevpn.com/dns-query
 https://dns.a47.me/dns-query
 https://dns.aa.net.uk/dns-query
@@ -349,6 +349,7 @@ https://dns64.cloudflare-dns.com/dns-query
 https://dns64.dns.google/dns-query
 https://dns9.quad9.net/dns-query
 https://dnscache.e-utp.net/dns-query
+https://dnsdoh.art/dns-query
 https://dnses.alekberg.net/dns-query
 https://dnsforge.de/dns-query
 https://dnslow.me/dns-query
@@ -420,6 +421,7 @@ https://doh.opendns.com/dns-query
 https://doh.pl.ahadns.net/dns-query
 https://doh.post-factum.tk/dns-query
 https://doh.powerdns.org
+https://doh.pub/dns-query
 https://doh.qis.io/dns-query
 https://doh.sandbox.opendns.com/dns-query
 https://doh.seby.io/dns-query
@@ -505,6 +507,7 @@ https://japan.dnsovertor.cc/dns-query
 https://jit.ddns.net/dns-query
 https://jp.tiar.app/dns-query
 https://jp.tiarap.org/dns-query
+https://juuri.hagezi.org/dns-query
 https://kaitain.restena.lu/dns-query
 https://kids.ns.nwps.fi/dns-query
 https://kiv01.dnscry.pt/dns-query
@@ -527,7 +530,6 @@ https://ns1.fdn.fr/dns-query
 https://ns1.opennameserver.org/dns-query
 https://ns2.4netguides.org/dns-query
 https://nsec.arnor.org/dns-query
-https://ntwrkh.pro/dns-query
 https://nue01.dnscry.pt/dns-query
 https://nz01.dns4me.net
 https://odvr.nic.cz/dns-query
@@ -564,8 +566,8 @@ https://revelio.top/dns-query
 https://rfree1.blue-shield.at/dns-query
 https://rfree2.blue-shield.at/dns-query
 https://ric.openbld.net/dns-query
-https://ro-bu.foxyfy.net/dns-query
 https://ro-buc-w-p-1.nashkan.net/dns-query
+https://root.hagezi.org/dns-query
 https://router.comss.one/dns-query
 https://rx.techomespace.com/dns-query
 https://sa01.dns4me.net
@@ -618,9 +620,6 @@ https://us-jac-w-p-1.nashkan.net/dns-query
 https://us-kan-w-p-1.nashkan.net/dns-query
 https://us-nyc-dns-601.mullvad.net/dns-query
 https://us-nyc-w-p-1.nashkan.net/dns-query
-https://us-saj-w-f-1.nashkan.net/dns-query
-https://us-saj-w-p-1.nashkan.net/dns-query
-https://us-sj.foxyfy.net/dns-query
 https://us01.dns4me.net
 https://us02.dns4me.net
 https://us1.dns.lavate.ch/dns-query
@@ -631,6 +630,7 @@ https://vie01.dnscry.pt/dns-query
 https://vno01.dnscry.pt/dns-query
 https://waw02.dnscry.pt/dns-query
 https://wikimedia-dns.org/dns-query
+https://wurzn.hagezi.org/dns-query
 https://xn--durhre-yxa.de/dns-query
 https://yarp.lefolgoc.net/dns-query
 https://yhz01.dnscry.pt/dns-query
@@ -671,6 +671,7 @@ quic://dns.roedel.cloud
 quic://dns.skrep.eu
 quic://dns.surfsharkdns.com
 quic://dns.yuu-g.net
+quic://dnsdoh.art
 quic://dnsforge.de
 quic://dog.dns.qwer.pw
 quic://doh.dns4all.eu
@@ -1557,7 +1558,6 @@ tls://adblock.dns.mullvad.net
 tls://adblock.krctech.dev
 tls://adfree.usableprivacy.net
 tls://adfreedns.top
-tls://adguard-kartoffel.zernico.de
 tls://adguard.meddy94.de
 tls://adguard.shoupperuser.com
 tls://adult-filter-dns.cleanbrowsing.org
@@ -1577,11 +1577,14 @@ tls://common.dot.dns.yandex.net
 tls://dandelionsprout.asuscomm.com:853
 tls://dart.kpsn.org
 tls://dns-dot.dnsforfamily.com
+tls://dns-family.adguard.com
 tls://dns-tls.bitwiseshift.net
 tls://dns-tls.qis.io
+tls://dns-unfiltered.adguard.com
 tls://dns.18bit.cn
 tls://dns.aa.net.uk
 tls://dns.adguard-dns.com
+tls://dns.adguard.com
 tls://dns.akbxr.com
 tls://dns.alidns.com
 tls://dns.anon.no
@@ -1621,6 +1624,7 @@ tls://dns.elemental.software
 tls://dns.eliv.kr
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
+tls://dns.fdn
 tls://dns.floriantinney.de
 tls://dns.froth.zone
 tls://dns.girino.org
@@ -1680,6 +1684,7 @@ tls://dns.yuu-g.net
 tls://dns1.in-berlin.de
 tls://dns10.quad9.net
 tls://dns11.quad9.net
+tls://dnsdoh.art
 tls://dnsforge.de
 tls://dnslow.me
 tls://dnsovertls.sinodun.com
@@ -1746,7 +1751,6 @@ tls://ns1.dnsprivacy.at
 tls://ns2.4netguides.org
 tls://ns2.dnsprivacy.at
 tls://nsec.arnor.org
-tls://ntwrkh.pro
 tls://odvr.nic.cz
 tls://oisd.dns.bebasid.com:853
 tls://one.one.one.one
@@ -1781,6 +1785,7 @@ tls://sky.rethinkdns.com
 tls://sunnygyl.com
 tls://unfiltered.adguard-dns.com
 tls://unfiltered.dns.bebasid.com:853
+tls://unfiltered.joindns4.eu
 tls://unicast.censurfridns.dk
 tls://wikimedia-dns.org
 tls://yarp.lefolgoc.net

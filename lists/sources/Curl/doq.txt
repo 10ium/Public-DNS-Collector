@@ -8,7 +8,6 @@ quic://dns.alidns.com
 quic://dns.anon.no
 quic://dns.bitservices.io
 quic://dns.chunghwamc.com
-quic://dns.dnsguard.pub
 quic://dns.dnshome.de
 quic://dns.dynx.pro
 quic://dns.faked.org
@@ -26,6 +25,7 @@ quic://dns.roedel.cloud
 quic://dns.skrep.eu
 quic://dns.surfsharkdns.com
 quic://dns.yuu-g.net
+quic://dnsdoh.art
 quic://dnsforge.de
 quic://dog.dns.qwer.pw
 quic://doh.dns4all.eu

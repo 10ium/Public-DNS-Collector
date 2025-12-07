@@ -5,7 +5,6 @@ tls://ada.openbld.net
 tls://adblock.krctech.dev
 tls://adfree.usableprivacy.net
 tls://adfreedns.top
-tls://adguard-kartoffel.zernico.de
 tls://adguard.meddy94.de
 tls://adguard.shoupperuser.com
 tls://ag.apollohct.com
@@ -41,7 +40,6 @@ tls://dns.decky.eu
 tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
-tls://dns.dnsguard.pub
 tls://dns.dnshome.de
 tls://dns.dremaxx.de
 tls://dns.dynx.pro
@@ -99,6 +97,7 @@ tls://dns.unx.io
 tls://dns.w3ctag.org
 tls://dns.yuu-g.net
 tls://dns1.in-berlin.de
+tls://dnsdoh.art
 tls://dnsforge.de
 tls://dnslow.me
 tls://dnspub.restena.lu
@@ -129,7 +128,6 @@ tls://ns.data.haus
 tls://ns0.fdn.fr
 tls://ns2.4netguides.org
 tls://nsec.arnor.org
-tls://ntwrkh.pro
 tls://odvr.nic.cz
 tls://per.adfilter.net
 tls://pihole.aws.ketan.dev
