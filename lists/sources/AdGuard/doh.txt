@@ -18,6 +18,7 @@ https://dns.bebasid.com/dns-oisd
 https://dns.bebasid.com/dns-query
 https://dns.bebasid.com/unfiltered
 https://dns.caliph.dev/dns-query
+https://dns.cert.ee/dns-query
 https://dns.cfiec.net/dns-query
 https://dns.cloudflare.com/dns-query
 https://dns.comss.one/dns-query

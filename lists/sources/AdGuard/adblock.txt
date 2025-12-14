@@ -37,6 +37,7 @@ https://dns.alidns.com/dns-query
 https://dns.arapurayil.com/dns-query
 https://dns.bebasid.com/dns-query
 https://dns.caliph.dev/dns-query
+https://dns.cert.ee/dns-query
 https://dns.cfiec.net/dns-query
 https://dns.decloudus.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
@@ -175,6 +176,7 @@ tls://dns.adguard-dns.com
 tls://dns.alidns.com
 tls://dns.bebasid.com:853
 tls://dns.caliph.dev:853
+tls://dns.cert.ee
 tls://dns.cfiec.net
 tls://dns.decloudus.com
 tls://dns.digitale-gesellschaft.ch

@@ -20,6 +20,7 @@ tls://dns.alidns.com
 tls://dns.bebasid.com:853
 tls://dns.bitgeek.in
 tls://dns.caliph.dev:853
+tls://dns.cert.ee
 tls://dns.cfiec.net
 tls://dns.cmrg.net
 tls://dns.comss.one

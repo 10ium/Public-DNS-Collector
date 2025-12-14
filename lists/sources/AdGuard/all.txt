@@ -126,6 +126,7 @@ https://dns.bebasid.com/dns-oisd
 https://dns.bebasid.com/dns-query
 https://dns.bebasid.com/unfiltered
 https://dns.caliph.dev/dns-query
+https://dns.cert.ee/dns-query
 https://dns.cfiec.net/dns-query
 https://dns.cloudflare.com/dns-query
 https://dns.comss.one/dns-query
@@ -463,6 +464,7 @@ tls://dns.alidns.com
 tls://dns.bebasid.com:853
 tls://dns.bitgeek.in
 tls://dns.caliph.dev:853
+tls://dns.cert.ee
 tls://dns.cfiec.net
 tls://dns.cmrg.net
 tls://dns.comss.one

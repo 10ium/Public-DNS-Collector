@@ -23,7 +23,6 @@ https://chuncheon.dnsovertor.cc/dns-query
 https://clean.dnsforge.de/dns-query
 https://cph01.dnscry.pt/dns-query
 https://cvt01.dnscry.pt/dns-query
-https://de-d2.foxyfy.net/dns-query
 https://de-f1.foxyfy.net/dns-query
 https://de01.dns4me.net
 https://dns.a47.me/dns-query
