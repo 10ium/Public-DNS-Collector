@@ -2,7 +2,6 @@ quic://adblock.krctech.dev
 quic://adfreedns.top
 quic://agh.dshubham.xyz
 quic://anycast.uncensoreddns.org
-quic://dart.kpsn.org
 quic://dns.adguard-dns.com
 quic://dns.alidns.com
 quic://dns.anon.no

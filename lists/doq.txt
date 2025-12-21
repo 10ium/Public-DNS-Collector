@@ -3,7 +3,6 @@ quic://adfreedns.top
 quic://agh.dshubham.xyz
 quic://anycast.uncensoreddns.org
 quic://dandelionsprout.asuscomm.com:48582
-quic://dart.kpsn.org
 quic://dns.adguard-dns.com
 quic://dns.alidns.com:853
 quic://dns.anon.no

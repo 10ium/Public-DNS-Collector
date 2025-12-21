@@ -24,7 +24,6 @@ tls://child.joindns4.eu
 tls://cloudflare-dns.com
 tls://common.dot.dns.yandex.net
 tls://dandelionsprout.asuscomm.com:853
-tls://dart.kpsn.org
 tls://dns-dot.dnsforfamily.com
 tls://dns-family.adguard.com
 tls://dns-tls.bitwiseshift.net

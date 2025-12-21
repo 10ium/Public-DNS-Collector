@@ -17,7 +17,6 @@ https://agh.dshubham.xyz/dns-query
 https://all.dns.mullvad.net/dns-query
 https://au-syd-w-f-1.nashkan.net/dns-query
 https://base.dns.mullvad.net/dns-query
-https://dart.kpsn.org/dns-query
 https://dns.akbxr.com/dns-query
 https://dns.anon.no/dns-query
 https://dns.applewebkit.dev/dns-query
@@ -118,7 +117,6 @@ https://zdn.ro/dns-query
 quic://adblock.krctech.dev
 quic://adfreedns.top
 quic://agh.dshubham.xyz
-quic://dart.kpsn.org
 quic://dns.anon.no
 quic://dns.bitservices.io
 quic://dns.chunghwamc.com
@@ -147,7 +145,6 @@ tls://adfreedns.top
 tls://adguard.meddy94.de
 tls://ag.apollohct.com
 tls://agh.dshubham.xyz
-tls://dart.kpsn.org
 tls://dns.akbxr.com
 tls://dns.anon.no
 tls://dns.applewebkit.dev

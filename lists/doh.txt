@@ -56,7 +56,6 @@ https://commons.host/
 https://cph01.dnscry.pt/dns-query
 https://cvt01.dnscry.pt/dns-query
 https://dandelionsprout.asuscomm.com:2501/dns-query
-https://dart.kpsn.org/dns-query
 https://de-f1.foxyfy.net/dns-query
 https://de-fra-dns-001.mullvad.net/dns-query
 https://de.adhole.org/dns-query
@@ -302,7 +301,6 @@ https://doh.xfinity.com/dns-query
 https://doh.zknt.org/dns-query
 https://doth.huque.com/dns-query
 https://draco.plan9-ns2.com/dns-query
-https://droyd.top/dns-query
 https://dub01.dnscry.pt/dns-query
 https://dukun.de/dns-query
 https://es-ma.foxyfy.net/dns-query
@@ -402,7 +400,6 @@ https://ordns.he.net/dns-query
 https://par01.dnscry.pt/dns-query
 https://paranoia.mydns.network/dns-query
 https://pdx01.dnscry.pt/dns-query
-https://pepetio.xyz/dns-query
 https://per.adfilter.net/dns-query
 https://phl01.dnscry.pt/dns-query
 https://phx01.dnscry.pt/dns-query

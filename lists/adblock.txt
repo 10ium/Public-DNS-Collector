@@ -56,7 +56,6 @@ https://au-syd-w-f-1.nashkan.net/dns-query
 https://base.dns.mullvad.net/dns-query
 https://child-noads.joindns4.eu/dns-query
 https://dandelionsprout.asuscomm.com:2501/dns-query
-https://dart.kpsn.org/dns-query
 https://de.adhole.org/dns-query
 https://dns-doh.dnsforfamily.com/dns-query
 https://dns-family.adguard.com/dns-query
@@ -211,7 +210,6 @@ quic://adblock.krctech.dev
 quic://adfreedns.top
 quic://agh.dshubham.xyz
 quic://dandelionsprout.asuscomm.com:48582
-quic://dart.kpsn.org
 quic://dns.adguard-dns.com
 quic://dns.alidns.com:853
 quic://dns.anon.no
@@ -359,7 +357,6 @@ tls://all.dns.mullvad.net
 tls://base.dns.mullvad.net
 tls://child-noads.joindns4.eu
 tls://dandelionsprout.asuscomm.com:853
-tls://dart.kpsn.org
 tls://dns-dot.dnsforfamily.com
 tls://dns-tls.qis.io
 tls://dns.18bit.cn

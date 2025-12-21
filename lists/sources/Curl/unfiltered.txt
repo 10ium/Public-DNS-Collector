@@ -99,7 +99,6 @@ https://doh.niyawe.de/dns-query
 https://doh.seby.io/dns-query
 https://doh.zknt.org/dns-query
 https://doth.huque.com/dns-query
-https://droyd.top/dns-query
 https://dub01.dnscry.pt/dns-query
 https://dukun.de/dns-query
 https://es-ma.foxyfy.net/dns-query
@@ -142,7 +141,6 @@ https://odvr.nic.cz/dns-query
 https://omr01.dnscry.pt/dns-query
 https://par01.dnscry.pt/dns-query
 https://pdx01.dnscry.pt/dns-query
-https://pepetio.xyz/dns-query
 https://phl01.dnscry.pt/dns-query
 https://phx01.dnscry.pt/dns-query
 https://pluton.plan9-dns.com/dns-query
