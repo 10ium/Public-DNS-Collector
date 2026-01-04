@@ -11,7 +11,7 @@
 <br />
 <br />
 
-**آخرین بروزرسانی:** 2025-12-28 03:06:41 UTC
+**آخرین بروزرسانی:** 2026-01-04 03:09:30 UTC
 <br />
 <br />
 
@@ -89,10 +89,10 @@
 
 | نام فایل | تعداد آدرس‌ها | لینک خام |
 | :--- | :---: | :---: |
-| `all.txt` | **10630** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/all.txt) |
-| `ipv4.txt` | **5315** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/ipv4.txt) |
-| `tcp.txt` | **5315** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/tcp.txt) |
-| `udp.txt` | **5315** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/udp.txt) |
+| `all.txt` | **10576** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/all.txt) |
+| `ipv4.txt` | **5288** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/ipv4.txt) |
+| `tcp.txt` | **5288** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/tcp.txt) |
+| `udp.txt` | **5288** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/udp.txt) |
 
 </details>
 
