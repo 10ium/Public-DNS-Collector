@@ -7,7 +7,6 @@ https://bog01.dnscry.pt/dns-query
 https://bom01.dnscry.pt/dns-query
 https://bru01.dnscry.pt/dns-query
 https://bts01.dnscry.pt/dns-query
-https://clean.dnsforge.de/dns-query
 https://cph01.dnscry.pt/dns-query
 https://cvt01.dnscry.pt/dns-query
 https://dns.adguard-dns.com/dns-query
@@ -15,6 +14,7 @@ https://dns.brahma.world/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.digitalsize.net/dns-query
 https://dns.google/dns-query
+https://dns.kernel-error.de/dns-query
 https://dns.kescher.at/dns-query
 https://dns.quad9.net/dns-query
 https://dns.rbn.gr/dns-query
@@ -23,7 +23,6 @@ https://dns11.quad9.net/dns-query
 https://dns12.quad9.net/dns-query
 https://dns64.dns.google/dns-query
 https://dns9.quad9.net/dns-query
-https://dnsforge.de/dns-query
 https://dnspub.restena.lu/dns-query
 https://doh.applied-privacy.net/query
 https://doh.dns.sb/dns-query
@@ -46,7 +45,6 @@ https://gru01.dnscry.pt/dns-query
 https://gva01.dnscry.pt/dns-query
 https://haf01.dnscry.pt/dns-query
 https://han01.dnscry.pt/dns-query
-https://hard.dnsforge.de/dns-query
 https://ibuki.cgnat.net/dns-query
 https://ist01.dnscry.pt/dns-query
 https://kiv01.dnscry.pt/dns-query
@@ -91,8 +89,8 @@ https://yvr01.dnscry.pt/dns-query
 https://yyc01.dnscry.pt/dns-query
 https://yyz01.dnscry.pt/dns-query
 quic://dns.adguard-dns.com
+quic://dns.kernel-error.de
 quic://dns.kescher.at
-quic://dnsforge.de
 quic://nsec.arnor.org
 tls://abn01.dnscry.pt
 tls://dns.adguard-dns.com
@@ -100,10 +98,10 @@ tls://dns.brahma.world
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
 tls://dns.google
+tls://dns.kernel-error.de
 tls://dns.kescher.at
 tls://dns.quad9.net
 tls://dns.rbn.gr
-tls://dnsforge.de
 tls://dnspub.restena.lu
 tls://doh.applied-privacy.net
 tls://doh.dns.sb

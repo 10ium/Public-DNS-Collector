@@ -40,9 +40,9 @@ https://ca02.dns4me.net
 https://child-noads.joindns4.eu/dns-query
 https://child.joindns4.eu/dns-query
 https://chuncheon.dnsovertor.cc/dns-query
-https://clean.dnsforge.de/dns-query
 https://cloudflare-dns.com/dns-query
 https://cph01.dnscry.pt/dns-query
+https://cryptostorm.is/dns-query
 https://cvt01.dnscry.pt/dns-query
 https://de-f1.foxyfy.net/dns-query
 https://de01.dns4me.net
@@ -88,6 +88,7 @@ https://dns.eliv.kr/dns-query
 https://dns.faked.org/dns-query
 https://dns.fancyorg.at/dns-query
 https://dns.farshidhakimy.de/dns-query
+https://dns.flatuslifir.is/dns-query
 https://dns.floriantinney.de/dns-query
 https://dns.flymc.cc/dns-query
 https://dns.foxyfy.net/dns-query
@@ -168,7 +169,6 @@ https://dns64.cloudflare-dns.com/dns-query
 https://dns64.dns.google/dns-query
 https://dns9.quad9.net/dns-query
 https://dnsdoh.art/dns-query
-https://dnsforge.de/dns-query
 https://dnslow.me/dns-query
 https://dnspub.restena.lu/dns-query
 https://dnsvps.familiamv.net/dns-query
@@ -257,7 +257,6 @@ https://gru01.dnscry.pt/dns-query
 https://gva01.dnscry.pt/dns-query
 https://haf01.dnscry.pt/dns-query
 https://han01.dnscry.pt/dns-query
-https://hard.dnsforge.de/dns-query
 https://helios.plan9-dns.com/dns-query
 https://ibuki.cgnat.net/dns-query
 https://ie01.dns4me.net
@@ -332,7 +331,6 @@ https://sky.rethinkdns.com/1:IAAgAA==
 https://sky.rethinkdns.com/dns-query
 https://slc01.dnscry.pt/dns-query
 https://sof01.dnscry.pt/dns-query
-https://solaxy.live/dns-query
 https://sto01.dnscry.pt/dns-query
 https://sunnygyl.com/dns-query
 https://syd.adfilter.net/dns-query

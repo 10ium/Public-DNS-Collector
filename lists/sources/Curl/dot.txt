@@ -46,6 +46,7 @@ tls://dns.elemental.software
 tls://dns.eliv.kr
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
+tls://dns.flatuslifir.is
 tls://dns.floriantinney.de
 tls://dns.froth.zone
 tls://dns.girino.org
@@ -97,7 +98,6 @@ tls://dns.w3ctag.org
 tls://dns.yuu-g.net
 tls://dns1.in-berlin.de
 tls://dnsdoh.art
-tls://dnsforge.de
 tls://dnslow.me
 tls://dnspub.restena.lu
 tls://dnsvps.familiamv.net

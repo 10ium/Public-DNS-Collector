@@ -73,6 +73,7 @@ tls://dns.eliv.kr
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
 tls://dns.fdn
+tls://dns.flatuslifir.is
 tls://dns.floriantinney.de
 tls://dns.froth.zone
 tls://dns.girino.org
