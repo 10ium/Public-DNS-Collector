@@ -23,7 +23,6 @@ tls://child-noads.joindns4.eu
 tls://child.joindns4.eu
 tls://cloudflare-dns.com
 tls://common.dot.dns.yandex.net
-tls://dandelionsprout.asuscomm.com:853
 tls://dns-dot.dnsforfamily.com
 tls://dns-family.adguard.com
 tls://dns-tls.bitwiseshift.net
@@ -131,6 +130,7 @@ tls://dns.unx.io
 tls://dns.w3ctag.org
 tls://dns.yuu-g.net
 tls://dns1.in-berlin.de
+tls://dns1.techniverse.net
 tls://dns10.quad9.net
 tls://dns11.quad9.net
 tls://dnsdoh.art

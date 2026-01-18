@@ -55,7 +55,6 @@ https://commons.host/
 https://cph01.dnscry.pt/dns-query
 https://cryptostorm.is/dns-query
 https://cvt01.dnscry.pt/dns-query
-https://dandelionsprout.asuscomm.com:2501/dns-query
 https://de-f1.foxyfy.net/dns-query
 https://de-fra-dns-001.mullvad.net/dns-query
 https://de.adhole.org/dns-query
@@ -203,6 +202,7 @@ https://dns.wevpn.com/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
 https://dns1.in-berlin.de/dns-query
+https://dns1.techniverse.net/dns-query
 https://dns10.quad9.net/dns-query
 https://dns11.quad9.net/dns-query
 https://dns12.quad9.net/dns-query

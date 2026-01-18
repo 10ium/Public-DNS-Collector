@@ -70,6 +70,7 @@ https://dns.tipsy.coffee/dns-query
 https://dns.unx.io/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
+https://dns1.techniverse.net/dns-query
 https://dnsdoh.art/dns-query
 https://dnsvps.familiamv.net/dns-query
 https://dog.dns.qwer.pw/dns-query
@@ -131,6 +132,7 @@ quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.skrep.eu
 quic://dns.yuu-g.net
+quic://dns1.techniverse.net
 quic://dnsdoh.art
 quic://dog.dns.qwer.pw
 quic://doh.sz-dns.com
@@ -185,6 +187,7 @@ tls://dns.technologycage.com
 tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.yuu-g.net
+tls://dns1.techniverse.net
 tls://dnsdoh.art
 tls://dnsvps.familiamv.net
 tls://dog.dns.qwer.pw

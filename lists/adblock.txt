@@ -55,7 +55,6 @@ https://all.dns.mullvad.net/dns-query
 https://au-syd-w-f-1.nashkan.net/dns-query
 https://base.dns.mullvad.net/dns-query
 https://child-noads.joindns4.eu/dns-query
-https://dandelionsprout.asuscomm.com:2501/dns-query
 https://de.adhole.org/dns-query
 https://dns-doh.dnsforfamily.com/dns-query
 https://dns-family.adguard.com/dns-query
@@ -133,6 +132,7 @@ https://dns.tipsy.coffee/dns-query
 https://dns.unx.io/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
+https://dns1.techniverse.net/dns-query
 https://dnsdoh.art/dns-query
 https://dnsforge.de/dns-query
 https://dnsvps.familiamv.net/dns-query
@@ -209,7 +209,6 @@ https://zdn.ro/dns-query
 quic://adblock.krctech.dev
 quic://adfreedns.top
 quic://agh.dshubham.xyz
-quic://dandelionsprout.asuscomm.com:48582
 quic://dns.adguard-dns.com
 quic://dns.alidns.com:853
 quic://dns.anon.no
@@ -230,6 +229,7 @@ quic://dns.roedel.cloud
 quic://dns.skrep.eu
 quic://dns.surfsharkdns.com
 quic://dns.yuu-g.net
+quic://dns1.techniverse.net
 quic://dnsdoh.art
 quic://dog.dns.qwer.pw
 quic://doh.sz-dns.com
@@ -356,7 +356,6 @@ tls://agh.dshubham.xyz
 tls://all.dns.mullvad.net
 tls://base.dns.mullvad.net
 tls://child-noads.joindns4.eu
-tls://dandelionsprout.asuscomm.com:853
 tls://dns-dot.dnsforfamily.com
 tls://dns-tls.qis.io
 tls://dns.18bit.cn
@@ -415,6 +414,7 @@ tls://dns.technologycage.com
 tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.yuu-g.net
+tls://dns1.techniverse.net
 tls://dnsdoh.art
 tls://dnsforge.de
 tls://dnsvps.familiamv.net

@@ -8,7 +8,6 @@ https://basic.rethinkdns.com/
 https://child-noads.joindns4.eu/dns-query
 https://child.joindns4.eu/dns-query
 https://common.dot.dns.yandex.net/dns-query
-https://dandelionsprout.asuscomm.com:2501/dns-query
 https://dns-doh.dnsforfamily.com/dns-query
 https://dns.adguard-dns.com/dns-query
 https://dns.alidns.com/dns-query

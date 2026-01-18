@@ -10,7 +10,6 @@ tls://base.dns.mullvad.net
 tls://child-noads.joindns4.eu
 tls://child.joindns4.eu
 tls://common.dot.dns.yandex.net
-tls://dandelionsprout.asuscomm.com:853
 tls://dns-dot.dnsforfamily.com
 tls://dns-tls.bitwiseshift.net
 tls://dns-tls.qis.io

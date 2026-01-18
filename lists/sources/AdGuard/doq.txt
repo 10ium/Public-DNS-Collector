@@ -1,4 +1,3 @@
-quic://dandelionsprout.asuscomm.com:48582
 quic://dns.adguard-dns.com
 quic://dns.alidns.com:853
 quic://dns.caliph.dev:853

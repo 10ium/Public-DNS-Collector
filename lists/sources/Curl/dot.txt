@@ -97,6 +97,7 @@ tls://dns.unx.io
 tls://dns.w3ctag.org
 tls://dns.yuu-g.net
 tls://dns1.in-berlin.de
+tls://dns1.techniverse.net
 tls://dnsdoh.art
 tls://dnslow.me
 tls://dnspub.restena.lu

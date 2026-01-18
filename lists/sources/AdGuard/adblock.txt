@@ -30,7 +30,6 @@
 [2a01:4f8:13a:250b::30]:9443
 [2a10:50c0::ad1:ff]:5443
 https://adblock.dns.mullvad.net/dns-query
-https://dandelionsprout.asuscomm.com:2501/dns-query
 https://dns-doh.dnsforfamily.com/dns-query
 https://dns.adguard-dns.com/dns-query
 https://dns.alidns.com/dns-query
@@ -72,7 +71,6 @@ https://rx.techomespace.com/dns-query
 https://sm2.doh.pub/dns-query
 https://v.recipes/dns-query
 https://wikimedia-dns.org/dns-query
-quic://dandelionsprout.asuscomm.com:48582
 quic://dns.adguard-dns.com
 quic://dns.alidns.com:853
 quic://dns.caliph.dev:853
@@ -168,7 +166,6 @@ tcp://94.140.14.14
 tcp://94.140.15.15
 tls://101.101.101.101
 tls://adblock.dns.mullvad.net
-tls://dandelionsprout.asuscomm.com:853
 tls://dns-dot.dnsforfamily.com
 tls://dns-tls.qis.io
 tls://dns.18bit.cn

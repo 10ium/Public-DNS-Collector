@@ -130,7 +130,6 @@ https://dns.petqa.ru/dns-query
 https://dns.pub/dns-query
 https://dns.quad9.net/dns-query
 https://dns.quiet.rocks/dns-query
-https://dns.rabbitdns.org/dns-query
 https://dns.rbn.gr/dns-query
 https://dns.redhosting.com.ar/dns-query
 https://dns.retakecs.com/dns-query
@@ -160,6 +159,7 @@ https://dns.w3ctag.org/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
 https://dns1.in-berlin.de/dns-query
+https://dns1.techniverse.net/dns-query
 https://dns10.quad9.net/dns-query
 https://dns11.quad9.net/dns-query
 https://dns12.quad9.net/dns-query
@@ -222,7 +222,6 @@ https://family.cloudflare-dns.com/dns-query
 https://family.dns.mullvad.net/dns-query
 https://family.dns.ningkelle.id/dns-query
 https://family.mydns.network/dns-query
-https://family.rabbitdns.org/dns-query
 https://fidelius.top/dns-query
 https://fra01.dnscry.pt/dns-query
 https://fra02.dnscry.pt/dns-query
@@ -320,7 +319,6 @@ https://sea01.dnscry.pt/dns-query
 https://secure.avastdns.com/dns-query
 https://secure.hafnova.com/dns-query
 https://security.cloudflare-dns.com/dns-query
-https://security.rabbitdns.org/dns-query
 https://seoul.dnsovertor.cc/dns-query
 https://sg-w-p-1.nashkan.net/dns-query
 https://sg01.dns4me.net
