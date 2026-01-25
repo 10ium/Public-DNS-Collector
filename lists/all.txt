@@ -674,11 +674,14 @@ quic://doq.ffmuc.net
 quic://family.adguard-dns.com
 quic://freedns.controld.com
 quic://ibksturm.synology.me
+quic://juuri.hagezi.org
 quic://nsec.arnor.org
 quic://privacy.plumedns.com
+quic://root.hagezi.org
 quic://router.comss.one
 quic://rx.techomespace.com
 quic://unfiltered.adguard-dns.com
+quic://wurzn.hagezi.org
 quic://zdn.ro
 sdns://AQAAAAAAAAAACjguMjAuMjQ3LjIg0sJUqpYcHsoXmZb1X7yAHwg2xyN5q1J-zaiGG-Dgs7AoMi5kbnNjcnlwdC1jZXJ0LnNoaWVsZC0yLmRuc2J5Y29tb2RvLmNvbQ
 sdns://AQAAAAAAAAAAD1syNjIwOjA6Y2NjOjoyXSC3NRFAIG8iXT4r2CLX_WkeocM8yNZmjQy-BL-rykP7eRsyLmRuc2NyeXB0LWNlcnQub3BlbmRucy5jb20
@@ -1771,6 +1774,7 @@ tls://ibksturm.synology.me
 tls://ibuki.cgnat.net
 tls://internetsehat.bebasid.com:853
 tls://jp.tiar.app
+tls://juuri.hagezi.org
 tls://kaitain.restena.lu
 tls://kids.ns.nwps.fi
 tls://masters-of-cloud.de
@@ -1805,6 +1809,7 @@ tls://resolver.sunet.se
 tls://resolver1.absolight.net
 tls://rfree1.blue-shield.at
 tls://ric.openbld.net
+tls://root.hagezi.org
 tls://router.comss.one
 tls://safe.dot.dns.yandex.net
 tls://safeservedns.com
@@ -1819,6 +1824,7 @@ tls://unfiltered.dns.bebasid.com:853
 tls://unfiltered.joindns4.eu
 tls://unicast.censurfridns.dk
 tls://wikimedia-dns.org
+tls://wurzn.hagezi.org
 tls://yarp.lefolgoc.net
 tls://zdn.ro
 udp://1.0.0.1

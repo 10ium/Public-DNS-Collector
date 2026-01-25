@@ -73,6 +73,7 @@ tls://hagezi.dns.bebasid.com:853
 tls://ibksturm.synology.me
 tls://internetsehat.bebasid.com:853
 tls://jp.tiar.app
+tls://juuri.hagezi.org
 tls://kaitain.restena.lu
 tls://kids.ns.nwps.fi
 tls://max.rethinkdns.com
@@ -95,6 +96,7 @@ tls://public.ns.nwps.fi
 tls://resolver-eu.lelux.fi
 tls://resolver.dnsprivacy.org.uk
 tls://ric.openbld.net
+tls://root.hagezi.org
 tls://router.comss.one
 tls://safe.dot.dns.yandex.net
 tls://sandbox.opendns.com
@@ -104,3 +106,4 @@ tls://security.cloudflare-dns.com
 tls://unfiltered.adguard-dns.com
 tls://unfiltered.dns.bebasid.com:853
 tls://unicast.censurfridns.dk
+tls://wurzn.hagezi.org

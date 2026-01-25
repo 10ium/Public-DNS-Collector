@@ -39,9 +39,12 @@ quic://doq.ffmuc.net
 quic://family.adguard-dns.com
 quic://freedns.controld.com
 quic://ibksturm.synology.me
+quic://juuri.hagezi.org
 quic://nsec.arnor.org
 quic://privacy.plumedns.com
+quic://root.hagezi.org
 quic://router.comss.one
 quic://rx.techomespace.com
 quic://unfiltered.adguard-dns.com
+quic://wurzn.hagezi.org
 quic://zdn.ro

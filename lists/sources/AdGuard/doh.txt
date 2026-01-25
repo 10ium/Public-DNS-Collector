@@ -78,6 +78,7 @@ https://internetsehat.bebasid.com/adblock
 https://internetsehat.bebasid.com/dns-query
 https://jp.tiar.app/dns-query
 https://jp.tiarap.org/dns-query
+https://juuri.hagezi.org/dns-query
 https://kaitain.restena.lu/dns-query
 https://kids.ns.nwps.fi/dns-query
 https://noads.joindns4.eu/dns-query
@@ -91,6 +92,7 @@ https://public.ns.nwps.fi/dns-query
 https://resolver-eu.lelux.fi/dns-query
 https://resolver.dnsprivacy.org.uk/dns-query
 https://ric.openbld.net/dns-query
+https://root.hagezi.org/dns-query
 https://router.comss.one/dns-query
 https://rx.techomespace.com/dns-query
 https://safe.dot.dns.yandex.net/dns-query
@@ -102,3 +104,4 @@ https://unfiltered.adguard-dns.com/dns-query
 https://unfiltered.joindns4.eu/dns-query
 https://v.recipes/dns-query
 https://wikimedia-dns.org/dns-query
+https://wurzn.hagezi.org/dns-query

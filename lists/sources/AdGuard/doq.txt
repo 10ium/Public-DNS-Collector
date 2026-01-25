@@ -9,6 +9,9 @@ quic://doh.tiar.app
 quic://doq.ffmuc.net
 quic://family.adguard-dns.com
 quic://ibksturm.synology.me
+quic://juuri.hagezi.org
+quic://root.hagezi.org
 quic://router.comss.one
 quic://rx.techomespace.com
 quic://unfiltered.adguard-dns.com
+quic://wurzn.hagezi.org
