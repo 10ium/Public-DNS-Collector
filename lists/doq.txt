@@ -11,7 +11,6 @@ quic://dns.chunghwamc.com
 quic://dns.comss.one
 quic://dns.dnsguard.pub
 quic://dns.dnshome.de
-quic://dns.dynx.pro
 quic://dns.faked.org
 quic://dns.froth.zone
 quic://dns.inforlogia.com

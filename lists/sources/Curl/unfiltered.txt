@@ -32,7 +32,6 @@ https://dns.belnet.be/dns-query
 https://dns.bitdefender.net/dns-query
 https://dns.blokada.org/dns-query
 https://dns.bmwhocking.com/dns-query
-https://dns.cctld.kg/dns-query
 https://dns.christerwaren.fi
 https://dns.csa-rz.de/dns-query
 https://dns.csaonline.de/dns-query
@@ -71,7 +70,6 @@ https://dns.surfsharkdns.com/dns-query
 https://dns.t53.de/dns-query
 https://dns.telekom.de/dns-query
 https://dns.tls-data.de/dns-query
-https://dns.twnic.tw/dns-query
 https://dns.vaioswolke.xyz/dns-query
 https://dns.w3ctag.org/dns-query
 https://dns1.in-berlin.de/dns-query

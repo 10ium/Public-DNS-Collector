@@ -222,7 +222,6 @@ https://dns.brembeck.cloud/dns-query
 https://dns.busold.ws/dns-query
 https://dns.caliph.dev/dns-query
 https://dns.caspervk.net/dns-query
-https://dns.cctld.kg/dns-query
 https://dns.cert.ee/dns-query
 https://dns.cfiec.net/dns-query
 https://dns.chenu.ch/dns-query
@@ -247,13 +246,10 @@ https://dns.dnshome.de/dns-query
 https://dns.dnswarden.com/uncensored
 https://dns.doh.my.id/dns-query
 https://dns.dremaxx.de/dns-query
-https://dns.dynx.pro/dns-query
-https://dns.dynx.pro/dns-query/family
 https://dns.edgy.network/dns-query
 https://dns.elemental.software/dns-query
 https://dns.eliv.kr/dns-query
 https://dns.faked.org/dns-query
-https://dns.fancyorg.at/dns-query
 https://dns.farshidhakimy.de/dns-query
 https://dns.flatuslifir.is/dns-query
 https://dns.floriantinney.de/dns-query
@@ -261,7 +257,6 @@ https://dns.flymc.cc/dns-query
 https://dns.foxyfy.net/dns-query
 https://dns.froth.zone/dns-query
 https://dns.gamban.com/dns-query
-https://dns.girino.org/dns-query
 https://dns.glf.wtf/dns-query
 https://dns.google/dns-query
 https://dns.guard.io/dns-query
@@ -325,7 +320,6 @@ https://dns.surfsharkdns.com/dns-query
 https://dns.switch.ch/dns-query
 https://dns.szpadel.ovh/dns-query
 https://dns.t53.de/dns-query
-https://dns.technologycage.com/dns-query
 https://dns.telekom.de/dns-query
 https://dns.tipsy.coffee/dns-query
 https://dns.tls-data.de/dns-query
@@ -646,7 +640,6 @@ quic://dns.chunghwamc.com
 quic://dns.comss.one
 quic://dns.dnsguard.pub
 quic://dns.dnshome.de
-quic://dns.dynx.pro
 quic://dns.faked.org
 quic://dns.froth.zone
 quic://dns.inforlogia.com
@@ -1651,7 +1644,6 @@ tls://dns.digitalsize.net
 tls://dns.dnsguard.pub
 tls://dns.dnshome.de
 tls://dns.dremaxx.de
-tls://dns.dynx.pro
 tls://dns.elemental.software
 tls://dns.eliv.kr
 tls://dns.faked.org
@@ -1660,7 +1652,6 @@ tls://dns.fdn
 tls://dns.flatuslifir.is
 tls://dns.floriantinney.de
 tls://dns.froth.zone
-tls://dns.girino.org
 tls://dns.glf.wtf
 tls://dns.google
 tls://dns.inforlogia.com
@@ -1708,7 +1699,6 @@ tls://dns.surfsharkdns.com
 tls://dns.switch.ch
 tls://dns.szpadel.ovh
 tls://dns.t53.de
-tls://dns.technologycage.com
 tls://dns.telekom.de
 tls://dns.tipsy.coffee
 tls://dns.unx.io

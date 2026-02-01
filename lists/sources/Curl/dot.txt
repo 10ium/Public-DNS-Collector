@@ -41,7 +41,6 @@ tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
 tls://dns.dnshome.de
 tls://dns.dremaxx.de
-tls://dns.dynx.pro
 tls://dns.elemental.software
 tls://dns.eliv.kr
 tls://dns.faked.org
@@ -49,7 +48,6 @@ tls://dns.farshidhakimy.de
 tls://dns.flatuslifir.is
 tls://dns.floriantinney.de
 tls://dns.froth.zone
-tls://dns.girino.org
 tls://dns.glf.wtf
 tls://dns.google
 tls://dns.inforlogia.com
@@ -90,7 +88,6 @@ tls://dns.surfsharkdns.com
 tls://dns.switch.ch
 tls://dns.szpadel.ovh
 tls://dns.t53.de
-tls://dns.technologycage.com
 tls://dns.telekom.de
 tls://dns.tipsy.coffee
 tls://dns.unx.io

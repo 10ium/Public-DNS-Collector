@@ -33,10 +33,8 @@ https://dns.datenquark.de/dns-query
 https://dns.decky.eu/dns-query
 https://dns.eliv.kr/dns-query
 https://dns.faked.org/dns-query
-https://dns.fancyorg.at/dns-query
 https://dns.farshidhakimy.de/dns-query
 https://dns.flymc.cc/dns-query
-https://dns.girino.org/dns-query
 https://dns.glf.wtf/dns-query
 https://dns.haka.se/dns-query
 https://dns.inforlogia.com/dns-query
@@ -65,7 +63,6 @@ https://dns.slinkyman.net/dns-query
 https://dns.suhaila.dev/dns-query
 https://dns.superstefan.win/dns-query
 https://dns.szpadel.ovh/dns-query
-https://dns.technologycage.com/dns-query
 https://dns.tipsy.coffee/dns-query
 https://dns.unx.io/dns-query
 https://dns.xlion.tw/dns-query
@@ -162,7 +159,6 @@ tls://dns.decky.eu
 tls://dns.eliv.kr
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
-tls://dns.girino.org
 tls://dns.glf.wtf
 tls://dns.inforlogia.com
 tls://dns.kapite.in
@@ -183,7 +179,6 @@ tls://dns.roedel.cloud
 tls://dns.skrep.eu
 tls://dns.slinkyman.net
 tls://dns.szpadel.ovh
-tls://dns.technologycage.com
 tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.yuu-g.net

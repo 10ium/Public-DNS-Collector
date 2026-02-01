@@ -57,7 +57,6 @@ https://dns.belnet.be/dns-query
 https://dns.bitdefender.net/dns-query
 https://dns.blokada.org/dns-query
 https://dns.bmwhocking.com/dns-query
-https://dns.cctld.kg/dns-query
 https://dns.christerwaren.fi
 https://dns.csa-rz.de/dns-query
 https://dns.csaonline.de/dns-query
