@@ -90,7 +90,6 @@ tls://dns.luma-medien.com
 tls://dns.marbledfennec.net
 tls://dns.mateo.ovh
 tls://dns.mh4ckt3mh4ckt1c4s.xyz
-tls://dns.mnet-online.de
 tls://dns.mullvad.net
 tls://dns.mzjtechnology.com
 tls://dns.neeb.it
@@ -101,6 +100,7 @@ tls://dns.ofdoom.net
 tls://dns.opendns.com
 tls://dns.oszx.co
 tls://dns.petqa.ru
+tls://dns.practicallyunhackable.com
 tls://dns.pub
 tls://dns.pumplex.com
 tls://dns.quad9.net
@@ -237,5 +237,4 @@ tls://unfiltered.joindns4.eu
 tls://unicast.censurfridns.dk
 tls://wikimedia-dns.org
 tls://wurzn.hagezi.org
-tls://yarp.lefolgoc.net
 tls://zdn.ro

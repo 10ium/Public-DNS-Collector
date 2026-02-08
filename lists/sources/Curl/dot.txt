@@ -62,7 +62,6 @@ tls://dns.luma-medien.com
 tls://dns.marbledfennec.net
 tls://dns.mateo.ovh
 tls://dns.mh4ckt3mh4ckt1c4s.xyz
-tls://dns.mnet-online.de
 tls://dns.mullvad.net
 tls://dns.mzjtechnology.com
 tls://dns.neeb.it
@@ -70,6 +69,7 @@ tls://dns.nextdns.io
 tls://dns.ningkelle.id
 tls://dns.ofdoom.net
 tls://dns.petqa.ru
+tls://dns.practicallyunhackable.com
 tls://dns.pub
 tls://dns.quad9.net
 tls://dns.quiet.rocks
@@ -132,7 +132,6 @@ tls://privacy.plumedns.com
 tls://private.canadianshield.cira.ca
 tls://public.dns.iij.jp
 tls://renardbleu.dev
-tls://resolver.dnsprivacy.org.uk
 tls://resolver.sunet.se
 tls://resolver1.absolight.net
 tls://rfree1.blue-shield.at
@@ -140,5 +139,4 @@ tls://safeservedns.com
 tls://sky.rethinkdns.com
 tls://sunnygyl.com
 tls://wikimedia-dns.org
-tls://yarp.lefolgoc.net
 tls://zdn.ro

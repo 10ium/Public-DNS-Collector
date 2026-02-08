@@ -35,7 +35,6 @@ https://doh.tiar.app/dns-query
 https://doh.umbrella.com/dns-query
 https://dub01.dnscry.pt/dns-query
 https://eu1.dns.lavate.ch/dns-query
-https://evn01.dnscry.pt/dns-query
 https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
 https://fra01.dnscry.pt/dns-query

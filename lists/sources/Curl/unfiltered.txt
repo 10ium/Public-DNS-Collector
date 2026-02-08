@@ -4,7 +4,6 @@ https://abel.waringer-atg.de/dns-query
 https://abn01.dnscry.pt/dns-query
 https://adg.geili.me/dns-query
 https://anycast.uncensoreddns.org/dns-query
-https://arashi.net.eu.org/dns-query
 https://ath01.dnscry.pt/dns-query
 https://atl01.dnscry.pt/dns-query
 https://au01.dns4me.net
@@ -42,6 +41,7 @@ https://dns.digitalsize.net/dns-query
 https://dns.dnshome.de/dns-query
 https://dns.dremaxx.de/dns-query
 https://dns.elemental.software/dns-query
+https://dns.envs.net/dns-query
 https://dns.flatuslifir.is/dns-query
 https://dns.floriantinney.de/dns-query
 https://dns.foxyfy.net/dns-query
@@ -55,12 +55,12 @@ https://dns.liberador.net
 https://dns.lobbygod.com/dns-query
 https://dns.marbledfennec.net/dns-query
 https://dns.mayx.eu.org/dns-query
-https://dns.mnet-online.de/dns-query
 https://dns.mzjtechnology.com/dns-query
 https://dns.nextdns.io
 https://dns.njal.la/dns-query
 https://dns.novg.net/dns-query
 https://dns.paulo.nom.za/dns-query
+https://dns.practicallyunhackable.com/dns-query
 https://dns.pub/dns-query
 https://dns.smartguard.io/dns-query
 https://dns.startupstack.tech/dns-query
@@ -101,7 +101,6 @@ https://dub01.dnscry.pt/dns-query
 https://dukun.de/dns-query
 https://es-ma.foxyfy.net/dns-query
 https://eu1.dns.lavate.ch/dns-query
-https://evn01.dnscry.pt/dns-query
 https://fidelius.top/dns-query
 https://fra01.dnscry.pt/dns-query
 https://fra02.dnscry.pt/dns-query
@@ -128,7 +127,6 @@ https://mad01.dnscry.pt/dns-query
 https://masters-of-cloud.de/dns-query
 https://mil01.dnscry.pt/dns-query
 https://noads.joindns4.eu/dns-query
-https://ns.net.kg/dns-query
 https://ns0.fdn.fr/dns-query
 https://ns1.fdn.fr/dns-query
 https://ns1.opennameserver.org/dns-query
@@ -146,7 +144,6 @@ https://public.dns.iij.jp/dns-query
 https://rdd01.dnscry.pt/dns-query
 https://regiopolis.cloud/dns-query
 https://renardbleu.dev/dns-query
-https://resolver.dnsprivacy.org.uk/dns-query
 https://resolver.sunet.se/dns-query
 https://resolver1.absolight.net/dns-query
 https://resolver2.absolight.net/dns-query
@@ -157,7 +154,6 @@ https://root.hagezi.org/dns-query
 https://sa01.dns4me.net
 https://safeservedns.com/dns-query
 https://sea01.dnscry.pt/dns-query
-https://secure.avastdns.com/dns-query
 https://secure.hafnova.com/dns-query
 https://seoul.dnsovertor.cc/dns-query
 https://sg01.dns4me.net
@@ -185,7 +181,6 @@ https://waw02.dnscry.pt/dns-query
 https://wikimedia-dns.org/dns-query
 https://wurzn.hagezi.org/dns-query
 https://xn--durhre-yxa.de/dns-query
-https://yarp.lefolgoc.net/dns-query
 https://yhz01.dnscry.pt/dns-query
 https://yvr01.dnscry.pt/dns-query
 https://yyc01.dnscry.pt/dns-query
@@ -226,9 +221,9 @@ tls://dns.kescher.at
 tls://dns.liberador.net
 tls://dns.lobbygod.com
 tls://dns.marbledfennec.net
-tls://dns.mnet-online.de
 tls://dns.mzjtechnology.com
 tls://dns.nextdns.io
+tls://dns.practicallyunhackable.com
 tls://dns.pub
 tls://dns.smartguard.io
 tls://dns.startupstack.tech
@@ -257,11 +252,9 @@ tls://ns0.fdn.fr
 tls://odvr.nic.cz
 tls://public.dns.iij.jp
 tls://renardbleu.dev
-tls://resolver.dnsprivacy.org.uk
 tls://resolver.sunet.se
 tls://resolver1.absolight.net
 tls://rfree1.blue-shield.at
 tls://safeservedns.com
 tls://sky.rethinkdns.com
 tls://wikimedia-dns.org
-tls://yarp.lefolgoc.net

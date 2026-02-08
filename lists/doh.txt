@@ -25,7 +25,6 @@ https://all.dns.mullvad.net/dns-query
 https://antivirus.bebasid.com/dns-query
 https://anycast.dns.nextdns.io
 https://anycast.uncensoreddns.org/dns-query
-https://arashi.net.eu.org/dns-query
 https://ath01.dnscry.pt/dns-query
 https://atl01.dnscry.pt/dns-query
 https://au-syd-w-f-1.nashkan.net/dns-query
@@ -115,6 +114,7 @@ https://dns.dremaxx.de/dns-query
 https://dns.edgy.network/dns-query
 https://dns.elemental.software/dns-query
 https://dns.eliv.kr/dns-query
+https://dns.envs.net/dns-query
 https://dns.faked.org/dns-query
 https://dns.farshidhakimy.de/dns-query
 https://dns.flatuslifir.is/dns-query
@@ -145,7 +145,6 @@ https://dns.marbledfennec.net/dns-query
 https://dns.mateo.ovh/dns-query
 https://dns.mayx.eu.org/dns-query
 https://dns.mh4ckt3mh4ckt1c4s.xyz/dns-query
-https://dns.mnet-online.de/dns-query
 https://dns.moulticast.net/dns-query
 https://dns.mullvad.net/dns-query
 https://dns.mzjtechnology.com/dns-query
@@ -160,6 +159,7 @@ https://dns.oszx.co/dns-query
 https://dns.paesa.es/dns-query
 https://dns.paulo.nom.za/dns-query
 https://dns.petqa.ru/dns-query
+https://dns.practicallyunhackable.com/dns-query
 https://dns.pub/dns-query
 https://dns.pumplex.com/dns-query
 https://dns.quad9.net/dns-query
@@ -299,7 +299,6 @@ https://dub01.dnscry.pt/dns-query
 https://dukun.de/dns-query
 https://es-ma.foxyfy.net/dns-query
 https://eu1.dns.lavate.ch/dns-query
-https://evn01.dnscry.pt/dns-query
 https://example.doh.blockerdns.com/dns-query
 https://extended.dns.mullvad.net/dns-query
 https://family.adguard-dns.com/dns-query
@@ -378,7 +377,6 @@ https://my.nextdns.io/start
 https://nicsezcheckfbi.gov
 https://noads.joindns4.eu/dns-query
 https://ns.data.haus/dns-query
-https://ns.net.kg/dns-query
 https://ns0.fdn.fr/dns-query
 https://ns1.fdn.fr/dns-query
 https://ns1.opennameserver.org/dns-query
@@ -431,7 +429,6 @@ https://se-mma-dns-001.mullvad.net/dns-query
 https://se-sto-dns-001.mullvad.net/dns-query
 https://sea01.dnscry.pt/dns-query
 https://secondary.dns.seia.io/dns-query
-https://secure.avastdns.com/dns-query
 https://secure.hafnova.com/dns-query
 https://security.cloudflare-dns.com/dns-query
 https://security.rabbitdns.org/dns-query
@@ -484,7 +481,6 @@ https://waw02.dnscry.pt/dns-query
 https://wikimedia-dns.org/dns-query
 https://wurzn.hagezi.org/dns-query
 https://xn--durhre-yxa.de/dns-query
-https://yarp.lefolgoc.net/dns-query
 https://yhz01.dnscry.pt/dns-query
 https://yvr01.dnscry.pt/dns-query
 https://yyc01.dnscry.pt/dns-query

@@ -22,7 +22,6 @@ https://ag.apollohct.com/dns-query
 https://agh.dshubham.xyz/dns-query
 https://all.dns.mullvad.net/dns-query
 https://anycast.uncensoreddns.org/dns-query
-https://arashi.net.eu.org/dns-query
 https://ath01.dnscry.pt/dns-query
 https://atl01.dnscry.pt/dns-query
 https://au-syd-w-f-1.nashkan.net/dns-query
@@ -82,6 +81,7 @@ https://dns.dnshome.de/dns-query
 https://dns.dremaxx.de/dns-query
 https://dns.elemental.software/dns-query
 https://dns.eliv.kr/dns-query
+https://dns.envs.net/dns-query
 https://dns.faked.org/dns-query
 https://dns.farshidhakimy.de/dns-query
 https://dns.flatuslifir.is/dns-query
@@ -109,7 +109,6 @@ https://dns.marbledfennec.net/dns-query
 https://dns.mateo.ovh/dns-query
 https://dns.mayx.eu.org/dns-query
 https://dns.mh4ckt3mh4ckt1c4s.xyz/dns-query
-https://dns.mnet-online.de/dns-query
 https://dns.mullvad.net/dns-query
 https://dns.mzjtechnology.com/dns-query
 https://dns.neeb.it/dns-query
@@ -122,6 +121,7 @@ https://dns.ofdoom.net/dns-query
 https://dns.paesa.es/dns-query
 https://dns.paulo.nom.za/dns-query
 https://dns.petqa.ru/dns-query
+https://dns.practicallyunhackable.com/dns-query
 https://dns.pub/dns-query
 https://dns.quad9.net/dns-query
 https://dns.quiet.rocks/dns-query
@@ -207,7 +207,6 @@ https://dub01.dnscry.pt/dns-query
 https://dukun.de/dns-query
 https://es-ma.foxyfy.net/dns-query
 https://eu1.dns.lavate.ch/dns-query
-https://evn01.dnscry.pt/dns-query
 https://extended.dns.mullvad.net/dns-query
 https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
@@ -269,7 +268,6 @@ https://mozilla.cloudflare-dns.com/dns-query
 https://nicsezcheckfbi.gov
 https://noads.joindns4.eu/dns-query
 https://ns.data.haus/dns-query
-https://ns.net.kg/dns-query
 https://ns0.fdn.fr/dns-query
 https://ns1.fdn.fr/dns-query
 https://ns1.opennameserver.org/dns-query
@@ -296,7 +294,6 @@ https://public.dns.iij.jp/dns-query
 https://rdd01.dnscry.pt/dns-query
 https://regiopolis.cloud/dns-query
 https://renardbleu.dev/dns-query
-https://resolver.dnsprivacy.org.uk/dns-query
 https://resolver.sunet.se/dns-query
 https://resolver1.absolight.net/dns-query
 https://resolver2.absolight.net/dns-query
@@ -309,7 +306,6 @@ https://router.comss.one/dns-query
 https://sa01.dns4me.net
 https://safeservedns.com/dns-query
 https://sea01.dnscry.pt/dns-query
-https://secure.avastdns.com/dns-query
 https://secure.hafnova.com/dns-query
 https://security.cloudflare-dns.com/dns-query
 https://seoul.dnsovertor.cc/dns-query
@@ -352,7 +348,6 @@ https://waw02.dnscry.pt/dns-query
 https://wikimedia-dns.org/dns-query
 https://wurzn.hagezi.org/dns-query
 https://xn--durhre-yxa.de/dns-query
-https://yarp.lefolgoc.net/dns-query
 https://yhz01.dnscry.pt/dns-query
 https://yvr01.dnscry.pt/dns-query
 https://yyc01.dnscry.pt/dns-query
@@ -457,7 +452,6 @@ tls://dns.luma-medien.com
 tls://dns.marbledfennec.net
 tls://dns.mateo.ovh
 tls://dns.mh4ckt3mh4ckt1c4s.xyz
-tls://dns.mnet-online.de
 tls://dns.mullvad.net
 tls://dns.mzjtechnology.com
 tls://dns.neeb.it
@@ -465,6 +459,7 @@ tls://dns.nextdns.io
 tls://dns.ningkelle.id
 tls://dns.ofdoom.net
 tls://dns.petqa.ru
+tls://dns.practicallyunhackable.com
 tls://dns.pub
 tls://dns.quad9.net
 tls://dns.quiet.rocks
@@ -527,7 +522,6 @@ tls://privacy.plumedns.com
 tls://private.canadianshield.cira.ca
 tls://public.dns.iij.jp
 tls://renardbleu.dev
-tls://resolver.dnsprivacy.org.uk
 tls://resolver.sunet.se
 tls://resolver1.absolight.net
 tls://rfree1.blue-shield.at
@@ -535,5 +529,4 @@ tls://safeservedns.com
 tls://sky.rethinkdns.com
 tls://sunnygyl.com
 tls://wikimedia-dns.org
-tls://yarp.lefolgoc.net
 tls://zdn.ro
