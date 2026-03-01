@@ -24,14 +24,11 @@ tls://child.joindns4.eu
 tls://cloudflare-dns.com
 tls://common.dot.dns.yandex.net
 tls://dns-dot.dnsforfamily.com
-tls://dns-family.adguard.com
 tls://dns-tls.bitwiseshift.net
 tls://dns-tls.qis.io
-tls://dns-unfiltered.adguard.com
 tls://dns.18bit.cn
 tls://dns.aa.net.uk
 tls://dns.adguard-dns.com
-tls://dns.adguard.com
 tls://dns.akbxr.com
 tls://dns.alidns.com
 tls://dns.anon.no
@@ -70,7 +67,6 @@ tls://dns.elemental.software
 tls://dns.eliv.kr
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
-tls://dns.fdn
 tls://dns.flatuslifir.is
 tls://dns.floriantinney.de
 tls://dns.froth.zone
@@ -233,7 +229,6 @@ tls://sky.rethinkdns.com
 tls://sunnygyl.com
 tls://unfiltered.adguard-dns.com
 tls://unfiltered.dns.bebasid.com:853
-tls://unfiltered.joindns4.eu
 tls://unicast.censurfridns.dk
 tls://wikimedia-dns.org
 tls://wurzn.hagezi.org

@@ -61,7 +61,6 @@ https://de01.dns4me.net
 https://dns-doh.dnsforfamily.com/dns-query
 https://dns-family.adguard.com/dns-query
 https://dns-nyc.aaflalo.me/dns-query
-https://dns-unfiltered.adguard.com/dns-query
 https://dns-weblock.wevpn.com/dns-query
 https://dns.a47.me/dns-query
 https://dns.aa.net.uk/dns-query
@@ -278,7 +277,6 @@ https://doh.opendns.com/dns-query
 https://doh.pl.ahadns.net/dns-query
 https://doh.post-factum.tk/dns-query
 https://doh.powerdns.org
-https://doh.pub/dns-query
 https://doh.qis.io/dns-query
 https://doh.sandbox.opendns.com/dns-query
 https://doh.seby.io/dns-query

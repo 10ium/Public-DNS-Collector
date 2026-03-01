@@ -37,7 +37,6 @@
 https://123000123.xyz/dns-query
 https://ada.openbld.net/dns-query
 https://adblock.dns.mullvad.net/dns-query
-https://adblock.doh.mullvad.net/dns-query
 https://adblock.krctech.dev/dns-query
 https://adblock.mydns.network/dns-query
 https://addns1.m-it.ro/dns-query
@@ -54,7 +53,6 @@ https://agh.dshubham.xyz/dns-query
 https://all.dns.mullvad.net/dns-query
 https://au-syd-w-f-1.nashkan.net/dns-query
 https://base.dns.mullvad.net/dns-query
-https://child-noads.joindns4.eu/dns-query
 https://de.adhole.org/dns-query
 https://dns-doh.dnsforfamily.com/dns-query
 https://dns-family.adguard.com/dns-query
@@ -148,7 +146,6 @@ https://doh.kel.pe
 https://doh.libredns.gr/ads
 https://doh.libredns.gr/dns-query
 https://doh.mmmalia.com/dns-query
-https://doh.mullvad.net/dns-query
 https://doh.qis.io/dns-query
 https://doh.sz-dns.com/dns-query
 https://doh.tiar.app/dns-query
@@ -167,7 +164,6 @@ https://gb-lon-w-p-2.nashkan.net/dns-query
 https://ibksturm.synology.me/dns-query
 https://kaitain.restena.lu/dns-query
 https://lion.dns.qwer.pw/dns-query
-https://noads.joindns4.eu/dns-query
 https://ns.data.haus/dns-query
 https://ns2.4netguides.org/dns-query
 https://nsec.arnor.org/dns-query
@@ -265,8 +261,8 @@ sdns://AgMAAAAAAAAADjE2My40Ny4xMTcuMTc2IJB40hpWwOCJHZBiIbaZIzG90XFy6w8z3aB9XGXG4
 sdns://AgMAAAAAAAAADjExMi4yMTMuMzIuMjE5IJB40hpWwOCJHZBiIbaZIzG90XFy6w8z3aB9XGXG4Uw5EHN5ZC5hZGZpbHRlci5uZXQKL2Rucy1xdWVyeQ
 sdns://AgMAAAAAAAAADjgzLjIyMC4xNjkuMTU1IOVh_sR8Wh3NwumyfOVEFrzdxzIG9bZ6Vl2nNfJprop5DWRucy5jb21zcy5vbmUKL2Rucy1xdWVyeQ
 sdns://AgMAAAAAAAAAGFsyNDA0Ojk0MDA6NDFhOTo0ODAwOjoxXSCQeNIaVsDgiR2QYiG2mSMxvdFxcusPM92gfVxlxuFMORBwZXIuYWRmaWx0ZXIubmV0Ci9kbnMtcXVlcnk
-sdns://AgMAAAAAAAAAGFsyYTAxOjRmODoxNDE6MzE2ZDo6MTE3XSCyXy82ln9zlPCZN4hbMz-qNW1xn-rPOMzp8DVQAPPhdAtkbnNmb3JnZS5kZQovZG5zLXF1ZXJ5
-sdns://AgMAAAAAAAAAGFsyYTAxOjRmODoxNTE6MzRhYTo6MTk4XSCyXy82ln9zlPCZN4hbMz-qNW1xn-rPOMzp8DVQAPPhdAtkbnNmb3JnZS5kZQovZG5zLXF1ZXJ5
+sdns://AgMAAAAAAAAAGFsyYTAxOjRmODoxNDE6MzE2ZDo6MTE3XSCQeNIaVsDgiR2QYiG2mSMxvdFxcusPM92gfVxlxuFMOQtkbnNmb3JnZS5kZQovZG5zLXF1ZXJ5
+sdns://AgMAAAAAAAAAGFsyYTAxOjRmODoxNTE6MzRhYTo6MTk4XSCQeNIaVsDgiR2QYiG2mSMxvdFxcusPM92gfVxlxuFMOQtkbnNmb3JnZS5kZQovZG5zLXF1ZXJ5
 sdns://AgMAAAAAAAAAHlsyNDAwOmM0MDE6OjUwNTQ6ZmY6ZmUxYjpiMDM2XSCQeNIaVsDgiR2QYiG2mSMxvdFxcusPM92gfVxlxuFMORBhZGwuYWRmaWx0ZXIubmV0Ci9kbnMtcXVlcnk
 tcp://101.101.101.101
 tcp://101.102.103.104
@@ -352,12 +348,10 @@ tls://ag.apollohct.com
 tls://agh.dshubham.xyz
 tls://all.dns.mullvad.net
 tls://base.dns.mullvad.net
-tls://child-noads.joindns4.eu
 tls://dns-dot.dnsforfamily.com
 tls://dns-tls.qis.io
 tls://dns.18bit.cn
 tls://dns.adguard-dns.com
-tls://dns.adguard.com
 tls://dns.akbxr.com
 tls://dns.alidns.com
 tls://dns.anon.no
@@ -430,7 +424,6 @@ tls://frd4wvnobp.cloudflare-gateway.com
 tls://freedom.mydns.network
 tls://ibksturm.synology.me
 tls://kaitain.restena.lu
-tls://noads.joindns4.eu
 tls://ns.data.haus
 tls://ns2.4netguides.org
 tls://nsec.arnor.org
