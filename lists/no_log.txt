@@ -105,6 +105,7 @@ https://tsm01.dnscry.pt/dns-query
 https://us-dal-dns-001.mullvad.net/dns-query
 https://us-nyc-dns-601.mullvad.net/dns-query
 https://us1.dns.lavate.ch/dns-query
+https://v0dka.ru/dns-query
 https://vie01.dnscry.pt/dns-query
 https://vno01.dnscry.pt/dns-query
 https://waw02.dnscry.pt/dns-query

@@ -53,6 +53,7 @@ https://de01.dns4me.net
 https://dns-weblock.wevpn.com/dns-query
 https://dns.a47.me/dns-query
 https://dns.aa.net.uk/dns-query
+https://dns.adnull.com/dns-query
 https://dns.bebasid.com/unfiltered
 https://dns.belnet.be/dns-query
 https://dns.bitdefender.net/dns-query
@@ -245,6 +246,7 @@ https://us-nyc-dns-601.mullvad.net/dns-query
 https://us01.dns4me.net
 https://us02.dns4me.net
 https://us1.dns.lavate.ch/dns-query
+https://v0dka.ru/dns-query
 https://vie01.dnscry.pt/dns-query
 https://vno01.dnscry.pt/dns-query
 https://waw02.dnscry.pt/dns-query

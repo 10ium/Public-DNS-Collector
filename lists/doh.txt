@@ -66,6 +66,7 @@ https://dns.a47.me/dns-query
 https://dns.aa.net.uk/dns-query
 https://dns.adguard-dns.com/dns-query
 https://dns.adguard.com/dns-query
+https://dns.adnull.com/dns-query
 https://dns.akbxr.com/dns-query
 https://dns.alidns.com/dns-query
 https://dns.anon.no/dns-query
@@ -473,6 +474,7 @@ https://us1.dns.lavate.ch/dns-query
 https://v.recipes/dns-adblock
 https://v.recipes/dns-ecs
 https://v.recipes/dns-query
+https://v0dka.ru/dns-query
 https://vie01.dnscry.pt/dns-query
 https://vno01.dnscry.pt/dns-query
 https://waw02.dnscry.pt/dns-query
