@@ -42,7 +42,6 @@ https://adblock.mydns.network/dns-query
 https://addns1.m-it.ro/dns-query
 https://adfree.usableprivacy.net/dns-query
 https://adfreedns.top/dns-query
-https://adg.khon.dev/dns-query
 https://adguard.meddy94.de/dns-query
 https://adl.adfilter.net/dns-query
 https://ae-fuj-w-p-1.nashkan.net/dns-query
@@ -85,7 +84,6 @@ https://dns.dnsguard.pub/dns-query
 https://dns.dnswarden.com/uncensored
 https://dns.doh.my.id/dns-query
 https://dns.edgy.network/dns-query
-https://dns.eliv.kr/dns-query
 https://dns.faked.org/dns-query
 https://dns.farshidhakimy.de/dns-query
 https://dns.flymc.cc/dns-query
@@ -106,7 +104,6 @@ https://dns.mh4ckt3mh4ckt1c4s.xyz/dns-query
 https://dns.mullvad.net/dns-query
 https://dns.neeb.it/dns-query
 https://dns.nick-slowinski.de/dns-query
-https://dns.ningkelle.id/dns-query
 https://dns.ofdoom.net/dns-query
 https://dns.paesa.es/dns-query
 https://dns.petqa.ru/dns-query
@@ -128,7 +125,6 @@ https://dns.unx.io/dns-query
 https://dns.xlion.tw/dns-query
 https://dns.yuu-g.net/dns-query
 https://dns1.techniverse.net/dns-query
-https://dnsdoh.art/dns-query
 https://dnsforge.de/dns-query
 https://dnsvps.familiamv.net/dns-query
 https://dog.dns.qwer.pw/dns-query
@@ -153,13 +149,11 @@ https://doh.viatech.com.tw/dns-query
 https://example.doh.blockerdns.com/dns-query
 https://extended.dns.mullvad.net/dns-query
 https://family.dns.mullvad.net/dns-query
-https://family.dns.ningkelle.id/dns-query
 https://family.mydns.network/dns-query
 https://frd4wvnobp.cloudflare-gateway.com/dns-query
 https://freedns.controld.com/p2
 https://freedns.controld.com/p3
 https://freedom.mydns.network/dns-query
-https://frog.dns.qwer.pw/dns-query
 https://gb-lon-w-p-2.nashkan.net/dns-query
 https://ibksturm.synology.me/dns-query
 https://kaitain.restena.lu/dns-query
@@ -223,7 +217,6 @@ quic://dns.skrep.eu
 quic://dns.surfsharkdns.com
 quic://dns.yuu-g.net
 quic://dns1.techniverse.net
-quic://dnsdoh.art
 quic://dog.dns.qwer.pw
 quic://doh.sz-dns.com
 quic://doq.ffmuc.net
@@ -372,7 +365,6 @@ tls://dns.decky.eu
 tls://dns.decloudus.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.dnsguard.pub
-tls://dns.eliv.kr
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
 tls://dns.glf.wtf
@@ -388,7 +380,6 @@ tls://dns.mateo.ovh
 tls://dns.mh4ckt3mh4ckt1c4s.xyz
 tls://dns.mullvad.net
 tls://dns.neeb.it
-tls://dns.ningkelle.id
 tls://dns.ofdoom.net
 tls://dns.petqa.ru
 tls://dns.quiet.rocks
@@ -404,7 +395,6 @@ tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.yuu-g.net
 tls://dns1.techniverse.net
-tls://dnsdoh.art
 tls://dnsforge.de
 tls://dnsvps.familiamv.net
 tls://dog.dns.qwer.pw

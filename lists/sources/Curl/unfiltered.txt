@@ -35,7 +35,6 @@ https://dns.bmwhocking.com/dns-query
 https://dns.christerwaren.fi
 https://dns.csa-rz.de/dns-query
 https://dns.csaonline.de/dns-query
-https://dns.csswg.org/dns-query
 https://dns.dev-umbrellagov.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.digitalsize.net/dns-query
@@ -46,7 +45,6 @@ https://dns.envs.net/dns-query
 https://dns.flatuslifir.is/dns-query
 https://dns.floriantinney.de/dns-query
 https://dns.foxyfy.net/dns-query
-https://dns.froth.zone/dns-query
 https://dns.gamban.com/dns-query
 https://dns.google/dns-query
 https://dns.guard.io/dns-query
@@ -158,7 +156,6 @@ https://sea01.dnscry.pt/dns-query
 https://secure.hafnova.com/dns-query
 https://seoul.dnsovertor.cc/dns-query
 https://sg01.dns4me.net
-https://sgn01.dnscry.pt/dns-query
 https://sin03.dnscry.pt/dns-query
 https://sjc01.dnscry.pt/dns-query
 https://sky.rethinkdns.com/1:IAAgAA==
@@ -190,7 +187,6 @@ https://yyz01.dnscry.pt/dns-query
 quic://anycast.uncensoreddns.org
 quic://dns.alidns.com
 quic://dns.dnshome.de
-quic://dns.froth.zone
 quic://dns.kernel-error.de
 quic://dns.kescher.at
 quic://dns.nextdns.io
@@ -207,7 +203,6 @@ tls://dns.blokada.org
 tls://dns.christerwaren.fi
 tls://dns.csa-rz.de
 tls://dns.csaonline.de
-tls://dns.csswg.org
 tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
@@ -216,7 +211,6 @@ tls://dns.dremaxx.de
 tls://dns.elemental.software
 tls://dns.flatuslifir.is
 tls://dns.floriantinney.de
-tls://dns.froth.zone
 tls://dns.google
 tls://dns.kernel-error.de
 tls://dns.kescher.at

@@ -49,7 +49,6 @@ https://phl01.dnscry.pt/dns-query
 https://phx01.dnscry.pt/dns-query
 https://rdd01.dnscry.pt/dns-query
 https://sea01.dnscry.pt/dns-query
-https://sgn01.dnscry.pt/dns-query
 https://sin03.dnscry.pt/dns-query
 https://sjc01.dnscry.pt/dns-query
 https://sky.rethinkdns.com/1:IAAgAA==

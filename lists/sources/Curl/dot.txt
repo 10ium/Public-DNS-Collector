@@ -32,7 +32,6 @@ tls://dns.chunghwamc.com
 tls://dns.comss.one
 tls://dns.csa-rz.de
 tls://dns.csaonline.de
-tls://dns.csswg.org
 tls://dns.d94.xyz
 tls://dns.datenquark.de
 tls://dns.decky.eu
@@ -42,12 +41,10 @@ tls://dns.digitalsize.net
 tls://dns.dnshome.de
 tls://dns.dremaxx.de
 tls://dns.elemental.software
-tls://dns.eliv.kr
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
 tls://dns.flatuslifir.is
 tls://dns.floriantinney.de
-tls://dns.froth.zone
 tls://dns.glf.wtf
 tls://dns.google
 tls://dns.inforlogia.com
@@ -66,7 +63,6 @@ tls://dns.mullvad.net
 tls://dns.mzjtechnology.com
 tls://dns.neeb.it
 tls://dns.nextdns.io
-tls://dns.ningkelle.id
 tls://dns.ofdoom.net
 tls://dns.petqa.ru
 tls://dns.practicallyunhackable.com
@@ -95,7 +91,6 @@ tls://dns.w3ctag.org
 tls://dns.yuu-g.net
 tls://dns1.in-berlin.de
 tls://dns1.techniverse.net
-tls://dnsdoh.art
 tls://dnslow.me
 tls://dnspub.restena.lu
 tls://dnsvps.familiamv.net

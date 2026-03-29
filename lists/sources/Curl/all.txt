@@ -11,7 +11,6 @@ https://addns1.m-it.ro/dns-query
 https://adfree.usableprivacy.net/dns-query
 https://adfreedns.top/dns-query
 https://adg.geili.me/dns-query
-https://adg.khon.dev/dns-query
 https://adguard.meddy94.de/dns-query
 https://adguard.shoupperuser.com/dns-query
 https://adl.adfilter.net/dns-query
@@ -70,7 +69,6 @@ https://dns.chunghwamc.com/dns-query
 https://dns.comss.one/dns-query
 https://dns.csa-rz.de/dns-query
 https://dns.csaonline.de/dns-query
-https://dns.csswg.org/dns-query
 https://dns.cynthialabs.net/dns-query
 https://dns.d94.xyz/dns-query
 https://dns.datenquark.de/dns-query
@@ -81,7 +79,6 @@ https://dns.digitalsize.net/dns-query
 https://dns.dnshome.de/dns-query
 https://dns.dremaxx.de/dns-query
 https://dns.elemental.software/dns-query
-https://dns.eliv.kr/dns-query
 https://dns.envs.net/dns-query
 https://dns.faked.org/dns-query
 https://dns.farshidhakimy.de/dns-query
@@ -89,7 +86,6 @@ https://dns.flatuslifir.is/dns-query
 https://dns.floriantinney.de/dns-query
 https://dns.flymc.cc/dns-query
 https://dns.foxyfy.net/dns-query
-https://dns.froth.zone/dns-query
 https://dns.gamban.com/dns-query
 https://dns.glf.wtf/dns-query
 https://dns.google/dns-query
@@ -115,7 +111,6 @@ https://dns.mzjtechnology.com/dns-query
 https://dns.neeb.it/dns-query
 https://dns.nextdns.io
 https://dns.nick-slowinski.de/dns-query
-https://dns.ningkelle.id/dns-query
 https://dns.njal.la/dns-query
 https://dns.novg.net/dns-query
 https://dns.ofdoom.net/dns-query
@@ -162,7 +157,6 @@ https://dns4eu.online/dns-query
 https://dns64.cloudflare-dns.com/dns-query
 https://dns64.dns.google/dns-query
 https://dns9.quad9.net/dns-query
-https://dnsdoh.art/dns-query
 https://dnslow.me/dns-query
 https://dnspub.restena.lu/dns-query
 https://dnsvps.familiamv.net/dns-query
@@ -213,7 +207,6 @@ https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
 https://family.dns.mullvad.net/dns-query
-https://family.dns.ningkelle.id/dns-query
 https://family.mydns.network/dns-query
 https://fidelius.top/dns-query
 https://fra01.dnscry.pt/dns-query
@@ -240,7 +233,6 @@ https://freedns.controld.com/x-oisd
 https://freedns.controld.com/x-oisd-basic
 https://freedns.controld.com/x-stevenblack
 https://freedom.mydns.network/dns-query
-https://frog.dns.qwer.pw/dns-query
 https://gb-lon-w-p-2.nashkan.net/dns-query
 https://geg01.dnscry.pt/dns-query
 https://gibblets.top/dns-query
@@ -312,7 +304,6 @@ https://security.cloudflare-dns.com/dns-query
 https://seoul.dnsovertor.cc/dns-query
 https://sg-w-p-1.nashkan.net/dns-query
 https://sg01.dns4me.net
-https://sgn01.dnscry.pt/dns-query
 https://sin03.dnscry.pt/dns-query
 https://sjc01.dnscry.pt/dns-query
 https://sky.rethinkdns.com/1:IAAgAA==
@@ -366,7 +357,6 @@ quic://dns.bitservices.io
 quic://dns.chunghwamc.com
 quic://dns.dnshome.de
 quic://dns.faked.org
-quic://dns.froth.zone
 quic://dns.inforlogia.com
 quic://dns.kapite.in
 quic://dns.kernel-error.de
@@ -382,7 +372,6 @@ quic://dns.skrep.eu
 quic://dns.surfsharkdns.com
 quic://dns.yuu-g.net
 quic://dns1.techniverse.net
-quic://dnsdoh.art
 quic://dog.dns.qwer.pw
 quic://doh.dns4all.eu
 quic://doh.sz-dns.com
@@ -424,7 +413,6 @@ tls://dns.chunghwamc.com
 tls://dns.comss.one
 tls://dns.csa-rz.de
 tls://dns.csaonline.de
-tls://dns.csswg.org
 tls://dns.d94.xyz
 tls://dns.datenquark.de
 tls://dns.decky.eu
@@ -434,12 +422,10 @@ tls://dns.digitalsize.net
 tls://dns.dnshome.de
 tls://dns.dremaxx.de
 tls://dns.elemental.software
-tls://dns.eliv.kr
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
 tls://dns.flatuslifir.is
 tls://dns.floriantinney.de
-tls://dns.froth.zone
 tls://dns.glf.wtf
 tls://dns.google
 tls://dns.inforlogia.com
@@ -458,7 +444,6 @@ tls://dns.mullvad.net
 tls://dns.mzjtechnology.com
 tls://dns.neeb.it
 tls://dns.nextdns.io
-tls://dns.ningkelle.id
 tls://dns.ofdoom.net
 tls://dns.petqa.ru
 tls://dns.practicallyunhackable.com
@@ -487,7 +472,6 @@ tls://dns.w3ctag.org
 tls://dns.yuu-g.net
 tls://dns1.in-berlin.de
 tls://dns1.techniverse.net
-tls://dnsdoh.art
 tls://dnslow.me
 tls://dnspub.restena.lu
 tls://dnsvps.familiamv.net

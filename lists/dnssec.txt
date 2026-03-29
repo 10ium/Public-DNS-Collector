@@ -156,7 +156,6 @@ https://se-mma-dns-001.mullvad.net/dns-query
 https://se-sto-dns-001.mullvad.net/dns-query
 https://sea01.dnscry.pt/dns-query
 https://sg-sin-dns-101.mullvad.net/dns-query
-https://sgn01.dnscry.pt/dns-query
 https://sin03.dnscry.pt/dns-query
 https://sjc01.dnscry.pt/dns-query
 https://slc01.dnscry.pt/dns-query

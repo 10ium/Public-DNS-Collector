@@ -9,7 +9,6 @@ quic://dns.bitservices.io
 quic://dns.chunghwamc.com
 quic://dns.dnshome.de
 quic://dns.faked.org
-quic://dns.froth.zone
 quic://dns.inforlogia.com
 quic://dns.kapite.in
 quic://dns.kernel-error.de
@@ -25,7 +24,6 @@ quic://dns.skrep.eu
 quic://dns.surfsharkdns.com
 quic://dns.yuu-g.net
 quic://dns1.techniverse.net
-quic://dnsdoh.art
 quic://dog.dns.qwer.pw
 quic://doh.dns4all.eu
 quic://doh.sz-dns.com

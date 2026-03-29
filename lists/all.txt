@@ -146,7 +146,6 @@ https://addns1.m-it.ro/dns-query
 https://adfree.usableprivacy.net/dns-query
 https://adfreedns.top/dns-query
 https://adg.geili.me/dns-query
-https://adg.khon.dev/dns-query
 https://adguard.meddy94.de/dns-query
 https://adguard.shoupperuser.com/dns-query
 https://adl.adfilter.net/dns-query
@@ -230,7 +229,6 @@ https://dns.cloudflare.com/dns-query
 https://dns.comss.one/dns-query
 https://dns.csa-rz.de/dns-query
 https://dns.csaonline.de/dns-query
-https://dns.csswg.org/dns-query
 https://dns.cynthialabs.net/dns-query
 https://dns.d94.xyz/dns-query
 https://dns.datenquark.de/dns-query
@@ -247,7 +245,6 @@ https://dns.doh.my.id/dns-query
 https://dns.dremaxx.de/dns-query
 https://dns.edgy.network/dns-query
 https://dns.elemental.software/dns-query
-https://dns.eliv.kr/dns-query
 https://dns.envs.net/dns-query
 https://dns.faked.org/dns-query
 https://dns.farshidhakimy.de/dns-query
@@ -255,7 +252,6 @@ https://dns.flatuslifir.is/dns-query
 https://dns.floriantinney.de/dns-query
 https://dns.flymc.cc/dns-query
 https://dns.foxyfy.net/dns-query
-https://dns.froth.zone/dns-query
 https://dns.gamban.com/dns-query
 https://dns.glf.wtf/dns-query
 https://dns.google/dns-query
@@ -286,7 +282,6 @@ https://dns.neeb.it/dns-query
 https://dns.nextdns.io
 https://dns.nextdns.io/
 https://dns.nick-slowinski.de/dns-query
-https://dns.ningkelle.id/dns-query
 https://dns.njal.la/dns-query
 https://dns.novg.net/dns-query
 https://dns.ofdoom.net/dns-query
@@ -341,7 +336,6 @@ https://dns64.cloudflare-dns.com/dns-query
 https://dns64.dns.google/dns-query
 https://dns9.quad9.net/dns-query
 https://dnscache.e-utp.net/dns-query
-https://dnsdoh.art/dns-query
 https://dnses.alekberg.net/dns-query
 https://dnsforge.de/dns-query
 https://dnslow.me/dns-query
@@ -440,7 +434,6 @@ https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
 https://family.dns.mullvad.net/dns-query
-https://family.dns.ningkelle.id/dns-query
 https://family.dot.dns.yandex.net/dns-query
 https://family.mydns.network/dns-query
 https://family.rabbitdns.org/dns-query
@@ -471,7 +464,6 @@ https://freedns.controld.com/x-oisd
 https://freedns.controld.com/x-oisd-basic
 https://freedns.controld.com/x-stevenblack
 https://freedom.mydns.network/dns-query
-https://frog.dns.qwer.pw/dns-query
 https://gb-lon-dns-001.mullvad.net/dns-query
 https://gb-lon-dns-301.mullvad.net/dns-query
 https://gb-lon-w-p-2.nashkan.net/dns-query
@@ -572,7 +564,6 @@ https://sg-sin-dns-101.mullvad.net/dns-query
 https://sg-w-p-1.nashkan.net/dns-query
 https://sg.adhole.org/dns-query
 https://sg01.dns4me.net
-https://sgn01.dnscry.pt/dns-query
 https://sin03.dnscry.pt/dns-query
 https://sjc01.dnscry.pt/dns-query
 https://sky.rethinkdns.com/1:IAAgAA==
@@ -637,7 +628,6 @@ quic://dns.comss.one
 quic://dns.dnsguard.pub
 quic://dns.dnshome.de
 quic://dns.faked.org
-quic://dns.froth.zone
 quic://dns.inforlogia.com
 quic://dns.jupitrdns.com
 quic://dns.kapite.in
@@ -654,7 +644,6 @@ quic://dns.skrep.eu
 quic://dns.surfsharkdns.com
 quic://dns.yuu-g.net
 quic://dns1.techniverse.net
-quic://dnsdoh.art
 quic://dog.dns.qwer.pw
 quic://doh.dns4all.eu
 quic://doh.sz-dns.com
@@ -1608,7 +1597,6 @@ tls://dns.cmrg.net
 tls://dns.comss.one
 tls://dns.csa-rz.de
 tls://dns.csaonline.de
-tls://dns.csswg.org
 tls://dns.d94.xyz
 tls://dns.datenquark.de
 tls://dns.decky.eu
@@ -1620,12 +1608,10 @@ tls://dns.dnsguard.pub
 tls://dns.dnshome.de
 tls://dns.dremaxx.de
 tls://dns.elemental.software
-tls://dns.eliv.kr
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
 tls://dns.flatuslifir.is
 tls://dns.floriantinney.de
-tls://dns.froth.zone
 tls://dns.glf.wtf
 tls://dns.google
 tls://dns.inforlogia.com
@@ -1647,7 +1633,6 @@ tls://dns.mzjtechnology.com
 tls://dns.neeb.it
 tls://dns.neutopia.org
 tls://dns.nextdns.io
-tls://dns.ningkelle.id
 tls://dns.ofdoom.net
 tls://dns.opendns.com
 tls://dns.oszx.co
@@ -1682,7 +1667,6 @@ tls://dns1.in-berlin.de
 tls://dns1.techniverse.net
 tls://dns10.quad9.net
 tls://dns11.quad9.net
-tls://dnsdoh.art
 tls://dnsforge.de
 tls://dnslow.me
 tls://dnsovertls.sinodun.com

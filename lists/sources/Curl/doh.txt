@@ -11,7 +11,6 @@ https://addns1.m-it.ro/dns-query
 https://adfree.usableprivacy.net/dns-query
 https://adfreedns.top/dns-query
 https://adg.geili.me/dns-query
-https://adg.khon.dev/dns-query
 https://adguard.meddy94.de/dns-query
 https://adguard.shoupperuser.com/dns-query
 https://adl.adfilter.net/dns-query
@@ -70,7 +69,6 @@ https://dns.chunghwamc.com/dns-query
 https://dns.comss.one/dns-query
 https://dns.csa-rz.de/dns-query
 https://dns.csaonline.de/dns-query
-https://dns.csswg.org/dns-query
 https://dns.cynthialabs.net/dns-query
 https://dns.d94.xyz/dns-query
 https://dns.datenquark.de/dns-query
@@ -81,7 +79,6 @@ https://dns.digitalsize.net/dns-query
 https://dns.dnshome.de/dns-query
 https://dns.dremaxx.de/dns-query
 https://dns.elemental.software/dns-query
-https://dns.eliv.kr/dns-query
 https://dns.envs.net/dns-query
 https://dns.faked.org/dns-query
 https://dns.farshidhakimy.de/dns-query
@@ -89,7 +86,6 @@ https://dns.flatuslifir.is/dns-query
 https://dns.floriantinney.de/dns-query
 https://dns.flymc.cc/dns-query
 https://dns.foxyfy.net/dns-query
-https://dns.froth.zone/dns-query
 https://dns.gamban.com/dns-query
 https://dns.glf.wtf/dns-query
 https://dns.google/dns-query
@@ -115,7 +111,6 @@ https://dns.mzjtechnology.com/dns-query
 https://dns.neeb.it/dns-query
 https://dns.nextdns.io
 https://dns.nick-slowinski.de/dns-query
-https://dns.ningkelle.id/dns-query
 https://dns.njal.la/dns-query
 https://dns.novg.net/dns-query
 https://dns.ofdoom.net/dns-query
@@ -162,7 +157,6 @@ https://dns4eu.online/dns-query
 https://dns64.cloudflare-dns.com/dns-query
 https://dns64.dns.google/dns-query
 https://dns9.quad9.net/dns-query
-https://dnsdoh.art/dns-query
 https://dnslow.me/dns-query
 https://dnspub.restena.lu/dns-query
 https://dnsvps.familiamv.net/dns-query
@@ -213,7 +207,6 @@ https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
 https://family.dns.mullvad.net/dns-query
-https://family.dns.ningkelle.id/dns-query
 https://family.mydns.network/dns-query
 https://fidelius.top/dns-query
 https://fra01.dnscry.pt/dns-query
@@ -240,7 +233,6 @@ https://freedns.controld.com/x-oisd
 https://freedns.controld.com/x-oisd-basic
 https://freedns.controld.com/x-stevenblack
 https://freedom.mydns.network/dns-query
-https://frog.dns.qwer.pw/dns-query
 https://gb-lon-w-p-2.nashkan.net/dns-query
 https://geg01.dnscry.pt/dns-query
 https://gibblets.top/dns-query
@@ -312,7 +304,6 @@ https://security.cloudflare-dns.com/dns-query
 https://seoul.dnsovertor.cc/dns-query
 https://sg-w-p-1.nashkan.net/dns-query
 https://sg01.dns4me.net
-https://sgn01.dnscry.pt/dns-query
 https://sin03.dnscry.pt/dns-query
 https://sjc01.dnscry.pt/dns-query
 https://sky.rethinkdns.com/1:IAAgAA==
