@@ -14,6 +14,8 @@ https://dns.brahma.world/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.digitalsize.net/dns-query
 https://dns.google/dns-query
+https://dns.hostux.net/ads
+https://dns.hostux.net/dns-query
 https://dns.kernel-error.de/dns-query
 https://dns.kescher.at/dns-query
 https://dns.quad9.net/dns-query

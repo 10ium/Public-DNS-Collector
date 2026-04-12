@@ -91,6 +91,8 @@ https://dns.glf.wtf/dns-query
 https://dns.google/dns-query
 https://dns.guard.io/dns-query
 https://dns.haka.se/dns-query
+https://dns.hostux.net/ads
+https://dns.hostux.net/dns-query
 https://dns.inforlogia.com/dns-query
 https://dns.kapite.in/dns-query
 https://dns.kernel-error.de/dns-query
