@@ -220,6 +220,7 @@ tls://sandbox.opendns.com
 tls://secondary.dns.seia.io
 tls://security-filter-dns.cleanbrowsing.org
 tls://security.cloudflare-dns.com
+tls://shitblocker.com
 tls://sky.rethinkdns.com
 tls://sunnygyl.com
 tls://unfiltered.adguard-dns.com

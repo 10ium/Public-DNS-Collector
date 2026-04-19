@@ -428,6 +428,7 @@ https://sg-sin-dns-101.mullvad.net/dns-query
 https://sg-w-p-1.nashkan.net/dns-query
 https://sg.adhole.org/dns-query
 https://sg01.dns4me.net
+https://shitblocker.com/dns-query
 https://sin03.dnscry.pt/dns-query
 https://sjc01.dnscry.pt/dns-query
 https://sky.rethinkdns.com/1:IAAgAA==

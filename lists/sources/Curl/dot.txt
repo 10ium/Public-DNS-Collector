@@ -131,6 +131,7 @@ tls://resolver.sunet.se
 tls://resolver1.absolight.net
 tls://rfree1.blue-shield.at
 tls://safeservedns.com
+tls://shitblocker.com
 tls://sky.rethinkdns.com
 tls://sunnygyl.com
 tls://wikimedia-dns.org

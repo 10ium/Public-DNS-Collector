@@ -93,6 +93,7 @@ https://pooblet.co.za/dns-query
 https://privacy.plumedns.com/dns-query
 https://ro-buc-w-p-1.nashkan.net/dns-query
 https://sg-w-p-1.nashkan.net/dns-query
+https://shitblocker.com/dns-query
 https://sunnygyl.com/dns-query
 https://syd.adfilter.net/dns-query
 https://tiger.dns.qwer.pw/dns-query
@@ -187,5 +188,6 @@ tls://nsec.arnor.org
 tls://per.adfilter.net
 tls://pihole.aws.ketan.dev
 tls://privacy.plumedns.com
+tls://shitblocker.com
 tls://sunnygyl.com
 tls://zdn.ro
