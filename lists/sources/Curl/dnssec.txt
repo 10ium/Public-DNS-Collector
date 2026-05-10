@@ -36,7 +36,6 @@ https://doh.seby.io/dns-query
 https://doh.tiar.app/dns-query
 https://doh.umbrella.com/dns-query
 https://dub01.dnscry.pt/dns-query
-https://eu1.dns.lavate.ch/dns-query
 https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
 https://fra01.dnscry.pt/dns-query
@@ -62,7 +61,6 @@ https://odvr.nic.cz/dns-query
 https://omr01.dnscry.pt/dns-query
 https://par01.dnscry.pt/dns-query
 https://pdx01.dnscry.pt/dns-query
-https://phl01.dnscry.pt/dns-query
 https://phx01.dnscry.pt/dns-query
 https://private.canadianshield.cira.ca/dns-query
 https://protected.canadianshield.cira.ca/dns-query

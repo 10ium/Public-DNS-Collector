@@ -22,7 +22,6 @@ https://doh.libredns.gr/noads
 https://doh.seby.io/dns-query
 https://doh.tiar.app/dns-query
 https://dub01.dnscry.pt/dns-query
-https://eu1.dns.lavate.ch/dns-query
 https://fra01.dnscry.pt/dns-query
 https://fra02.dnscry.pt/dns-query
 https://geg01.dnscry.pt/dns-query
@@ -45,7 +44,6 @@ https://nue01.dnscry.pt/dns-query
 https://omr01.dnscry.pt/dns-query
 https://par01.dnscry.pt/dns-query
 https://pdx01.dnscry.pt/dns-query
-https://phl01.dnscry.pt/dns-query
 https://phx01.dnscry.pt/dns-query
 https://rdd01.dnscry.pt/dns-query
 https://sea01.dnscry.pt/dns-query

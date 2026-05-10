@@ -30,7 +30,6 @@ tls://dns.chenu.ch
 tls://dns.christerwaren.fi
 tls://dns.chunghwamc.com
 tls://dns.comss.one
-tls://dns.csa-rz.de
 tls://dns.csaonline.de
 tls://dns.d94.xyz
 tls://dns.datenquark.de
@@ -109,7 +108,6 @@ tls://doh.lv
 tls://doh.niyawe.de
 tls://doh.seby.io
 tls://doh.sz-dns.com
-tls://doh.zknt.org
 tls://doth.huque.com
 tls://dukun.de
 tls://freedns.controld.com

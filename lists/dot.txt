@@ -50,7 +50,6 @@ tls://dns.christerwaren.fi
 tls://dns.chunghwamc.com
 tls://dns.cmrg.net
 tls://dns.comss.one
-tls://dns.csa-rz.de
 tls://dns.csaonline.de
 tls://dns.d94.xyz
 tls://dns.datenquark.de
@@ -143,7 +142,6 @@ tls://doh.lv
 tls://doh.niyawe.de
 tls://doh.seby.io
 tls://doh.sz-dns.com
-tls://doh.zknt.org
 tls://dot-pure.onedns.net
 tls://dot.360.cn
 tls://dot.ffmuc.net

@@ -25,7 +25,6 @@ https://ath01.dnscry.pt/dns-query
 https://atl01.dnscry.pt/dns-query
 https://au-syd-w-f-1.nashkan.net/dns-query
 https://au01.dns4me.net
-https://au02.dns4me.net
 https://base.dns.mullvad.net/dns-query
 https://bazooki-infra.dev/dns-query
 https://bne01.dnscry.pt/dns-query
@@ -67,7 +66,6 @@ https://dns.chenu.ch/dns-query
 https://dns.christerwaren.fi
 https://dns.chunghwamc.com/dns-query
 https://dns.comss.one/dns-query
-https://dns.csa-rz.de/dns-query
 https://dns.csaonline.de/dns-query
 https://dns.cynthialabs.net/dns-query
 https://dns.d94.xyz/dns-query
@@ -85,7 +83,6 @@ https://dns.farshidhakimy.de/dns-query
 https://dns.flatuslifir.is/dns-query
 https://dns.floriantinney.de/dns-query
 https://dns.flymc.cc/dns-query
-https://dns.foxyfy.net/dns-query
 https://dns.gamban.com/dns-query
 https://dns.glf.wtf/dns-query
 https://dns.google/dns-query
@@ -198,12 +195,10 @@ https://doh.sz-dns.com/dns-query
 https://doh.tiar.app/dns-query
 https://doh.umbrella.com/dns-query
 https://doh.viatech.com.tw/dns-query
-https://doh.zknt.org/dns-query
 https://doth.huque.com/dns-query
 https://dub01.dnscry.pt/dns-query
 https://dukun.de/dns-query
 https://es-ma.foxyfy.net/dns-query
-https://eu1.dns.lavate.ch/dns-query
 https://extended.dns.mullvad.net/dns-query
 https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
@@ -276,7 +271,6 @@ https://par01.dnscry.pt/dns-query
 https://paranoia.mydns.network/dns-query
 https://pdx01.dnscry.pt/dns-query
 https://per.adfilter.net/dns-query
-https://phl01.dnscry.pt/dns-query
 https://phx01.dnscry.pt/dns-query
 https://pihole.aws.ketan.dev/dns-query
 https://pluton.plan9-dns.com/dns-query
@@ -414,7 +408,6 @@ tls://dns.chenu.ch
 tls://dns.christerwaren.fi
 tls://dns.chunghwamc.com
 tls://dns.comss.one
-tls://dns.csa-rz.de
 tls://dns.csaonline.de
 tls://dns.d94.xyz
 tls://dns.datenquark.de
@@ -493,7 +486,6 @@ tls://doh.lv
 tls://doh.niyawe.de
 tls://doh.seby.io
 tls://doh.sz-dns.com
-tls://doh.zknt.org
 tls://doth.huque.com
 tls://dukun.de
 tls://freedns.controld.com

@@ -28,7 +28,6 @@ https://ath01.dnscry.pt/dns-query
 https://atl01.dnscry.pt/dns-query
 https://au-syd-w-f-1.nashkan.net/dns-query
 https://au01.dns4me.net
-https://au02.dns4me.net
 https://base.dns.mullvad.net/dns-query
 https://basic.rethinkdns.com/
 https://basic.rethinkdns.com/dns-query
@@ -93,7 +92,6 @@ https://dns.christerwaren.fi
 https://dns.chunghwamc.com/dns-query
 https://dns.cloudflare.com/dns-query
 https://dns.comss.one/dns-query
-https://dns.csa-rz.de/dns-query
 https://dns.csaonline.de/dns-query
 https://dns.cynthialabs.net/dns-query
 https://dns.d94.xyz/dns-query
@@ -117,7 +115,6 @@ https://dns.farshidhakimy.de/dns-query
 https://dns.flatuslifir.is/dns-query
 https://dns.floriantinney.de/dns-query
 https://dns.flymc.cc/dns-query
-https://dns.foxyfy.net/dns-query
 https://dns.gamban.com/dns-query
 https://dns.glf.wtf/dns-query
 https://dns.google/dns-query
@@ -285,7 +282,6 @@ https://doh.us.dnswarden.com/adultfilter
 https://doh.us.dnswarden.com/uncensored
 https://doh.viatech.com.tw/dns-query
 https://doh.xfinity.com/dns-query
-https://doh.zknt.org/dns-query
 https://doth.huque.com/dns-query
 https://draco.plan9-ns2.com/dns-query
 https://dub01.dnscry.pt/dns-query
@@ -383,7 +379,6 @@ https://par01.dnscry.pt/dns-query
 https://paranoia.mydns.network/dns-query
 https://pdx01.dnscry.pt/dns-query
 https://per.adfilter.net/dns-query
-https://phl01.dnscry.pt/dns-query
 https://phx01.dnscry.pt/dns-query
 https://pihole.aws.ketan.dev/dns-query
 https://pluton.plan9-dns.com/dns-query
