@@ -66,6 +66,7 @@ tls://dns.faked.org
 tls://dns.farshidhakimy.de
 tls://dns.flatuslifir.is
 tls://dns.floriantinney.de
+tls://dns.furrix.zone
 tls://dns.glf.wtf
 tls://dns.google
 tls://dns.inforlogia.com

@@ -44,6 +44,7 @@ tls://dns.faked.org
 tls://dns.farshidhakimy.de
 tls://dns.flatuslifir.is
 tls://dns.floriantinney.de
+tls://dns.furrix.zone
 tls://dns.glf.wtf
 tls://dns.google
 tls://dns.inforlogia.com
@@ -55,7 +56,6 @@ tls://dns.l337.site
 tls://dns.liberador.net
 tls://dns.lobbygod.com
 tls://dns.luma-medien.com
-tls://dns.marbledfennec.net
 tls://dns.mateo.ovh
 tls://dns.mh4ckt3mh4ckt1c4s.xyz
 tls://dns.mullvad.net

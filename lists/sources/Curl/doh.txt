@@ -83,6 +83,7 @@ https://dns.farshidhakimy.de/dns-query
 https://dns.flatuslifir.is/dns-query
 https://dns.floriantinney.de/dns-query
 https://dns.flymc.cc/dns-query
+https://dns.furrix.zone/dns-query
 https://dns.gamban.com/dns-query
 https://dns.glf.wtf/dns-query
 https://dns.google/dns-query
@@ -101,7 +102,6 @@ https://dns.liberador.net
 https://dns.lobbygod.com/dns-query
 https://dns.luma-medien.com/dns-query
 https://dns.marasov.id/dns-query
-https://dns.marbledfennec.net/dns-query
 https://dns.mateo.ovh/dns-query
 https://dns.mayx.eu.org/dns-query
 https://dns.mh4ckt3mh4ckt1c4s.xyz/dns-query

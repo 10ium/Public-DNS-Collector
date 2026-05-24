@@ -42,6 +42,7 @@ https://dns.elemental.software/dns-query
 https://dns.envs.net/dns-query
 https://dns.flatuslifir.is/dns-query
 https://dns.floriantinney.de/dns-query
+https://dns.furrix.zone/dns-query
 https://dns.gamban.com/dns-query
 https://dns.google/dns-query
 https://dns.guard.io/dns-query
@@ -51,7 +52,6 @@ https://dns.kernel-error.de/dns-query
 https://dns.kescher.at/dns-query
 https://dns.liberador.net
 https://dns.lobbygod.com/dns-query
-https://dns.marbledfennec.net/dns-query
 https://dns.mayx.eu.org/dns-query
 https://dns.mzjtechnology.com/dns-query
 https://dns.nextdns.io
@@ -206,12 +206,12 @@ tls://dns.dremaxx.de
 tls://dns.elemental.software
 tls://dns.flatuslifir.is
 tls://dns.floriantinney.de
+tls://dns.furrix.zone
 tls://dns.google
 tls://dns.kernel-error.de
 tls://dns.kescher.at
 tls://dns.liberador.net
 tls://dns.lobbygod.com
-tls://dns.marbledfennec.net
 tls://dns.mzjtechnology.com
 tls://dns.nextdns.io
 tls://dns.practicallyunhackable.com
