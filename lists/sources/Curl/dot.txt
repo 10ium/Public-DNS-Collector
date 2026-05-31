@@ -38,7 +38,6 @@ tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
 tls://dns.dnshome.de
-tls://dns.dremaxx.de
 tls://dns.elemental.software
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
@@ -72,7 +71,6 @@ tls://dns.rbn.gr
 tls://dns.redhosting.com.ar
 tls://dns.retakecs.com
 tls://dns.roedel.cloud
-tls://dns.sheggi.ch
 tls://dns.skrep.eu
 tls://dns.slinkyman.net
 tls://dns.smartguard.io
@@ -87,7 +85,6 @@ tls://dns.telekom.de
 tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.w3ctag.org
-tls://dns.yuu-g.net
 tls://dns1.in-berlin.de
 tls://dns1.techniverse.net
 tls://dnslow.me
@@ -111,7 +108,6 @@ tls://doh.sz-dns.com
 tls://doth.huque.com
 tls://dukun.de
 tls://freedns.controld.com
-tls://freedom.mydns.network
 tls://ibuki.cgnat.net
 tls://masters-of-cloud.de
 tls://ns.data.haus
@@ -126,10 +122,8 @@ tls://private.canadianshield.cira.ca
 tls://public.dns.iij.jp
 tls://renardbleu.dev
 tls://resolver.sunet.se
-tls://resolver1.absolight.net
 tls://rfree1.blue-shield.at
 tls://safeservedns.com
-tls://shitblocker.com
 tls://sky.rethinkdns.com
 tls://sunnygyl.com
 tls://wikimedia-dns.org

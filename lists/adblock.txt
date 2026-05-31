@@ -38,7 +38,6 @@ https://123000123.xyz/dns-query
 https://ada.openbld.net/dns-query
 https://adblock.dns.mullvad.net/dns-query
 https://adblock.krctech.dev/dns-query
-https://adblock.mydns.network/dns-query
 https://addns1.m-it.ro/dns-query
 https://adfree.usableprivacy.net/dns-query
 https://adfreedns.top/dns-query
@@ -86,7 +85,6 @@ https://dns.doh.my.id/dns-query
 https://dns.edgy.network/dns-query
 https://dns.faked.org/dns-query
 https://dns.farshidhakimy.de/dns-query
-https://dns.flymc.cc/dns-query
 https://dns.glf.wtf/dns-query
 https://dns.google/dns-query
 https://dns.haka.se/dns-query
@@ -115,7 +113,6 @@ https://dns.roedel.cloud/dns-query
 https://dns.silen.org/dns-query
 https://dns.skrep.eu/dns-query
 https://dns.slinkyman.net/dns-query
-https://dns.suhaila.dev/dns-query
 https://dns.superstefan.win/dns-query
 https://dns.surfsharkdns.com/dns-query
 https://dns.switch.ch/dns-query
@@ -123,13 +120,11 @@ https://dns.szpadel.ovh/dns-query
 https://dns.tipsy.coffee/dns-query
 https://dns.unx.io/dns-query
 https://dns.xlion.tw/dns-query
-https://dns.yuu-g.net/dns-query
 https://dns1.techniverse.net/dns-query
 https://dnsforge.de/dns-query
 https://dnsvps.familiamv.net/dns-query
 https://dog.dns.qwer.pw/dns-query
-https://doh-own-recursion.nicolas-dorriere.fr/dns-query
-https://doh-random-upstream.nicolas-dorriere.fr/dns-query
+https://doh-dilution-to-upstreams-adguardhome.nicolas-dorriere.fr/dns-query
 https://doh.18bit.cn/dns-query
 https://doh.360.cn/dns-query
 https://doh.angry.im/dns-query
@@ -149,11 +144,9 @@ https://doh.viatech.com.tw/dns-query
 https://example.doh.blockerdns.com/dns-query
 https://extended.dns.mullvad.net/dns-query
 https://family.dns.mullvad.net/dns-query
-https://family.mydns.network/dns-query
 https://frd4wvnobp.cloudflare-gateway.com/dns-query
 https://freedns.controld.com/p2
 https://freedns.controld.com/p3
-https://freedom.mydns.network/dns-query
 https://gb-lon-w-p-2.nashkan.net/dns-query
 https://ibksturm.synology.me/dns-query
 https://kaitain.restena.lu/dns-query
@@ -163,7 +156,6 @@ https://ns2.4netguides.org/dns-query
 https://nsec.arnor.org/dns-query
 https://odvr.nic.cz/doh
 https://ordns.he.net/dns-query
-https://paranoia.mydns.network/dns-query
 https://per.adfilter.net/dns-query
 https://pihole.aws.ketan.dev/dns-query
 https://pooblet.co.za/dns-query
@@ -175,7 +167,6 @@ https://ro-buc-w-p-1.nashkan.net/dns-query
 https://rx.techomespace.com/dns-query
 https://sg-w-p-1.nashkan.net/dns-query
 https://sg.adhole.org/dns-query
-https://shitblocker.com/dns-query
 https://sm2.doh.pub/dns-query
 https://sunnygyl.com/dns-query
 https://syd.adfilter.net/dns-query
@@ -216,7 +207,6 @@ quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.skrep.eu
 quic://dns.surfsharkdns.com
-quic://dns.yuu-g.net
 quic://dns1.techniverse.net
 quic://dog.dns.qwer.pw
 quic://doh.sz-dns.com
@@ -394,7 +384,6 @@ tls://dns.switch.ch
 tls://dns.szpadel.ovh
 tls://dns.tipsy.coffee
 tls://dns.unx.io
-tls://dns.yuu-g.net
 tls://dns1.techniverse.net
 tls://dnsforge.de
 tls://dnsvps.familiamv.net
@@ -412,7 +401,6 @@ tls://dot1.applied-privacy.net
 tls://extended.dns.mullvad.net
 tls://family.dns.mullvad.net
 tls://frd4wvnobp.cloudflare-gateway.com
-tls://freedom.mydns.network
 tls://ibksturm.synology.me
 tls://kaitain.restena.lu
 tls://ns.data.haus
@@ -428,7 +416,6 @@ tls://privacy.plumedns.com
 tls://public.dns.iij.jp
 tls://resolver-eu.lelux.fi
 tls://resolver.dnsprivacy.org.uk
-tls://shitblocker.com
 tls://sunnygyl.com
 tls://zdn.ro
 udp://101.101.101.101

@@ -14,6 +14,7 @@ https://dns.brahma.world/dns-query
 https://dns.dnshome.de/dns-query
 https://dns.flatuslifir.is/dns-query
 https://dns.paesa.es/dns-query
+https://doh-dilution-to-upstreams-adguardhome.nicolas-dorriere.fr/dns-query
 https://doh.dns.sb/dns-query
 https://doh.dns4all.eu/dns-query
 https://doh.ffmuc.net/dns-query

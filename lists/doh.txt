@@ -11,7 +11,6 @@ https://adblock.mydns.network/dns-query
 https://addns1.m-it.ro/dns-query
 https://adfree.usableprivacy.net/dns-query
 https://adfreedns.top/dns-query
-https://adg.geili.me/dns-query
 https://adguard.meddy94.de/dns-query
 https://adguard.shoupperuser.com/dns-query
 https://adl.adfilter.net/dns-query
@@ -106,7 +105,6 @@ https://dns.dnsguard.pub/dns-query
 https://dns.dnshome.de/dns-query
 https://dns.dnswarden.com/uncensored
 https://dns.doh.my.id/dns-query
-https://dns.dremaxx.de/dns-query
 https://dns.edgy.network/dns-query
 https://dns.elemental.software/dns-query
 https://dns.envs.net/dns-query
@@ -114,7 +112,6 @@ https://dns.faked.org/dns-query
 https://dns.farshidhakimy.de/dns-query
 https://dns.flatuslifir.is/dns-query
 https://dns.floriantinney.de/dns-query
-https://dns.flymc.cc/dns-query
 https://dns.furrix.zone/dns-query
 https://dns.gamban.com/dns-query
 https://dns.glf.wtf/dns-query
@@ -164,7 +161,6 @@ https://dns.retakecs.com/dns-query
 https://dns.roedel.cloud/dns-query
 https://dns.rubyfish.cn/dns-query
 https://dns.seia.io/dns-query
-https://dns.sheggi.ch/dns-query
 https://dns.silen.org/dns-query
 https://dns.skrep.eu/dns-query
 https://dns.slinkyman.net/dns-query
@@ -172,7 +168,6 @@ https://dns.smartguard.io/dns-query
 https://dns.startupstack.tech/dns-query
 https://dns.stirringphoto.com/dns-query
 https://dns.stormycloud.org/dns-query
-https://dns.suhaila.dev/dns-query
 https://dns.superstefan.win/dns-query
 https://dns.surfsharkdns.com/dns-query
 https://dns.switch.ch/dns-query
@@ -187,7 +182,6 @@ https://dns.vaioswolke.xyz/dns-query
 https://dns.w3ctag.org/dns-query
 https://dns.wevpn.com/dns-query
 https://dns.xlion.tw/dns-query
-https://dns.yuu-g.net/dns-query
 https://dns1.in-berlin.de/dns-query
 https://dns1.techniverse.net/dns-query
 https://dns10.quad9.net/dns-query
@@ -212,11 +206,10 @@ https://doh-02.spectrum.com/dns-query
 https://doh-2.seby.io/dns-query
 https://doh-ch.blahdns.com/dns-query
 https://doh-de.blahdns.com/dns-query
+https://doh-dilution-to-upstreams-adguardhome.nicolas-dorriere.fr/dns-query
 https://doh-fi.blahdns.com/dns-query
 https://doh-jp.blahdns.com/dns-query
-https://doh-own-recursion.nicolas-dorriere.fr/dns-query
 https://doh-pure.onedns.net/dns-query
-https://doh-random-upstream.nicolas-dorriere.fr/dns-query
 https://doh-sg.blahdns.com/dns-query
 https://doh.18bit.cn/dns-query
 https://doh.360.cn/dns-query
@@ -296,7 +289,6 @@ https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
 https://family.dns.mullvad.net/dns-query
 https://family.dot.dns.yandex.net/dns-query
-https://family.mydns.network/dns-query
 https://family.rabbitdns.org/dns-query
 https://fi.doh.dns.snopyta.org/dns-query
 https://fidelius.top/dns-query
@@ -377,7 +369,6 @@ https://odvr.nic.cz/doh
 https://omr01.dnscry.pt/dns-query
 https://ordns.he.net/dns-query
 https://par01.dnscry.pt/dns-query
-https://paranoia.mydns.network/dns-query
 https://pdx01.dnscry.pt/dns-query
 https://per.adfilter.net/dns-query
 https://phx01.dnscry.pt/dns-query
@@ -397,8 +388,6 @@ https://renardbleu.dev/dns-query
 https://resolver-eu.lelux.fi/dns-query
 https://resolver.dnsprivacy.org.uk/dns-query
 https://resolver.sunet.se/dns-query
-https://resolver1.absolight.net/dns-query
-https://resolver2.absolight.net/dns-query
 https://rethinkdns.com/configure
 https://revelio.top/dns-query
 https://rfree1.blue-shield.at/dns-query
@@ -424,7 +413,6 @@ https://sg-sin-dns-101.mullvad.net/dns-query
 https://sg-w-p-1.nashkan.net/dns-query
 https://sg.adhole.org/dns-query
 https://sg01.dns4me.net
-https://shitblocker.com/dns-query
 https://sin03.dnscry.pt/dns-query
 https://sjc01.dnscry.pt/dns-query
 https://sky.rethinkdns.com/1:IAAgAA==

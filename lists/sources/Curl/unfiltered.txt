@@ -2,7 +2,6 @@ https://3dns.eu/dns-query
 https://8888.google/dns-query
 https://abel.waringer-atg.de/dns-query
 https://abn01.dnscry.pt/dns-query
-https://adg.geili.me/dns-query
 https://anycast.uncensoreddns.org/dns-query
 https://ath01.dnscry.pt/dns-query
 https://atl01.dnscry.pt/dns-query
@@ -37,7 +36,6 @@ https://dns.dev-umbrellagov.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.digitalsize.net/dns-query
 https://dns.dnshome.de/dns-query
-https://dns.dremaxx.de/dns-query
 https://dns.elemental.software/dns-query
 https://dns.envs.net/dns-query
 https://dns.flatuslifir.is/dns-query
@@ -140,8 +138,6 @@ https://rdd01.dnscry.pt/dns-query
 https://regiopolis.cloud/dns-query
 https://renardbleu.dev/dns-query
 https://resolver.sunet.se/dns-query
-https://resolver1.absolight.net/dns-query
-https://resolver2.absolight.net/dns-query
 https://revelio.top/dns-query
 https://rfree1.blue-shield.at/dns-query
 https://rfree2.blue-shield.at/dns-query
@@ -202,7 +198,6 @@ tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
 tls://dns.dnshome.de
-tls://dns.dremaxx.de
 tls://dns.elemental.software
 tls://dns.flatuslifir.is
 tls://dns.floriantinney.de
@@ -243,7 +238,6 @@ tls://odvr.nic.cz
 tls://public.dns.iij.jp
 tls://renardbleu.dev
 tls://resolver.sunet.se
-tls://resolver1.absolight.net
 tls://rfree1.blue-shield.at
 tls://safeservedns.com
 tls://sky.rethinkdns.com

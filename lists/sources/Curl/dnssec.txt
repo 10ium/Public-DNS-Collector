@@ -26,6 +26,7 @@ https://dns12.quad9.net/dns-query
 https://dns64.dns.google/dns-query
 https://dns9.quad9.net/dns-query
 https://dnspub.restena.lu/dns-query
+https://doh-dilution-to-upstreams-adguardhome.nicolas-dorriere.fr/dns-query
 https://doh.applied-privacy.net/query
 https://doh.dns.sb/dns-query
 https://doh.familyshield.opendns.com/dns-query

@@ -60,7 +60,6 @@ tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
 tls://dns.dnsguard.pub
 tls://dns.dnshome.de
-tls://dns.dremaxx.de
 tls://dns.elemental.software
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
@@ -102,7 +101,6 @@ tls://dns.redhosting.com.ar
 tls://dns.retakecs.com
 tls://dns.roedel.cloud
 tls://dns.seia.io
-tls://dns.sheggi.ch
 tls://dns.skrep.eu
 tls://dns.slinkyman.net
 tls://dns.smartguard.io
@@ -117,7 +115,6 @@ tls://dns.telekom.de
 tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.w3ctag.org
-tls://dns.yuu-g.net
 tls://dns1.in-berlin.de
 tls://dns1.techniverse.net
 tls://dns10.quad9.net
@@ -169,7 +166,6 @@ tls://family.dot.dns.yandex.net
 tls://familyshield.opendns.com
 tls://frd4wvnobp.cloudflare-gateway.com
 tls://freedns.controld.com
-tls://freedom.mydns.network
 tls://getdnsapi.net
 tls://hagezi.dns.bebasid.com:853
 tls://ibksturm.synology.me
@@ -208,7 +204,6 @@ tls://renardbleu.dev
 tls://resolver-eu.lelux.fi
 tls://resolver.dnsprivacy.org.uk
 tls://resolver.sunet.se
-tls://resolver1.absolight.net
 tls://rfree1.blue-shield.at
 tls://ric.openbld.net
 tls://root.hagezi.org
@@ -219,7 +214,6 @@ tls://sandbox.opendns.com
 tls://secondary.dns.seia.io
 tls://security-filter-dns.cleanbrowsing.org
 tls://security.cloudflare-dns.com
-tls://shitblocker.com
 tls://sky.rethinkdns.com
 tls://sunnygyl.com
 tls://unfiltered.adguard-dns.com
