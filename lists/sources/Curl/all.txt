@@ -1,4 +1,3 @@
-https://123000123.xyz/dns-query
 https://3dns.eu/dns-query
 https://8888.google/dns-query
 https://abel.waringer-atg.de/dns-query
@@ -361,7 +360,6 @@ quic://freedns.controld.com
 quic://nsec.arnor.org
 quic://privacy.plumedns.com
 quic://zdn.ro
-tls://123000123.xyz
 tls://3dns.eu
 tls://abn01.dnscry.pt
 tls://ada.openbld.net

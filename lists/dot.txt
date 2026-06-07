@@ -1,5 +1,4 @@
 tls://101.101.101.101
-tls://123000123.xyz
 tls://3dns.eu
 tls://abn01.dnscry.pt
 tls://ada.openbld.net

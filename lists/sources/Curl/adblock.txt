@@ -1,4 +1,3 @@
-https://123000123.xyz/dns-query
 https://ada.openbld.net/dns-query
 https://adblock.dns.mullvad.net/dns-query
 https://adblock.krctech.dev/dns-query
@@ -120,7 +119,6 @@ quic://doh.sz-dns.com
 quic://nsec.arnor.org
 quic://privacy.plumedns.com
 quic://zdn.ro
-tls://123000123.xyz
 tls://ada.openbld.net
 tls://adblock.krctech.dev
 tls://adfree.usableprivacy.net
