@@ -18,7 +18,6 @@ https://ag.apollohct.com/dns-query
 https://agh.dshubham.xyz/dns-query
 https://all.dns.mullvad.net/dns-query
 https://anycast.uncensoreddns.org/dns-query
-https://ath01.dnscry.pt/dns-query
 https://atl01.dnscry.pt/dns-query
 https://au-syd-w-f-1.nashkan.net/dns-query
 https://au01.dns4me.net
@@ -137,7 +136,6 @@ https://dns.tls-data.de/dns-query
 https://dns.unx.io/dns-query
 https://dns.vaioswolke.xyz/dns-query
 https://dns.w3ctag.org/dns-query
-https://dns.xlion.tw/dns-query
 https://dns1.in-berlin.de/dns-query
 https://dns1.techniverse.net/dns-query
 https://dns10.quad9.net/dns-query
@@ -249,7 +247,6 @@ https://noads.joindns4.eu/dns-query
 https://ns.data.haus/dns-query
 https://ns0.fdn.fr/dns-query
 https://ns1.fdn.fr/dns-query
-https://ns1.opennameserver.org/dns-query
 https://ns2.4netguides.org/dns-query
 https://nsec.arnor.org/dns-query
 https://nue01.dnscry.pt/dns-query

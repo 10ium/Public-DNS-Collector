@@ -1,5 +1,4 @@
 https://abn01.dnscry.pt/dns-query
-https://ath01.dnscry.pt/dns-query
 https://atl01.dnscry.pt/dns-query
 https://bne01.dnscry.pt/dns-query
 https://bog01.dnscry.pt/dns-query
@@ -40,7 +39,6 @@ https://mil01.dnscry.pt/dns-query
 https://ns.data.haus/dns-query
 https://ns0.fdn.fr/dns-query
 https://ns1.fdn.fr/dns-query
-https://ns1.opennameserver.org/dns-query
 https://nue01.dnscry.pt/dns-query
 https://omr01.dnscry.pt/dns-query
 https://par01.dnscry.pt/dns-query

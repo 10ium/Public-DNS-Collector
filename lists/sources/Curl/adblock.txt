@@ -58,7 +58,6 @@ https://dns.superstefan.win/dns-query
 https://dns.szpadel.ovh/dns-query
 https://dns.tipsy.coffee/dns-query
 https://dns.unx.io/dns-query
-https://dns.xlion.tw/dns-query
 https://dns1.techniverse.net/dns-query
 https://dnsvps.familiamv.net/dns-query
 https://dog.dns.qwer.pw/dns-query
