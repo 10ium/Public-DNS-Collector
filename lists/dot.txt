@@ -34,7 +34,6 @@ tls://dns.anon.no
 tls://dns.applewebkit.dev
 tls://dns.asterimoon.com
 tls://dns.bebasid.com:853
-tls://dns.bitdefender.net
 tls://dns.bitgeek.in
 tls://dns.bitservices.io
 tls://dns.blokada.org
@@ -49,7 +48,6 @@ tls://dns.christerwaren.fi
 tls://dns.chunghwamc.com
 tls://dns.cmrg.net
 tls://dns.comss.one
-tls://dns.csaonline.de
 tls://dns.d94.xyz
 tls://dns.datenquark.de
 tls://dns.decky.eu

@@ -26,11 +26,9 @@ https://dns.aa.net.uk/dns-query
 https://dns.adnull.com/dns-query
 https://dns.alidns.com/dns-query
 https://dns.belnet.be/dns-query
-https://dns.bitdefender.net/dns-query
 https://dns.blokada.org/dns-query
 https://dns.bmwhocking.com/dns-query
 https://dns.christerwaren.fi
-https://dns.csaonline.de/dns-query
 https://dns.dev-umbrellagov.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.digitalsize.net/dns-query
@@ -129,7 +127,6 @@ https://omr01.dnscry.pt/dns-query
 https://par01.dnscry.pt/dns-query
 https://pdx01.dnscry.pt/dns-query
 https://phx01.dnscry.pt/dns-query
-https://pluton.plan9-dns.com/dns-query
 https://protective.joindns4.eu/dns-query
 https://public.dns.iij.jp/dns-query
 https://rdd01.dnscry.pt/dns-query
@@ -188,10 +185,8 @@ tls://anycast.uncensoreddns.org
 tls://ca01.dns4me.net
 tls://dns.aa.net.uk
 tls://dns.alidns.com
-tls://dns.bitdefender.net
 tls://dns.blokada.org
 tls://dns.christerwaren.fi
-tls://dns.csaonline.de
 tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net

@@ -18,7 +18,6 @@ tls://dns.alidns.com
 tls://dns.anon.no
 tls://dns.applewebkit.dev
 tls://dns.asterimoon.com
-tls://dns.bitdefender.net
 tls://dns.bitservices.io
 tls://dns.blokada.org
 tls://dns.brahma.world
@@ -29,7 +28,6 @@ tls://dns.chenu.ch
 tls://dns.christerwaren.fi
 tls://dns.chunghwamc.com
 tls://dns.comss.one
-tls://dns.csaonline.de
 tls://dns.d94.xyz
 tls://dns.datenquark.de
 tls://dns.decky.eu

@@ -73,7 +73,6 @@ https://dns.bebasid.com/dns-oisd
 https://dns.bebasid.com/dns-query
 https://dns.bebasid.com/unfiltered
 https://dns.belnet.be/dns-query
-https://dns.bitdefender.net/dns-query
 https://dns.bitservices.io/dns-query
 https://dns.blokada.org/dns-query
 https://dns.bmwhocking.com/dns-query
@@ -89,7 +88,6 @@ https://dns.christerwaren.fi
 https://dns.chunghwamc.com/dns-query
 https://dns.cloudflare.com/dns-query
 https://dns.comss.one/dns-query
-https://dns.csaonline.de/dns-query
 https://dns.cynthialabs.net/dns-query
 https://dns.d94.xyz/dns-query
 https://dns.datenquark.de/dns-query
@@ -369,7 +367,6 @@ https://pdx01.dnscry.pt/dns-query
 https://per.adfilter.net/dns-query
 https://phx01.dnscry.pt/dns-query
 https://pihole.aws.ketan.dev/dns-query
-https://pluton.plan9-dns.com/dns-query
 https://pooblet.co.za/dns-query
 https://privacy.plumedns.com/dns-query
 https://private.canadianshield.cira.ca/dns-query
