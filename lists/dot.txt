@@ -24,7 +24,6 @@ tls://cloudflare-dns.com
 tls://common.dot.dns.yandex.net
 tls://dns-dot.dnsforfamily.com
 tls://dns-tls.bitwiseshift.net
-tls://dns-tls.qis.io
 tls://dns.18bit.cn
 tls://dns.aa.net.uk
 tls://dns.adguard-dns.com
@@ -42,7 +41,6 @@ tls://dns.busold.ws
 tls://dns.caliph.dev:853
 tls://dns.caspervk.net
 tls://dns.cert.ee
-tls://dns.cfiec.net
 tls://dns.chenu.ch
 tls://dns.christerwaren.fi
 tls://dns.chunghwamc.com
@@ -170,7 +168,6 @@ tls://ibuki.cgnat.net
 tls://internetsehat.bebasid.com:853
 tls://jp.tiar.app
 tls://juuri.hagezi.org
-tls://kaitain.restena.lu
 tls://kids.ns.nwps.fi
 tls://masters-of-cloud.de
 tls://max.rethinkdns.com
@@ -185,6 +182,7 @@ tls://odvr.nic.cz
 tls://oisd.dns.bebasid.com:853
 tls://one.one.one.one
 tls://ordns.he.net
+tls://p0.freedns.controld.com
 tls://p1.freedns.controld.com
 tls://p2.freedns.controld.com
 tls://p3.freedns.controld.com
@@ -198,7 +196,6 @@ tls://protective.joindns4.eu
 tls://public.dns.iij.jp
 tls://public.ns.nwps.fi
 tls://renardbleu.dev
-tls://resolver-eu.lelux.fi
 tls://resolver.dnsprivacy.org.uk
 tls://resolver.sunet.se
 tls://rfree1.blue-shield.at
@@ -215,6 +212,7 @@ tls://sky.rethinkdns.com
 tls://sunnygyl.com
 tls://unfiltered.adguard-dns.com
 tls://unfiltered.dns.bebasid.com:853
+tls://unfiltered.joindns4.eu
 tls://unicast.censurfridns.dk
 tls://wikimedia-dns.org
 tls://wurzn.hagezi.org

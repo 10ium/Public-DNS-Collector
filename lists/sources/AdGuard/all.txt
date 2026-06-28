@@ -15,7 +15,6 @@
 2001:67c:930::1
 2001:8b0:24:24::24
 2001:8d8:1801:86e7::1
-2001:a18:1::29
 2001:de4::101
 2001:de4::102
 2001:df7:5300:3::51e
@@ -26,8 +25,6 @@
 2400:8902::f03c:91ff:feda:c514
 2404:c2c0:85d8:901::4
 2404:c2c0:85d8:901::8
-240C::6644
-240C::6666
 2606:4700:4700::1001
 2606:4700:4700::1002
 2606:4700:4700::1003
@@ -77,6 +74,8 @@
 2a04:bdc7:100:70::70
 2a05:fc84::42
 2a05:fc84::43
+2a0c:4ac1:29::2
+2a0c:4ac1:29::3
 2a0d:2a00:1::1
 2a0d:2a00:1::2
 2a0d:2a00:2::1
@@ -119,20 +118,17 @@ https://common.dot.dns.yandex.net/dns-query
 https://dns-doh.dnsforfamily.com/dns-query
 https://dns.adguard-dns.com/dns-query
 https://dns.alidns.com/dns-query
-https://dns.arapurayil.com/dns-query
 https://dns.bebasid.com/dns-hagezi
 https://dns.bebasid.com/dns-oisd
 https://dns.bebasid.com/dns-query
 https://dns.bebasid.com/unfiltered
 https://dns.caliph.dev/dns-query
 https://dns.cert.ee/dns-query
-https://dns.cfiec.net/dns-query
 https://dns.cloudflare.com/dns-query
 https://dns.comss.one/dns-query
 https://dns.decloudus.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.dnsguard.pub/dns-query
-https://dns.dnswarden.com/uncensored
 https://dns.google/dns-query
 https://dns.jupitrdns.com/dns-query
 https://dns.marbledfennec.net/dns-query
@@ -142,7 +138,6 @@ https://dns.oszx.co/dns-query
 https://dns.pub/dns-query
 https://dns.pumplex.com/dns-query
 https://dns.quad9.net/dns-query
-https://dns.rabbitdns.org/dns-query
 https://dns.seia.io/dns-query
 https://dns.surfsharkdns.com/dns-query
 https://dns.switch.ch/dns-query
@@ -165,7 +160,6 @@ https://doh.libredns.gr/dns-query
 https://doh.nl.ahadns.net/dns-query
 https://doh.onedns.net/dns-query
 https://doh.opendns.com/dns-query
-https://doh.qis.io/dns-query
 https://doh.sandbox.opendns.com/dns-query
 https://doh.tiar.app/dns-query
 https://doh.tiarap.org/dns-query
@@ -175,7 +169,6 @@ https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
 https://family.dns.mullvad.net/dns-query
 https://family.dot.dns.yandex.net/dns-query
-https://family.rabbitdns.org/dns-query
 https://frd4wvnobp.cloudflare-gateway.com/dns-query
 https://freedns.controld.com/p0
 https://freedns.controld.com/p1
@@ -187,7 +180,6 @@ https://internetsehat.bebasid.com/dns-query
 https://jp.tiar.app/dns-query
 https://jp.tiarap.org/dns-query
 https://juuri.hagezi.org/dns-query
-https://kaitain.restena.lu/dns-query
 https://kids.ns.nwps.fi/dns-query
 https://noads.joindns4.eu/dns-query
 https://odvr.nic.cz/doh
@@ -197,16 +189,13 @@ https://protected.canadianshield.cira.ca/dns-query
 https://protective.joindns4.eu/dns-query
 https://public.dns.iij.jp/dns-query
 https://public.ns.nwps.fi/dns-query
-https://resolver-eu.lelux.fi/dns-query
 https://resolver.dnsprivacy.org.uk/dns-query
 https://ric.openbld.net/dns-query
 https://root.hagezi.org/dns-query
 https://router.comss.one/dns-query
-https://rx.techomespace.com/dns-query
 https://safe.dot.dns.yandex.net/dns-query
 https://secondary.dns.seia.io/dns-query
 https://security.cloudflare-dns.com/dns-query
-https://security.rabbitdns.org/dns-query
 https://sm2.doh.pub/dns-query
 https://unfiltered.adguard-dns.com/dns-query
 https://unfiltered.joindns4.eu/dns-query
@@ -227,7 +216,6 @@ quic://ibksturm.synology.me
 quic://juuri.hagezi.org
 quic://root.hagezi.org
 quic://router.comss.one
-quic://rx.techomespace.com
 quic://unfiltered.adguard-dns.com
 quic://wurzn.hagezi.org
 sdns://AQAAAAAAAAAACjguMjAuMjQ3LjIg0sJUqpYcHsoXmZb1X7yAHwg2xyN5q1J-zaiGG-Dgs7AoMi5kbnNjcnlwdC1jZXJ0LnNoaWVsZC0yLmRuc2J5Y29tb2RvLmNvbQ
@@ -250,7 +238,6 @@ sdns://AQMAAAAAAAAADTkuOS45LjEwOjg0NDMgZ8hHuMh1jNEgJFVDvnVnRt803x2EwAuMRwNo34Idh
 sdns://AQMAAAAAAAAADTkuOS45LjExOjg0NDMgZ8hHuMh1jNEgJFVDvnVnRt803x2EwAuMRwNo34Idhj4ZMi5kbnNjcnlwdC1jZXJ0LnF1YWQ5Lm5ldA
 sdns://AQMAAAAAAAAADjE3NC4xMzguMjEuMTI4IO-WgGbo2ZTwZdg-3dMa7u31bYZXRj5KykfN1_6Xw9T2HDIuZG5zY3J5cHQtY2VydC5kbnMudGlhci5hcHA
 sdns://AQMAAAAAAAAADjEwNC4xOTcuMjguMTIxICcgf9USBOg2e0g0AF35_9HTC74qnDNjnm7b-K7ZHUDYIDIuZG5zY3J5cHQtY2VydC5zYWZlc3VyZmVyLmNvLm56
-sdns://AQMAAAAAAAAAEDMuNy4xNTYuMTI4Ojg0NDMgDXD9OSDJDwe2q9bi836PURTP14NLYS03RbDq6j891ZciMi5kbnNjcnlwdC1jZXJ0LmRucy5hcmFwdXJheWlsLmNvbQ
 sdns://AQMAAAAAAAAAEjEwMy44Ny42OC4xOTQ6ODQ0MyAxXDKkdrOao8ZeLyu7vTnVrT0C7YlPNNf6trdMkje7QR8yLmRuc2NyeXB0LWNlcnQuZG5zLmJlYmFzaWQuY29t
 sdns://AQMAAAAAAAAAEjEwMy44Ny42OC4xOTY6ODQ0MyD5k4vgIHmBCZ2DeLtmoDVu1C6nVrRNzSVgZ1T0m0-3rCkyLmRuc2NyeXB0LWNlcnQuaW50ZXJuZXRzZWhhdC5iZWJhc2lkLmNvbQ
 sdns://AQMAAAAAAAAAEjc4LjQ3LjIxMi4yMTE6OTQ0MyBNRN4TaVynkcwkVAbSBrCvr4X3c3Cygz_4VDUcRhhhYx4yLmRuc2NyeXB0LWNlcnQuRGVDbG91ZFVzLXRlc3Q
@@ -331,7 +318,6 @@ tcp://156.154.71.2
 tcp://156.154.71.3
 tcp://156.154.71.4
 tcp://156.154.71.5
-tcp://158.64.1.29
 tcp://160.19.167.150
 tcp://169.239.202.202
 tcp://172.104.93.80
@@ -379,7 +365,6 @@ tcp://217.160.70.42
 tcp://218.30.118.6
 tcp://223.5.5.5
 tcp://223.6.6.6
-tcp://3.7.156.128
 tcp://45.11.45.11
 tcp://45.67.219.208
 tcp://45.76.113.31
@@ -393,6 +378,8 @@ tcp://52.80.52.52
 tcp://52.80.60.30
 tcp://52.80.66.66
 tcp://54.174.40.213
+tcp://62.192.153.242
+tcp://62.192.153.243
 tcp://64.176.190.82
 tcp://64.6.64.6
 tcp://64.6.65.6
@@ -460,7 +447,6 @@ tls://child.joindns4.eu
 tls://common.dot.dns.yandex.net
 tls://dns-dot.dnsforfamily.com
 tls://dns-tls.bitwiseshift.net
-tls://dns-tls.qis.io
 tls://dns.18bit.cn
 tls://dns.adguard-dns.com
 tls://dns.alidns.com
@@ -468,7 +454,6 @@ tls://dns.bebasid.com:853
 tls://dns.bitgeek.in
 tls://dns.caliph.dev:853
 tls://dns.cert.ee
-tls://dns.cfiec.net
 tls://dns.cmrg.net
 tls://dns.comss.one
 tls://dns.decloudus.com
@@ -522,7 +507,6 @@ tls://ibksturm.synology.me
 tls://internetsehat.bebasid.com:853
 tls://jp.tiar.app
 tls://juuri.hagezi.org
-tls://kaitain.restena.lu
 tls://kids.ns.nwps.fi
 tls://max.rethinkdns.com
 tls://noads.joindns4.eu
@@ -532,6 +516,7 @@ tls://odvr.nic.cz
 tls://oisd.dns.bebasid.com:853
 tls://one.one.one.one
 tls://ordns.he.net
+tls://p0.freedns.controld.com
 tls://p1.freedns.controld.com
 tls://p2.freedns.controld.com
 tls://p3.freedns.controld.com
@@ -541,7 +526,6 @@ tls://protected.canadianshield.cira.ca
 tls://protective.joindns4.eu
 tls://public.dns.iij.jp
 tls://public.ns.nwps.fi
-tls://resolver-eu.lelux.fi
 tls://resolver.dnsprivacy.org.uk
 tls://ric.openbld.net
 tls://root.hagezi.org
@@ -553,6 +537,7 @@ tls://security-filter-dns.cleanbrowsing.org
 tls://security.cloudflare-dns.com
 tls://unfiltered.adguard-dns.com
 tls://unfiltered.dns.bebasid.com:853
+tls://unfiltered.joindns4.eu
 tls://unicast.censurfridns.dk
 tls://wurzn.hagezi.org
 udp://1.0.0.1
@@ -608,7 +593,6 @@ udp://156.154.71.2
 udp://156.154.71.3
 udp://156.154.71.4
 udp://156.154.71.5
-udp://158.64.1.29
 udp://160.19.167.150
 udp://169.239.202.202
 udp://172.104.93.80
@@ -656,7 +640,6 @@ udp://217.160.70.42
 udp://218.30.118.6
 udp://223.5.5.5
 udp://223.6.6.6
-udp://3.7.156.128
 udp://45.11.45.11
 udp://45.67.219.208
 udp://45.76.113.31
@@ -670,6 +653,8 @@ udp://52.80.52.52
 udp://52.80.60.30
 udp://52.80.66.66
 udp://54.174.40.213
+udp://62.192.153.242
+udp://62.192.153.243
 udp://64.176.190.82
 udp://64.6.64.6
 udp://64.6.65.6

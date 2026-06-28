@@ -219,7 +219,6 @@ https://gb-lon-w-p-2.nashkan.net/dns-query
 https://geg01.dnscry.pt/dns-query
 https://gibblets.top/dns-query
 https://glacius.top/dns-query
-https://gru01.dnscry.pt/dns-query
 https://gva01.dnscry.pt/dns-query
 https://haf01.dnscry.pt/dns-query
 https://han01.dnscry.pt/dns-query
@@ -271,7 +270,6 @@ https://rfree1.blue-shield.at/dns-query
 https://rfree2.blue-shield.at/dns-query
 https://ro-buc-w-p-1.nashkan.net/dns-query
 https://root.hagezi.org/dns-query
-https://router.comss.one/dns-query
 https://sa01.dns4me.net
 https://safeservedns.com/dns-query
 https://sea01.dnscry.pt/dns-query

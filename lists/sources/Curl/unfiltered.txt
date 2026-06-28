@@ -98,7 +98,6 @@ https://fra02.dnscry.pt/dns-query
 https://geg01.dnscry.pt/dns-query
 https://gibblets.top/dns-query
 https://glacius.top/dns-query
-https://gru01.dnscry.pt/dns-query
 https://gva01.dnscry.pt/dns-query
 https://haf01.dnscry.pt/dns-query
 https://han01.dnscry.pt/dns-query

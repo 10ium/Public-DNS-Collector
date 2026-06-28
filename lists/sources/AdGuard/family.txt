@@ -13,7 +13,6 @@ https://doh.familyshield.opendns.com/dns-query
 https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
 https://family.dot.dns.yandex.net/dns-query
-https://family.rabbitdns.org/dns-query
 https://internetsehat.bebasid.com/adblock
 https://internetsehat.bebasid.com/dns-query
 quic://family.adguard-dns.com

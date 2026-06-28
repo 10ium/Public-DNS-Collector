@@ -57,7 +57,6 @@ https://freedom.mydns.network/dns-query
 https://gb-lon-dns-001.mullvad.net/dns-query
 https://gb-lon-dns-301.mullvad.net/dns-query
 https://geg01.dnscry.pt/dns-query
-https://gru01.dnscry.pt/dns-query
 https://gva01.dnscry.pt/dns-query
 https://haf01.dnscry.pt/dns-query
 https://han01.dnscry.pt/dns-query

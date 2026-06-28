@@ -38,7 +38,6 @@ https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
 https://family.dns.mullvad.net/dns-query
 https://family.dot.dns.yandex.net/dns-query
-https://family.rabbitdns.org/dns-query
 https://freedns.controld.com/family
 https://freedns.controld.com/p0
 https://freedns.controld.com/p1

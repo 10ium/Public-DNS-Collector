@@ -40,7 +40,6 @@ quic://nsec.arnor.org
 quic://privacy.plumedns.com
 quic://root.hagezi.org
 quic://router.comss.one
-quic://rx.techomespace.com
 quic://unfiltered.adguard-dns.com
 quic://wurzn.hagezi.org
 quic://zdn.ro

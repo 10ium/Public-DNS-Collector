@@ -12,10 +12,10 @@ tcp://208.67.220.2
 tcp://208.67.222.2
 tcp://86.54.11.100
 tcp://86.54.11.200
-tls://child-noads.joindns4.eu
 tls://private.canadianshield.cira.ca
 tls://sandbox.opendns.com
 tls://unfiltered.dns.bebasid.com:853
+tls://unfiltered.joindns4.eu
 udp://149.112.121.10
 udp://149.112.122.10
 udp://208.67.220.2

@@ -7,14 +7,11 @@
 2001:620:0:ff::2
 2001:67c:930::1
 2001:8d8:1801:86e7::1
-2001:a18:1::29
 2001:de4::101
 2001:de4::102
 2001:df7:5300:3::51e
 2400:3200::1
 2400:3200:baba::1
-240C::6644
-240C::6666
 2a01:4f8:141:316d::117
 2a01:4f8:151:34aa::198
 2a01:4f8:1c0c:40db::1
@@ -26,6 +23,8 @@
 2a07:e340::5
 2a07:e340::6
 2a07:e340::9
+2a0c:4ac1:29::2
+2a0c:4ac1:29::3
 2a10:50c0::ad1:ff
 2a10:50c0::ad2:ff
 [2001:678:e68:f000::]:8443
@@ -69,7 +68,6 @@ https://dns.busold.ws/dns-query
 https://dns.caliph.dev/dns-query
 https://dns.caspervk.net/dns-query
 https://dns.cert.ee/dns-query
-https://dns.cfiec.net/dns-query
 https://dns.chenu.ch/dns-query
 https://dns.chunghwamc.com/dns-query
 https://dns.cynthialabs.net/dns-query
@@ -79,7 +77,6 @@ https://dns.decky.eu/dns-query
 https://dns.decloudus.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.dnsguard.pub/dns-query
-https://dns.dnswarden.com/uncensored
 https://dns.doh.my.id/dns-query
 https://dns.edgy.network/dns-query
 https://dns.faked.org/dns-query
@@ -135,7 +132,6 @@ https://doh.kel.pe
 https://doh.libredns.gr/ads
 https://doh.libredns.gr/dns-query
 https://doh.mmmalia.com/dns-query
-https://doh.qis.io/dns-query
 https://doh.sz-dns.com/dns-query
 https://doh.tiar.app/dns-query
 https://doh.viatech.com.tw/dns-query
@@ -147,7 +143,6 @@ https://freedns.controld.com/p2
 https://freedns.controld.com/p3
 https://gb-lon-w-p-2.nashkan.net/dns-query
 https://ibksturm.synology.me/dns-query
-https://kaitain.restena.lu/dns-query
 https://lion.dns.qwer.pw/dns-query
 https://ns.data.haus/dns-query
 https://ns2.4netguides.org/dns-query
@@ -159,10 +154,8 @@ https://pihole.aws.ketan.dev/dns-query
 https://pooblet.co.za/dns-query
 https://privacy.plumedns.com/dns-query
 https://public.dns.iij.jp/dns-query
-https://resolver-eu.lelux.fi/dns-query
 https://resolver.dnsprivacy.org.uk/dns-query
 https://ro-buc-w-p-1.nashkan.net/dns-query
-https://rx.techomespace.com/dns-query
 https://sg-w-p-1.nashkan.net/dns-query
 https://sg.adhole.org/dns-query
 https://sm2.doh.pub/dns-query
@@ -212,7 +205,6 @@ quic://doq.ffmuc.net
 quic://ibksturm.synology.me
 quic://nsec.arnor.org
 quic://privacy.plumedns.com
-quic://rx.techomespace.com
 quic://zdn.ro
 sdns://AQAAAAAAAAAACjguMjAuMjQ3LjIg0sJUqpYcHsoXmZb1X7yAHwg2xyN5q1J-zaiGG-Dgs7AoMi5kbnNjcnlwdC1jZXJ0LnNoaWVsZC0yLmRuc2J5Y29tb2RvLmNvbQ
 sdns://AQAAAAAAAAAADzE4MC4xMzEuMTQ0LjE0NCDGC-b_38Dj4-ikI477AO1GXcLPfETOFpE36KZIHdOzLhkyLmRuc2NyeXB0LWNlcnQubmF3YWxhLmlk
@@ -221,7 +213,6 @@ sdns://AQIAAAAAAAAAETk0LjE0MC4xNC4xNDo1NDQzINErR_JS3PLCu_iZEIbq95zkSV2LFsigxDIuU
 sdns://AQIAAAAAAAAAF1syYTAxOjRmODoxYzBjOjQwZGI6OjFdIKeNqJacdMufL_kvUDGFm5-J2r4yS94vn4S5ie-o8MCMEGRuc2ZvcmZhbWlseS5jb20
 sdns://AQIAAAAAAAAAGFsyYTEwOjUwYzA6OmFkMTpmZl06NTQ0MyDRK0fyUtzywrv4mRCG6vec5EldixbIoMQyLlLKPzkIcyIyLmRuc2NyeXB0LmRlZmF1bHQubnMxLmFkZ3VhcmQuY29t
 sdns://AQMAAAAAAAAADjEwNC4xOTcuMjguMTIxICcgf9USBOg2e0g0AF35_9HTC74qnDNjnm7b-K7ZHUDYIDIuZG5zY3J5cHQtY2VydC5zYWZlc3VyZmVyLmNvLm56
-sdns://AQMAAAAAAAAAEDMuNy4xNTYuMTI4Ojg0NDMgDXD9OSDJDwe2q9bi836PURTP14NLYS03RbDq6j891ZciMi5kbnNjcnlwdC1jZXJ0LmRucy5hcmFwdXJheWlsLmNvbQ
 sdns://AQMAAAAAAAAAEjEwMy44Ny42OC4xOTQ6ODQ0MyAxXDKkdrOao8ZeLyu7vTnVrT0C7YlPNNf6trdMkje7QR8yLmRuc2NyeXB0LWNlcnQuZG5zLmJlYmFzaWQuY29t
 sdns://AQMAAAAAAAAAEjc4LjQ3LjIxMi4yMTE6OTQ0MyBNRN4TaVynkcwkVAbSBrCvr4X3c3Cygz_4VDUcRhhhYx4yLmRuc2NyeXB0LWNlcnQuRGVDbG91ZFVzLXRlc3Q
 sdns://AQMAAAAAAAAAHFsyYTAxOjRmODoxM2E6MjUwYjo6MzBdOjk0NDMgTUTeE2lcp5HMJFQG0gawr6-F93NwsoM_-FQ1HEYYYWMeMi5kbnNjcnlwdC1jZXJ0LkRlQ2xvdWRVcy10ZXN0
@@ -260,7 +251,6 @@ tcp://130.59.31.248
 tcp://139.59.48.222
 tcp://140.207.198.6
 tcp://155.248.232.226
-tcp://158.64.1.29
 tcp://160.19.167.150
 tcp://169.239.202.202
 tcp://176.9.1.117
@@ -293,11 +283,12 @@ tcp://217.160.70.42
 tcp://218.30.118.6
 tcp://223.5.5.5
 tcp://223.6.6.6
-tcp://3.7.156.128
 tcp://45.11.45.11
 tcp://5.1.66.255
 tcp://52.3.100.184
 tcp://54.174.40.213
+tcp://62.192.153.242
+tcp://62.192.153.243
 tcp://64.176.190.82
 tcp://64.6.64.6
 tcp://64.6.65.6
@@ -330,7 +321,6 @@ tls://agh.dshubham.xyz
 tls://all.dns.mullvad.net
 tls://base.dns.mullvad.net
 tls://dns-dot.dnsforfamily.com
-tls://dns-tls.qis.io
 tls://dns.18bit.cn
 tls://dns.adguard-dns.com
 tls://dns.akbxr.com
@@ -344,7 +334,6 @@ tls://dns.busold.ws
 tls://dns.caliph.dev:853
 tls://dns.caspervk.net
 tls://dns.cert.ee
-tls://dns.cfiec.net
 tls://dns.chenu.ch
 tls://dns.chunghwamc.com
 tls://dns.d94.xyz
@@ -399,7 +388,6 @@ tls://extended.dns.mullvad.net
 tls://family.dns.mullvad.net
 tls://frd4wvnobp.cloudflare-gateway.com
 tls://ibksturm.synology.me
-tls://kaitain.restena.lu
 tls://ns.data.haus
 tls://ns2.4netguides.org
 tls://nsec.arnor.org
@@ -411,7 +399,6 @@ tls://per.adfilter.net
 tls://pihole.aws.ketan.dev
 tls://privacy.plumedns.com
 tls://public.dns.iij.jp
-tls://resolver-eu.lelux.fi
 tls://resolver.dnsprivacy.org.uk
 tls://sunnygyl.com
 tls://zdn.ro
@@ -429,7 +416,6 @@ udp://130.59.31.248
 udp://139.59.48.222
 udp://140.207.198.6
 udp://155.248.232.226
-udp://158.64.1.29
 udp://160.19.167.150
 udp://169.239.202.202
 udp://176.9.1.117
@@ -462,11 +448,12 @@ udp://217.160.70.42
 udp://218.30.118.6
 udp://223.5.5.5
 udp://223.6.6.6
-udp://3.7.156.128
 udp://45.11.45.11
 udp://5.1.66.255
 udp://52.3.100.184
 udp://54.174.40.213
+udp://62.192.153.242
+udp://62.192.153.243
 udp://64.176.190.82
 udp://64.6.64.6
 udp://64.6.65.6

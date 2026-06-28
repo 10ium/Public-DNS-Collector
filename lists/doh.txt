@@ -82,7 +82,6 @@ https://dns.busold.ws/dns-query
 https://dns.caliph.dev/dns-query
 https://dns.caspervk.net/dns-query
 https://dns.cert.ee/dns-query
-https://dns.cfiec.net/dns-query
 https://dns.chenu.ch/dns-query
 https://dns.christerwaren.fi
 https://dns.chunghwamc.com/dns-query
@@ -99,7 +98,6 @@ https://dns.digitalsize.net/dns-query
 https://dns.dns-over-https.com/dns-query
 https://dns.dnsguard.pub/dns-query
 https://dns.dnshome.de/dns-query
-https://dns.dnswarden.com/uncensored
 https://dns.doh.my.id/dns-query
 https://dns.edgy.network/dns-query
 https://dns.elemental.software/dns-query
@@ -150,7 +148,6 @@ https://dns.pub/dns-query
 https://dns.pumplex.com/dns-query
 https://dns.quad9.net/dns-query
 https://dns.quiet.rocks/dns-query
-https://dns.rabbitdns.org/dns-query
 https://dns.rbn.gr/dns-query
 https://dns.redhosting.com.ar/dns-query
 https://dns.retakecs.com/dns-query
@@ -258,7 +255,6 @@ https://doh.opendns.com/dns-query
 https://doh.pl.ahadns.net/dns-query
 https://doh.post-factum.tk/dns-query
 https://doh.powerdns.org
-https://doh.qis.io/dns-query
 https://doh.sandbox.opendns.com/dns-query
 https://doh.seby.io/dns-query
 https://doh.sz-dns.com/dns-query
@@ -284,7 +280,6 @@ https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
 https://family.dns.mullvad.net/dns-query
 https://family.dot.dns.yandex.net/dns-query
-https://family.rabbitdns.org/dns-query
 https://fi.doh.dns.snopyta.org/dns-query
 https://fidelius.top/dns-query
 https://fra01.dnscry.pt/dns-query
@@ -318,7 +313,6 @@ https://gb-lon-w-p-2.nashkan.net/dns-query
 https://geg01.dnscry.pt/dns-query
 https://gibblets.top/dns-query
 https://glacius.top/dns-query
-https://gru01.dnscry.pt/dns-query
 https://gva01.dnscry.pt/dns-query
 https://haf01.dnscry.pt/dns-query
 https://han01.dnscry.pt/dns-query
@@ -336,7 +330,6 @@ https://jit.ddns.net/dns-query
 https://jp.tiar.app/dns-query
 https://jp.tiarap.org/dns-query
 https://juuri.hagezi.org/dns-query
-https://kaitain.restena.lu/dns-query
 https://kids.ns.nwps.fi/dns-query
 https://kiv01.dnscry.pt/dns-query
 https://kronos.plan9-dns.com/dns-query
@@ -378,7 +371,6 @@ https://rdd01.dnscry.pt/dns-query
 https://rdns.faelix.net/
 https://regiopolis.cloud/dns-query
 https://renardbleu.dev/dns-query
-https://resolver-eu.lelux.fi/dns-query
 https://resolver.dnsprivacy.org.uk/dns-query
 https://resolver.sunet.se/dns-query
 https://rethinkdns.com/configure
@@ -389,7 +381,6 @@ https://ric.openbld.net/dns-query
 https://ro-buc-w-p-1.nashkan.net/dns-query
 https://root.hagezi.org/dns-query
 https://router.comss.one/dns-query
-https://rx.techomespace.com/dns-query
 https://sa01.dns4me.net
 https://safe.dot.dns.yandex.net/dns-query
 https://safeservedns.com/dns-query
@@ -400,7 +391,6 @@ https://sea01.dnscry.pt/dns-query
 https://secondary.dns.seia.io/dns-query
 https://secure.hafnova.com/dns-query
 https://security.cloudflare-dns.com/dns-query
-https://security.rabbitdns.org/dns-query
 https://seoul.dnsovertor.cc/dns-query
 https://sg-sin-dns-101.mullvad.net/dns-query
 https://sg-w-p-1.nashkan.net/dns-query
