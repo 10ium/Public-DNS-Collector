@@ -1,4 +1,5 @@
 https://adblock.dns.mullvad.net/dns-query
+https://adblock.mydns.network/dns-query
 https://adguard.shoupperuser.com/dns-query
 https://all.dns.mullvad.net/dns-query
 https://base.dns.mullvad.net/dns-query
@@ -23,6 +24,7 @@ https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
 https://family.dns.mullvad.net/dns-query
+https://family.mydns.network/dns-query
 https://freedns.controld.com/family
 https://freedns.controld.com/p0
 https://freedns.controld.com/p1
@@ -44,7 +46,9 @@ https://freedns.controld.com/x-hagezi-ultimate
 https://freedns.controld.com/x-oisd
 https://freedns.controld.com/x-oisd-basic
 https://freedns.controld.com/x-stevenblack
+https://freedom.mydns.network/dns-query
 https://mozilla.cloudflare-dns.com/dns-query
+https://paranoia.mydns.network/dns-query
 https://private.canadianshield.cira.ca/dns-query
 https://protected.canadianshield.cira.ca/dns-query
 https://security.cloudflare-dns.com/dns-query
@@ -62,4 +66,5 @@ tls://dns.switch.ch
 tls://doh.cleanbrowsing.org
 tls://doh.domreg.lt
 tls://freedns.controld.com
+tls://freedom.mydns.network
 tls://private.canadianshield.cira.ca

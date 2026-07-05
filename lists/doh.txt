@@ -161,7 +161,6 @@ https://dns.smartguard.io/dns-query
 https://dns.startupstack.tech/dns-query
 https://dns.stirringphoto.com/dns-query
 https://dns.stormycloud.org/dns-query
-https://dns.superstefan.win/dns-query
 https://dns.surfsharkdns.com/dns-query
 https://dns.switch.ch/dns-query
 https://dns.szpadel.ovh/dns-query
@@ -235,7 +234,6 @@ https://doh.ffmuc.net/dns-query
 https://doh.futa.gg/dns-query
 https://doh.in.ahadns.net/dns-query
 https://doh.it.ahadns.net/dns-query
-https://doh.kel.pe
 https://doh.la.ahadns.net/dns-query
 https://doh.lacontrevoie.fr/dns-query
 https://doh.li/dns-query
@@ -280,6 +278,7 @@ https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
 https://family.dns.mullvad.net/dns-query
 https://family.dot.dns.yandex.net/dns-query
+https://family.mydns.network/dns-query
 https://fi.doh.dns.snopyta.org/dns-query
 https://fidelius.top/dns-query
 https://fra01.dnscry.pt/dns-query
@@ -356,6 +355,7 @@ https://odvr.nic.cz/doh
 https://omr01.dnscry.pt/dns-query
 https://ordns.he.net/dns-query
 https://par01.dnscry.pt/dns-query
+https://paranoia.mydns.network/dns-query
 https://pdx01.dnscry.pt/dns-query
 https://per.adfilter.net/dns-query
 https://phx01.dnscry.pt/dns-query
@@ -412,7 +412,6 @@ https://tiger.dns.qwer.pw/dns-query
 https://tll01.dnscry.pt/dns-query
 https://tpa01.dnscry.pt/dns-query
 https://trf01.dnscry.pt/dns-query
-https://tsm01.dnscry.pt/dns-query
 https://uk.adhole.org/dns-query
 https://uk01.dns4me.net
 https://unfiltered.adguard-dns.com/dns-query

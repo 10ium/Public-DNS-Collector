@@ -129,7 +129,6 @@ tls://doh.dns4all.eu
 tls://doh.domreg.lt
 tls://doh.ffmuc.net
 tls://doh.futa.gg
-tls://doh.kel.pe
 tls://doh.libredns.gr
 tls://doh.lv
 tls://doh.niyawe.de
@@ -161,6 +160,7 @@ tls://family.dot.dns.yandex.net
 tls://familyshield.opendns.com
 tls://frd4wvnobp.cloudflare-gateway.com
 tls://freedns.controld.com
+tls://freedom.mydns.network
 tls://getdnsapi.net
 tls://hagezi.dns.bebasid.com:853
 tls://ibksturm.synology.me

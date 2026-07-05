@@ -96,7 +96,6 @@ tls://doh.dns4all.eu
 tls://doh.domreg.lt
 tls://doh.ffmuc.net
 tls://doh.futa.gg
-tls://doh.kel.pe
 tls://doh.libredns.gr
 tls://doh.lv
 tls://doh.niyawe.de
@@ -105,6 +104,7 @@ tls://doh.sz-dns.com
 tls://doth.huque.com
 tls://dukun.de
 tls://freedns.controld.com
+tls://freedom.mydns.network
 tls://ibuki.cgnat.net
 tls://masters-of-cloud.de
 tls://ns.data.haus

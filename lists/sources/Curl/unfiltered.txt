@@ -154,7 +154,6 @@ https://tbs01.dnscry.pt/dns-query
 https://tll01.dnscry.pt/dns-query
 https://tpa01.dnscry.pt/dns-query
 https://trf01.dnscry.pt/dns-query
-https://tsm01.dnscry.pt/dns-query
 https://uk01.dns4me.net
 https://unfiltered.joindns4.eu/dns-query
 https://us01.dns4me.net

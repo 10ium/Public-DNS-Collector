@@ -36,6 +36,7 @@
 https://ada.openbld.net/dns-query
 https://adblock.dns.mullvad.net/dns-query
 https://adblock.krctech.dev/dns-query
+https://adblock.mydns.network/dns-query
 https://addns1.m-it.ro/dns-query
 https://adfree.usableprivacy.net/dns-query
 https://adfreedns.top/dns-query
@@ -109,7 +110,6 @@ https://dns.roedel.cloud/dns-query
 https://dns.silen.org/dns-query
 https://dns.skrep.eu/dns-query
 https://dns.slinkyman.net/dns-query
-https://dns.superstefan.win/dns-query
 https://dns.surfsharkdns.com/dns-query
 https://dns.switch.ch/dns-query
 https://dns.szpadel.ovh/dns-query
@@ -128,7 +128,6 @@ https://doh.archuser.org/dns-query
 https://doh.dns.sb/dns-query
 https://doh.ffmuc.net/dns-query
 https://doh.futa.gg/dns-query
-https://doh.kel.pe
 https://doh.libredns.gr/ads
 https://doh.libredns.gr/dns-query
 https://doh.mmmalia.com/dns-query
@@ -138,9 +137,11 @@ https://doh.viatech.com.tw/dns-query
 https://example.doh.blockerdns.com/dns-query
 https://extended.dns.mullvad.net/dns-query
 https://family.dns.mullvad.net/dns-query
+https://family.mydns.network/dns-query
 https://frd4wvnobp.cloudflare-gateway.com/dns-query
 https://freedns.controld.com/p2
 https://freedns.controld.com/p3
+https://freedom.mydns.network/dns-query
 https://gb-lon-w-p-2.nashkan.net/dns-query
 https://ibksturm.synology.me/dns-query
 https://lion.dns.qwer.pw/dns-query
@@ -149,6 +150,7 @@ https://ns2.4netguides.org/dns-query
 https://nsec.arnor.org/dns-query
 https://odvr.nic.cz/doh
 https://ordns.he.net/dns-query
+https://paranoia.mydns.network/dns-query
 https://per.adfilter.net/dns-query
 https://pihole.aws.ketan.dev/dns-query
 https://pooblet.co.za/dns-query
@@ -232,6 +234,7 @@ sdns://AgMAAAAAAAAADDE3Ni45LjkzLjE5OCCMUDOXP_5P8e8KqSmE_JMoG6epJ474v2QSJriY0Q1Od
 sdns://AgMAAAAAAAAADTIwMy4yOS4yNDEuNzYgjFAzlz_-T_HvCqkphPyTKBunqSeO-L9kEia4mNENTnQQcGVyLmFkZmlsdGVyLm5ldAovZG5zLXF1ZXJ5
 sdns://AgMAAAAAAAAADjExMi4yMTMuMzIuMjE5IIxQM5c__k_x7wqpKYT8kygbp6knjvi_ZBImuJjRDU50EHN5ZC5hZGZpbHRlci5uZXQKL2Rucy1xdWVyeQ
 sdns://AgMAAAAAAAAADjgzLjIyMC4xNjkuMTU1IKSyl_7Pgklj04d7IAintC3XV2ogOeLGTFT-NU8y9R8cDWRucy5jb21zcy5vbmUKL2Rucy1xdWVyeQ
+sdns://AgMAAAAAAAAADlsyYTA3OmUzNDA6OjNdABdhZGJsb2NrLmRucy5tdWxsdmFkLm5ldAovZG5zLXF1ZXJ5
 sdns://AgMAAAAAAAAADzEwMy4yNDkuMjM4LjEyNCCQeNIaVsDgiR2QYiG2mSMxvdFxcusPM92gfVxlxuFMORBhZGwuYWRmaWx0ZXIubmV0Ci9kbnMtcXVlcnk
 sdns://AgMAAAAAAAAAGFsyNDA0Ojk0MDA6NDFhOTo0ODAwOjoxXSCMUDOXP_5P8e8KqSmE_JMoG6epJ474v2QSJriY0Q1OdBBwZXIuYWRmaWx0ZXIubmV0Ci9kbnMtcXVlcnk
 sdns://AgMAAAAAAAAAGFsyNDA0Ojk0MDA6NjkwMzoyMTAwOjoxXSCQeNIaVsDgiR2QYiG2mSMxvdFxcusPM92gfVxlxuFMORBhZGwuYWRmaWx0ZXIubmV0Ci9kbnMtcXVlcnk
@@ -376,7 +379,6 @@ tls://dnsvps.familiamv.net
 tls://dog.dns.qwer.pw
 tls://doh.archuser.org
 tls://doh.futa.gg
-tls://doh.kel.pe
 tls://doh.sz-dns.com
 tls://dot.360.cn
 tls://dot.ffmuc.net
@@ -387,6 +389,7 @@ tls://dot1.applied-privacy.net
 tls://extended.dns.mullvad.net
 tls://family.dns.mullvad.net
 tls://frd4wvnobp.cloudflare-gateway.com
+tls://freedom.mydns.network
 tls://ibksturm.synology.me
 tls://ns.data.haus
 tls://ns2.4netguides.org
