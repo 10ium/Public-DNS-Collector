@@ -33,6 +33,7 @@ tls://dns.anon.no
 tls://dns.applewebkit.dev
 tls://dns.asterimoon.com
 tls://dns.bebasid.com:853
+tls://dns.bezmezhau.com
 tls://dns.bitgeek.in
 tls://dns.bitservices.io
 tls://dns.blokada.org
@@ -104,7 +105,6 @@ tls://dns.stirringphoto.com
 tls://dns.stormycloud.org
 tls://dns.surfsharkdns.com
 tls://dns.switch.ch
-tls://dns.szpadel.ovh
 tls://dns.t53.de
 tls://dns.telekom.de
 tls://dns.tipsy.coffee
@@ -187,7 +187,6 @@ tls://p1.freedns.controld.com
 tls://p2.freedns.controld.com
 tls://p3.freedns.controld.com
 tls://per.adfilter.net
-tls://pihole.aws.ketan.dev
 tls://privacy.plumedns.com
 tls://privacydns.go6lab.si
 tls://private.canadianshield.cira.ca

@@ -26,7 +26,6 @@ https://base.dns.mullvad.net/dns-query
 https://bazooki-infra.dev/dns-query
 https://bne01.dnscry.pt/dns-query
 https://bog01.dnscry.pt/dns-query
-https://bom01.dnscry.pt/dns-query
 https://bru01.dnscry.pt/dns-query
 https://bts01.dnscry.pt/dns-query
 https://ca01.dns4me.net
@@ -50,6 +49,7 @@ https://dns.anon.no/dns-query
 https://dns.applewebkit.dev/dns-query
 https://dns.asterimoon.com/dns-query
 https://dns.belnet.be/dns-query
+https://dns.bezmezhau.com/dns-query
 https://dns.bitservices.io/dns-query
 https://dns.blokada.org/dns-query
 https://dns.bmwhocking.com/dns-query
@@ -126,7 +126,6 @@ https://dns.stirringphoto.com/dns-query
 https://dns.stormycloud.org/dns-query
 https://dns.surfsharkdns.com/dns-query
 https://dns.switch.ch/dns-query
-https://dns.szpadel.ovh/dns-query
 https://dns.t53.de/dns-query
 https://dns.telekom.de/dns-query
 https://dns.tipsy.coffee/dns-query
@@ -233,7 +232,6 @@ https://juuri.hagezi.org/dns-query
 https://kiv01.dnscry.pt/dns-query
 https://kronos.plan9-dns.com/dns-query
 https://las01.dnscry.pt/dns-query
-https://lion.dns.qwer.pw/dns-query
 https://loadlow.me/dns-query
 https://lon01.dnscry.pt/dns-query
 https://mad01.dnscry.pt/dns-query
@@ -256,7 +254,6 @@ https://paranoia.mydns.network/dns-query
 https://pdx01.dnscry.pt/dns-query
 https://per.adfilter.net/dns-query
 https://phx01.dnscry.pt/dns-query
-https://pihole.aws.ketan.dev/dns-query
 https://pooblet.co.za/dns-query
 https://privacy.plumedns.com/dns-query
 https://private.canadianshield.cira.ca/dns-query
@@ -286,7 +283,6 @@ https://sky.rethinkdns.com/1:IAAgAA==
 https://sky.rethinkdns.com/dns-query
 https://slc01.dnscry.pt/dns-query
 https://sof01.dnscry.pt/dns-query
-https://sto01.dnscry.pt/dns-query
 https://sunnygyl.com/dns-query
 https://syd.adfilter.net/dns-query
 https://syd02.dnscry.pt/dns-query

@@ -55,7 +55,6 @@ https://dns.roedel.cloud/dns-query
 https://dns.silen.org/dns-query
 https://dns.skrep.eu/dns-query
 https://dns.slinkyman.net/dns-query
-https://dns.szpadel.ovh/dns-query
 https://dns.tipsy.coffee/dns-query
 https://dns.unx.io/dns-query
 https://dns1.techniverse.net/dns-query
@@ -74,13 +73,11 @@ https://family.dns.mullvad.net/dns-query
 https://family.mydns.network/dns-query
 https://freedom.mydns.network/dns-query
 https://gb-lon-w-p-2.nashkan.net/dns-query
-https://lion.dns.qwer.pw/dns-query
 https://ns.data.haus/dns-query
 https://ns2.4netguides.org/dns-query
 https://nsec.arnor.org/dns-query
 https://paranoia.mydns.network/dns-query
 https://per.adfilter.net/dns-query
-https://pihole.aws.ketan.dev/dns-query
 https://pooblet.co.za/dns-query
 https://privacy.plumedns.com/dns-query
 https://ro-buc-w-p-1.nashkan.net/dns-query
@@ -159,7 +156,6 @@ tls://dns.retakecs.com
 tls://dns.roedel.cloud
 tls://dns.skrep.eu
 tls://dns.slinkyman.net
-tls://dns.szpadel.ovh
 tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns1.techniverse.net
@@ -173,7 +169,6 @@ tls://ns.data.haus
 tls://ns2.4netguides.org
 tls://nsec.arnor.org
 tls://per.adfilter.net
-tls://pihole.aws.ketan.dev
 tls://privacy.plumedns.com
 tls://sunnygyl.com
 tls://zdn.ro

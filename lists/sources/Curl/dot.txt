@@ -18,6 +18,7 @@ tls://dns.alidns.com
 tls://dns.anon.no
 tls://dns.applewebkit.dev
 tls://dns.asterimoon.com
+tls://dns.bezmezhau.com
 tls://dns.bitservices.io
 tls://dns.blokada.org
 tls://dns.brahma.world
@@ -76,7 +77,6 @@ tls://dns.stirringphoto.com
 tls://dns.stormycloud.org
 tls://dns.surfsharkdns.com
 tls://dns.switch.ch
-tls://dns.szpadel.ovh
 tls://dns.t53.de
 tls://dns.telekom.de
 tls://dns.tipsy.coffee
@@ -113,7 +113,6 @@ tls://ns2.4netguides.org
 tls://nsec.arnor.org
 tls://odvr.nic.cz
 tls://per.adfilter.net
-tls://pihole.aws.ketan.dev
 tls://privacy.plumedns.com
 tls://private.canadianshield.cira.ca
 tls://public.dns.iij.jp

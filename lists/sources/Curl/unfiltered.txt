@@ -8,7 +8,6 @@ https://au01.dns4me.net
 https://bazooki-infra.dev/dns-query
 https://bne01.dnscry.pt/dns-query
 https://bog01.dnscry.pt/dns-query
-https://bom01.dnscry.pt/dns-query
 https://bru01.dnscry.pt/dns-query
 https://bts01.dnscry.pt/dns-query
 https://ca01.dns4me.net
@@ -26,6 +25,7 @@ https://dns.aa.net.uk/dns-query
 https://dns.adnull.com/dns-query
 https://dns.alidns.com/dns-query
 https://dns.belnet.be/dns-query
+https://dns.bezmezhau.com/dns-query
 https://dns.blokada.org/dns-query
 https://dns.bmwhocking.com/dns-query
 https://dns.christerwaren.fi
@@ -148,7 +148,6 @@ https://sky.rethinkdns.com/1:IAAgAA==
 https://sky.rethinkdns.com/dns-query
 https://slc01.dnscry.pt/dns-query
 https://sof01.dnscry.pt/dns-query
-https://sto01.dnscry.pt/dns-query
 https://syd02.dnscry.pt/dns-query
 https://tbs01.dnscry.pt/dns-query
 https://tll01.dnscry.pt/dns-query
@@ -183,6 +182,7 @@ tls://anycast.uncensoreddns.org
 tls://ca01.dns4me.net
 tls://dns.aa.net.uk
 tls://dns.alidns.com
+tls://dns.bezmezhau.com
 tls://dns.blokada.org
 tls://dns.christerwaren.fi
 tls://dns.dev-umbrellagov.com
