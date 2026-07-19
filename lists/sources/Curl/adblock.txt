@@ -62,7 +62,6 @@ https://dnsvps.familiamv.net/dns-query
 https://dog.dns.qwer.pw/dns-query
 https://doh-dilution-to-upstreams-adguardhome.nicolas-dorriere.fr/dns-query
 https://doh.angry.im/dns-query
-https://doh.archuser.org/dns-query
 https://doh.futa.gg/dns-query
 https://doh.mmmalia.com/dns-query
 https://doh.sz-dns.com/dns-query
@@ -161,7 +160,6 @@ tls://dns.unx.io
 tls://dns1.techniverse.net
 tls://dnsvps.familiamv.net
 tls://dog.dns.qwer.pw
-tls://doh.archuser.org
 tls://doh.futa.gg
 tls://doh.sz-dns.com
 tls://freedom.mydns.network

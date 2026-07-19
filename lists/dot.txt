@@ -1,6 +1,5 @@
 tls://101.101.101.101
 tls://3dns.eu
-tls://abn01.dnscry.pt
 tls://ada.openbld.net
 tls://adblock.dns.mullvad.net
 tls://adblock.krctech.dev
@@ -33,11 +32,9 @@ tls://dns.anon.no
 tls://dns.applewebkit.dev
 tls://dns.asterimoon.com
 tls://dns.bebasid.com:853
-tls://dns.bezmezhau.com
 tls://dns.bitgeek.in
 tls://dns.bitservices.io
 tls://dns.blokada.org
-tls://dns.brahma.world
 tls://dns.busold.ws
 tls://dns.caliph.dev:853
 tls://dns.caspervk.net
@@ -102,7 +99,6 @@ tls://dns.slinkyman.net
 tls://dns.smartguard.io
 tls://dns.startupstack.tech
 tls://dns.stirringphoto.com
-tls://dns.stormycloud.org
 tls://dns.surfsharkdns.com
 tls://dns.switch.ch
 tls://dns.t53.de
@@ -122,7 +118,6 @@ tls://dnspub.restena.lu
 tls://dnsvps.familiamv.net
 tls://dog.dns.qwer.pw
 tls://doh.applied-privacy.net
-tls://doh.archuser.org
 tls://doh.cleanbrowsing.org
 tls://doh.dns.sb
 tls://doh.dns4all.eu
