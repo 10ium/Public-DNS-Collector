@@ -107,6 +107,7 @@ https://dns.redhosting.com.ar/dns-query
 https://dns.retakecs.com/dns-query
 https://dns.roedel.cloud/dns-query
 https://dns.silen.org/dns-query
+https://dns.simplylinux.ch/dns-query
 https://dns.skrep.eu/dns-query
 https://dns.slinkyman.net/dns-query
 https://dns.smartguard.io/dns-query

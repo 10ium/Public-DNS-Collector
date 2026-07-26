@@ -94,6 +94,7 @@ tls://dns.redhosting.com.ar
 tls://dns.retakecs.com
 tls://dns.roedel.cloud
 tls://dns.seia.io
+tls://dns.simplylinux.ch
 tls://dns.skrep.eu
 tls://dns.slinkyman.net
 tls://dns.smartguard.io

@@ -144,6 +144,7 @@ https://dns.roedel.cloud/dns-query
 https://dns.rubyfish.cn/dns-query
 https://dns.seia.io/dns-query
 https://dns.silen.org/dns-query
+https://dns.simplylinux.ch/dns-query
 https://dns.skrep.eu/dns-query
 https://dns.slinkyman.net/dns-query
 https://dns.smartguard.io/dns-query

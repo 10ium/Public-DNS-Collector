@@ -45,6 +45,7 @@ https://dns.novg.net/dns-query
 https://dns.paulo.nom.za/dns-query
 https://dns.practicallyunhackable.com/dns-query
 https://dns.pub/dns-query
+https://dns.simplylinux.ch/dns-query
 https://dns.smartguard.io/dns-query
 https://dns.startupstack.tech/dns-query
 https://dns.stirringphoto.com/dns-query
@@ -127,6 +128,7 @@ quic://dns.dnshome.de
 quic://dns.kernel-error.de
 quic://dns.kescher.at
 quic://dns.nextdns.io
+quic://dns.simplylinux.ch
 quic://dns.surfsharkdns.com
 quic://doh.dns4all.eu
 tls://3dns.eu
@@ -153,6 +155,7 @@ tls://dns.mzjtechnology.com
 tls://dns.nextdns.io
 tls://dns.practicallyunhackable.com
 tls://dns.pub
+tls://dns.simplylinux.ch
 tls://dns.smartguard.io
 tls://dns.startupstack.tech
 tls://dns.stirringphoto.com
