@@ -9,7 +9,6 @@ https://ca02.dns4me.net
 https://child-noads.joindns4.eu/dns-query
 https://child.joindns4.eu/dns-query
 https://chuncheon.dnsovertor.cc/dns-query
-https://cryptostorm.is/dns-query
 https://de01.dns4me.net
 https://dns.a47.me/dns-query
 https://dns.aa.net.uk/dns-query

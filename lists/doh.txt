@@ -39,7 +39,6 @@ https://chuncheon.dnsovertor.cc/dns-query
 https://cloudflare-dns.com/dns-query
 https://common.dot.dns.yandex.net/dns-query
 https://commons.host/
-https://cryptostorm.is/dns-query
 https://de-fra-dns-001.mullvad.net/dns-query
 https://de.adhole.org/dns-query
 https://de01.dns4me.net
