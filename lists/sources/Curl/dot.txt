@@ -1,4 +1,3 @@
-tls://3dns.eu
 tls://ada.openbld.net
 tls://adblock.krctech.dev
 tls://adfree.usableprivacy.net
@@ -117,6 +116,5 @@ tls://resolver.sunet.se
 tls://rfree1.blue-shield.at
 tls://safeservedns.com
 tls://sky.rethinkdns.com
-tls://sunnygyl.com
 tls://wikimedia-dns.org
 tls://zdn.ro

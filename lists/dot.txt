@@ -1,5 +1,4 @@
 tls://101.101.101.101
-tls://3dns.eu
 tls://ada.openbld.net
 tls://adblock.dns.mullvad.net
 tls://adblock.krctech.dev
@@ -204,7 +203,6 @@ tls://secondary.dns.seia.io
 tls://security-filter-dns.cleanbrowsing.org
 tls://security.cloudflare-dns.com
 tls://sky.rethinkdns.com
-tls://sunnygyl.com
 tls://unfiltered.adguard-dns.com
 tls://unfiltered.dns.bebasid.com:853
 tls://unfiltered.joindns4.eu

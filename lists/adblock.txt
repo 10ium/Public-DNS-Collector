@@ -157,7 +157,6 @@ https://ro-buc-w-p-1.nashkan.net/dns-query
 https://sg-w-p-1.nashkan.net/dns-query
 https://sg.adhole.org/dns-query
 https://sm2.doh.pub/dns-query
-https://sunnygyl.com/dns-query
 https://syd.adfilter.net/dns-query
 https://tiger.dns.qwer.pw/dns-query
 https://uk.adhole.org/dns-query
@@ -416,7 +415,6 @@ tls://per.adfilter.net
 tls://privacy.plumedns.com
 tls://public.dns.iij.jp
 tls://resolver.dnsprivacy.org.uk
-tls://sunnygyl.com
 tls://zdn.ro
 udp://101.101.101.101
 udp://101.102.103.104

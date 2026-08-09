@@ -1,4 +1,3 @@
-https://3dns.eu/dns-query
 https://8888.google/dns-query
 https://abel.waringer-atg.de/dns-query
 https://ada.openbld.net/dns-query
@@ -32,7 +31,6 @@ https://de01.dns4me.net
 https://dns.a47.me/dns-query
 https://dns.aa.net.uk/dns-query
 https://dns.adguard-dns.com/dns-query
-https://dns.adnull.com/dns-query
 https://dns.akbxr.com/dns-query
 https://dns.alidns.com/dns-query
 https://dns.anon.no/dns-query
@@ -246,7 +244,6 @@ https://sg-w-p-1.nashkan.net/dns-query
 https://sg01.dns4me.net
 https://sky.rethinkdns.com/1:IAAgAA==
 https://sky.rethinkdns.com/dns-query
-https://sunnygyl.com/dns-query
 https://syd.adfilter.net/dns-query
 https://tiger.dns.qwer.pw/dns-query
 https://uk01.dns4me.net
@@ -301,7 +298,6 @@ quic://freedns.controld.com
 quic://nsec.arnor.org
 quic://privacy.plumedns.com
 quic://zdn.ro
-tls://3dns.eu
 tls://ada.openbld.net
 tls://adblock.krctech.dev
 tls://adfree.usableprivacy.net
@@ -420,6 +416,5 @@ tls://resolver.sunet.se
 tls://rfree1.blue-shield.at
 tls://safeservedns.com
 tls://sky.rethinkdns.com
-tls://sunnygyl.com
 tls://wikimedia-dns.org
 tls://zdn.ro
