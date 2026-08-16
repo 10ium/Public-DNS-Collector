@@ -20,6 +20,7 @@ https://dns.dev-umbrellagov.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.digitalsize.net/dns-query
 https://dns.dnshome.de/dns-query
+https://dns.easyhns.com/dns-query
 https://dns.elemental.software/dns-query
 https://dns.envs.net/dns-query
 https://dns.flatuslifir.is/dns-query
@@ -82,6 +83,7 @@ https://fidelius.top/dns-query
 https://gibblets.top/dns-query
 https://glacius.top/dns-query
 https://helios.plan9-dns.com/dns-query
+https://hnsdoh.com/dns-query
 https://ibuki.cgnat.net/dns-query
 https://ie01.dns4me.net
 https://imperio.top/dns-query
@@ -138,6 +140,7 @@ tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
 tls://dns.dnshome.de
+tls://dns.easyhns.com
 tls://dns.elemental.software
 tls://dns.flatuslifir.is
 tls://dns.floriantinney.de
@@ -171,6 +174,7 @@ tls://doh.niyawe.de
 tls://doh.seby.io
 tls://doth.huque.com
 tls://dukun.de
+tls://hnsdoh.com
 tls://ibuki.cgnat.net
 tls://masters-of-cloud.de
 tls://ns0.fdn.fr

@@ -100,6 +100,7 @@ https://dns.mullvad.net/dns-query
 https://dns.neeb.it/dns-query
 https://dns.nick-slowinski.de/dns-query
 https://dns.ofdoom.net/dns-query
+https://dns.omada.cafe/dns-query
 https://dns.paesa.es/dns-query
 https://dns.petqa.ru/dns-query
 https://dns.pub/dns-query
@@ -376,6 +377,7 @@ tls://dns.mh4ckt3mh4ckt1c4s.xyz
 tls://dns.mullvad.net
 tls://dns.neeb.it
 tls://dns.ofdoom.net
+tls://dns.omada.cafe
 tls://dns.petqa.ru
 tls://dns.quiet.rocks
 tls://dns.redhosting.com.ar

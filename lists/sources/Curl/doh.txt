@@ -56,6 +56,7 @@ https://dns.dev-umbrellagov.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.digitalsize.net/dns-query
 https://dns.dnshome.de/dns-query
+https://dns.easyhns.com/dns-query
 https://dns.elemental.software/dns-query
 https://dns.envs.net/dns-query
 https://dns.faked.org/dns-query
@@ -92,6 +93,7 @@ https://dns.nick-slowinski.de/dns-query
 https://dns.njal.la/dns-query
 https://dns.novg.net/dns-query
 https://dns.ofdoom.net/dns-query
+https://dns.omada.cafe/dns-query
 https://dns.paesa.es/dns-query
 https://dns.paulo.nom.za/dns-query
 https://dns.petqa.ru/dns-query
@@ -201,6 +203,7 @@ https://gb-lon-w-p-2.nashkan.net/dns-query
 https://gibblets.top/dns-query
 https://glacius.top/dns-query
 https://helios.plan9-dns.com/dns-query
+https://hnsdoh.com/dns-query
 https://ibuki.cgnat.net/dns-query
 https://ie01.dns4me.net
 https://imperio.top/dns-query

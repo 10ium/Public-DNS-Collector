@@ -85,6 +85,7 @@ https://dns.dns-over-https.com/dns-query
 https://dns.dnsguard.pub/dns-query
 https://dns.dnshome.de/dns-query
 https://dns.doh.my.id/dns-query
+https://dns.easyhns.com/dns-query
 https://dns.edgy.network/dns-query
 https://dns.elemental.software/dns-query
 https://dns.envs.net/dns-query
@@ -125,6 +126,7 @@ https://dns.nick-slowinski.de/dns-query
 https://dns.njal.la/dns-query
 https://dns.novg.net/dns-query
 https://dns.ofdoom.net/dns-query
+https://dns.omada.cafe/dns-query
 https://dns.oszx.co/dns-query
 https://dns.paesa.es/dns-query
 https://dns.paulo.nom.za/dns-query
@@ -293,6 +295,7 @@ https://gb-lon-w-p-2.nashkan.net/dns-query
 https://gibblets.top/dns-query
 https://glacius.top/dns-query
 https://helios.plan9-dns.com/dns-query
+https://hnsdoh.com/dns-query
 https://hydra.plan9-ns1.com/dns-query
 https://ibksturm.synology.me/dns-query
 https://ibuki.cgnat.net/dns-query

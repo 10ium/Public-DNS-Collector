@@ -32,6 +32,7 @@ tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
 tls://dns.dnshome.de
+tls://dns.easyhns.com
 tls://dns.elemental.software
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
@@ -56,6 +57,7 @@ tls://dns.mzjtechnology.com
 tls://dns.neeb.it
 tls://dns.nextdns.io
 tls://dns.ofdoom.net
+tls://dns.omada.cafe
 tls://dns.petqa.ru
 tls://dns.practicallyunhackable.com
 tls://dns.pub
@@ -100,6 +102,7 @@ tls://doth.huque.com
 tls://dukun.de
 tls://freedns.controld.com
 tls://freedom.mydns.network
+tls://hnsdoh.com
 tls://ibuki.cgnat.net
 tls://masters-of-cloud.de
 tls://ns.data.haus

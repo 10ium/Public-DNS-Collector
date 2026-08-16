@@ -52,6 +52,7 @@ tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
 tls://dns.dnsguard.pub
 tls://dns.dnshome.de
+tls://dns.easyhns.com
 tls://dns.elemental.software
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
@@ -80,6 +81,7 @@ tls://dns.neeb.it
 tls://dns.neutopia.org
 tls://dns.nextdns.io
 tls://dns.ofdoom.net
+tls://dns.omada.cafe
 tls://dns.opendns.com
 tls://dns.oszx.co
 tls://dns.petqa.ru
@@ -158,6 +160,7 @@ tls://freedns.controld.com
 tls://freedom.mydns.network
 tls://getdnsapi.net
 tls://hagezi.dns.bebasid.com:853
+tls://hnsdoh.com
 tls://ibksturm.synology.me
 tls://ibuki.cgnat.net
 tls://internetsehat.bebasid.com:853
