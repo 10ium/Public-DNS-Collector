@@ -25,7 +25,6 @@ tls://dns-tls.bitwiseshift.net
 tls://dns.18bit.cn
 tls://dns.aa.net.uk
 tls://dns.adguard-dns.com
-tls://dns.akbxr.com
 tls://dns.alidns.com
 tls://dns.anon.no
 tls://dns.applewebkit.dev
@@ -80,7 +79,6 @@ tls://dns.mzjtechnology.com
 tls://dns.neeb.it
 tls://dns.neutopia.org
 tls://dns.nextdns.io
-tls://dns.ofdoom.net
 tls://dns.omada.cafe
 tls://dns.opendns.com
 tls://dns.oszx.co
@@ -192,7 +190,6 @@ tls://protected.canadianshield.cira.ca
 tls://protective.joindns4.eu
 tls://public.dns.iij.jp
 tls://public.ns.nwps.fi
-tls://renardbleu.dev
 tls://resolver.dnsprivacy.org.uk
 tls://resolver.sunet.se
 tls://rfree1.blue-shield.at

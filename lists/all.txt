@@ -182,7 +182,6 @@ https://dns.a47.me/dns-query
 https://dns.aa.net.uk/dns-query
 https://dns.adguard-dns.com/dns-query
 https://dns.adguard.com/dns-query
-https://dns.akbxr.com/dns-query
 https://dns.alidns.com/dns-query
 https://dns.anon.no/dns-query
 https://dns.applewebkit.dev/dns-query
@@ -259,7 +258,6 @@ https://dns.nextdns.io/
 https://dns.nick-slowinski.de/dns-query
 https://dns.njal.la/dns-query
 https://dns.novg.net/dns-query
-https://dns.ofdoom.net/dns-query
 https://dns.omada.cafe/dns-query
 https://dns.oszx.co/dns-query
 https://dns.paesa.es/dns-query
@@ -449,7 +447,6 @@ https://loadlow.me/dns-query
 https://masters-of-cloud.de/dns-query
 https://mozilla.cloudflare-dns.com/dns-query
 https://my.nextdns.io/start
-https://nicsezcheckfbi.gov
 https://noads.joindns4.eu/dns-query
 https://ns.data.haus/dns-query
 https://ns0.fdn.fr/dns-query
@@ -471,7 +468,6 @@ https://public.dns.iij.jp/dns-query
 https://public.ns.nwps.fi/dns-query
 https://rdns.faelix.net/
 https://regiopolis.cloud/dns-query
-https://renardbleu.dev/dns-query
 https://resolver.dnsprivacy.org.uk/dns-query
 https://resolver.sunet.se/dns-query
 https://rethinkdns.com/configure
@@ -499,7 +495,6 @@ https://sg01.dns4me.net
 https://sky.rethinkdns.com/1:IAAgAA==
 https://sky.rethinkdns.com/dns-query
 https://sm2.doh.pub/dns-query
-https://syd.adfilter.net/dns-query
 https://tiger.dns.qwer.pw/dns-query
 https://uk.adhole.org/dns-query
 https://uk01.dns4me.net
@@ -1698,7 +1693,6 @@ tls://dns-tls.bitwiseshift.net
 tls://dns.18bit.cn
 tls://dns.aa.net.uk
 tls://dns.adguard-dns.com
-tls://dns.akbxr.com
 tls://dns.alidns.com
 tls://dns.anon.no
 tls://dns.applewebkit.dev
@@ -1753,7 +1747,6 @@ tls://dns.mzjtechnology.com
 tls://dns.neeb.it
 tls://dns.neutopia.org
 tls://dns.nextdns.io
-tls://dns.ofdoom.net
 tls://dns.omada.cafe
 tls://dns.opendns.com
 tls://dns.oszx.co
@@ -1865,7 +1858,6 @@ tls://protected.canadianshield.cira.ca
 tls://protective.joindns4.eu
 tls://public.dns.iij.jp
 tls://public.ns.nwps.fi
-tls://renardbleu.dev
 tls://resolver.dnsprivacy.org.uk
 tls://resolver.sunet.se
 tls://rfree1.blue-shield.at

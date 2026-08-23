@@ -56,7 +56,6 @@ https://dns-family.adguard.com/dns-query
 https://dns-nyc.aaflalo.me/dns-query
 https://dns.adguard-dns.com/dns-query
 https://dns.adguard.com/dns-query
-https://dns.akbxr.com/dns-query
 https://dns.alidns.com/dns-query
 https://dns.anon.no/dns-query
 https://dns.applewebkit.dev/dns-query
@@ -99,7 +98,6 @@ https://dns.mh4ckt3mh4ckt1c4s.xyz/dns-query
 https://dns.mullvad.net/dns-query
 https://dns.neeb.it/dns-query
 https://dns.nick-slowinski.de/dns-query
-https://dns.ofdoom.net/dns-query
 https://dns.omada.cafe/dns-query
 https://dns.paesa.es/dns-query
 https://dns.petqa.ru/dns-query
@@ -158,7 +156,6 @@ https://ro-buc-w-p-1.nashkan.net/dns-query
 https://sg-w-p-1.nashkan.net/dns-query
 https://sg.adhole.org/dns-query
 https://sm2.doh.pub/dns-query
-https://syd.adfilter.net/dns-query
 https://tiger.dns.qwer.pw/dns-query
 https://uk.adhole.org/dns-query
 https://us-central.adhole.org/dns-query
@@ -342,7 +339,6 @@ tls://base.dns.mullvad.net
 tls://dns-dot.dnsforfamily.com
 tls://dns.18bit.cn
 tls://dns.adguard-dns.com
-tls://dns.akbxr.com
 tls://dns.alidns.com
 tls://dns.anon.no
 tls://dns.applewebkit.dev
@@ -376,7 +372,6 @@ tls://dns.mateo.ovh
 tls://dns.mh4ckt3mh4ckt1c4s.xyz
 tls://dns.mullvad.net
 tls://dns.neeb.it
-tls://dns.ofdoom.net
 tls://dns.omada.cafe
 tls://dns.petqa.ru
 tls://dns.quiet.rocks

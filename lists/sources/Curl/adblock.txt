@@ -15,7 +15,6 @@ https://agh.dshubham.xyz/dns-query
 https://all.dns.mullvad.net/dns-query
 https://au-syd-w-f-1.nashkan.net/dns-query
 https://base.dns.mullvad.net/dns-query
-https://dns.akbxr.com/dns-query
 https://dns.anon.no/dns-query
 https://dns.applewebkit.dev/dns-query
 https://dns.asterimoon.com/dns-query
@@ -45,7 +44,6 @@ https://dns.mh4ckt3mh4ckt1c4s.xyz/dns-query
 https://dns.mullvad.net/dns-query
 https://dns.neeb.it/dns-query
 https://dns.nick-slowinski.de/dns-query
-https://dns.ofdoom.net/dns-query
 https://dns.omada.cafe/dns-query
 https://dns.paesa.es/dns-query
 https://dns.petqa.ru/dns-query
@@ -82,7 +80,6 @@ https://pooblet.co.za/dns-query
 https://privacy.plumedns.com/dns-query
 https://ro-buc-w-p-1.nashkan.net/dns-query
 https://sg-w-p-1.nashkan.net/dns-query
-https://syd.adfilter.net/dns-query
 https://tiger.dns.qwer.pw/dns-query
 https://us-chi-w-f-1.nashkan.net/dns-query
 https://us-chi-w-p-1.nashkan.net/dns-query
@@ -123,7 +120,6 @@ tls://adfreedns.top
 tls://adguard.meddy94.de
 tls://ag.apollohct.com
 tls://agh.dshubham.xyz
-tls://dns.akbxr.com
 tls://dns.anon.no
 tls://dns.applewebkit.dev
 tls://dns.asterimoon.com
@@ -147,7 +143,6 @@ tls://dns.mateo.ovh
 tls://dns.mh4ckt3mh4ckt1c4s.xyz
 tls://dns.mullvad.net
 tls://dns.neeb.it
-tls://dns.ofdoom.net
 tls://dns.omada.cafe
 tls://dns.petqa.ru
 tls://dns.quiet.rocks

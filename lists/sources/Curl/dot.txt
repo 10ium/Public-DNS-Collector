@@ -11,7 +11,6 @@ tls://ca01.dns4me.net
 tls://cloudflare-dns.com
 tls://dns.aa.net.uk
 tls://dns.adguard-dns.com
-tls://dns.akbxr.com
 tls://dns.alidns.com
 tls://dns.anon.no
 tls://dns.applewebkit.dev
@@ -56,7 +55,6 @@ tls://dns.mullvad.net
 tls://dns.mzjtechnology.com
 tls://dns.neeb.it
 tls://dns.nextdns.io
-tls://dns.ofdoom.net
 tls://dns.omada.cafe
 tls://dns.petqa.ru
 tls://dns.practicallyunhackable.com
@@ -114,7 +112,6 @@ tls://per.adfilter.net
 tls://privacy.plumedns.com
 tls://private.canadianshield.cira.ca
 tls://public.dns.iij.jp
-tls://renardbleu.dev
 tls://resolver.sunet.se
 tls://rfree1.blue-shield.at
 tls://safeservedns.com

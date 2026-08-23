@@ -162,7 +162,6 @@ https://odvr.nic.cz/dns-query
 https://protective.joindns4.eu/dns-query
 https://rdns.faelix.net/
 https://regiopolis.cloud/dns-query
-https://renardbleu.dev/dns-query
 https://resolver.sunet.se/dns-query
 https://rethinkdns.com/configure
 https://revelio.top/dns-query
@@ -1041,7 +1040,6 @@ tls://hnsdoh.com
 tls://ibuki.cgnat.net
 tls://masters-of-cloud.de
 tls://ns0.fdn.fr
-tls://renardbleu.dev
 tls://resolver.sunet.se
 tls://rfree1.blue-shield.at
 tls://safeservedns.com

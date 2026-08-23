@@ -31,7 +31,6 @@ https://de01.dns4me.net
 https://dns.a47.me/dns-query
 https://dns.aa.net.uk/dns-query
 https://dns.adguard-dns.com/dns-query
-https://dns.akbxr.com/dns-query
 https://dns.alidns.com/dns-query
 https://dns.anon.no/dns-query
 https://dns.applewebkit.dev/dns-query
@@ -92,7 +91,6 @@ https://dns.nextdns.io
 https://dns.nick-slowinski.de/dns-query
 https://dns.njal.la/dns-query
 https://dns.novg.net/dns-query
-https://dns.ofdoom.net/dns-query
 https://dns.omada.cafe/dns-query
 https://dns.paesa.es/dns-query
 https://dns.paulo.nom.za/dns-query
@@ -213,7 +211,6 @@ https://kronos.plan9-dns.com/dns-query
 https://loadlow.me/dns-query
 https://masters-of-cloud.de/dns-query
 https://mozilla.cloudflare-dns.com/dns-query
-https://nicsezcheckfbi.gov
 https://noads.joindns4.eu/dns-query
 https://ns.data.haus/dns-query
 https://ns0.fdn.fr/dns-query
@@ -231,7 +228,6 @@ https://protected.canadianshield.cira.ca/dns-query
 https://protective.joindns4.eu/dns-query
 https://public.dns.iij.jp/dns-query
 https://regiopolis.cloud/dns-query
-https://renardbleu.dev/dns-query
 https://resolver.sunet.se/dns-query
 https://revelio.top/dns-query
 https://rfree1.blue-shield.at/dns-query
@@ -247,7 +243,6 @@ https://sg-w-p-1.nashkan.net/dns-query
 https://sg01.dns4me.net
 https://sky.rethinkdns.com/1:IAAgAA==
 https://sky.rethinkdns.com/dns-query
-https://syd.adfilter.net/dns-query
 https://tiger.dns.qwer.pw/dns-query
 https://uk01.dns4me.net
 https://unfiltered.adguard-dns.com/dns-query
@@ -314,7 +309,6 @@ tls://ca01.dns4me.net
 tls://cloudflare-dns.com
 tls://dns.aa.net.uk
 tls://dns.adguard-dns.com
-tls://dns.akbxr.com
 tls://dns.alidns.com
 tls://dns.anon.no
 tls://dns.applewebkit.dev
@@ -359,7 +353,6 @@ tls://dns.mullvad.net
 tls://dns.mzjtechnology.com
 tls://dns.neeb.it
 tls://dns.nextdns.io
-tls://dns.ofdoom.net
 tls://dns.omada.cafe
 tls://dns.petqa.ru
 tls://dns.practicallyunhackable.com
@@ -417,7 +410,6 @@ tls://per.adfilter.net
 tls://privacy.plumedns.com
 tls://private.canadianshield.cira.ca
 tls://public.dns.iij.jp
-tls://renardbleu.dev
 tls://resolver.sunet.se
 tls://rfree1.blue-shield.at
 tls://safeservedns.com
