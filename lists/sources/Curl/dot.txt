@@ -56,7 +56,6 @@ tls://dns.mzjtechnology.com
 tls://dns.neeb.it
 tls://dns.nextdns.io
 tls://dns.omada.cafe
-tls://dns.petqa.ru
 tls://dns.practicallyunhackable.com
 tls://dns.pub
 tls://dns.quad9.net

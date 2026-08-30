@@ -7,6 +7,7 @@ https://base.dns.mullvad.net/dns-query
 https://basic.rethinkdns.com/
 https://child-noads.joindns4.eu/dns-query
 https://child.joindns4.eu/dns-query
+https://cloudflare-dns.com/dns-query
 https://common.dot.dns.yandex.net/dns-query
 https://dns-doh.dnsforfamily.com/dns-query
 https://dns.adguard-dns.com/dns-query
@@ -17,7 +18,6 @@ https://dns.bebasid.com/dns-query
 https://dns.bebasid.com/unfiltered
 https://dns.caliph.dev/dns-query
 https://dns.cert.ee/dns-query
-https://dns.cloudflare.com/dns-query
 https://dns.comss.one/dns-query
 https://dns.decloudus.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query

@@ -11,7 +11,7 @@
 <br />
 <br />
 
-**آخرین بروزرسانی:** 2026-08-23 02:23:56 UTC
+**آخرین بروزرسانی:** 2026-08-30 06:19:57 UTC
 <br />
 <br />
 
@@ -29,17 +29,17 @@
 
 | نام فایل | تعداد آدرس‌ها | توضیحات | لینک خام |
 | :--- | :---: | ---: | :---: |
-| `all.txt` | **2062** | لیست جامع تمام دی ان اس ها از همه منابع و پروتکل‌ها | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/all.txt) |
-| `doh.txt` | **388** | لیست تمام سرورهای دی ان اس روی اچ تی تی پی اس | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/doh.txt) |
-| `dot.txt` | **212** | لیست تمام سرورهای دی ان اس روی تی ال اس | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dot.txt) |
-| `doq.txt` | **46** | لیست تمام سرورهای دی ان اس روی کوییک | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/doq.txt) |
+| `all.txt` | **2058** | لیست جامع تمام دی ان اس ها از همه منابع و پروتکل‌ها | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/all.txt) |
+| `doh.txt` | **386** | لیست تمام سرورهای دی ان اس روی اچ تی تی پی اس | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/doh.txt) |
+| `dot.txt` | **211** | لیست تمام سرورهای دی ان اس روی تی ال اس | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dot.txt) |
+| `doq.txt` | **45** | لیست تمام سرورهای دی ان اس روی کوییک | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/doq.txt) |
 | `doh3.txt` | **5** | لیست تمام سرورهای دی ان اس روی اچ تی تی پی اس ۳ | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/doh3.txt) |
 | `dnscrypt.txt` | **916** | لیست تمام سرورهای دی ان اس کریپت | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dnscrypt.txt) |
 | `ipv4.txt` | **182** | لیست سرورهای دی ان اس استاندارد روی آی‌پی‌وی۴ | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/ipv4.txt) |
 | `tcp.txt` | **182** | لیست سرورهای دی انی اس آی‌پی‌وی۴ با پیشوند تی سی پی | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/tcp.txt) |
 | `udp.txt` | **182** | لیست سرورهای دی انی اس آی‌پی‌وی۴ با پیشوند یو دی پی | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/udp.txt) |
 | `ipv6.txt` | **123** | لیست سرورهای دی ان اس استاندارد روی آی‌پی‌وی۶ | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/ipv6.txt) |
-| `adblock.txt` | **487** | لیست سرورهایی که تبلیغات را مسدود می‌کنند | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/adblock.txt) |
+| `adblock.txt` | **484** | لیست سرورهایی که تبلیغات را مسدود می‌کنند | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/adblock.txt) |
 | `malware.txt` | **474** | لیست سرورهایی که از بدافزار و فیشینگ جلوگیری می‌کنند | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/malware.txt) |
 | `family.txt` | **177** | لیست سرورهایی با فیلترینگ خانواده (محتوای بزرگسالان) | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/family.txt) |
 | `unfiltered.txt` | **1068** | لیست سرورهای بدون فیلترینگ خاص | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/unfiltered.txt) |
@@ -82,10 +82,10 @@
 
 | نام فایل | تعداد آدرس‌ها | لینک خام |
 | :--- | :---: | :---: |
-| `all.txt` | **10230** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/all.txt) |
-| `ipv4.txt` | **5115** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/ipv4.txt) |
-| `tcp.txt` | **5115** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/tcp.txt) |
-| `udp.txt` | **5115** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/udp.txt) |
+| `all.txt` | **9766** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/all.txt) |
+| `ipv4.txt` | **4883** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/ipv4.txt) |
+| `tcp.txt` | **4883** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/tcp.txt) |
+| `udp.txt` | **4883** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/udp.txt) |
 
 </details>
 
@@ -169,13 +169,13 @@
 
 | نام فایل | تعداد آدرس‌ها | لینک خام |
 | :--- | :---: | :---: |
-| `all.txt` | **418** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/all.txt) |
-| `adblock.txt` | **167** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/adblock.txt) |
+| `all.txt` | **415** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/all.txt) |
+| `adblock.txt` | **164** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/adblock.txt) |
 | `dnssec.txt` | **61** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/dnssec.txt) |
-| `doh.txt` | **265** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/doh.txt) |
+| `doh.txt` | **264** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/doh.txt) |
 | `doh3.txt` | **5** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/doh3.txt) |
-| `doq.txt` | **33** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/doq.txt) |
-| `dot.txt` | **120** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/dot.txt) |
+| `doq.txt` | **32** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/doq.txt) |
+| `dot.txt` | **119** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/dot.txt) |
 | `family.txt` | **70** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/family.txt) |
 | `malware.txt` | **62** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/malware.txt) |
 | `no_log.txt` | **35** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Curl/no_log.txt) |

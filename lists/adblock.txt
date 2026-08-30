@@ -100,7 +100,6 @@ https://dns.neeb.it/dns-query
 https://dns.nick-slowinski.de/dns-query
 https://dns.omada.cafe/dns-query
 https://dns.paesa.es/dns-query
-https://dns.petqa.ru/dns-query
 https://dns.pub/dns-query
 https://dns.quiet.rocks/dns-query
 https://dns.redhosting.com.ar/dns-query
@@ -188,7 +187,6 @@ quic://dns.kapite.in
 quic://dns.l337.site
 quic://dns.luma-medien.com
 quic://dns.mateo.ovh
-quic://dns.petqa.ru
 quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.skrep.eu
@@ -373,7 +371,6 @@ tls://dns.mh4ckt3mh4ckt1c4s.xyz
 tls://dns.mullvad.net
 tls://dns.neeb.it
 tls://dns.omada.cafe
-tls://dns.petqa.ru
 tls://dns.quiet.rocks
 tls://dns.redhosting.com.ar
 tls://dns.retakecs.com

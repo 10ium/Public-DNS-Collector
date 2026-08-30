@@ -203,7 +203,6 @@ https://dns.cert.ee/dns-query
 https://dns.chenu.ch/dns-query
 https://dns.christerwaren.fi
 https://dns.chunghwamc.com/dns-query
-https://dns.cloudflare.com/dns-query
 https://dns.comss.one/dns-query
 https://dns.cynthialabs.net/dns-query
 https://dns.d94.xyz/dns-query
@@ -262,7 +261,6 @@ https://dns.omada.cafe/dns-query
 https://dns.oszx.co/dns-query
 https://dns.paesa.es/dns-query
 https://dns.paulo.nom.za/dns-query
-https://dns.petqa.ru/dns-query
 https://dns.practicallyunhackable.com/dns-query
 https://dns.pub/dns-query
 https://dns.pumplex.com/dns-query
@@ -545,7 +543,6 @@ quic://dns.l337.site
 quic://dns.luma-medien.com
 quic://dns.mateo.ovh
 quic://dns.nextdns.io
-quic://dns.petqa.ru
 quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.simplylinux.ch
@@ -1274,7 +1271,7 @@ sdns://AgcAAAAAAAAADjE5NS4xMjMuMjQ1LjE5IIxQM5c__k_x7wqpKYT8kygbp6knjvi_ZBImuJjRD
 sdns://AgcAAAAAAAAADjE5OC4xMzQuMTA3LjgyIIxQM5c__k_x7wqpKYT8kygbp6knjvi_ZBImuJjRDU50D2luZDAxLmRuc2NyeS5wdAovZG5zLXF1ZXJ5
 sdns://AgcAAAAAAAAADjE5OC4xNDAuMTQxLjQ2IIxQM5c__k_x7wqpKYT8kygbp6knjvi_ZBImuJjRDU50D2FtczAxLmRuc2NyeS5wdAovZG5zLXF1ZXJ5
 sdns://AgcAAAAAAAAADjE5OS4xMTkuMTM3Ljc0IIxQM5c__k_x7wqpKYT8kygbp6knjvi_ZBImuJjRDU50D255YzAxLmRuc2NyeS5wdAovZG5zLXF1ZXJ5
-sdns://AgcAAAAAAAAADjEwMi4yMDkuMjEuMTc2IIxQM5c__k_x7wqpKYT8kygbp6knjvi_ZBImuJjRDU50F2N0MS1kb2guY2lwaGVyZG5zLmNvLnphCi9kbnMtcXVlcnk
+sdns://AgcAAAAAAAAADjEwMi4yMDkuMjEuMTc2oP_qvxWZFJ9BK1V6rOVWoUSdlRS9JwllVzJr6hoRRXifINqSeh5K4YpnPElAq-H8Z9W88gNANHsHDKWZn1t_0K1ID2NpcGhlcmRucy5jby56YQovZG5zLXF1ZXJ5
 sdns://AgcAAAAAAAAADjEwMi4yMTYuNzkuMjM3IIxQM5c__k_x7wqpKYT8kygbp6knjvi_ZBImuJjRDU50D2NwdDAxLmRuc2NyeS5wdAovZG5zLXF1ZXJ5
 sdns://AgcAAAAAAAAADjEwMy45OS4xMzMuMTEwIIxQM5c__k_x7wqpKYT8kygbp6knjvi_ZBImuJjRDU50D2lzYjAxLmRuc2NyeS5wdAovZG5zLXF1ZXJ5
 sdns://AgcAAAAAAAAADjEwMy4xMDguMjI4LjE1IIxQM5c__k_x7wqpKYT8kygbp6knjvi_ZBImuJjRDU50D21lbDAxLmRuc2NyeS5wdAovZG5zLXF1ZXJ5
@@ -1750,7 +1747,6 @@ tls://dns.nextdns.io
 tls://dns.omada.cafe
 tls://dns.opendns.com
 tls://dns.oszx.co
-tls://dns.petqa.ru
 tls://dns.practicallyunhackable.com
 tls://dns.pub
 tls://dns.pumplex.com

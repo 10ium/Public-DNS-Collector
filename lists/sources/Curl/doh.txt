@@ -94,7 +94,6 @@ https://dns.novg.net/dns-query
 https://dns.omada.cafe/dns-query
 https://dns.paesa.es/dns-query
 https://dns.paulo.nom.za/dns-query
-https://dns.petqa.ru/dns-query
 https://dns.practicallyunhackable.com/dns-query
 https://dns.pub/dns-query
 https://dns.quad9.net/dns-query

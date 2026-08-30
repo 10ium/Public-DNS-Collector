@@ -82,7 +82,6 @@ tls://dns.nextdns.io
 tls://dns.omada.cafe
 tls://dns.opendns.com
 tls://dns.oszx.co
-tls://dns.petqa.ru
 tls://dns.practicallyunhackable.com
 tls://dns.pub
 tls://dns.pumplex.com

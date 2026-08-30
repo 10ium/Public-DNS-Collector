@@ -17,7 +17,6 @@ quic://dns.l337.site
 quic://dns.luma-medien.com
 quic://dns.mateo.ovh
 quic://dns.nextdns.io
-quic://dns.petqa.ru
 quic://dns.retakecs.com
 quic://dns.roedel.cloud
 quic://dns.simplylinux.ch

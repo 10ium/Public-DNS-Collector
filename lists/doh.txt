@@ -70,7 +70,6 @@ https://dns.cert.ee/dns-query
 https://dns.chenu.ch/dns-query
 https://dns.christerwaren.fi
 https://dns.chunghwamc.com/dns-query
-https://dns.cloudflare.com/dns-query
 https://dns.comss.one/dns-query
 https://dns.cynthialabs.net/dns-query
 https://dns.d94.xyz/dns-query
@@ -128,7 +127,6 @@ https://dns.omada.cafe/dns-query
 https://dns.oszx.co/dns-query
 https://dns.paesa.es/dns-query
 https://dns.paulo.nom.za/dns-query
-https://dns.petqa.ru/dns-query
 https://dns.practicallyunhackable.com/dns-query
 https://dns.pub/dns-query
 https://dns.pumplex.com/dns-query
