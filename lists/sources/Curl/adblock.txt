@@ -1,5 +1,4 @@
 https://ada.openbld.net/dns-query
-https://adblock.dns.mullvad.net/dns-query
 https://adblock.krctech.dev/dns-query
 https://adblock.mydns.network/dns-query
 https://addns1.m-it.ro/dns-query
@@ -12,9 +11,7 @@ https://ae-fuj-w-p-2.nashkan.net/dns-query
 https://ae-fuj-w-p-3.nashkan.net/dns-query
 https://ag.apollohct.com/dns-query
 https://agh.dshubham.xyz/dns-query
-https://all.dns.mullvad.net/dns-query
 https://au-syd-w-f-1.nashkan.net/dns-query
-https://base.dns.mullvad.net/dns-query
 https://dns.anon.no/dns-query
 https://dns.applewebkit.dev/dns-query
 https://dns.asterimoon.com/dns-query
@@ -41,7 +38,6 @@ https://dns.luma-medien.com/dns-query
 https://dns.marasov.id/dns-query
 https://dns.mateo.ovh/dns-query
 https://dns.mh4ckt3mh4ckt1c4s.xyz/dns-query
-https://dns.mullvad.net/dns-query
 https://dns.neeb.it/dns-query
 https://dns.nick-slowinski.de/dns-query
 https://dns.omada.cafe/dns-query
@@ -65,8 +61,6 @@ https://doh.mmmalia.com/dns-query
 https://doh.sz-dns.com/dns-query
 https://doh.tiar.app/dns-query
 https://doh.viatech.com.tw/dns-query
-https://extended.dns.mullvad.net/dns-query
-https://family.dns.mullvad.net/dns-query
 https://family.mydns.network/dns-query
 https://freedom.mydns.network/dns-query
 https://gb-lon-w-p-2.nashkan.net/dns-query
@@ -139,7 +133,6 @@ tls://dns.l337.site
 tls://dns.luma-medien.com
 tls://dns.mateo.ovh
 tls://dns.mh4ckt3mh4ckt1c4s.xyz
-tls://dns.mullvad.net
 tls://dns.neeb.it
 tls://dns.omada.cafe
 tls://dns.quiet.rocks

@@ -51,7 +51,6 @@ tls://dns.lobbygod.com
 tls://dns.luma-medien.com
 tls://dns.mateo.ovh
 tls://dns.mh4ckt3mh4ckt1c4s.xyz
-tls://dns.mullvad.net
 tls://dns.mzjtechnology.com
 tls://dns.neeb.it
 tls://dns.nextdns.io

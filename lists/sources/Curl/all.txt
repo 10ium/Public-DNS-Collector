@@ -1,7 +1,6 @@
 https://8888.google/dns-query
 https://abel.waringer-atg.de/dns-query
 https://ada.openbld.net/dns-query
-https://adblock.dns.mullvad.net/dns-query
 https://adblock.krctech.dev/dns-query
 https://adblock.mydns.network/dns-query
 https://addns1.m-it.ro/dns-query
@@ -15,11 +14,9 @@ https://ae-fuj-w-p-2.nashkan.net/dns-query
 https://ae-fuj-w-p-3.nashkan.net/dns-query
 https://ag.apollohct.com/dns-query
 https://agh.dshubham.xyz/dns-query
-https://all.dns.mullvad.net/dns-query
 https://anycast.uncensoreddns.org/dns-query
 https://au-syd-w-f-1.nashkan.net/dns-query
 https://au01.dns4me.net
-https://base.dns.mullvad.net/dns-query
 https://bazooki-infra.dev/dns-query
 https://ca01.dns4me.net
 https://ca02.dns4me.net
@@ -84,7 +81,6 @@ https://dns.marasov.id/dns-query
 https://dns.mateo.ovh/dns-query
 https://dns.mayx.eu.org/dns-query
 https://dns.mh4ckt3mh4ckt1c4s.xyz/dns-query
-https://dns.mullvad.net/dns-query
 https://dns.mzjtechnology.com/dns-query
 https://dns.neeb.it/dns-query
 https://dns.nextdns.io
@@ -167,11 +163,9 @@ https://doh.viatech.com.tw/dns-query
 https://doth.huque.com/dns-query
 https://dukun.de/dns-query
 https://es-ma.foxyfy.net/dns-query
-https://extended.dns.mullvad.net/dns-query
 https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
-https://family.dns.mullvad.net/dns-query
 https://family.mydns.network/dns-query
 https://fidelius.top/dns-query
 https://freedns.controld.com/family
@@ -347,7 +341,6 @@ tls://dns.lobbygod.com
 tls://dns.luma-medien.com
 tls://dns.mateo.ovh
 tls://dns.mh4ckt3mh4ckt1c4s.xyz
-tls://dns.mullvad.net
 tls://dns.mzjtechnology.com
 tls://dns.neeb.it
 tls://dns.nextdns.io

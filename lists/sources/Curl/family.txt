@@ -1,14 +1,10 @@
-https://adblock.dns.mullvad.net/dns-query
 https://adblock.mydns.network/dns-query
 https://adguard.shoupperuser.com/dns-query
-https://all.dns.mullvad.net/dns-query
-https://base.dns.mullvad.net/dns-query
 https://cloudflare-dns.com/dns-query
 https://dns.adguard-dns.com/dns-query
 https://dns.brembeck.cloud/dns-query
 https://dns.cert.ee/dns-query
 https://dns.mateo.ovh/dns-query
-https://dns.mullvad.net/dns-query
 https://dns.switch.ch/dns-query
 https://dns64.cloudflare-dns.com/dns-query
 https://doh.cleanbrowsing.org/doh/adult-filter/
@@ -19,11 +15,9 @@ https://doh.familyshield.opendns.com/dns-query
 https://doh.mmmalia.com/dns-query
 https://doh.opendns.com/dns-query
 https://doh.umbrella.com/dns-query
-https://extended.dns.mullvad.net/dns-query
 https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
-https://family.dns.mullvad.net/dns-query
 https://family.mydns.network/dns-query
 https://freedns.controld.com/family
 https://freedns.controld.com/p0
@@ -61,7 +55,6 @@ tls://cloudflare-dns.com
 tls://dns.adguard-dns.com
 tls://dns.cert.ee
 tls://dns.mateo.ovh
-tls://dns.mullvad.net
 tls://dns.switch.ch
 tls://doh.cleanbrowsing.org
 tls://doh.domreg.lt
