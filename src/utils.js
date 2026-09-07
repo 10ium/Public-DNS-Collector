@@ -7,6 +7,11 @@ import axios from 'axios';
  */
 export async function fetchData(url) {
     try {
+        const parsedUrl = new URL(url);
+        if (parsedUrl.protocol !== 'https:') {
+            console.error(`  ❌ [خطای امنیتی] URL با پروتکل غیرمجاز رد شد: ${url}`);
+            return null;
+        }
         const response = await axios.get(url, { timeout: 15000 });
         return response.data;
     } catch (error) {
