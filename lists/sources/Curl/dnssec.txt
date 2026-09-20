@@ -9,6 +9,7 @@ https://dns.kernel-error.de/dns-query
 https://dns.kescher.at/dns-query
 https://dns.quad9.net/dns-query
 https://dns.rbn.gr/dns-query
+https://dns.yunzheng.space/dns-query
 https://dns10.quad9.net/dns-query
 https://dns11.quad9.net/dns-query
 https://dns12.quad9.net/dns-query
@@ -27,6 +28,7 @@ https://doh.tiar.app/dns-query
 https://doh.umbrella.com/dns-query
 https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
+https://filter.dns.yunzheng.space/dns-query
 https://ibuki.cgnat.net/dns-query
 https://ns0.fdn.fr/dns-query
 https://ns1.fdn.fr/dns-query
@@ -39,6 +41,7 @@ https://wikimedia-dns.org/dns-query
 quic://dns.adguard-dns.com
 quic://dns.kernel-error.de
 quic://dns.kescher.at
+quic://dns.yunzheng.space
 quic://nsec.arnor.org
 tls://dns.adguard-dns.com
 tls://dns.digitale-gesellschaft.ch
@@ -48,6 +51,7 @@ tls://dns.kernel-error.de
 tls://dns.kescher.at
 tls://dns.quad9.net
 tls://dns.rbn.gr
+tls://dns.yunzheng.space
 tls://dnspub.restena.lu
 tls://doh.applied-privacy.net
 tls://doh.dns.sb

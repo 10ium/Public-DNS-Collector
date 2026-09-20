@@ -105,6 +105,7 @@ tls://dns.telekom.de
 tls://dns.tipsy.coffee
 tls://dns.unx.io
 tls://dns.w3ctag.org
+tls://dns.yunzheng.space
 tls://dns1.in-berlin.de
 tls://dns1.techniverse.net
 tls://dns10.quad9.net

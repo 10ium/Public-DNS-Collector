@@ -49,6 +49,7 @@ https://dns.mullvad.net/dns-query
 https://dns.quad9.net/dns-query
 https://dns.rbn.gr/dns-query
 https://dns.switch.ch/dns-query
+https://dns.yunzheng.space/dns-query
 https://dns10.quad9.net/dns-query
 https://dns11.quad9.net/dns-query
 https://dns12.quad9.net/dns-query
@@ -105,6 +106,7 @@ https://extended.dns.mullvad.net/dns-query
 https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
 https://family.dns.mullvad.net/dns-query
+https://filter.dns.yunzheng.space/dns-query
 https://freedom.mydns.network/dns-query
 https://gb-lon-dns-001.mullvad.net/dns-query
 https://gb-lon-dns-301.mullvad.net/dns-query
@@ -131,6 +133,7 @@ https://wikimedia-dns.org/dns-query
 quic://dns.adguard-dns.com
 quic://dns.kernel-error.de
 quic://dns.kescher.at
+quic://dns.yunzheng.space
 quic://nsec.arnor.org
 sdns://AQMAAAAAAAAADDkuOS45Ljk6ODQ0MyBnyEe4yHWM0SAkVUO-dWdG3zTfHYTAC4xHA2jfgh2GPhkyLmRuc2NyeXB0LWNlcnQucXVhZDkubmV0
 sdns://AQMAAAAAAAAADTkuOS45LjExOjg0NDMgZ8hHuMh1jNEgJFVDvnVnRt803x2EwAuMRwNo34Idhj4ZMi5kbnNjcnlwdC1jZXJ0LnF1YWQ5Lm5ldA
@@ -798,6 +801,7 @@ tls://dns.kescher.at
 tls://dns.mullvad.net
 tls://dns.quad9.net
 tls://dns.rbn.gr
+tls://dns.yunzheng.space
 tls://dnspub.restena.lu
 tls://doh.applied-privacy.net
 tls://doh.dns.sb

@@ -53,6 +53,7 @@ https://dns.telekom.de/dns-query
 https://dns.tls-data.de/dns-query
 https://dns.vaioswolke.xyz/dns-query
 https://dns.w3ctag.org/dns-query
+https://dns.yunzheng.space/dns-query
 https://dns1.in-berlin.de/dns-query
 https://dns2.in-berlin.de/dns-query
 https://dns4eu.online/dns-query
@@ -80,6 +81,7 @@ https://doth.huque.com/dns-query
 https://dukun.de/dns-query
 https://es-ma.foxyfy.net/dns-query
 https://fidelius.top/dns-query
+https://filter.dns.yunzheng.space/dns-query
 https://gibblets.top/dns-query
 https://glacius.top/dns-query
 https://helios.plan9-dns.com/dns-query
@@ -128,6 +130,7 @@ quic://dns.kescher.at
 quic://dns.nextdns.io
 quic://dns.simplylinux.ch
 quic://dns.surfsharkdns.com
+quic://dns.yunzheng.space
 quic://doh.dns4all.eu
 tls://anycast.uncensoreddns.org
 tls://ca01.dns4me.net
@@ -161,6 +164,7 @@ tls://dns.surfsharkdns.com
 tls://dns.t53.de
 tls://dns.telekom.de
 tls://dns.w3ctag.org
+tls://dns.yunzheng.space
 tls://dns1.in-berlin.de
 tls://dnspub.restena.lu
 tls://doh.applied-privacy.net

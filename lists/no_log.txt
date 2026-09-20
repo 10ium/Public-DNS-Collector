@@ -21,6 +21,7 @@ https://dns.google/dns-query
 https://dns.moulticast.net/dns-query
 https://dns.mullvad.net/dns-query
 https://dns.paesa.es/dns-query
+https://dns.yunzheng.space/dns-query
 https://dnses.alekberg.net/dns-query
 https://dnsforge.de/dns-query
 https://dnsnl.alekberg.net/dns-query
@@ -40,6 +41,7 @@ https://eu1.dns.lavate.ch/dns-query
 https://example.doh.blockerdns.com/dns-query
 https://extended.dns.mullvad.net/dns-query
 https://family.dns.mullvad.net/dns-query
+https://filter.dns.yunzheng.space/dns-query
 https://freedom.mydns.network/dns-query
 https://gb-lon-dns-001.mullvad.net/dns-query
 https://gb-lon-dns-301.mullvad.net/dns-query
@@ -63,6 +65,7 @@ https://us1.dns.lavate.ch/dns-query
 https://v0dka.ru/dns-query
 quic://dns.adguard-dns.com
 quic://dns.dnshome.de
+quic://dns.yunzheng.space
 quic://doh.dns4all.eu
 sdns://AQMAAAAAAAAADzE2My4xNzIuMTgwLjEyNSDfYnO_x1IZKotaObwMhaw_-WRF1zZE9mJygl01WPGh_x8yLmRuc2NyeXB0LWNlcnQuc2Z3LnNjYWxld2F5LWZy
 sdns://AQcAAAAAAAAACzg5LjExNy4yLjE3IMC4eSuCrbghtvVsoGHUaT3eBNQLsYxXjNdz_WsChD95GTIuZG5zY3J5cHQtY2VydC5kbnNjcnkucHQ
@@ -129,6 +132,7 @@ tls://dns.flatuslifir.is
 tls://dns.google
 tls://dns.mullvad.net
 tls://dns.quad9.net
+tls://dns.yunzheng.space
 tls://doh.dns.sb
 tls://doh.dns4all.eu
 tls://doh.ffmuc.net
