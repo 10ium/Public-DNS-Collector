@@ -11,7 +11,7 @@
 <br />
 <br />
 
-**آخرین بروزرسانی:** 2026-09-20 05:52:25 UTC
+**آخرین بروزرسانی:** 2026-09-27 06:23:47 UTC
 <br />
 <br />
 
@@ -29,22 +29,22 @@
 
 | نام فایل | تعداد آدرس‌ها | توضیحات | لینک خام |
 | :--- | :---: | ---: | :---: |
-| `all.txt` | **2060** | لیست جامع تمام دی ان اس ها از همه منابع و پروتکل‌ها | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/all.txt) |
+| `all.txt` | **2072** | لیست جامع تمام دی ان اس ها از همه منابع و پروتکل‌ها | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/all.txt) |
 | `doh.txt` | **388** | لیست تمام سرورهای دی ان اس روی اچ تی تی پی اس | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/doh.txt) |
 | `dot.txt` | **212** | لیست تمام سرورهای دی ان اس روی تی ال اس | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dot.txt) |
 | `doq.txt` | **46** | لیست تمام سرورهای دی ان اس روی کوییک | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/doq.txt) |
 | `doh3.txt` | **5** | لیست تمام سرورهای دی ان اس روی اچ تی تی پی اس ۳ | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/doh3.txt) |
-| `dnscrypt.txt` | **914** | لیست تمام سرورهای دی ان اس کریپت | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dnscrypt.txt) |
+| `dnscrypt.txt` | **926** | لیست تمام سرورهای دی ان اس کریپت | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dnscrypt.txt) |
 | `ipv4.txt` | **182** | لیست سرورهای دی ان اس استاندارد روی آی‌پی‌وی۴ | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/ipv4.txt) |
 | `tcp.txt` | **182** | لیست سرورهای دی انی اس آی‌پی‌وی۴ با پیشوند تی سی پی | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/tcp.txt) |
 | `udp.txt` | **182** | لیست سرورهای دی انی اس آی‌پی‌وی۴ با پیشوند یو دی پی | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/udp.txt) |
 | `ipv6.txt` | **123** | لیست سرورهای دی ان اس استاندارد روی آی‌پی‌وی۶ | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/ipv6.txt) |
 | `adblock.txt` | **481** | لیست سرورهایی که تبلیغات را مسدود می‌کنند | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/adblock.txt) |
-| `malware.txt` | **473** | لیست سرورهایی که از بدافزار و فیشینگ جلوگیری می‌کنند | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/malware.txt) |
-| `family.txt` | **172** | لیست سرورهایی با فیلترینگ خانواده (محتوای بزرگسالان) | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/family.txt) |
-| `unfiltered.txt` | **1073** | لیست سرورهای بدون فیلترینگ خاص | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/unfiltered.txt) |
-| `no_log.txt` | **152** | لیست سرورهایی که ادعا می‌کنند لاگ کاربران را ذخیره نمی‌کنند | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/no_log.txt) |
-| `dnssec.txt` | **841** | لیست سرورهایی که از دی ان اس سک برای افزایش امنیت پشتیبانی می‌کنند | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dnssec.txt) |
+| `malware.txt` | **478** | لیست سرورهایی که از بدافزار و فیشینگ جلوگیری می‌کنند | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/malware.txt) |
+| `family.txt` | **177** | لیست سرورهایی با فیلترینگ خانواده (محتوای بزرگسالان) | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/family.txt) |
+| `unfiltered.txt` | **1080** | لیست سرورهای بدون فیلترینگ خاص | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/unfiltered.txt) |
+| `no_log.txt` | **162** | لیست سرورهایی که ادعا می‌کنند لاگ کاربران را ذخیره نمی‌کنند | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/no_log.txt) |
+| `dnssec.txt` | **853** | لیست سرورهایی که از دی ان اس سک برای افزایش امنیت پشتیبانی می‌کنند | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dnssec.txt) |
 | `dns64.txt` | **16** | لیست سرورهایی که از دی‌ان‌اس۶۴ پشتیبانی می‌کنند | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/dns64.txt) |
 
 ---
@@ -58,14 +58,14 @@
 
 | نام فایل | تعداد آدرس‌ها | لینک خام |
 | :--- | :---: | :---: |
-| `all.txt` | **875** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/all.txt) |
+| `all.txt` | **887** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/all.txt) |
 | `adblock.txt` | **35** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/adblock.txt) |
-| `dnscrypt.txt` | **875** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/dnscrypt.txt) |
-| `dnssec.txt` | **629** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/dnssec.txt) |
-| `family.txt` | **38** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/family.txt) |
-| `malware.txt` | **57** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/malware.txt) |
-| `no_log.txt` | **48** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/no_log.txt) |
-| `unfiltered.txt` | **783** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/unfiltered.txt) |
+| `dnscrypt.txt` | **887** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/dnscrypt.txt) |
+| `dnssec.txt` | **641** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/dnssec.txt) |
+| `family.txt` | **43** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/family.txt) |
+| `malware.txt` | **62** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/malware.txt) |
+| `no_log.txt` | **58** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/no_log.txt) |
+| `unfiltered.txt` | **790** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/DNSCrypt/unfiltered.txt) |
 
 </details>
 
@@ -82,10 +82,10 @@
 
 | نام فایل | تعداد آدرس‌ها | لینک خام |
 | :--- | :---: | :---: |
-| `all.txt` | **3186** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/all.txt) |
-| `ipv4.txt` | **1593** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/ipv4.txt) |
-| `tcp.txt` | **1593** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/tcp.txt) |
-| `udp.txt` | **1593** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/udp.txt) |
+| `all.txt` | **10656** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/all.txt) |
+| `ipv4.txt` | **5328** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/ipv4.txt) |
+| `tcp.txt` | **5328** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/tcp.txt) |
+| `udp.txt` | **5328** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/Blacklantern/udp.txt) |
 
 </details>
 
@@ -110,16 +110,16 @@
 
 | نام فایل | تعداد آدرس‌ها | لینک خام |
 | :--- | :---: | :---: |
-| `all.txt` | **710** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/all.txt) |
-| `adblock.txt` | **255** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/adblock.txt) |
+| `all.txt` | **698** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/all.txt) |
+| `adblock.txt` | **253** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/adblock.txt) |
 | `dnscrypt.txt` | **47** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/dnscrypt.txt) |
-| `doh.txt` | **97** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/doh.txt) |
+| `doh.txt` | **91** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/doh.txt) |
 | `doq.txt` | **16** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/doq.txt) |
-| `dot.txt` | **107** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/dot.txt) |
+| `dot.txt` | **101** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/dot.txt) |
 | `family.txt` | **65** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/family.txt) |
 | `ipv4.txt` | **168** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/ipv4.txt) |
 | `ipv6.txt` | **107** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/ipv6.txt) |
-| `malware.txt` | **337** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/malware.txt) |
+| `malware.txt` | **329** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/malware.txt) |
 | `tcp.txt` | **168** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/tcp.txt) |
 | `udp.txt` | **168** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/udp.txt) |
 | `unfiltered.txt` | **24** | [لینک](https://github.com/10ium/Public-DNS-Collector/raw/main/lists/sources/AdGuard/unfiltered.txt) |

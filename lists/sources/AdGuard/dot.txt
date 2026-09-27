@@ -1,12 +1,9 @@
 tls://101.101.101.101
 tls://ada.openbld.net
-tls://adblock.dns.mullvad.net
 tls://adult-filter-dns.cleanbrowsing.org
-tls://all.dns.mullvad.net
 tls://antivirus.bebasid.com:853
 tls://anycast.censurfridns.dk
 tls://anycast.dns.nextdns.io
-tls://base.dns.mullvad.net
 tls://child-noads.joindns4.eu
 tls://child.joindns4.eu
 tls://common.dot.dns.yandex.net
@@ -28,7 +25,6 @@ tls://dns.google
 tls://dns.jupitrdns.com
 tls://dns.larsdebruin.net
 tls://dns.marbledfennec.net
-tls://dns.mullvad.net
 tls://dns.neutopia.org
 tls://dns.nextdns.io
 tls://dns.opendns.com
@@ -56,13 +52,11 @@ tls://dot.seby.io
 tls://dot.securedns.eu
 tls://dot.tiar.app
 tls://dot1.applied-privacy.net
-tls://extended.dns.mullvad.net
 tls://family-adblock.bebasid.com:853
 tls://family-filter-dns.cleanbrowsing.org
 tls://family.adguard-dns.com
 tls://family.canadianshield.cira.ca
 tls://family.cloudflare-dns.com
-tls://family.dns.mullvad.net
 tls://family.dot.dns.yandex.net
 tls://familyshield.opendns.com
 tls://frd4wvnobp.cloudflare-gateway.com

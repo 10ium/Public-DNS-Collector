@@ -1,9 +1,6 @@
 https://ada.openbld.net/dns-query
-https://adblock.dns.mullvad.net/dns-query
-https://all.dns.mullvad.net/dns-query
 https://antivirus.bebasid.com/dns-query
 https://anycast.dns.nextdns.io
-https://base.dns.mullvad.net/dns-query
 https://basic.rethinkdns.com/
 https://child-noads.joindns4.eu/dns-query
 https://child.joindns4.eu/dns-query
@@ -25,7 +22,6 @@ https://dns.dnsguard.pub/dns-query
 https://dns.google/dns-query
 https://dns.jupitrdns.com/dns-query
 https://dns.marbledfennec.net/dns-query
-https://dns.mullvad.net/dns-query
 https://dns.nextdns.io
 https://dns.oszx.co/dns-query
 https://dns.pub/dns-query
@@ -56,11 +52,9 @@ https://doh.opendns.com/dns-query
 https://doh.sandbox.opendns.com/dns-query
 https://doh.tiar.app/dns-query
 https://doh.tiarap.org/dns-query
-https://extended.dns.mullvad.net/dns-query
 https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
-https://family.dns.mullvad.net/dns-query
 https://family.dot.dns.yandex.net/dns-query
 https://frd4wvnobp.cloudflare-gateway.com/dns-query
 https://freedns.controld.com/p0

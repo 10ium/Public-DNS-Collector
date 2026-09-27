@@ -106,11 +106,8 @@
 [2a10:50c0::bad1:ff]:5443
 [2a13:1001::86:54:11]:1
 https://ada.openbld.net/dns-query
-https://adblock.dns.mullvad.net/dns-query
-https://all.dns.mullvad.net/dns-query
 https://antivirus.bebasid.com/dns-query
 https://anycast.dns.nextdns.io
-https://base.dns.mullvad.net/dns-query
 https://basic.rethinkdns.com/
 https://child-noads.joindns4.eu/dns-query
 https://child.joindns4.eu/dns-query
@@ -132,7 +129,6 @@ https://dns.dnsguard.pub/dns-query
 https://dns.google/dns-query
 https://dns.jupitrdns.com/dns-query
 https://dns.marbledfennec.net/dns-query
-https://dns.mullvad.net/dns-query
 https://dns.nextdns.io
 https://dns.oszx.co/dns-query
 https://dns.pub/dns-query
@@ -163,11 +159,9 @@ https://doh.opendns.com/dns-query
 https://doh.sandbox.opendns.com/dns-query
 https://doh.tiar.app/dns-query
 https://doh.tiarap.org/dns-query
-https://extended.dns.mullvad.net/dns-query
 https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
-https://family.dns.mullvad.net/dns-query
 https://family.dot.dns.yandex.net/dns-query
 https://frd4wvnobp.cloudflare-gateway.com/dns-query
 https://freedns.controld.com/p0
@@ -435,13 +429,10 @@ tcp://94.140.15.15
 tcp://94.140.15.16
 tls://101.101.101.101
 tls://ada.openbld.net
-tls://adblock.dns.mullvad.net
 tls://adult-filter-dns.cleanbrowsing.org
-tls://all.dns.mullvad.net
 tls://antivirus.bebasid.com:853
 tls://anycast.censurfridns.dk
 tls://anycast.dns.nextdns.io
-tls://base.dns.mullvad.net
 tls://child-noads.joindns4.eu
 tls://child.joindns4.eu
 tls://common.dot.dns.yandex.net
@@ -463,7 +454,6 @@ tls://dns.google
 tls://dns.jupitrdns.com
 tls://dns.larsdebruin.net
 tls://dns.marbledfennec.net
-tls://dns.mullvad.net
 tls://dns.neutopia.org
 tls://dns.nextdns.io
 tls://dns.opendns.com
@@ -491,13 +481,11 @@ tls://dot.seby.io
 tls://dot.securedns.eu
 tls://dot.tiar.app
 tls://dot1.applied-privacy.net
-tls://extended.dns.mullvad.net
 tls://family-adblock.bebasid.com:853
 tls://family-filter-dns.cleanbrowsing.org
 tls://family.adguard-dns.com
 tls://family.canadianshield.cira.ca
 tls://family.cloudflare-dns.com
-tls://family.dns.mullvad.net
 tls://family.dot.dns.yandex.net
 tls://familyshield.opendns.com
 tls://frd4wvnobp.cloudflare-gateway.com
