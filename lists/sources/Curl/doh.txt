@@ -67,6 +67,7 @@ https://dns.guard.io/dns-query
 https://dns.haka.se/dns-query
 https://dns.hostux.net/ads
 https://dns.hostux.net/dns-query
+https://dns.hqdns.sarl/dns-query
 https://dns.inforlogia.com/dns-query
 https://dns.kapite.in/dns-query
 https://dns.kernel-error.de/dns-query
@@ -125,6 +126,7 @@ https://dns4eu.online/dns-query
 https://dns64.cloudflare-dns.com/dns-query
 https://dns64.dns.google/dns-query
 https://dns9.quad9.net/dns-query
+https://dnsdoh.art/dns-query
 https://dnslow.me/dns-query
 https://dnspub.restena.lu/dns-query
 https://dnsvps.familiamv.net/dns-query

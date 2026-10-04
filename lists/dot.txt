@@ -60,6 +60,7 @@ tls://dns.floriantinney.de
 tls://dns.furrix.zone
 tls://dns.glf.wtf
 tls://dns.google
+tls://dns.hqdns.sarl
 tls://dns.inforlogia.com
 tls://dns.jupitrdns.com
 tls://dns.kapite.in
