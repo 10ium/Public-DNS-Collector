@@ -76,6 +76,10 @@
 2a05:fc84::43
 2a0c:4ac1:29::2
 2a0c:4ac1:29::3
+2a0c:9a40:e100::53
+2a0c:9a40:e100::f53
+2a0c:9a40:e101::53
+2a0c:9a40:e101::f53
 2a0d:2a00:1::1
 2a0d:2a00:1::2
 2a0d:2a00:2::1
@@ -162,6 +166,7 @@ https://doh.tiarap.org/dns-query
 https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
+https://family.dns.dremaxx.com/dns-query
 https://family.dot.dns.yandex.net/dns-query
 https://frd4wvnobp.cloudflare-gateway.com/dns-query
 https://freedns.controld.com/p0
@@ -177,6 +182,7 @@ https://juuri.hagezi.org/dns-query
 https://kids.ns.nwps.fi/dns-query
 https://noads.joindns4.eu/dns-query
 https://odvr.nic.cz/doh
+https://open.dns.dremaxx.com/dns-query
 https://ordns.he.net/dns-query
 https://private.canadianshield.cira.ca/dns-query
 https://protected.canadianshield.cira.ca/dns-query
@@ -323,6 +329,8 @@ tcp://180.131.145.145
 tcp://180.184.1.1
 tcp://180.184.2.2
 tcp://184.105.193.78
+tcp://185.121.169.45
+tcp://185.121.169.47
 tcp://185.121.177.177
 tcp://185.222.222.222
 tcp://185.228.168.10
@@ -332,6 +340,8 @@ tcp://185.228.169.11
 tcp://185.228.169.168
 tcp://185.228.169.9
 tcp://185.43.135.1
+tcp://185.44.82.150
+tcp://185.44.82.158
 tcp://185.49.141.37
 tcp://185.71.138.138
 tcp://185.95.218.42
@@ -339,6 +349,7 @@ tcp://185.95.218.43
 tcp://193.17.47.1
 tcp://193.58.251.251
 tcp://194.169.169.169
+tcp://194.28.99.248
 tcp://195.133.25.16
 tcp://195.46.39.39
 tcp://195.46.39.40
@@ -374,6 +385,7 @@ tcp://52.80.66.66
 tcp://54.174.40.213
 tcp://62.192.153.242
 tcp://62.192.153.243
+tcp://62.3.50.42
 tcp://64.176.190.82
 tcp://64.6.64.6
 tcp://64.6.65.6
@@ -486,6 +498,7 @@ tls://family-filter-dns.cleanbrowsing.org
 tls://family.adguard-dns.com
 tls://family.canadianshield.cira.ca
 tls://family.cloudflare-dns.com
+tls://family.dns.dremaxx.com
 tls://family.dot.dns.yandex.net
 tls://familyshield.opendns.com
 tls://frd4wvnobp.cloudflare-gateway.com
@@ -503,6 +516,7 @@ tls://ns2.dnsprivacy.at
 tls://odvr.nic.cz
 tls://oisd.dns.bebasid.com:853
 tls://one.one.one.one
+tls://open.dns.dremaxx.com
 tls://ordns.he.net
 tls://p0.freedns.controld.com
 tls://p1.freedns.controld.com
@@ -592,6 +606,8 @@ udp://180.131.145.145
 udp://180.184.1.1
 udp://180.184.2.2
 udp://184.105.193.78
+udp://185.121.169.45
+udp://185.121.169.47
 udp://185.121.177.177
 udp://185.222.222.222
 udp://185.228.168.10
@@ -601,6 +617,8 @@ udp://185.228.169.11
 udp://185.228.169.168
 udp://185.228.169.9
 udp://185.43.135.1
+udp://185.44.82.150
+udp://185.44.82.158
 udp://185.49.141.37
 udp://185.71.138.138
 udp://185.95.218.42
@@ -608,6 +626,7 @@ udp://185.95.218.43
 udp://193.17.47.1
 udp://193.58.251.251
 udp://194.169.169.169
+udp://194.28.99.248
 udp://195.133.25.16
 udp://195.46.39.39
 udp://195.46.39.40
@@ -643,6 +662,7 @@ udp://52.80.66.66
 udp://54.174.40.213
 udp://62.192.153.242
 udp://62.192.153.243
+udp://62.3.50.42
 udp://64.176.190.82
 udp://64.6.64.6
 udp://64.6.65.6

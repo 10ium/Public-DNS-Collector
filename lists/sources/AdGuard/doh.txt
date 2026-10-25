@@ -55,6 +55,7 @@ https://doh.tiarap.org/dns-query
 https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
+https://family.dns.dremaxx.com/dns-query
 https://family.dot.dns.yandex.net/dns-query
 https://frd4wvnobp.cloudflare-gateway.com/dns-query
 https://freedns.controld.com/p0
@@ -70,6 +71,7 @@ https://juuri.hagezi.org/dns-query
 https://kids.ns.nwps.fi/dns-query
 https://noads.joindns4.eu/dns-query
 https://odvr.nic.cz/doh
+https://open.dns.dremaxx.com/dns-query
 https://ordns.he.net/dns-query
 https://private.canadianshield.cira.ca/dns-query
 https://protected.canadianshield.cira.ca/dns-query

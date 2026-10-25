@@ -260,6 +260,7 @@ https://extended.dns.mullvad.net/dns-query
 https://family.adguard-dns.com/dns-query
 https://family.canadianshield.cira.ca/dns-query
 https://family.cloudflare-dns.com/dns-query
+https://family.dns.dremaxx.com/dns-query
 https://family.dns.mullvad.net/dns-query
 https://family.dot.dns.yandex.net/dns-query
 https://family.mydns.network/dns-query
@@ -323,6 +324,7 @@ https://nsec.arnor.org/dns-query
 https://nz01.dns4me.net
 https://odvr.nic.cz/dns-query
 https://odvr.nic.cz/doh
+https://open.dns.dremaxx.com/dns-query
 https://ordns.he.net/dns-query
 https://paranoia.mydns.network/dns-query
 https://per.adfilter.net/dns-query

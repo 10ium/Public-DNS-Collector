@@ -151,6 +151,7 @@ tls://family-filter-dns.cleanbrowsing.org
 tls://family.adguard-dns.com
 tls://family.canadianshield.cira.ca
 tls://family.cloudflare-dns.com
+tls://family.dns.dremaxx.com
 tls://family.dns.mullvad.net
 tls://family.dot.dns.yandex.net
 tls://familyshield.opendns.com
@@ -178,6 +179,7 @@ tls://nsec.arnor.org
 tls://odvr.nic.cz
 tls://oisd.dns.bebasid.com:853
 tls://one.one.one.one
+tls://open.dns.dremaxx.com
 tls://ordns.he.net
 tls://p0.freedns.controld.com
 tls://p1.freedns.controld.com
