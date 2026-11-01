@@ -1,7 +1,6 @@
 https://dns.aa.net.uk/dns-query
 https://dns.blokada.org/dns-query
 https://dns.dnshome.de/dns-query
-https://dns.flatuslifir.is/dns-query
 https://dns.paesa.es/dns-query
 https://dns.yunzheng.space/dns-query
 https://doh-dilution-to-upstreams-adguardhome.nicolas-dorriere.fr/dns-query
@@ -14,7 +13,6 @@ https://doh.seby.io/dns-query
 https://doh.tiar.app/dns-query
 https://filter.dns.yunzheng.space/dns-query
 https://ibuki.cgnat.net/dns-query
-https://ns.data.haus/dns-query
 https://ns0.fdn.fr/dns-query
 https://ns1.fdn.fr/dns-query
 https://sky.rethinkdns.com/1:IAAgAA==
@@ -26,7 +24,6 @@ quic://doh.dns4all.eu
 tls://dns.aa.net.uk
 tls://dns.blokada.org
 tls://dns.dnshome.de
-tls://dns.flatuslifir.is
 tls://dns.yunzheng.space
 tls://doh.dns.sb
 tls://doh.dns4all.eu
@@ -34,6 +31,5 @@ tls://doh.ffmuc.net
 tls://doh.libredns.gr
 tls://doh.seby.io
 tls://ibuki.cgnat.net
-tls://ns.data.haus
 tls://ns0.fdn.fr
 tls://sky.rethinkdns.com

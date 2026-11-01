@@ -64,12 +64,10 @@ https://doh.viatech.com.tw/dns-query
 https://family.mydns.network/dns-query
 https://freedom.mydns.network/dns-query
 https://gb-lon-w-p-2.nashkan.net/dns-query
-https://ns.data.haus/dns-query
 https://ns2.4netguides.org/dns-query
 https://nsec.arnor.org/dns-query
 https://paranoia.mydns.network/dns-query
 https://per.adfilter.net/dns-query
-https://pooblet.co.za/dns-query
 https://privacy.plumedns.com/dns-query
 https://ro-buc-w-p-1.nashkan.net/dns-query
 https://sg-w-p-1.nashkan.net/dns-query
@@ -149,7 +147,6 @@ tls://dog.dns.qwer.pw
 tls://doh.futa.gg
 tls://doh.sz-dns.com
 tls://freedom.mydns.network
-tls://ns.data.haus
 tls://ns2.4netguides.org
 tls://nsec.arnor.org
 tls://per.adfilter.net

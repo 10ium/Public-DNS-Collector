@@ -55,12 +55,10 @@ tls://dns.easyhns.com
 tls://dns.elemental.software
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
-tls://dns.flatuslifir.is
 tls://dns.floriantinney.de
 tls://dns.furrix.zone
 tls://dns.glf.wtf
 tls://dns.google
-tls://dns.hqdns.sarl
 tls://dns.inforlogia.com
 tls://dns.jupitrdns.com
 tls://dns.kapite.in
@@ -126,7 +124,6 @@ tls://doh.domreg.lt
 tls://doh.ffmuc.net
 tls://doh.futa.gg
 tls://doh.libredns.gr
-tls://doh.lv
 tls://doh.niyawe.de
 tls://doh.seby.io
 tls://doh.sz-dns.com
@@ -170,7 +167,6 @@ tls://kids.ns.nwps.fi
 tls://masters-of-cloud.de
 tls://max.rethinkdns.com
 tls://noads.joindns4.eu
-tls://ns.data.haus
 tls://ns0.fdn.fr
 tls://ns1.dnsprivacy.at
 tls://ns2.4netguides.org

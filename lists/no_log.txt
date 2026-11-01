@@ -49,7 +49,6 @@ https://ibuki.cgnat.net/dns-query
 https://jp.tiar.app/dns-query
 https://jp.tiarap.org/dns-query
 https://mozilla.cloudflare-dns.com/dns-query
-https://ns.data.haus/dns-query
 https://ns0.fdn.fr/dns-query
 https://ns1.fdn.fr/dns-query
 https://rdns.faelix.net/
@@ -137,7 +136,6 @@ tls://cloudflare-dns.com
 tls://dns.aa.net.uk
 tls://dns.blokada.org
 tls://dns.dnshome.de
-tls://dns.flatuslifir.is
 tls://dns.google
 tls://dns.mullvad.net
 tls://dns.quad9.net
@@ -150,7 +148,6 @@ tls://doh.seby.io
 tls://extended.dns.mullvad.net
 tls://family.dns.mullvad.net
 tls://ibuki.cgnat.net
-tls://ns.data.haus
 tls://ns0.fdn.fr
 tls://sky.rethinkdns.com
 udp://194.242.2.2
