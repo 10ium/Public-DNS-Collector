@@ -1,6 +1,8 @@
+https://beatquantum.com/dns-query
 https://dns.aa.net.uk/dns-query
 https://dns.blokada.org/dns-query
 https://dns.dnshome.de/dns-query
+https://dns.ekinao.com/dns-query
 https://dns.paesa.es/dns-query
 https://dns.yunzheng.space/dns-query
 https://doh-dilution-to-upstreams-adguardhome.nicolas-dorriere.fr/dns-query
@@ -18,9 +20,11 @@ https://ns1.fdn.fr/dns-query
 https://sky.rethinkdns.com/1:IAAgAA==
 https://sky.rethinkdns.com/dns-query
 https://v0dka.ru/dns-query
+quic://beatquantum.com
 quic://dns.dnshome.de
 quic://dns.yunzheng.space
 quic://doh.dns4all.eu
+tls://beatquantum.com
 tls://dns.aa.net.uk
 tls://dns.blokada.org
 tls://dns.dnshome.de

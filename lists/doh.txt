@@ -26,6 +26,7 @@ https://base.dns.mullvad.net/dns-query
 https://basic.rethinkdns.com/
 https://basic.rethinkdns.com/dns-query
 https://bazooki-infra.dev/dns-query
+https://beatquantum.com/dns-query
 https://blitz.ahadns.com
 https://blitz.ahadns.com/1:1
 https://blitz.ahadns.com/1:1.12
@@ -85,6 +86,7 @@ https://dns.dnshome.de/dns-query
 https://dns.doh.my.id/dns-query
 https://dns.easyhns.com/dns-query
 https://dns.edgy.network/dns-query
+https://dns.ekinao.com/dns-query
 https://dns.elemental.software/dns-query
 https://dns.envs.net/dns-query
 https://dns.faked.org/dns-query
@@ -93,7 +95,6 @@ https://dns.flatuslifir.is/dns-query
 https://dns.floriantinney.de/dns-query
 https://dns.furrix.zone/dns-query
 https://dns.gamban.com/dns-query
-https://dns.glf.wtf/dns-query
 https://dns.google/dns-query
 https://dns.guard.io/dns-query
 https://dns.haka.se/dns-query
@@ -141,6 +142,7 @@ https://dns.seia.io/dns-query
 https://dns.silen.org/dns-query
 https://dns.simplylinux.ch/dns-query
 https://dns.skrep.eu/dns-query
+https://dns.sktr.com.tr/dns-query
 https://dns.slinkyman.net/dns-query
 https://dns.smartguard.io/dns-query
 https://dns.startupstack.tech/dns-query
@@ -244,7 +246,6 @@ https://doh.umbrella.com/dns-query
 https://doh.us.dnswarden.com/adblock
 https://doh.us.dnswarden.com/adultfilter
 https://doh.us.dnswarden.com/uncensored
-https://doh.viatech.com.tw/dns-query
 https://doh.xfinity.com/dns-query
 https://doth.huque.com/dns-query
 https://draco.plan9-ns2.com/dns-query

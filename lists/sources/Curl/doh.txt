@@ -18,6 +18,7 @@ https://anycast.uncensoreddns.org/dns-query
 https://au-syd-w-f-1.nashkan.net/dns-query
 https://au01.dns4me.net
 https://bazooki-infra.dev/dns-query
+https://beatquantum.com/dns-query
 https://ca01.dns4me.net
 https://ca02.dns4me.net
 https://child-noads.joindns4.eu/dns-query
@@ -51,8 +52,10 @@ https://dns.decky.eu/dns-query
 https://dns.dev-umbrellagov.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.digitalsize.net/dns-query
+https://dns.dnsguard.pub/dns-query
 https://dns.dnshome.de/dns-query
 https://dns.easyhns.com/dns-query
+https://dns.ekinao.com/dns-query
 https://dns.elemental.software/dns-query
 https://dns.envs.net/dns-query
 https://dns.faked.org/dns-query
@@ -60,7 +63,6 @@ https://dns.farshidhakimy.de/dns-query
 https://dns.floriantinney.de/dns-query
 https://dns.furrix.zone/dns-query
 https://dns.gamban.com/dns-query
-https://dns.glf.wtf/dns-query
 https://dns.google/dns-query
 https://dns.guard.io/dns-query
 https://dns.haka.se/dns-query
@@ -100,6 +102,7 @@ https://dns.roedel.cloud/dns-query
 https://dns.silen.org/dns-query
 https://dns.simplylinux.ch/dns-query
 https://dns.skrep.eu/dns-query
+https://dns.sktr.com.tr/dns-query
 https://dns.slinkyman.net/dns-query
 https://dns.smartguard.io/dns-query
 https://dns.startupstack.tech/dns-query
@@ -154,7 +157,6 @@ https://doh.seby.io/dns-query
 https://doh.sz-dns.com/dns-query
 https://doh.tiar.app/dns-query
 https://doh.umbrella.com/dns-query
-https://doh.viatech.com.tw/dns-query
 https://doth.huque.com/dns-query
 https://dukun.de/dns-query
 https://family.adguard-dns.com/dns-query

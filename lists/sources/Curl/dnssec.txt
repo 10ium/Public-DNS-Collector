@@ -1,7 +1,9 @@
 https://8888.google/dns-query
+https://beatquantum.com/dns-query
 https://dns.adguard-dns.com/dns-query
 https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.digitalsize.net/dns-query
+https://dns.ekinao.com/dns-query
 https://dns.google/dns-query
 https://dns.hostux.net/ads
 https://dns.hostux.net/dns-query
@@ -38,11 +40,13 @@ https://private.canadianshield.cira.ca/dns-query
 https://protected.canadianshield.cira.ca/dns-query
 https://unfiltered.adguard-dns.com/dns-query
 https://wikimedia-dns.org/dns-query
+quic://beatquantum.com
 quic://dns.adguard-dns.com
 quic://dns.kernel-error.de
 quic://dns.kescher.at
 quic://dns.yunzheng.space
 quic://nsec.arnor.org
+tls://beatquantum.com
 tls://dns.adguard-dns.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net

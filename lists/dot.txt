@@ -15,6 +15,7 @@ tls://anycast.censurfridns.dk
 tls://anycast.dns.nextdns.io
 tls://anycast.uncensoreddns.org
 tls://base.dns.mullvad.net
+tls://beatquantum.com
 tls://ca01.dns4me.net
 tls://child-noads.joindns4.eu
 tls://child.joindns4.eu
@@ -57,7 +58,6 @@ tls://dns.faked.org
 tls://dns.farshidhakimy.de
 tls://dns.floriantinney.de
 tls://dns.furrix.zone
-tls://dns.glf.wtf
 tls://dns.google
 tls://dns.inforlogia.com
 tls://dns.jupitrdns.com

@@ -25,9 +25,9 @@ https://dns.cynthialabs.net/dns-query
 https://dns.d94.xyz/dns-query
 https://dns.datenquark.de/dns-query
 https://dns.decky.eu/dns-query
+https://dns.dnsguard.pub/dns-query
 https://dns.faked.org/dns-query
 https://dns.farshidhakimy.de/dns-query
-https://dns.glf.wtf/dns-query
 https://dns.haka.se/dns-query
 https://dns.inforlogia.com/dns-query
 https://dns.kapite.in/dns-query
@@ -48,6 +48,7 @@ https://dns.retakecs.com/dns-query
 https://dns.roedel.cloud/dns-query
 https://dns.silen.org/dns-query
 https://dns.skrep.eu/dns-query
+https://dns.sktr.com.tr/dns-query
 https://dns.slinkyman.net/dns-query
 https://dns.tipsy.coffee/dns-query
 https://dns.unx.io/dns-query
@@ -60,7 +61,6 @@ https://doh.futa.gg/dns-query
 https://doh.mmmalia.com/dns-query
 https://doh.sz-dns.com/dns-query
 https://doh.tiar.app/dns-query
-https://doh.viatech.com.tw/dns-query
 https://family.mydns.network/dns-query
 https://freedom.mydns.network/dns-query
 https://gb-lon-w-p-2.nashkan.net/dns-query
@@ -121,9 +121,9 @@ tls://dns.chunghwamc.com
 tls://dns.d94.xyz
 tls://dns.datenquark.de
 tls://dns.decky.eu
+tls://dns.dnsguard.pub
 tls://dns.faked.org
 tls://dns.farshidhakimy.de
-tls://dns.glf.wtf
 tls://dns.inforlogia.com
 tls://dns.kapite.in
 tls://dns.koala.us.to

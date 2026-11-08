@@ -7,6 +7,7 @@ tls://adguard.shoupperuser.com
 tls://ag.apollohct.com
 tls://agh.dshubham.xyz
 tls://anycast.uncensoreddns.org
+tls://beatquantum.com
 tls://ca01.dns4me.net
 tls://cloudflare-dns.com
 tls://dns.aa.net.uk
@@ -30,6 +31,7 @@ tls://dns.decky.eu
 tls://dns.dev-umbrellagov.com
 tls://dns.digitale-gesellschaft.ch
 tls://dns.digitalsize.net
+tls://dns.dnsguard.pub
 tls://dns.dnshome.de
 tls://dns.easyhns.com
 tls://dns.elemental.software
@@ -37,7 +39,6 @@ tls://dns.faked.org
 tls://dns.farshidhakimy.de
 tls://dns.floriantinney.de
 tls://dns.furrix.zone
-tls://dns.glf.wtf
 tls://dns.google
 tls://dns.inforlogia.com
 tls://dns.kapite.in

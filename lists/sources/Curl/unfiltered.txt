@@ -3,6 +3,7 @@ https://abel.waringer-atg.de/dns-query
 https://anycast.uncensoreddns.org/dns-query
 https://au01.dns4me.net
 https://bazooki-infra.dev/dns-query
+https://beatquantum.com/dns-query
 https://ca01.dns4me.net
 https://ca02.dns4me.net
 https://child-noads.joindns4.eu/dns-query
@@ -21,6 +22,7 @@ https://dns.digitale-gesellschaft.ch/dns-query
 https://dns.digitalsize.net/dns-query
 https://dns.dnshome.de/dns-query
 https://dns.easyhns.com/dns-query
+https://dns.ekinao.com/dns-query
 https://dns.elemental.software/dns-query
 https://dns.envs.net/dns-query
 https://dns.floriantinney.de/dns-query
@@ -110,6 +112,7 @@ https://wikimedia-dns.org/dns-query
 https://wurzn.hagezi.org/dns-query
 https://xn--durhre-yxa.de/dns-query
 quic://anycast.uncensoreddns.org
+quic://beatquantum.com
 quic://dns.alidns.com
 quic://dns.dnshome.de
 quic://dns.kernel-error.de
@@ -119,6 +122,7 @@ quic://dns.simplylinux.ch
 quic://dns.yunzheng.space
 quic://doh.dns4all.eu
 tls://anycast.uncensoreddns.org
+tls://beatquantum.com
 tls://ca01.dns4me.net
 tls://dns.aa.net.uk
 tls://dns.alidns.com
