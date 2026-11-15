@@ -154,7 +154,6 @@ https://sm2.doh.pub/dns-query
 https://tiger.dns.qwer.pw/dns-query
 https://uk.adhole.org/dns-query
 https://us-central.adhole.org/dns-query
-https://us-chi-w-f-1.nashkan.net/dns-query
 https://us-chi-w-p-1.nashkan.net/dns-query
 https://us-east.adhole.org/dns-query
 https://us-jac-w-f-1.nashkan.net/dns-query

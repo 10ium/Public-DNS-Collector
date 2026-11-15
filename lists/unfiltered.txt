@@ -34,6 +34,7 @@ https://child-noads.joindns4.eu/dns-query
 https://child.joindns4.eu/dns-query
 https://chuncheon.dnsovertor.cc/dns-query
 https://commons.host/
+https://ctif.hagezi.org/dns-query
 https://de-fra-dns-001.mullvad.net/dns-query
 https://de01.dns4me.net
 https://dns-weblock.wevpn.com/dns-query
@@ -77,7 +78,6 @@ https://dns.simplylinux.ch/dns-query
 https://dns.smartguard.io/dns-query
 https://dns.startupstack.tech/dns-query
 https://dns.stirringphoto.com/dns-query
-https://dns.t53.de/dns-query
 https://dns.telekom.de/dns-query
 https://dns.tls-data.de/dns-query
 https://dns.twnic.tw/dns-query
@@ -148,6 +148,7 @@ https://jp.tiar.app/dns-query
 https://jp.tiarap.org/dns-query
 https://juuri.hagezi.org/dns-query
 https://kronos.plan9-dns.com/dns-query
+https://ledns.eu/dns-query
 https://loadlow.me/dns-query
 https://masters-of-cloud.de/dns-query
 https://my.nextdns.io/start
@@ -194,6 +195,7 @@ quic://dns.nextdns.io
 quic://dns.simplylinux.ch
 quic://dns.yunzheng.space
 quic://doh.dns4all.eu
+quic://ledns.eu
 sdns://AQEAAAAAAAAAD1syNjIwOjA6Y2NjOjoyXSC3NRFAIG8iXT4r2CLX_WkeocM8yNZmjQy-BL-rykP7eRsyLmRuc2NyeXB0LWNlcnQub3BlbmRucy5jb20
 sdns://AQEAAAAAAAAADDE0Ni4xMTIuNDEuNCC3NRFAIG8iXT4r2CLX_WkeocM8yNZmjQy-BL-rykP7eRsyLmRuc2NyeXB0LWNlcnQub3BlbmRucy5jb20
 sdns://AQEAAAAAAAAADjIwOC42Ny4yMjAuMjIwILc1EUAgbyJdPivYItf9aR6hwzzI1maNDL4Ev6vKQ_t5GzIuZG5zY3J5cHQtY2VydC5vcGVuZG5zLmNvbQ
@@ -591,6 +593,7 @@ sdns://AgAAAAAAAAAADlsyNDAwOjMyMDA6OjFdIJjj1eU2rylYzS9_FPcE70onbSXjPNZfLmX15PJyf
 sdns://AgAAAAAAAAAADzEzOS4xMjkuMTM3LjEzNyCY49XlNq8pWM0vfxT3BO9KJ20l4zzWXy5l9eTycnwTMA8xMzkuMTI5LjEzNy4xMzcKL2Rucy1xdWVyeQ
 sdns://AgAAAAAAAAAAE1syNDAwOjMyMDA6YmFiYTo6MV0gmOPV5TavKVjNL38U9wTvSidtJeM81l8uZfXk8nJ8EzAJMjIzLjUuNS41Ci9kbnMtcXVlcnk
 sdns://AgAAAAAAAAAAEFsyNjIwOjExOTpmYzo6Ml0gmGTt9-6oWWdSdLD6370mk2Wpq566dz2oZ0lMWpSkN98PZG9oLm9wZW5kbnMuY29tCi9kbnMtcXVlcnk
+sdns://AgEAAAAAAAAAAKCMUDOXP_5P8e8KqSmE_JMoG6epJ474v2QSJriY0Q1OdKA2nRz4WOMJwCqigkw3Y-EsBZdeAykb_yu0YlZ7y-k_ISAy7bsRzCWPvjPCzSShSScPC-b0RvVyZLO9HCW5hTMnLg9kbnMuaWFrb3ZmMS5jb20KL2Rucy1xdWVyeQ
 sdns://AgEAAAAAAAAACjEwMy4yLjU3LjWgjFAzlz_-T_HvCqkphPyTKBunqSeO-L9kEia4mNENTnSgNp0c-FjjCcAqooJMN2PhLAWXXgMpG_8rtGJWe8vpPyEgMu27Ecwlj74zws0koUknDwvm9Eb1cmSzvRwluYUzJy4RcHVibGljLmRucy5paWouanAKL2Rucy1xdWVyeQ
 sdns://AgIAAAAAAAAADjExNi4yMDIuMTc2LjI2oIxQM5c__k_x7wqpKYT8kygbp6knjvi_ZBImuJjRDU50oDadHPhY4wnAKqKCTDdj4SwFl14DKRv_K7RiVnvL6T8hIDLtuxHMJY--M8LNJKFJJw8L5vRG9XJks70cJbmFMycuD2RvaC5saWJyZWRucy5ncgYvbm9hZHM
 sdns://AgIAAAAAAAAADjExNi4yMDIuMTc2LjI2oIxQM5c__k_x7wqpKYT8kygbp6knjvi_ZBImuJjRDU50oDadHPhY4wnAKqKCTDdj4SwFl14DKRv_K7RiVnvL6T8hIDLtuxHMJY--M8LNJKFJJw8L5vRG9XJks70cJbmFMycuD2RvaC5saWJyZWRucy5ncgovZG5zLXF1ZXJ5
@@ -598,7 +601,6 @@ sdns://AgMAAAAAAAAAAKCMUDOXP_5P8e8KqSmE_JMoG6epJ474v2QSJriY0Q1OdKA2nRz4WOMJwCqig
 sdns://AgMAAAAAAAAABzkuOS45LjkgsBkgdEu7dsmrBT4B4Ht-BQ5HPSD3n3vqQ1-v5DydJC8SZG5zOS5xdWFkOS5uZXQ6NDQzCi9kbnMtcXVlcnk
 sdns://AgMAAAAAAAAACDkuOS45LjExILAZIHRLu3bJqwU-AeB7fgUORz0g95976kNfr-Q8nSQvE2RuczExLnF1YWQ5Lm5ldDo0NDMKL2Rucy1xdWVyeQ
 sdns://AgMAAAAAAAAACTE5NC4wLjUuMwAOZG9oLmRuczRhbGwuZXUKL2Rucy1xdWVyeQ
-sdns://AgMAAAAAAAAACjE5NC4wLjUuNjQAEGRvaDY0LmRuczRhbGwuZXUKL2Rucy1xdWVyeQ
 sdns://AgMAAAAAAAAACjg2LjU0LjExLjGgjFAzlz_-T_HvCqkphPyTKBunqSeO-L9kEia4mNENTnSgNp0c-FjjCcAqooJMN2PhLAWXXgMpG_8rtGJWe8vpPyEgMu27Ecwlj74zws0koUknDwvm9Eb1cmSzvRwluYUzJy4WcHJvdGVjdGl2ZS5qb2luZG5zNC5ldQovZG5zLXF1ZXJ5
 sdns://AgMAAAAAAAAACzE3Ni45LjEuMTE3oIxQM5c__k_x7wqpKYT8kygbp6knjvi_ZBImuJjRDU50oDadHPhY4wnAKqKCTDdj4SwFl14DKRv_K7RiVnvL6T8hIDLtuxHMJY--M8LNJKFJJw8L5vRG9XJks70cJbmFMycuC2Ruc2ZvcmdlLmRlCi9kbnMtcXVlcnk
 sdns://AgMAAAAAAAAAD1syMDAxOjY3ODo4OjozXQAOZG9oLmRuczRhbGwuZXUKL2Rucy1xdWVyeQ
@@ -613,7 +615,6 @@ sdns://AgMAAAAAAAAADjE0OS4xMTIuMTEyLjExILAZIHRLu3bJqwU-AeB7fgUORz0g95976kNfr-Q8n
 sdns://AgMAAAAAAAAADjE4NS4yMjguMTY4LjEwoIxQM5c__k_x7wqpKYT8kygbp6knjvi_ZBImuJjRDU50oDadHPhY4wnAKqKCTDdj4SwFl14DKRv_K7RiVnvL6T8hIDLtuxHMJY--M8LNJKFJJw8L5vRG9XJks70cJbmFMycuEWNsZWFuYnJvd3Npbmcub3JnES9kb2gvYWR1bHQtZmlsdGVy
 sdns://AgMAAAAAAAAADjIxMi4xMDkuMjIxLjIwoIxQM5c__k_x7wqpKYT8kygbp6knjvi_ZBImuJjRDU50oDadHPhY4wnAKqKCTDdj4SwFl14DKRv_K7RiVnvL6T8hIDLtuxHMJY--M8LNJKFJJw8L5vRG9XJks70cJbmFMycuDWRucy5jb21zcy5vbmUKL2Rucy1xdWVyeQ
 sdns://AgMAAAAAAAAADzE4NS4yMjguMTY4LjE2OKCMUDOXP_5P8e8KqSmE_JMoG6epJ474v2QSJriY0Q1OdKA2nRz4WOMJwCqigkw3Y-EsBZdeAykb_yu0YlZ7y-k_ISAy7bsRzCWPvjPCzSShSScPC-b0RvVyZLO9HCW5hTMnLhFjbGVhbmJyb3dzaW5nLm9yZxEvZG9oL2FkdWx0LWZpbHRlcg
-sdns://AgMAAAAAAAAAEFsyMDAxOjY3ODo4Ojo2NF0AEGRvaDY0LmRuczRhbGwuZXUKL2Rucy1xdWVyeQ
 sdns://AgMAAAAAAAAAEFsyNjIwOmZlOjpmZToxMV0gsBkgdEu7dsmrBT4B4Ht-BQ5HPSD3n3vqQ1-v5DydJC8TZG5zMTEucXVhZDkubmV0OjQ0MwovZG5zLXF1ZXJ5
 sdns://AgMAAAAAAAAAF1syYTEzOjEwMDE6Ojg2OjU0OjExOjFdoIxQM5c__k_x7wqpKYT8kygbp6knjvi_ZBImuJjRDU50oDadHPhY4wnAKqKCTDdj4SwFl14DKRv_K7RiVnvL6T8hIDLtuxHMJY--M8LNJKFJJw8L5vRG9XJks70cJbmFMycuFnByb3RlY3RpdmUuam9pbmRuczQuZXUKL2Rucy1xdWVyeQ
 sdns://AgMAAAAAAAAAGFsyYTAxOjRmODoxNDE6MzE2ZDo6MTE3XaCMUDOXP_5P8e8KqSmE_JMoG6epJ474v2QSJriY0Q1OdKA2nRz4WOMJwCqigkw3Y-EsBZdeAykb_yu0YlZ7y-k_ISAy7bsRzCWPvjPCzSShSScPC-b0RvVyZLO9HCW5hTMnLgtkbnNmb3JnZS5kZQovZG5zLXF1ZXJ5
@@ -1028,7 +1029,6 @@ tls://dns.simplylinux.ch
 tls://dns.smartguard.io
 tls://dns.startupstack.tech
 tls://dns.stirringphoto.com
-tls://dns.t53.de
 tls://dns.telekom.de
 tls://dns.w3ctag.org
 tls://dns.yunzheng.space
@@ -1045,6 +1045,7 @@ tls://doth.huque.com
 tls://dukun.de
 tls://hnsdoh.com
 tls://ibuki.cgnat.net
+tls://ledns.eu
 tls://masters-of-cloud.de
 tls://ns0.fdn.fr
 tls://resolver.sunet.se

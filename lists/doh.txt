@@ -39,6 +39,7 @@ https://chuncheon.dnsovertor.cc/dns-query
 https://cloudflare-dns.com/dns-query
 https://common.dot.dns.yandex.net/dns-query
 https://commons.host/
+https://ctif.hagezi.org/dns-query
 https://de-fra-dns-001.mullvad.net/dns-query
 https://de.adhole.org/dns-query
 https://de01.dns4me.net
@@ -149,7 +150,6 @@ https://dns.startupstack.tech/dns-query
 https://dns.stirringphoto.com/dns-query
 https://dns.surfsharkdns.com/dns-query
 https://dns.switch.ch/dns-query
-https://dns.t53.de/dns-query
 https://dns.telekom.de/dns-query
 https://dns.tipsy.coffee/dns-query
 https://dns.tls-data.de/dns-query
@@ -303,6 +303,7 @@ https://jp.tiarap.org/dns-query
 https://juuri.hagezi.org/dns-query
 https://kids.ns.nwps.fi/dns-query
 https://kronos.plan9-dns.com/dns-query
+https://ledns.eu/dns-query
 https://loadlow.me/dns-query
 https://masters-of-cloud.de/dns-query
 https://mozilla.cloudflare-dns.com/dns-query
@@ -359,7 +360,6 @@ https://uk01.dns4me.net
 https://unfiltered.adguard-dns.com/dns-query
 https://unfiltered.joindns4.eu/dns-query
 https://us-central.adhole.org/dns-query
-https://us-chi-w-f-1.nashkan.net/dns-query
 https://us-chi-w-p-1.nashkan.net/dns-query
 https://us-dal-dns-001.mullvad.net/dns-query
 https://us-east.adhole.org/dns-query

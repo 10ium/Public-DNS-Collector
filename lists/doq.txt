@@ -38,6 +38,7 @@ quic://family.adguard-dns.com
 quic://freedns.controld.com
 quic://ibksturm.synology.me
 quic://juuri.hagezi.org
+quic://ledns.eu
 quic://nsec.arnor.org
 quic://privacy.plumedns.com
 quic://root.hagezi.org

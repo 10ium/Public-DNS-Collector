@@ -99,7 +99,6 @@ tls://dns.startupstack.tech
 tls://dns.stirringphoto.com
 tls://dns.surfsharkdns.com
 tls://dns.switch.ch
-tls://dns.t53.de
 tls://dns.telekom.de
 tls://dns.tipsy.coffee
 tls://dns.unx.io
@@ -164,6 +163,7 @@ tls://internetsehat.bebasid.com:853
 tls://jp.tiar.app
 tls://juuri.hagezi.org
 tls://kids.ns.nwps.fi
+tls://ledns.eu
 tls://masters-of-cloud.de
 tls://max.rethinkdns.com
 tls://noads.joindns4.eu

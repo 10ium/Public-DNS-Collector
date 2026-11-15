@@ -28,6 +28,7 @@ quic://dog.dns.qwer.pw
 quic://doh.dns4all.eu
 quic://doh.sz-dns.com
 quic://freedns.controld.com
+quic://ledns.eu
 quic://nsec.arnor.org
 quic://privacy.plumedns.com
 quic://zdn.ro

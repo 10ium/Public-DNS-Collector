@@ -24,7 +24,6 @@ tls://dns.cert.ee
 tls://dns.chenu.ch
 tls://dns.christerwaren.fi
 tls://dns.chunghwamc.com
-tls://dns.comss.one
 tls://dns.d94.xyz
 tls://dns.datenquark.de
 tls://dns.decky.eu
@@ -70,7 +69,6 @@ tls://dns.smartguard.io
 tls://dns.startupstack.tech
 tls://dns.stirringphoto.com
 tls://dns.switch.ch
-tls://dns.t53.de
 tls://dns.telekom.de
 tls://dns.tipsy.coffee
 tls://dns.unx.io
@@ -99,6 +97,7 @@ tls://freedns.controld.com
 tls://freedom.mydns.network
 tls://hnsdoh.com
 tls://ibuki.cgnat.net
+tls://ledns.eu
 tls://masters-of-cloud.de
 tls://ns0.fdn.fr
 tls://ns2.4netguides.org
